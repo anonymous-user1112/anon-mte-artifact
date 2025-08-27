@@ -1,0 +1,823 @@
+runcpu v5825 started at 2025-08-12 12:52:43 on "fedora"
+runcpu is: /root/mte/spec17/bin/harness/runcpu
+runcpu: runcpu --config=mte.cfg --label=clang181-64 --define=gcc_dir=/home/XXXXXXXX/code/llvm-mte/tagcfi/build/ --define=glibc_dir=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build/ --size=ref --threads=1 --tune=base --use_submit_for_speed -S LOADER=taskset -c 1 -S PASS_ENV=GLIBC_TUNABLES=glibc.mem.tagging=3 600.perlbench_s 602.gcc_s 605.mcf_s 620.omnetpp_s 623.xalancbmk_s 625.x264_s 631.deepsjeng_s 641.leela_s 657.xz_s 998.specrand_is
+toolset: linux-aarch64
+
+Locating benchmarks...found 47 benchmarks in 53 benchsets.
+Reading config file '/root/mte/spec17/config/mte.cfg'
+Running "specperl /root/mte/spec17/bin/sysinfo" to gather system information.
+Read 130 info lines from the sysinfo program.
+
+1 configuration selected:
+
+ Action    Run Mode   Workload      Report Type      Benchmarks
+--------   --------   --------   -----------------   --------------------------
+validate   speed      refspeed   SPECspeed2017_int   600.perlbench_s,          
+                                                     602.gcc_s, 605.mcf_s,     
+                                                     620.omnetpp_s,            
+                                                     623.xalancbmk_s,          
+                                                     625.x264_s,               
+                                                     631.deepsjeng_s,          
+                                                     641.leela_s, 657.xz_s,    
+                                                     998.specrand_is           
+-------------------------------------------------------------------------------
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Label     = clang181-64
+Size      = refspeed
+benchmarks= 600.perlbench_s,602.gcc_s,605.mcf_s,620.omnetpp_s,623.xalancbmk_s,625.x264_s,631.deepsjeng_s,641.leela_s,657.xz_s,998.specrand_is
+outputs   = txt,html,cfg,pdf,csv
+username  = root
+Benchmarks selected: 600.perlbench_s, 602.gcc_s, 605.mcf_s, 620.omnetpp_s, 623.xalancbmk_s, 625.x264_s, 631.deepsjeng_s, 641.leela_s, 657.xz_s, 998.specrand_is
+Compiling Binaries
+------------------------------------------------------------------------
+COMP: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/ -c -o options.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64          -DSPEC_LINUX_AARCH64  -fgnu89-inline -fcommon     -DSPEC_LP64  <source>"
+C: CC="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE=""
+P: PORTABILITY="-DSPEC_LINUX_AARCH64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS="-fgnu89-inline -fcommon"
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/   -static -unwindlib=libunwind        -DSPEC_LINUX_AARCH64     <objects>   -lm     /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a    -o options  "
+C: LD="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+O: EXTRA_LDFLAGS="-static -unwindlib=libunwind"
+P: PORTABILITY="-DSPEC_LINUX_AARCH64"
+C: MATH_LIBS="-lm"
+O: EXTRA_LIBS="/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+/bin/sh: line 1: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang: No such file or directory
+specmake: [/root/mte/spec17/benchspec/Makefile.defaults:502: compiler-version] Error 127 (ignored)
+  Up to date 600.perlbench_s base clang181-64
+------------------------------------------------------------------------
+COMP: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/ -c -o options.o -DSPEC -DNDEBUG -I. -I./include -I./spec_qsort -DSPEC_602 -DIN_GCC -DHAVE_CONFIG_H            -fgnu89-inline -fcommon     -DSPEC_LP64  <source>"
+C: CC="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-I. -I./include -I./spec_qsort -DSPEC_602 -DIN_GCC -DHAVE_CONFIG_H"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS="-fgnu89-inline -fcommon"
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/   -static -unwindlib=libunwind             <objects>   -lm     /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a    -o options  "
+C: LD="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+O: EXTRA_LDFLAGS="-static -unwindlib=libunwind"
+C: MATH_LIBS="-lm"
+O: EXTRA_LIBS="/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+/bin/sh: line 1: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang: No such file or directory
+specmake: [/root/mte/spec17/benchspec/Makefile.defaults:502: compiler-version] Error 127 (ignored)
+  Up to date 602.gcc_s base clang181-64
+------------------------------------------------------------------------
+COMP: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/ -c -o options.o -DSPEC -DNDEBUG  -Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP           -fgnu89-inline -fcommon     -DSPEC_LP64  <source>"
+C: CC="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS="-Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP"
+O: OPTIMIZE=""
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS="-fgnu89-inline -fcommon"
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/   -static -unwindlib=libunwind             <objects>   -lm     /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a    -o options  "
+C: LD="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+O: EXTRA_LDFLAGS="-static -unwindlib=libunwind"
+C: MATH_LIBS="-lm"
+O: EXTRA_LIBS="/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+/bin/sh: line 1: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang: No such file or directory
+specmake: [/root/mte/spec17/benchspec/Makefile.defaults:502: compiler-version] Error 127 (ignored)
+  Up to date 605.mcf_s base clang181-64
+------------------------------------------------------------------------
+COMP: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/ -c -o options.o -DSPEC -DNDEBUG -Isimulator/platdep -Isimulator -Imodel -DWITH_NETBUILDER           -DSPEC_LP64  <source>"
+C: CXXC="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Isimulator/platdep -Isimulator -Imodel -DWITH_NETBUILDER"
+P: BENCH_CXXFLAGS=""
+O: OPTIMIZE=""
+O: CXXOPTIMIZE=""
+P: PORTABILITY=""
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CXXPORTABILITY=""
+LINK: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/   -static -unwindlib=libunwind             <objects>        /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a    -o options  "
+C: LD="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+O: EXTRA_LDFLAGS="-static -unwindlib=libunwind"
+O: EXTRA_LIBS="/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a"
+C: LDOUT="-o options"
+ CXXC_VERSION_OPTION:
+/bin/sh: line 1: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++: No such file or directory
+specmake: [/root/mte/spec17/benchspec/Makefile.defaults:502: compiler-version] Error 127 (ignored)
+  Up to date 620.omnetpp_s base clang181-64
+------------------------------------------------------------------------
+COMP: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/ -c -o options.o -DSPEC -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_INMEM_MESSAGELOADER     -DSPEC_LINUX     -DSPEC_LP64  <source>"
+C: CXXC="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CXXFLAGS="-DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_INMEM_MESSAGELOADER"
+O: OPTIMIZE=""
+O: CXXOPTIMIZE=""
+P: PORTABILITY="-DSPEC_LINUX"
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CXXPORTABILITY=""
+LINK: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/   -static -unwindlib=libunwind        -DSPEC_LINUX     <objects>        /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a    -o options  "
+C: LD="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+O: EXTRA_LDFLAGS="-static -unwindlib=libunwind"
+P: PORTABILITY="-DSPEC_LINUX"
+O: EXTRA_LIBS="/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a"
+C: LDOUT="-o options"
+ CXXC_VERSION_OPTION:
+/bin/sh: line 1: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++: No such file or directory
+specmake: [/root/mte/spec17/benchspec/Makefile.defaults:502: compiler-version] Error 127 (ignored)
+  Up to date 623.xalancbmk_s base clang181-64
+------------------------------------------------------------------------
+COMP: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/ -c -o options.o -DSPEC -DNDEBUG -Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_BYTEORDER=0x12345678            -fgnu89-inline -fcommon     -DSPEC_LP64  <source>"
+C: CC="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_BYTEORDER=0x12345678"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS="-fgnu89-inline -fcommon"
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/   -static -unwindlib=libunwind             <objects>   -lm     /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a    -o options  "
+C: LD="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+O: EXTRA_LDFLAGS="-static -unwindlib=libunwind"
+C: MATH_LIBS="-lm"
+O: EXTRA_LIBS="/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+/bin/sh: line 1: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang: No such file or directory
+specmake: [/root/mte/spec17/benchspec/Makefile.defaults:502: compiler-version] Error 127 (ignored)
+COMP: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/ -c -o options.o -DSPEC -DNDEBUG -Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_BYTEORDER=0x12345678            -fgnu89-inline -fcommon     -DSPEC_LP64  <source>"
+C: CC="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_BYTEORDER=0x12345678"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS="-fgnu89-inline -fcommon"
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/   -static -unwindlib=libunwind             <objects>   -lm     /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a    -o options  "
+C: LD="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+O: EXTRA_LDFLAGS="-static -unwindlib=libunwind"
+C: MATH_LIBS="-lm"
+O: EXTRA_LIBS="/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+/bin/sh: line 1: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang: No such file or directory
+specmake: [/root/mte/spec17/benchspec/Makefile.defaults:502: compiler-version] Error 127 (ignored)
+COMP: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/ -c -o options.o -DSPEC -DNDEBUG -Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_BYTEORDER=0x12345678            -fgnu89-inline -fcommon     -DSPEC_LP64  <source>"
+C: CC="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_BYTEORDER=0x12345678"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS="-fgnu89-inline -fcommon"
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/   -static -unwindlib=libunwind             <objects>   -lm     /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a    -o options  "
+C: LD="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+O: EXTRA_LDFLAGS="-static -unwindlib=libunwind"
+C: MATH_LIBS="-lm"
+O: EXTRA_LIBS="/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+/bin/sh: line 1: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang: No such file or directory
+specmake: [/root/mte/spec17/benchspec/Makefile.defaults:502: compiler-version] Error 127 (ignored)
+  Up to date 625.x264_s base clang181-64
+------------------------------------------------------------------------
+COMP: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/ -c -o options.o -DSPEC -DNDEBUG -DBIG_MEMORY           -DSPEC_LP64  <source>"
+C: CXXC="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DBIG_MEMORY"
+P: BENCH_CXXFLAGS=""
+O: OPTIMIZE=""
+O: CXXOPTIMIZE=""
+P: PORTABILITY=""
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CXXPORTABILITY=""
+LINK: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/   -static -unwindlib=libunwind             <objects>        /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a    -o options  "
+C: LD="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+O: EXTRA_LDFLAGS="-static -unwindlib=libunwind"
+O: EXTRA_LIBS="/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a"
+C: LDOUT="-o options"
+ CXXC_VERSION_OPTION:
+/bin/sh: line 1: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++: No such file or directory
+specmake: [/root/mte/spec17/benchspec/Makefile.defaults:502: compiler-version] Error 127 (ignored)
+  Up to date 631.deepsjeng_s base clang181-64
+------------------------------------------------------------------------
+COMP: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/ -c -o options.o -DSPEC -DNDEBUG -I.           -DSPEC_LP64  <source>"
+C: CXXC="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-I."
+P: BENCH_CXXFLAGS=""
+O: OPTIMIZE=""
+O: CXXOPTIMIZE=""
+P: PORTABILITY=""
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CXXPORTABILITY=""
+LINK: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/   -static -unwindlib=libunwind             <objects>        /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a    -o options  "
+C: LD="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++     -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+O: EXTRA_LDFLAGS="-static -unwindlib=libunwind"
+O: EXTRA_LIBS="/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a"
+C: LDOUT="-o options"
+ CXXC_VERSION_OPTION:
+/bin/sh: line 1: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++: No such file or directory
+specmake: [/root/mte/spec17/benchspec/Makefile.defaults:502: compiler-version] Error 127 (ignored)
+  Up to date 641.leela_s base clang181-64
+------------------------------------------------------------------------
+COMP: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/ -c -o options.o -DSPEC -DNDEBUG -DSPEC_AUTO_BYTEORDER=0x12345678 -DHAVE_CONFIG_H=1 -DSPEC_MEM_IO -DSPEC_XZ -I. -Ispec_mem_io -Isha-2 -Icommon -Iliblzma/api -Iliblzma/lzma -Iliblzma/common -Iliblzma/check -Iliblzma/simple -Iliblzma/delta -Iliblzma/lz -Iliblzma/rangecoder            -fgnu89-inline -fcommon     -DSPEC_LP64  <source>"
+C: CC="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DSPEC_AUTO_BYTEORDER=0x12345678 -DHAVE_CONFIG_H=1 -DSPEC_MEM_IO -DSPEC_XZ -I. -Ispec_mem_io -Isha-2 -Icommon -Iliblzma/api -Iliblzma/lzma -Iliblzma/common -Iliblzma/check -Iliblzma/simple -Iliblzma/delta -Iliblzma/lz -Iliblzma/rangecoder"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS="-fgnu89-inline -fcommon"
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/   -static -unwindlib=libunwind             <objects>        /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a    -o options  "
+C: LD="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+O: EXTRA_LDFLAGS="-static -unwindlib=libunwind"
+O: EXTRA_LIBS="/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+/bin/sh: line 1: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang: No such file or directory
+specmake: [/root/mte/spec17/benchspec/Makefile.defaults:502: compiler-version] Error 127 (ignored)
+  Up to date 657.xz_s base clang181-64
+------------------------------------------------------------------------
+COMP: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/ -c -o options.o -DSPEC -DNDEBUG -Ispecrand-common            -fgnu89-inline -fcommon     -DSPEC_LP64  <source>"
+C: CC="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ispecrand-common"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS="-fgnu89-inline -fcommon"
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/   -static -unwindlib=libunwind             <objects>        /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a    -o options  "
+C: LD="/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang     -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"
+O: EXTRA_LDFLAGS="-static -unwindlib=libunwind"
+O: EXTRA_LIBS="/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+/bin/sh: line 1: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang: No such file or directory
+specmake: [/root/mte/spec17/benchspec/Makefile.defaults:502: compiler-version] Error 127 (ignored)
+  Up to date 998.specrand_is base clang181-64
+
+
+Setting Up Run Directories
+  Setting up 600.perlbench_s refspeed (ref) base clang181-64: run_base_refspeed_clang181-64.0000
+  Setting up 602.gcc_s refspeed (ref) base clang181-64: run_base_refspeed_clang181-64.0000
+  Setting up 605.mcf_s refspeed (ref) base clang181-64: run_base_refspeed_clang181-64.0000
+  Setting up 620.omnetpp_s refspeed (ref) base clang181-64: run_base_refspeed_clang181-64.0000
+  Setting up 623.xalancbmk_s refspeed (ref) base clang181-64: run_base_refspeed_clang181-64.0000
+  Setting up 625.x264_s refspeed (ref) base clang181-64: OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/625.x264_s/run/run_base_refspeed_clang181-64.0000 -f inputgen.cmd -e inputgen.err -o inputgen.stdout'
+Start command: 2025-08-12 12:53:01 (1755028381.3901)
+Stop command: 2025-08-12 12:54:26 (1755028466.13892)
+Elapsed time for command: 00:01:24 (84.748820066452)
+Input generation total elapsed time = 85 seconds
+Input generation elapsed time (0:1) = 84.584082 seconds
+run_base_refspeed_clang181-64.0000
+  Setting up 631.deepsjeng_s refspeed (ref) base clang181-64: run_base_refspeed_clang181-64.0000
+  Setting up 641.leela_s refspeed (ref) base clang181-64: run_base_refspeed_clang181-64.0000
+  Setting up 657.xz_s refspeed (ref) base clang181-64: run_base_refspeed_clang181-64.0000
+  Setting up 998.specrand_is refspeed (ref) base clang181-64: run_base_refspeed_clang181-64.0000
+-----------------------------------
+Running Benchmarks
+-----------------------------------
+  Running 600.perlbench_s refspeed (ref) base clang181-64 [2025-08-12 12:54:35]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /root/mte/spec17/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_clang181-64.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/perlbench_s_base.clang181-64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 > checkspam.2500.5.25.11.150.1.1.1.1.out 2>> checkspam.2500.5.25.11.150.1.1.1.1.err (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/perlbench_s_base.clang181-64 -I./lib diffmail.pl 4 800 10 17 19 300 > diffmail.4.800.10.17.19.300.out 2>> diffmail.4.800.10.17.19.300.err (timed)
+    -o splitmail.6400.12.26.16.100.0.out -e splitmail.6400.12.26.16.100.0.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/perlbench_s_base.clang181-64 -I./lib splitmail.pl 6400 12 26 16 100 0 > splitmail.6400.12.26.16.100.0.out 2>> splitmail.6400.12.26.16.100.0.err (timed)
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2025-08-12 12:54:35 (1755028475.21946)
+Stop command: 2025-08-12 13:13:32 (1755029612.34717)
+Elapsed time for command: 00:18:57 (1137.12771010399)
+Workload elapsed time (copy 0 workload 1) = 480.035317 seconds
+Workload elapsed time (copy 0 workload 2) = 332.001192 seconds
+Workload elapsed time (copy 0 workload 3) = 324.926786 seconds
+Copy 0 of 600.perlbench_s (base refspeed) run 1 finished at 2025-08-12 13:13:32.  Total elapsed time: 1136.963295
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with floatcompare=1, nansupport=no
+comparing 'diffmail.4.800.10.17.19.300.out' with floatcompare=1, nansupport=no
+comparing 'splitmail.6400.12.26.16.100.0.out' with floatcompare=1, nansupport=no
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2025-08-12 13:13:32 (1755029612.41802)
+Stop command: 2025-08-12 13:13:33 (1755029613.33444)
+Elapsed time for command: 00:00:00 (0.916428089141846)
+Benchmark Times:
+  Run Start:    2025-08-12 12:54:35 (1755028475)
+  Run Stop:     2025-08-12 13:13:32 (1755029612)
+  Run Elapsed:  00:18:57 (1137)
+  Run Reported: 00:18:56 (1136 963465000 1136.963465)
+ Success 600.perlbench_s base refspeed ratio=1.56, runtime=1136.963465, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 602.gcc_s refspeed (ref) base clang181-64 [2025-08-12 13:13:33]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /root/mte/spec17/benchspec/CPU/602.gcc_s/run/run_base_refspeed_clang181-64.0000
+    -o gcc-pp.opts-O5_-fipa-pta.out -e gcc-pp.opts-O5_-fipa-pta.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/sgcc_base.clang181-64 gcc-pp.c -O5 -fipa-pta -o gcc-pp.opts-O5_-fipa-pta.s > gcc-pp.opts-O5_-fipa-pta.out 2>> gcc-pp.opts-O5_-fipa-pta.err (timed)
+    -o gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.out -e gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/sgcc_base.clang181-64 gcc-pp.c -O5 -finline-limit=1000 -fselective-scheduling -fselective-scheduling2 -o gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.s > gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.out 2>> gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.err (timed)
+    -o gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.out -e gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/sgcc_base.clang181-64 gcc-pp.c -O5 -finline-limit=24000 -fgcse -fgcse-las -fgcse-lm -fgcse-sm -o gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.s > gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.out 2>> gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.err (timed)
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/602.gcc_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/602.gcc_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2025-08-12 13:13:33 (1755029613.69438)
+Stop command: 2025-08-12 13:47:34 (1755031654.28375)
+Elapsed time for command: 00:34:00 (2040.58936691284)
+Workload elapsed time (copy 0 workload 1) = 1241.371252 seconds
+Workload elapsed time (copy 0 workload 2) = 407.30999 seconds
+Workload elapsed time (copy 0 workload 3) = 391.743736 seconds
+Copy 0 of 602.gcc_s (base refspeed) run 1 finished at 2025-08-12 13:47:34.  Total elapsed time: 2040.424978
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.s' with floatcompare=1, nansupport=no
+comparing 'gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.s' with floatcompare=1, nansupport=no
+comparing 'gcc-pp.opts-O5_-fipa-pta.s' with floatcompare=1, nansupport=no
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/602.gcc_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/602.gcc_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2025-08-12 13:47:34 (1755031654.35818)
+Stop command: 2025-08-12 13:47:57 (1755031677.7935)
+Elapsed time for command: 00:00:23 (23.4353239536285)
+Benchmark Times:
+  Run Start:    2025-08-12 13:13:33 (1755029613)
+  Run Stop:     2025-08-12 13:47:34 (1755031654)
+  Run Elapsed:  00:34:01 (2041)
+  Run Reported: 00:34:00 (2040 425224000 2040.425224)
+ Success 602.gcc_s base refspeed ratio=1.95, runtime=2040.425224, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 605.mcf_s refspeed (ref) base clang181-64 [2025-08-12 13:47:57]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /root/mte/spec17/benchspec/CPU/605.mcf_s/run/run_base_refspeed_clang181-64.0000
+    -o inp.out -e inp.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/mcf_s_base.clang181-64 inp.in  > inp.out 2>> inp.err (timed)
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/605.mcf_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/605.mcf_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2025-08-12 13:47:57 (1755031677.93533)
+Stop command: 2025-08-12 14:23:15 (1755033795.34179)
+Elapsed time for command: 00:35:17 (2117.40645217896)
+Workload elapsed time (copy 0 workload 1) = 2117.242083 seconds
+Copy 0 of 605.mcf_s (base refspeed) run 1 finished at 2025-08-12 14:23:15.  Total elapsed time: 2117.242083
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'inp.out' with 
+comparing 'mcf.out' with 
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/605.mcf_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/605.mcf_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2025-08-12 14:23:15 (1755033795.41432)
+Stop command: 2025-08-12 14:23:15 (1755033795.79939)
+Elapsed time for command: 00:00:00 (0.385063886642456)
+Benchmark Times:
+  Run Start:    2025-08-12 13:47:57 (1755031677)
+  Run Stop:     2025-08-12 14:23:15 (1755033795)
+  Run Elapsed:  00:35:18 (2118)
+  Run Reported: 00:35:17 (2117 242227000 2117.242227)
+ Success 605.mcf_s base refspeed ratio=2.23, runtime=2117.242227, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 620.omnetpp_s refspeed (ref) base clang181-64 [2025-08-12 14:23:15]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /root/mte/spec17/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_clang181-64.0000
+    -o omnetpp.General-0.out -e omnetpp.General-0.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/omnetpp_s_base.clang181-64 -c General -r 0 > omnetpp.General-0.out 2>> omnetpp.General-0.err (timed)
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2025-08-12 14:23:16 (1755033796.09278)
+Stop command: 2025-08-12 14:49:04 (1755035344.03481)
+Elapsed time for command: 00:25:47 (1547.94203591347)
+Workload elapsed time (copy 0 workload 1) = 1547.777541 seconds
+Copy 0 of 620.omnetpp_s (base refspeed) run 1 finished at 2025-08-12 14:49:03.  Total elapsed time: 1547.777541
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'General-0.sca' with abstol=1e-06, reltol=1e-05
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2025-08-12 14:49:04 (1755035344.10892)
+Stop command: 2025-08-12 14:49:07 (1755035347.97023)
+Elapsed time for command: 00:00:03 (3.8613109588623)
+Benchmark Times:
+  Run Start:    2025-08-12 14:23:16 (1755033796)
+  Run Stop:     2025-08-12 14:49:04 (1755035344)
+  Run Elapsed:  00:25:48 (1548)
+  Run Reported: 00:25:47 (1547 777655000 1547.777655)
+ Success 620.omnetpp_s base refspeed ratio=1.05, runtime=1547.777655, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 623.xalancbmk_s refspeed (ref) base clang181-64 [2025-08-12 14:49:08]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /root/mte/spec17/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_clang181-64.0000
+    -o ref-t5.out -e ref-t5.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/xalancbmk_s_base.clang181-64 -v t5.xml xalanc.xsl > ref-t5.out 2>> ref-t5.err (timed)
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2025-08-12 14:49:08 (1755035348.32501)
+Stop command: 2025-08-12 15:20:25 (1755037225.23188)
+Elapsed time for command: 00:31:16 (1876.90687298775)
+Workload elapsed time (copy 0 workload 1) = 1876.742207 seconds
+Copy 0 of 623.xalancbmk_s (base refspeed) run 1 finished at 2025-08-12 15:20:25.  Total elapsed time: 1876.742207
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'ref-t5.out' with 
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2025-08-12 15:20:25 (1755037225.30879)
+Stop command: 2025-08-12 15:20:25 (1755037225.65294)
+Elapsed time for command: 00:00:00 (0.344153165817261)
+Benchmark Times:
+  Run Start:    2025-08-12 14:49:08 (1755035348)
+  Run Stop:     2025-08-12 15:20:25 (1755037225)
+  Run Elapsed:  00:31:17 (1877)
+  Run Reported: 00:31:16 (1876 742334000 1876.742334)
+ Success 623.xalancbmk_s base refspeed ratio=0.76, runtime=1876.742334, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 625.x264_s refspeed (ref) base clang181-64 [2025-08-12 15:20:25]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /root/mte/spec17/benchspec/CPU/625.x264_s/run/run_base_refspeed_clang181-64.0000
+    -o run_000-1000_x264_s_base.clang181-64_x264_pass1.out -e run_000-1000_x264_s_base.clang181-64_x264_pass1.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/x264_s_base.clang181-64 --pass 1 --stats x264_stats.log --bitrate 1000 --frames 1000 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_000-1000_x264_s_base.clang181-64_x264_pass1.out 2>> run_000-1000_x264_s_base.clang181-64_x264_pass1.err (timed)
+    -o run_000-1000_x264_s_base.clang181-64_x264_pass2.out -e run_000-1000_x264_s_base.clang181-64_x264_pass2.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/x264_s_base.clang181-64 --pass 2 --stats x264_stats.log --bitrate 1000 --dumpyuv 200 --frames 1000 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_000-1000_x264_s_base.clang181-64_x264_pass2.out 2>> run_000-1000_x264_s_base.clang181-64_x264_pass2.err (timed)
+    -o run_0500-1250_x264_s_base.clang181-64_x264.out -e run_0500-1250_x264_s_base.clang181-64_x264.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/x264_s_base.clang181-64 --seek 500 --dumpyuv 200 --frames 1250 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_0500-1250_x264_s_base.clang181-64_x264.out 2>> run_0500-1250_x264_s_base.clang181-64_x264.err (timed)
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/625.x264_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/625.x264_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2025-08-12 15:20:25 (1755037225.94441)
+Stop command: 2025-08-12 15:52:15 (1755039135.55475)
+Elapsed time for command: 00:31:49 (1909.61033511162)
+Workload elapsed time (copy 0 workload 1) = 222.429845 seconds
+Workload elapsed time (copy 0 workload 2) = 866.156743 seconds
+Workload elapsed time (copy 0 workload 3) = 820.860979 seconds
+Copy 0 of 625.x264_s (base refspeed) run 1 finished at 2025-08-12 15:52:15.  Total elapsed time: 1909.447567
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'imagevalidate_frame_1100.out' with reltol=0.085
+comparing 'imagevalidate_frame_1249.out' with reltol=0.085
+comparing 'imagevalidate_frame_200.out' with reltol=0.085
+comparing 'imagevalidate_frame_400.out' with reltol=0.085
+comparing 'imagevalidate_frame_600.out' with reltol=0.085
+comparing 'imagevalidate_frame_700.out' with reltol=0.085
+comparing 'imagevalidate_frame_800.out' with reltol=0.085
+comparing 'imagevalidate_frame_900.out' with reltol=0.085
+comparing 'imagevalidate_frame_999.out' with reltol=0.085
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/625.x264_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/625.x264_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2025-08-12 15:52:15 (1755039135.64447)
+Stop command: 2025-08-12 15:52:17 (1755039137.80648)
+Elapsed time for command: 00:00:02 (2.16201400756836)
+Benchmark Times:
+  Run Start:    2025-08-12 15:20:25 (1755037225)
+  Run Stop:     2025-08-12 15:52:15 (1755039135)
+  Run Elapsed:  00:31:50 (1910)
+  Run Reported: 00:31:49 (1909 447738000 1909.447738)
+ Success 625.x264_s base refspeed ratio=0.92, runtime=1909.447738, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 631.deepsjeng_s refspeed (ref) base clang181-64 [2025-08-12 15:52:17]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /root/mte/spec17/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_clang181-64.0000
+    -o ref.out -e ref.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/deepsjeng_s_base.clang181-64 ref.txt > ref.out 2>> ref.err (timed)
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2025-08-12 15:52:17 (1755039137.95474)
+Stop command: 2025-08-12 16:11:32 (1755040292.01134)
+Elapsed time for command: 00:19:14 (1154.05660796165)
+Workload elapsed time (copy 0 workload 1) = 1153.891683 seconds
+Copy 0 of 631.deepsjeng_s (base refspeed) run 1 finished at 2025-08-12 16:11:31.  Total elapsed time: 1153.891683
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'ref.out' with obiwan=1
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2025-08-12 16:11:32 (1755040292.08586)
+Stop command: 2025-08-12 16:11:32 (1755040292.37043)
+Elapsed time for command: 00:00:00 (0.284570932388306)
+Benchmark Times:
+  Run Start:    2025-08-12 15:52:17 (1755039137)
+  Run Stop:     2025-08-12 16:11:32 (1755040292)
+  Run Elapsed:  00:19:15 (1155)
+  Run Reported: 00:19:13 (1153 891825000 1153.891825)
+ Success 631.deepsjeng_s base refspeed ratio=1.24, runtime=1153.891825, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 641.leela_s refspeed (ref) base clang181-64 [2025-08-12 16:11:32]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /root/mte/spec17/benchspec/CPU/641.leela_s/run/run_base_refspeed_clang181-64.0000
+    -o ref.out -e ref.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/leela_s_base.clang181-64 ref.sgf > ref.out 2>> ref.err (timed)
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/641.leela_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/641.leela_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2025-08-12 16:11:32 (1755040292.60943)
+Stop command: 2025-08-12 16:54:12 (1755042852.59055)
+Elapsed time for command: 00:42:39 (2559.981112957)
+Workload elapsed time (copy 0 workload 1) = 2559.816428 seconds
+Copy 0 of 641.leela_s (base refspeed) run 1 finished at 2025-08-12 16:54:12.  Total elapsed time: 2559.816428
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'ref.out' with 
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/641.leela_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/641.leela_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2025-08-12 16:54:12 (1755042852.66788)
+Stop command: 2025-08-12 16:54:12 (1755042852.94753)
+Elapsed time for command: 00:00:00 (0.279651880264282)
+Benchmark Times:
+  Run Start:    2025-08-12 16:11:32 (1755040292)
+  Run Stop:     2025-08-12 16:54:12 (1755042852)
+  Run Elapsed:  00:42:40 (2560)
+  Run Reported: 00:42:39 (2559 816559000 2559.816559)
+ Success 641.leela_s base refspeed ratio=0.67, runtime=2559.816559, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 657.xz_s refspeed (ref) base clang181-64 [2025-08-12 16:54:12]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /root/mte/spec17/benchspec/CPU/657.xz_s/run/run_base_refspeed_clang181-64.0000
+    -o cpu2006docs.tar-6643-4.out -e cpu2006docs.tar-6643-4.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/xz_s_base.clang181-64 cpu2006docs.tar.xz 6643 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1036078272 1111795472 4 > cpu2006docs.tar-6643-4.out 2>> cpu2006docs.tar-6643-4.err (timed)
+    -o cld.tar-1400-8.out -e cld.tar-1400-8.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/xz_s_base.clang181-64 cld.tar.xz 1400 19cf30ae51eddcbefda78dd06014b4b96281456e078ca7c13e1c0c9e6aaea8dff3efb4ad6b0456697718cede6bd5454852652806a657bb56e07d61128434b474 536995164 539938872 8 > cld.tar-1400-8.out 2>> cld.tar-1400-8.err (timed)
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/657.xz_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/657.xz_s/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2025-08-12 16:54:13 (1755042853.13645)
+Stop command: 2025-08-12 18:44:40 (1755049480.28757)
+Elapsed time for command: 01:50:27 (6627.15112185478)
+Workload elapsed time (copy 0 workload 1) = 3270.854564 seconds
+Workload elapsed time (copy 0 workload 2) = 3356.131047 seconds
+Copy 0 of 657.xz_s (base refspeed) run 1 finished at 2025-08-12 18:44:40.  Total elapsed time: 6626.985611
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'cld.tar-1400-8.out' with 
+comparing 'cpu2006docs.tar-6643-4.out' with 
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/657.xz_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/657.xz_s/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2025-08-12 18:44:40 (1755049480.36217)
+Stop command: 2025-08-12 18:44:40 (1755049480.74684)
+Elapsed time for command: 00:00:00 (0.384661912918091)
+Benchmark Times:
+  Run Start:    2025-08-12 16:54:13 (1755042853)
+  Run Stop:     2025-08-12 18:44:40 (1755049480)
+  Run Elapsed:  01:50:27 (6627)
+  Run Reported: 01:50:26 (6626 985778000 6626.985778)
+ Success 657.xz_s base refspeed ratio=0.93, runtime=6626.985778, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 998.specrand_is refspeed (ref) base clang181-64 [2025-08-12 18:44:40]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /root/mte/spec17/benchspec/CPU/998.specrand_is/run/run_base_refspeed_clang181-64.0000
+    -o rand.234923.out -e rand.234923.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_refspeed_clang181-64.0000/specrand_is_base.clang181-64 1255432124 234923 > rand.234923.out 2>> rand.234923.err (timed)
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/998.specrand_is/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/998.specrand_is/run/run_base_refspeed_clang181-64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2025-08-12 18:44:40 (1755049480.88436)
+Stop command: 2025-08-12 18:44:41 (1755049481.14128)
+Elapsed time for command: 00:00:00 (0.25691294670105)
+Workload elapsed time (copy 0 workload 1) = 0.093202 seconds
+Copy 0 of 998.specrand_is (base refspeed) run 1 finished at 2025-08-12 18:44:40.  Total elapsed time: 0.093202
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'rand.234923.out' with floatcompare=1, nansupport=0
+Specinvoke: /root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/998.specrand_is/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/root/mte/spec17/bin/specinvoke -d /root/mte/spec17/benchspec/CPU/998.specrand_is/run/run_base_refspeed_clang181-64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2025-08-12 18:44:41 (1755049481.21305)
+Stop command: 2025-08-12 18:44:42 (1755049482.38737)
+Elapsed time for command: 00:00:01 (1.174320936203)
+Benchmark Times:
+  Run Start:    2025-08-12 18:44:40 (1755049480)
+  Run Stop:     2025-08-12 18:44:41 (1755049481)
+  Run Elapsed:  00:00:01 (1)
+  Run Reported: 00:00:00 (0 93288000 0.093288)
+ Success 998.specrand_is base refspeed ratio=107.19, runtime=0.093288, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x600.perlbench_s 1x602.gcc_s 1x605.mcf_s 1x620.omnetpp_s 1x623.xalancbmk_s 1x625.x264_s 1x631.deepsjeng_s 1x641.leela_s 1x657.xz_s 1x998.specrand_is
+Producing Raw Reports
+ label: clang181-64
+  workload: refspeed (ref)
+   benchset: intspeed
+   metric: SPECspeed2017_int_base
+    format: raw -> /root/mte/spec17/result/CPU2017.004.intspeed.refspeed.rsf
+Parsing flags for 600.perlbench_s base: done
+Parsing flags for 602.gcc_s base: done
+Parsing flags for 605.mcf_s base: done
+Parsing flags for 620.omnetpp_s base: done
+Parsing flags for 623.xalancbmk_s base: done
+Parsing flags for 625.x264_s base: done
+Parsing flags for 631.deepsjeng_s base: done
+Parsing flags for 641.leela_s base: done
+Parsing flags for 657.xz_s base: done
+Doing flag reduction: done
+    format: flags -> /root/mte/spec17/result/CPU2017.004.intspeed.refspeed.flags.html
+    format: cfg -> /root/mte/spec17/result/CPU2017.004.intspeed.refspeed.cfg, /root/mte/spec17/result/CPU2017.004.intspeed.refspeed.orig.cfg
+    format: CSV -> /root/mte/spec17/result/CPU2017.004.intspeed.refspeed.csv
+    format: PDF -> /root/mte/spec17/result/CPU2017.004.intspeed.refspeed.pdf
+    format: HTML -> /root/mte/spec17/result/CPU2017.004.intspeed.refspeed.html
+    format: Text -> /root/mte/spec17/result/CPU2017.004.intspeed.refspeed.txt
+   benchset: intrate
+   benchset: fpspeed
+   benchset: fprate
+The log for this run is in /root/mte/spec17/result/CPU2017.004.log
+
+runcpu finished at 2025-08-12 18:44:48; 21124 total seconds elapsed

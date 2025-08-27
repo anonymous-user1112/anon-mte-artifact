@@ -1,0 +1,1396 @@
+runspec v6152 started at Sat Nov 16 18:42:51 2024 on "localhost"
+runspec is: /root/spec/bin/runspec
+runspec: runspec -c llvm-aarch64-mte-tagcfi -e ifct-vtt-static --tune base --size ref --iterations 5 -S CORE=little --noreportable all_cpp
+toolset: unknown
+
+Locating benchmarks...found 31 benchmarks in 6 benchsets.
+Reading config file '/root/spec/config/llvm-aarch64-mte-tagcfi.cfg'
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = ifct-vtt-static
+Size      = ref
+Machine   = default
+benchmarks= 444.namd,447.dealII,450.soplex,453.povray,471.omnetpp,473.astar,483.xalancbmk
+outputs   = asc, csv, Screen
+username  = root
+Benchmarks selected: 444.namd, 447.dealII, 450.soplex, 453.povray, 471.omnetpp, 473.astar, 483.xalancbmk
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 444.namd base ifct-vtt-static default
+
+------------------------------------------------------------------------
+  Up to date 447.dealII base ifct-vtt-static default
+
+------------------------------------------------------------------------
+  Up to date 450.soplex base ifct-vtt-static default
+
+------------------------------------------------------------------------
+  Up to date 453.povray base ifct-vtt-static default
+
+------------------------------------------------------------------------
+  Up to date 471.omnetpp base ifct-vtt-static default
+
+------------------------------------------------------------------------
+  Up to date 473.astar base ifct-vtt-static default
+
+------------------------------------------------------------------------
+  Up to date 483.xalancbmk base ifct-vtt-static default
+
+
+Setting Up Run Directories
+  Setting up 444.namd ref base ifct-vtt-static default: existing (run_base_ref_ifct-vtt-static.0000)
+  Setting up 447.dealII ref base ifct-vtt-static default: existing (run_base_ref_ifct-vtt-static.0000)
+  Setting up 450.soplex ref base ifct-vtt-static default: existing (run_base_ref_ifct-vtt-static.0000)
+  Setting up 453.povray ref base ifct-vtt-static default: existing (run_base_ref_ifct-vtt-static.0000)
+  Setting up 471.omnetpp ref base ifct-vtt-static default: existing (run_base_ref_ifct-vtt-static.0000)
+  Setting up 473.astar ref base ifct-vtt-static default: existing (run_base_ref_ifct-vtt-static.0000)
+  Setting up 483.xalancbmk ref base ifct-vtt-static default: existing (run_base_ref_ifct-vtt-static.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 444.namd ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000
+    -o namd.stdout -e namd.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/namd_base.ifct-vtt-static --input namd.input --iterations 38 --output namd.out  (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 18:42:58 2024 (1731782578)
+Stop command: Sat Nov 16 19:12:05 2024 (1731784325)
+Elapsed time for command: 00:29:07 (1747)
+Workload elapsed time (0:1) = 1739.736757 seconds
+Copy 0 of 444.namd (base ref) run 1 finished at Sat Nov 16 19:11:57 2024.  Total elapsed time: 1739.736757
+comparing files in '/root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'namd.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 19:12:06 2024 (1731784326)
+Stop command: Sat Nov 16 19:12:06 2024 (1731784326)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Nov 16 18:42:58 2024 (1731782578)
+  Stop:     Sat Nov 16 19:12:05 2024 (1731784325)
+  Elapsed:  00:29:07 (1747)
+  Reported: 1739 736881000 1739.736881
+ Success 444.namd base ref ratio=4.61, runtime=1739.736881
+
+-----------------------------------
+  Running (#1) 447.dealII ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000
+    -o log -e dealII.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/dealII_base.ifct-vtt-static 23 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 19:12:06 2024 (1731784326)
+Stop command: Sat Nov 16 19:33:40 2024 (1731785620)
+Elapsed time for command: 00:21:34 (1294)
+Workload elapsed time (0:1) = 1285.672181 seconds
+Copy 0 of 447.dealII (base ref) run 1 finished at Sat Nov 16 19:33:32 2024.  Total elapsed time: 1285.672181
+comparing files in '/root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'grid-0.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-1.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-2.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-3.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-4.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-5.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-6.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-7.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-8.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-0.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-1.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-2.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-3.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-4.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-5.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-6.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-7.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-8.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-10.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-11.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-12.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-13.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-14.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-15.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-16.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-17.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-18.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-19.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-20.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-21.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-22.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-23.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-9.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'log' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-10.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-11.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-12.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-13.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-14.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-15.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-16.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-17.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-18.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-19.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-20.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-21.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-22.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-23.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-9.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 19:33:40 2024 (1731785620)
+Stop command: Sat Nov 16 19:34:06 2024 (1731785646)
+Elapsed time for command: 00:00:26 (26)
+Benchmark Times:
+  Start:    Sat Nov 16 19:12:06 2024 (1731784326)
+  Stop:     Sat Nov 16 19:33:40 2024 (1731785620)
+  Elapsed:  00:21:34 (1294)
+  Reported: 1285 672370000 1285.67237
+ Success 447.dealII base ref ratio=8.90, runtime=1285.672370
+
+-----------------------------------
+  Running (#1) 450.soplex ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/soplex_base.ifct-vtt-static -s1 -e -m45000 pds-50.mps (timed)
+    -o ref.out -e ref.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/soplex_base.ifct-vtt-static -m3500 ref.mps (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 19:34:06 2024 (1731785646)
+Stop command: Sat Nov 16 19:54:45 2024 (1731786885)
+Elapsed time for command: 00:20:39 (1239)
+Workload elapsed time (0:1) = 774.923307 seconds
+Workload elapsed time (0:2) = 456.553968 seconds
+Copy 0 of 450.soplex (base ref) run 1 finished at Sat Nov 16 19:54:37 2024.  Total elapsed time: 1231.477275
+comparing files in '/root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'pds-50.mps.info' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.mps.info' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 19:54:45 2024 (1731786885)
+Stop command: Sat Nov 16 19:54:47 2024 (1731786887)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Sat Nov 16 19:34:06 2024 (1731785646)
+  Stop:     Sat Nov 16 19:54:45 2024 (1731786885)
+  Elapsed:  00:20:39 (1239)
+  Reported: 1231 477603000 1231.477603
+ Success 450.soplex base ref ratio=6.77, runtime=1231.477603
+
+-----------------------------------
+  Running (#1) 453.povray ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000
+    -o SPEC-benchmark-ref.stdout -e SPEC-benchmark-ref.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/povray_base.ifct-vtt-static SPEC-benchmark-ref.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 19:54:47 2024 (1731786887)
+Stop command: Sat Nov 16 20:09:42 2024 (1731787782)
+Elapsed time for command: 00:14:55 (895)
+Workload elapsed time (0:1) = 886.749063 seconds
+Copy 0 of 453.povray (base ref) run 1 finished at Sat Nov 16 20:09:34 2024.  Total elapsed time: 886.749063
+comparing files in '/root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'SPEC-benchmark.log' with abstol=0, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'SPEC-benchmark.tga' with abstol=0, binary=1, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=50
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 20:09:42 2024 (1731787782)
+Stop command: Sat Nov 16 20:09:50 2024 (1731787790)
+Elapsed time for command: 00:00:08 (8)
+Benchmark Times:
+  Start:    Sat Nov 16 19:54:47 2024 (1731786887)
+  Stop:     Sat Nov 16 20:09:42 2024 (1731787782)
+  Elapsed:  00:14:55 (895)
+  Reported: 886 749281000 886.749281
+ Success 453.povray base ref ratio=6.00, runtime=886.749281
+
+-----------------------------------
+  Running (#1) 471.omnetpp ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000
+    -o omnetpp.log -e omnetpp.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/omnetpp_base.ifct-vtt-static omnetpp.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 20:09:50 2024 (1731787790)
+Stop command: Sat Nov 16 20:37:22 2024 (1731789442)
+Elapsed time for command: 00:27:32 (1652)
+Workload elapsed time (0:1) = 1644.239506 seconds
+Copy 0 of 471.omnetpp (base ref) run 1 finished at Sat Nov 16 20:37:14 2024.  Total elapsed time: 1644.239506
+comparing files in '/root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 20:37:22 2024 (1731789442)
+Stop command: Sat Nov 16 20:37:23 2024 (1731789443)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Nov 16 20:09:50 2024 (1731787790)
+  Stop:     Sat Nov 16 20:37:22 2024 (1731789442)
+  Elapsed:  00:27:32 (1652)
+  Reported: 1644 239648000 1644.239648
+ Success 471.omnetpp base ref ratio=3.80, runtime=1644.239648
+
+-----------------------------------
+  Running (#1) 473.astar ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/astar_base.ifct-vtt-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/astar_base.ifct-vtt-static rivers.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 20:37:23 2024 (1731789443)
+Stop command: Sat Nov 16 21:00:03 2024 (1731790803)
+Elapsed time for command: 00:22:40 (1360)
+Workload elapsed time (0:1) = 576.920066 seconds
+Workload elapsed time (0:2) = 774.575968 seconds
+Copy 0 of 473.astar (base ref) run 1 finished at Sat Nov 16 20:59:55 2024.  Total elapsed time: 1351.496034
+comparing files in '/root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 21:00:03 2024 (1731790803)
+Stop command: Sat Nov 16 21:00:04 2024 (1731790804)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Nov 16 20:37:23 2024 (1731789443)
+  Stop:     Sat Nov 16 21:00:03 2024 (1731790803)
+  Elapsed:  00:22:40 (1360)
+  Reported: 1351 496288000 1351.496288
+ Success 473.astar base ref ratio=5.19, runtime=1351.496288
+
+-----------------------------------
+  Running (#1) 483.xalancbmk ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/Xalan_base.ifct-vtt-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 21:00:04 2024 (1731790804)
+Stop command: Sat Nov 16 21:17:34 2024 (1731791854)
+Elapsed time for command: 00:17:30 (1050)
+Workload elapsed time (0:1) = 1042.142942 seconds
+Copy 0 of 483.xalancbmk (base ref) run 1 finished at Sat Nov 16 21:17:26 2024.  Total elapsed time: 1042.142942
+comparing files in '/root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 21:17:34 2024 (1731791854)
+Stop command: Sat Nov 16 21:17:36 2024 (1731791856)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Sat Nov 16 21:00:04 2024 (1731790804)
+  Stop:     Sat Nov 16 21:17:34 2024 (1731791854)
+  Elapsed:  00:17:30 (1050)
+  Reported: 1042 143154000 1042.143154
+ Success 483.xalancbmk base ref ratio=6.62, runtime=1042.143154
+
+-----------------------------------
+  Running (#2) 444.namd ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000
+    -o namd.stdout -e namd.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/namd_base.ifct-vtt-static --input namd.input --iterations 38 --output namd.out  (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 21:17:36 2024 (1731791856)
+Stop command: Sat Nov 16 21:46:41 2024 (1731793601)
+Elapsed time for command: 00:29:05 (1745)
+Workload elapsed time (0:1) = 1736.726438 seconds
+Copy 0 of 444.namd (base ref) run 2 finished at Sat Nov 16 21:46:33 2024.  Total elapsed time: 1736.726438
+comparing files in '/root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'namd.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 21:46:41 2024 (1731793601)
+Stop command: Sat Nov 16 21:46:41 2024 (1731793601)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Nov 16 21:17:36 2024 (1731791856)
+  Stop:     Sat Nov 16 21:46:41 2024 (1731793601)
+  Elapsed:  00:29:05 (1745)
+  Reported: 1736 726630000 1736.72663
+ Success 444.namd base ref ratio=4.62, runtime=1736.726630
+
+-----------------------------------
+  Running (#2) 447.dealII ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000
+    -o log -e dealII.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/dealII_base.ifct-vtt-static 23 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 21:46:41 2024 (1731793601)
+Stop command: Sat Nov 16 22:08:17 2024 (1731794897)
+Elapsed time for command: 00:21:36 (1296)
+Workload elapsed time (0:1) = 1287.180745 seconds
+Copy 0 of 447.dealII (base ref) run 2 finished at Sat Nov 16 22:08:09 2024.  Total elapsed time: 1287.180745
+comparing files in '/root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'grid-0.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-1.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-2.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-3.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-4.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-5.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-6.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-7.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-8.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-0.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-1.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-2.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-3.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-4.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-5.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-6.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-7.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-8.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-10.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-11.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-12.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-13.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-14.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-15.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-16.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-17.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-18.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-19.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-20.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-21.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-22.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-23.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-9.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'log' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-10.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-11.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-12.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-13.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-14.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-15.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-16.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-17.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-18.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-19.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-20.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-21.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-22.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-23.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-9.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 22:08:17 2024 (1731794897)
+Stop command: Sat Nov 16 22:08:42 2024 (1731794922)
+Elapsed time for command: 00:00:25 (25)
+Benchmark Times:
+  Start:    Sat Nov 16 21:46:41 2024 (1731793601)
+  Stop:     Sat Nov 16 22:08:17 2024 (1731794897)
+  Elapsed:  00:21:36 (1296)
+  Reported: 1287 181017000 1287.181017
+ Success 447.dealII base ref ratio=8.89, runtime=1287.181017
+
+-----------------------------------
+  Running (#2) 450.soplex ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/soplex_base.ifct-vtt-static -s1 -e -m45000 pds-50.mps (timed)
+    -o ref.out -e ref.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/soplex_base.ifct-vtt-static -m3500 ref.mps (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 22:08:42 2024 (1731794922)
+Stop command: Sat Nov 16 22:29:27 2024 (1731796167)
+Elapsed time for command: 00:20:45 (1245)
+Workload elapsed time (0:1) = 777.261371 seconds
+Workload elapsed time (0:2) = 458.922919 seconds
+Copy 0 of 450.soplex (base ref) run 2 finished at Sat Nov 16 22:29:19 2024.  Total elapsed time: 1236.18429
+comparing files in '/root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'pds-50.mps.info' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.mps.info' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 22:29:27 2024 (1731796167)
+Stop command: Sat Nov 16 22:29:28 2024 (1731796168)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Nov 16 22:08:42 2024 (1731794922)
+  Stop:     Sat Nov 16 22:29:27 2024 (1731796167)
+  Elapsed:  00:20:45 (1245)
+  Reported: 1236 184459000 1236.184459
+ Success 450.soplex base ref ratio=6.75, runtime=1236.184459
+
+-----------------------------------
+  Running (#2) 453.povray ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000
+    -o SPEC-benchmark-ref.stdout -e SPEC-benchmark-ref.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/povray_base.ifct-vtt-static SPEC-benchmark-ref.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 22:29:28 2024 (1731796168)
+Stop command: Sat Nov 16 22:44:35 2024 (1731797075)
+Elapsed time for command: 00:15:07 (907)
+Workload elapsed time (0:1) = 898.029488 seconds
+Copy 0 of 453.povray (base ref) run 2 finished at Sat Nov 16 22:44:27 2024.  Total elapsed time: 898.029488
+comparing files in '/root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'SPEC-benchmark.log' with abstol=0, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'SPEC-benchmark.tga' with abstol=0, binary=1, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=50
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 22:44:35 2024 (1731797075)
+Stop command: Sat Nov 16 22:44:42 2024 (1731797082)
+Elapsed time for command: 00:00:07 (7)
+Benchmark Times:
+  Start:    Sat Nov 16 22:29:28 2024 (1731796168)
+  Stop:     Sat Nov 16 22:44:35 2024 (1731797075)
+  Elapsed:  00:15:07 (907)
+  Reported: 898 29690000 898.02969
+ Success 453.povray base ref ratio=5.92, runtime=898.029690
+
+-----------------------------------
+  Running (#2) 471.omnetpp ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000
+    -o omnetpp.log -e omnetpp.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/omnetpp_base.ifct-vtt-static omnetpp.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 22:44:43 2024 (1731797083)
+Stop command: Sat Nov 16 23:12:33 2024 (1731798753)
+Elapsed time for command: 00:27:50 (1670)
+Workload elapsed time (0:1) = 1661.967551 seconds
+Copy 0 of 471.omnetpp (base ref) run 2 finished at Sat Nov 16 23:12:25 2024.  Total elapsed time: 1661.967551
+comparing files in '/root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 23:12:33 2024 (1731798753)
+Stop command: Sat Nov 16 23:12:34 2024 (1731798754)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Nov 16 22:44:43 2024 (1731797083)
+  Stop:     Sat Nov 16 23:12:33 2024 (1731798753)
+  Elapsed:  00:27:50 (1670)
+  Reported: 1661 967678000 1661.967678
+ Success 471.omnetpp base ref ratio=3.76, runtime=1661.967678
+
+-----------------------------------
+  Running (#2) 473.astar ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/astar_base.ifct-vtt-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/astar_base.ifct-vtt-static rivers.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 23:12:34 2024 (1731798754)
+Stop command: Sat Nov 16 23:35:02 2024 (1731800102)
+Elapsed time for command: 00:22:28 (1348)
+Workload elapsed time (0:1) = 573.339102 seconds
+Workload elapsed time (0:2) = 766.578686 seconds
+Copy 0 of 473.astar (base ref) run 2 finished at Sat Nov 16 23:34:54 2024.  Total elapsed time: 1339.917788
+comparing files in '/root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 23:35:02 2024 (1731800102)
+Stop command: Sat Nov 16 23:35:02 2024 (1731800102)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Nov 16 23:12:34 2024 (1731798754)
+  Stop:     Sat Nov 16 23:35:02 2024 (1731800102)
+  Elapsed:  00:22:28 (1348)
+  Reported: 1339 918142000 1339.918142
+ Success 473.astar base ref ratio=5.24, runtime=1339.918142
+
+-----------------------------------
+  Running (#2) 483.xalancbmk ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/Xalan_base.ifct-vtt-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 23:35:03 2024 (1731800103)
+Stop command: Sat Nov 16 23:52:25 2024 (1731801145)
+Elapsed time for command: 00:17:22 (1042)
+Workload elapsed time (0:1) = 1034.073311 seconds
+Copy 0 of 483.xalancbmk (base ref) run 2 finished at Sat Nov 16 23:52:17 2024.  Total elapsed time: 1034.073311
+comparing files in '/root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Nov 16 23:52:25 2024 (1731801145)
+Stop command: Sat Nov 16 23:52:26 2024 (1731801146)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Nov 16 23:35:03 2024 (1731800103)
+  Stop:     Sat Nov 16 23:52:25 2024 (1731801145)
+  Elapsed:  00:17:22 (1042)
+  Reported: 1034 73514000 1034.073514
+ Success 483.xalancbmk base ref ratio=6.67, runtime=1034.073514
+
+-----------------------------------
+  Running (#3) 444.namd ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000
+    -o namd.stdout -e namd.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/namd_base.ifct-vtt-static --input namd.input --iterations 38 --output namd.out  (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Nov 16 23:52:26 2024 (1731801146)
+Stop command: Sun Nov 17 00:21:30 2024 (1731802890)
+Elapsed time for command: 00:29:04 (1744)
+Workload elapsed time (0:1) = 1736.413257 seconds
+Copy 0 of 444.namd (base ref) run 3 finished at Sun Nov 17 00:21:22 2024.  Total elapsed time: 1736.413257
+comparing files in '/root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'namd.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 00:21:30 2024 (1731802890)
+Stop command: Sun Nov 17 00:21:31 2024 (1731802891)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Nov 16 23:52:26 2024 (1731801146)
+  Stop:     Sun Nov 17 00:21:30 2024 (1731802890)
+  Elapsed:  00:29:04 (1744)
+  Reported: 1736 413408000 1736.413408
+ Success 444.namd base ref ratio=4.62, runtime=1736.413408
+
+-----------------------------------
+  Running (#3) 447.dealII ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000
+    -o log -e dealII.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/dealII_base.ifct-vtt-static 23 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 00:21:31 2024 (1731802891)
+Stop command: Sun Nov 17 00:43:06 2024 (1731804186)
+Elapsed time for command: 00:21:35 (1295)
+Workload elapsed time (0:1) = 1287.308605 seconds
+Copy 0 of 447.dealII (base ref) run 3 finished at Sun Nov 17 00:42:58 2024.  Total elapsed time: 1287.308605
+comparing files in '/root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'grid-0.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-1.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-2.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-3.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-4.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-5.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-6.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-7.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-8.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-0.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-1.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-2.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-3.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-4.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-5.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-6.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-7.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-8.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-10.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-11.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-12.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-13.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-14.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-15.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-16.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-17.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-18.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-19.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-20.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-21.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-22.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-23.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-9.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'log' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-10.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-11.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-12.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-13.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-14.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-15.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-16.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-17.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-18.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-19.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-20.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-21.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-22.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-23.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-9.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 00:43:07 2024 (1731804187)
+Stop command: Sun Nov 17 00:43:32 2024 (1731804212)
+Elapsed time for command: 00:00:25 (25)
+Benchmark Times:
+  Start:    Sun Nov 17 00:21:31 2024 (1731802891)
+  Stop:     Sun Nov 17 00:43:06 2024 (1731804186)
+  Elapsed:  00:21:35 (1295)
+  Reported: 1287 308849000 1287.308849
+ Success 447.dealII base ref ratio=8.89, runtime=1287.308849
+
+-----------------------------------
+  Running (#3) 450.soplex ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/soplex_base.ifct-vtt-static -s1 -e -m45000 pds-50.mps (timed)
+    -o ref.out -e ref.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/soplex_base.ifct-vtt-static -m3500 ref.mps (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 00:43:32 2024 (1731804212)
+Stop command: Sun Nov 17 01:04:16 2024 (1731805456)
+Elapsed time for command: 00:20:44 (1244)
+Workload elapsed time (0:1) = 776.368583 seconds
+Workload elapsed time (0:2) = 459.535118 seconds
+Copy 0 of 450.soplex (base ref) run 3 finished at Sun Nov 17 01:04:08 2024.  Total elapsed time: 1235.903701
+comparing files in '/root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'pds-50.mps.info' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.mps.info' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 01:04:16 2024 (1731805456)
+Stop command: Sun Nov 17 01:04:17 2024 (1731805457)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sun Nov 17 00:43:32 2024 (1731804212)
+  Stop:     Sun Nov 17 01:04:16 2024 (1731805456)
+  Elapsed:  00:20:44 (1244)
+  Reported: 1235 903923000 1235.903923
+ Success 450.soplex base ref ratio=6.75, runtime=1235.903923
+
+-----------------------------------
+  Running (#3) 453.povray ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000
+    -o SPEC-benchmark-ref.stdout -e SPEC-benchmark-ref.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/povray_base.ifct-vtt-static SPEC-benchmark-ref.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 01:04:17 2024 (1731805457)
+Stop command: Sun Nov 17 01:19:23 2024 (1731806363)
+Elapsed time for command: 00:15:06 (906)
+Workload elapsed time (0:1) = 898.237789 seconds
+Copy 0 of 453.povray (base ref) run 3 finished at Sun Nov 17 01:19:15 2024.  Total elapsed time: 898.237789
+comparing files in '/root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'SPEC-benchmark.log' with abstol=0, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'SPEC-benchmark.tga' with abstol=0, binary=1, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=50
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 01:19:24 2024 (1731806364)
+Stop command: Sun Nov 17 01:19:31 2024 (1731806371)
+Elapsed time for command: 00:00:07 (7)
+Benchmark Times:
+  Start:    Sun Nov 17 01:04:17 2024 (1731805457)
+  Stop:     Sun Nov 17 01:19:23 2024 (1731806363)
+  Elapsed:  00:15:06 (906)
+  Reported: 898 237889000 898.237889
+ Success 453.povray base ref ratio=5.92, runtime=898.237889
+
+-----------------------------------
+  Running (#3) 471.omnetpp ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000
+    -o omnetpp.log -e omnetpp.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/omnetpp_base.ifct-vtt-static omnetpp.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 01:19:32 2024 (1731806372)
+Stop command: Sun Nov 17 01:47:25 2024 (1731808045)
+Elapsed time for command: 00:27:53 (1673)
+Workload elapsed time (0:1) = 1665.553597 seconds
+Copy 0 of 471.omnetpp (base ref) run 3 finished at Sun Nov 17 01:47:17 2024.  Total elapsed time: 1665.553597
+comparing files in '/root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 01:47:25 2024 (1731808045)
+Stop command: Sun Nov 17 01:47:26 2024 (1731808046)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sun Nov 17 01:19:32 2024 (1731806372)
+  Stop:     Sun Nov 17 01:47:25 2024 (1731808045)
+  Elapsed:  00:27:53 (1673)
+  Reported: 1665 553887000 1665.553887
+ Success 471.omnetpp base ref ratio=3.75, runtime=1665.553887
+
+-----------------------------------
+  Running (#3) 473.astar ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/astar_base.ifct-vtt-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/astar_base.ifct-vtt-static rivers.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 01:47:26 2024 (1731808046)
+Stop command: Sun Nov 17 02:10:03 2024 (1731809403)
+Elapsed time for command: 00:22:37 (1357)
+Workload elapsed time (0:1) = 576.239312 seconds
+Workload elapsed time (0:2) = 772.8095 seconds
+Copy 0 of 473.astar (base ref) run 3 finished at Sun Nov 17 02:09:55 2024.  Total elapsed time: 1349.048812
+comparing files in '/root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 02:10:03 2024 (1731809403)
+Stop command: Sun Nov 17 02:10:04 2024 (1731809404)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sun Nov 17 01:47:26 2024 (1731808046)
+  Stop:     Sun Nov 17 02:10:03 2024 (1731809403)
+  Elapsed:  00:22:37 (1357)
+  Reported: 1349 49053000 1349.049053
+ Success 473.astar base ref ratio=5.20, runtime=1349.049053
+
+-----------------------------------
+  Running (#3) 483.xalancbmk ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/Xalan_base.ifct-vtt-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 02:10:04 2024 (1731809404)
+Stop command: Sun Nov 17 02:27:36 2024 (1731810456)
+Elapsed time for command: 00:17:32 (1052)
+Workload elapsed time (0:1) = 1043.750755 seconds
+Copy 0 of 483.xalancbmk (base ref) run 3 finished at Sun Nov 17 02:27:28 2024.  Total elapsed time: 1043.750755
+comparing files in '/root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 02:27:36 2024 (1731810456)
+Stop command: Sun Nov 17 02:27:38 2024 (1731810458)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Sun Nov 17 02:10:04 2024 (1731809404)
+  Stop:     Sun Nov 17 02:27:36 2024 (1731810456)
+  Elapsed:  00:17:32 (1052)
+  Reported: 1043 750875000 1043.750875
+ Success 483.xalancbmk base ref ratio=6.61, runtime=1043.750875
+
+-----------------------------------
+  Running (#4) 444.namd ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000
+    -o namd.stdout -e namd.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/namd_base.ifct-vtt-static --input namd.input --iterations 38 --output namd.out  (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 02:27:38 2024 (1731810458)
+Stop command: Sun Nov 17 02:56:45 2024 (1731812205)
+Elapsed time for command: 00:29:07 (1747)
+Workload elapsed time (0:1) = 1739.088161 seconds
+Copy 0 of 444.namd (base ref) run 4 finished at Sun Nov 17 02:56:37 2024.  Total elapsed time: 1739.088161
+comparing files in '/root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'namd.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 02:56:45 2024 (1731812205)
+Stop command: Sun Nov 17 02:56:45 2024 (1731812205)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sun Nov 17 02:27:38 2024 (1731810458)
+  Stop:     Sun Nov 17 02:56:45 2024 (1731812205)
+  Elapsed:  00:29:07 (1747)
+  Reported: 1739 88378000 1739.088378
+ Success 444.namd base ref ratio=4.61, runtime=1739.088378
+
+-----------------------------------
+  Running (#4) 447.dealII ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000
+    -o log -e dealII.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/dealII_base.ifct-vtt-static 23 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 02:56:46 2024 (1731812206)
+Stop command: Sun Nov 17 03:18:20 2024 (1731813500)
+Elapsed time for command: 00:21:34 (1294)
+Workload elapsed time (0:1) = 1286.687711 seconds
+Copy 0 of 447.dealII (base ref) run 4 finished at Sun Nov 17 03:18:12 2024.  Total elapsed time: 1286.687711
+comparing files in '/root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'grid-0.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-1.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-2.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-3.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-4.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-5.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-6.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-7.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-8.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-0.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-1.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-2.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-3.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-4.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-5.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-6.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-7.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-8.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-10.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-11.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-12.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-13.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-14.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-15.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-16.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-17.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-18.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-19.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-20.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-21.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-22.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-23.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-9.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'log' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-10.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-11.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-12.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-13.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-14.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-15.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-16.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-17.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-18.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-19.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-20.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-21.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-22.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-23.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-9.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 03:18:21 2024 (1731813501)
+Stop command: Sun Nov 17 03:18:47 2024 (1731813527)
+Elapsed time for command: 00:00:26 (26)
+Benchmark Times:
+  Start:    Sun Nov 17 02:56:46 2024 (1731812206)
+  Stop:     Sun Nov 17 03:18:20 2024 (1731813500)
+  Elapsed:  00:21:34 (1294)
+  Reported: 1286 687866000 1286.687866
+ Success 447.dealII base ref ratio=8.89, runtime=1286.687866
+
+-----------------------------------
+  Running (#4) 450.soplex ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/soplex_base.ifct-vtt-static -s1 -e -m45000 pds-50.mps (timed)
+    -o ref.out -e ref.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/soplex_base.ifct-vtt-static -m3500 ref.mps (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 03:18:47 2024 (1731813527)
+Stop command: Sun Nov 17 03:39:28 2024 (1731814768)
+Elapsed time for command: 00:20:41 (1241)
+Workload elapsed time (0:1) = 774.581019 seconds
+Workload elapsed time (0:2) = 458.704159 seconds
+Copy 0 of 450.soplex (base ref) run 4 finished at Sun Nov 17 03:39:20 2024.  Total elapsed time: 1233.285178
+comparing files in '/root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'pds-50.mps.info' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.mps.info' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 03:39:28 2024 (1731814768)
+Stop command: Sun Nov 17 03:39:30 2024 (1731814770)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Sun Nov 17 03:18:47 2024 (1731813527)
+  Stop:     Sun Nov 17 03:39:28 2024 (1731814768)
+  Elapsed:  00:20:41 (1241)
+  Reported: 1233 285500000 1233.2855
+ Success 450.soplex base ref ratio=6.76, runtime=1233.285500
+
+-----------------------------------
+  Running (#4) 453.povray ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000
+    -o SPEC-benchmark-ref.stdout -e SPEC-benchmark-ref.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/povray_base.ifct-vtt-static SPEC-benchmark-ref.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 03:39:30 2024 (1731814770)
+Stop command: Sun Nov 17 03:54:41 2024 (1731815681)
+Elapsed time for command: 00:15:11 (911)
+Workload elapsed time (0:1) = 902.883362 seconds
+Copy 0 of 453.povray (base ref) run 4 finished at Sun Nov 17 03:54:33 2024.  Total elapsed time: 902.883362
+comparing files in '/root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'SPEC-benchmark.log' with abstol=0, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'SPEC-benchmark.tga' with abstol=0, binary=1, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=50
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 03:54:41 2024 (1731815681)
+Stop command: Sun Nov 17 03:54:49 2024 (1731815689)
+Elapsed time for command: 00:00:08 (8)
+Benchmark Times:
+  Start:    Sun Nov 17 03:39:30 2024 (1731814770)
+  Stop:     Sun Nov 17 03:54:41 2024 (1731815681)
+  Elapsed:  00:15:11 (911)
+  Reported: 902 883643000 902.883643
+ Success 453.povray base ref ratio=5.89, runtime=902.883643
+
+-----------------------------------
+  Running (#4) 471.omnetpp ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000
+    -o omnetpp.log -e omnetpp.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/omnetpp_base.ifct-vtt-static omnetpp.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 03:54:49 2024 (1731815689)
+Stop command: Sun Nov 17 04:22:49 2024 (1731817369)
+Elapsed time for command: 00:28:00 (1680)
+Workload elapsed time (0:1) = 1671.500235 seconds
+Copy 0 of 471.omnetpp (base ref) run 4 finished at Sun Nov 17 04:22:41 2024.  Total elapsed time: 1671.500235
+comparing files in '/root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 04:22:49 2024 (1731817369)
+Stop command: Sun Nov 17 04:22:50 2024 (1731817370)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sun Nov 17 03:54:49 2024 (1731815689)
+  Stop:     Sun Nov 17 04:22:49 2024 (1731817369)
+  Elapsed:  00:28:00 (1680)
+  Reported: 1671 500488000 1671.500488
+ Success 471.omnetpp base ref ratio=3.74, runtime=1671.500488
+
+-----------------------------------
+  Running (#4) 473.astar ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/astar_base.ifct-vtt-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/astar_base.ifct-vtt-static rivers.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 04:22:50 2024 (1731817370)
+Stop command: Sun Nov 17 04:45:54 2024 (1731818754)
+Elapsed time for command: 00:23:04 (1384)
+Workload elapsed time (0:1) = 605.130925 seconds
+Workload elapsed time (0:2) = 771.224736 seconds
+Copy 0 of 473.astar (base ref) run 4 finished at Sun Nov 17 04:45:46 2024.  Total elapsed time: 1376.355661
+comparing files in '/root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 04:45:54 2024 (1731818754)
+Stop command: Sun Nov 17 04:45:55 2024 (1731818755)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sun Nov 17 04:22:50 2024 (1731817370)
+  Stop:     Sun Nov 17 04:45:54 2024 (1731818754)
+  Elapsed:  00:23:04 (1384)
+  Reported: 1376 356023000 1376.356023
+ Success 473.astar base ref ratio=5.10, runtime=1376.356023
+
+-----------------------------------
+  Running (#4) 483.xalancbmk ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/Xalan_base.ifct-vtt-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 04:45:55 2024 (1731818755)
+Stop command: Sun Nov 17 05:03:25 2024 (1731819805)
+Elapsed time for command: 00:17:30 (1050)
+Workload elapsed time (0:1) = 1042.387566 seconds
+Copy 0 of 483.xalancbmk (base ref) run 4 finished at Sun Nov 17 05:03:17 2024.  Total elapsed time: 1042.387566
+comparing files in '/root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 05:03:26 2024 (1731819806)
+Stop command: Sun Nov 17 05:03:27 2024 (1731819807)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sun Nov 17 04:45:55 2024 (1731818755)
+  Stop:     Sun Nov 17 05:03:26 2024 (1731819806)
+  Elapsed:  00:17:31 (1051)
+  Reported: 1042 387732000 1042.387732
+ Success 483.xalancbmk base ref ratio=6.62, runtime=1042.387732
+
+-----------------------------------
+  Running (#5) 444.namd ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000
+    -o namd.stdout -e namd.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/namd_base.ifct-vtt-static --input namd.input --iterations 38 --output namd.out  (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 05:03:27 2024 (1731819807)
+Stop command: Sun Nov 17 05:32:32 2024 (1731821552)
+Elapsed time for command: 00:29:05 (1745)
+Workload elapsed time (0:1) = 1736.673167 seconds
+Copy 0 of 444.namd (base ref) run 5 finished at Sun Nov 17 05:32:24 2024.  Total elapsed time: 1736.673167
+comparing files in '/root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'namd.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/444.namd/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 05:32:32 2024 (1731821552)
+Stop command: Sun Nov 17 05:32:32 2024 (1731821552)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sun Nov 17 05:03:27 2024 (1731819807)
+  Stop:     Sun Nov 17 05:32:32 2024 (1731821552)
+  Elapsed:  00:29:05 (1745)
+  Reported: 1736 673357000 1736.673357
+ Success 444.namd base ref ratio=4.62, runtime=1736.673357
+
+-----------------------------------
+  Running (#5) 447.dealII ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000
+    -o log -e dealII.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/dealII_base.ifct-vtt-static 23 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 05:32:33 2024 (1731821553)
+Stop command: Sun Nov 17 05:54:05 2024 (1731822845)
+Elapsed time for command: 00:21:32 (1292)
+Workload elapsed time (0:1) = 1284.795053 seconds
+Copy 0 of 447.dealII (base ref) run 5 finished at Sun Nov 17 05:53:57 2024.  Total elapsed time: 1284.795053
+comparing files in '/root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'grid-0.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-1.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-2.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-3.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-4.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-5.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-6.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-7.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-8.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-0.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-1.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-2.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-3.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-4.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-5.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-6.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-7.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-8.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-10.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-11.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-12.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-13.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-14.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-15.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-16.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-17.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-18.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-19.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-20.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-21.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-22.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-23.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-9.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'log' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-10.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-11.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-12.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-13.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-14.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-15.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-16.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-17.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-18.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-19.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-20.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-21.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-22.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-23.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-9.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/447.dealII/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 05:54:06 2024 (1731822846)
+Stop command: Sun Nov 17 05:54:31 2024 (1731822871)
+Elapsed time for command: 00:00:25 (25)
+Benchmark Times:
+  Start:    Sun Nov 17 05:32:33 2024 (1731821553)
+  Stop:     Sun Nov 17 05:54:05 2024 (1731822845)
+  Elapsed:  00:21:32 (1292)
+  Reported: 1284 795163000 1284.795163
+ Success 447.dealII base ref ratio=8.90, runtime=1284.795163
+
+-----------------------------------
+  Running (#5) 450.soplex ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/soplex_base.ifct-vtt-static -s1 -e -m45000 pds-50.mps (timed)
+    -o ref.out -e ref.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/soplex_base.ifct-vtt-static -m3500 ref.mps (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 05:54:31 2024 (1731822871)
+Stop command: Sun Nov 17 06:15:17 2024 (1731824117)
+Elapsed time for command: 00:20:46 (1246)
+Workload elapsed time (0:1) = 777.327987 seconds
+Workload elapsed time (0:2) = 460.329863 seconds
+Copy 0 of 450.soplex (base ref) run 5 finished at Sun Nov 17 06:15:09 2024.  Total elapsed time: 1237.65785
+comparing files in '/root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'pds-50.mps.info' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.mps.info' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/450.soplex/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 06:15:17 2024 (1731824117)
+Stop command: Sun Nov 17 06:15:18 2024 (1731824118)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sun Nov 17 05:54:31 2024 (1731822871)
+  Stop:     Sun Nov 17 06:15:17 2024 (1731824117)
+  Elapsed:  00:20:46 (1246)
+  Reported: 1237 658080000 1237.65808
+ Success 450.soplex base ref ratio=6.74, runtime=1237.658080
+
+-----------------------------------
+  Running (#5) 453.povray ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000
+    -o SPEC-benchmark-ref.stdout -e SPEC-benchmark-ref.stderr bench_runner little ../run_base_ref_ifct-vtt-static.0000/povray_base.ifct-vtt-static SPEC-benchmark-ref.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 06:15:18 2024 (1731824118)
+Stop command: Sun Nov 17 06:30:24 2024 (1731825024)
+Elapsed time for command: 00:15:06 (906)
+Workload elapsed time (0:1) = 897.651588 seconds
+Copy 0 of 453.povray (base ref) run 5 finished at Sun Nov 17 06:30:16 2024.  Total elapsed time: 897.651588
+comparing files in '/root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'SPEC-benchmark.log' with abstol=0, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'SPEC-benchmark.tga' with abstol=0, binary=1, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=50
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/453.povray/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 06:30:24 2024 (1731825024)
+Stop command: Sun Nov 17 06:30:32 2024 (1731825032)
+Elapsed time for command: 00:00:08 (8)
+Benchmark Times:
+  Start:    Sun Nov 17 06:15:18 2024 (1731824118)
+  Stop:     Sun Nov 17 06:30:24 2024 (1731825024)
+  Elapsed:  00:15:06 (906)
+  Reported: 897 651721000 897.651721
+ Success 453.povray base ref ratio=5.93, runtime=897.651721
+
+-----------------------------------
+  Running (#5) 471.omnetpp ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000
+    -o omnetpp.log -e omnetpp.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/omnetpp_base.ifct-vtt-static omnetpp.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 06:30:32 2024 (1731825032)
+Stop command: Sun Nov 17 06:58:27 2024 (1731826707)
+Elapsed time for command: 00:27:55 (1675)
+Workload elapsed time (0:1) = 1666.372536 seconds
+Copy 0 of 471.omnetpp (base ref) run 5 finished at Sun Nov 17 06:58:19 2024.  Total elapsed time: 1666.372536
+comparing files in '/root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 06:58:27 2024 (1731826707)
+Stop command: Sun Nov 17 06:58:28 2024 (1731826708)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sun Nov 17 06:30:32 2024 (1731825032)
+  Stop:     Sun Nov 17 06:58:27 2024 (1731826707)
+  Elapsed:  00:27:55 (1675)
+  Reported: 1666 372649000 1666.372649
+ Success 471.omnetpp base ref ratio=3.75, runtime=1666.372649
+
+-----------------------------------
+  Running (#5) 473.astar ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/astar_base.ifct-vtt-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/astar_base.ifct-vtt-static rivers.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 06:58:28 2024 (1731826708)
+Stop command: Sun Nov 17 07:21:05 2024 (1731828065)
+Elapsed time for command: 00:22:37 (1357)
+Workload elapsed time (0:1) = 577.113866 seconds
+Workload elapsed time (0:2) = 772.029496 seconds
+Copy 0 of 473.astar (base ref) run 5 finished at Sun Nov 17 07:20:57 2024.  Total elapsed time: 1349.143362
+comparing files in '/root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 07:21:05 2024 (1731828065)
+Stop command: Sun Nov 17 07:21:06 2024 (1731828066)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sun Nov 17 06:58:28 2024 (1731826708)
+  Stop:     Sun Nov 17 07:21:05 2024 (1731828065)
+  Elapsed:  00:22:37 (1357)
+  Reported: 1349 143782000 1349.143782
+ Success 473.astar base ref ratio=5.20, runtime=1349.143782
+
+-----------------------------------
+  Running (#5) 483.xalancbmk ref base ifct-vtt-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ifct-vtt-static.0000/Xalan_base.ifct-vtt-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sun Nov 17 07:21:06 2024 (1731828066)
+Stop command: Sun Nov 17 07:38:36 2024 (1731829116)
+Elapsed time for command: 00:17:30 (1050)
+Workload elapsed time (0:1) = 1041.866238 seconds
+Copy 0 of 483.xalancbmk (base ref) run 5 finished at Sun Nov 17 07:38:28 2024.  Total elapsed time: 1041.866238
+comparing files in '/root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ifct-vtt-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sun Nov 17 07:38:36 2024 (1731829116)
+Stop command: Sun Nov 17 07:38:37 2024 (1731829117)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sun Nov 17 07:21:06 2024 (1731828066)
+  Stop:     Sun Nov 17 07:38:36 2024 (1731829116)
+  Elapsed:  00:17:30 (1050)
+  Reported: 1041 866425000 1041.866425
+ Success 483.xalancbmk base ref ratio=6.62, runtime=1041.866425
+Success: 5x444.namd 5x447.dealII 5x450.soplex 5x453.povray 5x471.omnetpp 5x473.astar 5x483.xalancbmk
+Producing Raw Reports
+mach: default
+  ext: ifct-vtt-static
+    size: ref
+      set: int
+        format: raw -> /root/spec/result/CINT2006.161.ref.rsf
+Parsing flags for 471.omnetpp base: done
+Parsing flags for 473.astar base: done
+Parsing flags for 483.xalancbmk base: done
+Doing flag reduction: done
+        format: ASCII -> /root/spec/result/CINT2006.161.ref.txt
+        format: CSV -> /root/spec/result/CINT2006.161.ref.csv
+        format: Screen -> 
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+400.perlbench                               NR                                 
+401.bzip2                                   NR                                 
+403.gcc                                     NR                                 
+429.mcf                                     NR                                 
+445.gobmk                                   NR                                 
+456.hmmer                                   NR                                 
+458.sjeng                                   NR                                 
+462.libquantum                              NR                                 
+464.h264ref                                 NR                                 
+471.omnetpp      6250       1666       3.75 *                                  
+473.astar        7020       1349       5.20 *                                  
+483.xalancbmk    6900       1042       6.62 *                                  
+ Est. SPECint_base2006                   --
+ Est. SPECint2006                                                   Not Run
+
+      set: fp
+        format: raw -> /root/spec/result/CFP2006.161.ref.rsf
+Parsing flags for 444.namd base: done
+Parsing flags for 447.dealII base: done
+Parsing flags for 450.soplex base: done
+Parsing flags for 453.povray base: done
+Doing flag reduction: done
+        format: ASCII -> /root/spec/result/CFP2006.161.ref.txt
+        format: CSV -> /root/spec/result/CFP2006.161.ref.csv
+        format: Screen -> 
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+410.bwaves                                  NR                                 
+416.gamess                                  NR                                 
+433.milc                                    NR                                 
+434.zeusmp                                  NR                                 
+435.gromacs                                 NR                                 
+436.cactusADM                               NR                                 
+437.leslie3d                                NR                                 
+444.namd         8020       1737       4.62 *                                  
+447.dealII      11440       1287       8.89 *                                  
+450.soplex       8340       1236       6.75 *                                  
+453.povray       5320        898       5.92 *                                  
+454.calculix                                NR                                 
+459.GemsFDTD                                NR                                 
+465.tonto                                   NR                                 
+470.lbm                                     NR                                 
+481.wrf                                     NR                                 
+482.sphinx3                                 NR                                 
+ Est. SPECfp_base2006                    --
+ Est. SPECfp2006                                                    Not Run
+
+
+The log for this run is in /root/spec/result/CPU2006.161.log
+
+runspec finished at Sun Nov 17 07:38:41 2024; 46550 total seconds elapsed

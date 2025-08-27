@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.4-->
+<PhoronixTestSuite>
+  <SuiteInformation>
+    <Title>MTE-server</Title>
+    <Version>0.0.1</Version>
+    <TestType>System</TestType>
+    <Description>A subset/fork of pts/server.</Description>
+    <Maintainer>XXXXXXXX</Maintainer>
+  </SuiteInformation>
+  <!-- <Execute> -->
+  <!--   <Test>pts/apache</Test> -->
+  <!--   <Mode>BATCH</Mode> -->
+  <!-- </Execute> -->
+  <Execute>
+    <Test>local/nginx-3.0.1</Test>
+    <Mode>BATCH</Mode>
+  </Execute>
+  <Execute>
+    <Test>local/memcached-1.2.0</Test>
+    <Mode>BATCH</Mode>
+  </Execute>
+  <Execute>
+    <Test>local/rocksdb-1.7.0</Test>
+    <Mode>BATCH</Mode>
+  </Execute>
+  <Execute>
+    <Test>local/pgbench-1.15.0</Test>
+    <Mode>BATCH</Mode>
+    <OptionSelect>scaling-factor = 1, clients = 100, run-mode = Read Write</OptionSelect>
+  </Execute>
+  <Execute>
+    <Test>local/pgbench-1.15.0</Test>
+    <Mode>BATCH</Mode>
+    <OptionSelect>scaling-factor = 1, clients = 100, run-mode = Read Only</OptionSelect>
+  </Execute>
+  <Execute>
+    <Test>local/pgbench-1.15.0</Test>
+    <Mode>BATCH</Mode>
+    <OptionSelect>scaling-factor = 100, clients = 100, run-mode = Read Write</OptionSelect>
+  </Execute>
+  <Execute>
+    <Test>local/pgbench-1.15.0</Test>
+    <Mode>BATCH</Mode>
+    <OptionSelect>scaling-factor = 100, clients = 100, run-mode = Read Only</OptionSelect>
+  </Execute>
+</PhoronixTestSuite>

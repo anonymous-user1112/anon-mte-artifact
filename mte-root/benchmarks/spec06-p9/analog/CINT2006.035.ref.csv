@@ -1,0 +1,289 @@
+valid,0
+
+"Full Results Table"
+
+Benchmark,"Base Ref Time","Est. Base Run Time","Est. Base Ratio","Base Selected","Base Status","Peak Ref Time","Est. Peak Run Time","Est. Peak Ratio","Peak Selected","Peak Status",Description
+400.perlbench,9770,403.84539,24.192427,0,S,,,,,,"ref iteration #1"
+400.perlbench,9770,403.376443,24.220552,1,S,,,,,,"ref iteration #2"
+400.perlbench,9770,403.200695,24.231109,0,S,,,,,,"ref iteration #3"
+401.bzip2,9650,468.985369,20.576335,0,S,,,,,,"ref iteration #1"
+401.bzip2,9650,470.168688,20.524548,0,S,,,,,,"ref iteration #2"
+401.bzip2,9650,469.814753,20.540011,1,S,,,,,,"ref iteration #3"
+403.gcc,8050,320.001404,25.15614,1,S,,,,,,"ref iteration #1"
+403.gcc,8050,319.397836,25.203677,0,S,,,,,,"ref iteration #2"
+403.gcc,8050,320.885112,25.08686,0,S,,,,,,"ref iteration #3"
+429.mcf,9120,384.899304,23.694509,0,S,,,,,,"ref iteration #1"
+429.mcf,9120,330.444543,27.599185,0,S,,,,,,"ref iteration #2"
+429.mcf,9120,371.391575,24.556292,1,S,,,,,,"ref iteration #3"
+445.gobmk,10490,408.446174,25.682699,0,S,,,,,,"ref iteration #1"
+445.gobmk,10490,409.222078,25.634003,1,S,,,,,,"ref iteration #2"
+445.gobmk,10490,409.294462,25.62947,0,S,,,,,,"ref iteration #3"
+456.hmmer,9330,246.696666,37.819725,0,S,,,,,,"ref iteration #1"
+456.hmmer,9330,246.510686,37.848258,1,S,,,,,,"ref iteration #2"
+456.hmmer,9330,246.316178,37.878145,0,S,,,,,,"ref iteration #3"
+458.sjeng,12100,544.503256,22.222089,1,S,,,,,,"ref iteration #1"
+458.sjeng,12100,546.90638,22.124445,0,S,,,,,,"ref iteration #2"
+458.sjeng,12100,543.983828,22.243308,0,S,,,,,,"ref iteration #3"
+462.libquantum,20720,259.426406,79.868508,0,S,,,,,,"ref iteration #1"
+462.libquantum,20720,264.512406,78.33281,1,S,,,,,,"ref iteration #2"
+462.libquantum,20720,264.523397,78.329555,0,S,,,,,,"ref iteration #3"
+464.h264ref,22130,413.998679,53.454277,0,S,,,,,,"ref iteration #1"
+464.h264ref,22130,413.811527,53.478452,1,S,,,,,,"ref iteration #2"
+464.h264ref,22130,413.78772,53.481529,0,S,,,,,,"ref iteration #3"
+471.omnetpp,6250,435.781659,14.342045,0,S,,,,,,"ref iteration #1"
+471.omnetpp,6250,438.044854,14.267945,1,S,,,,,,"ref iteration #2"
+471.omnetpp,6250,438.494041,14.253329,0,S,,,,,,"ref iteration #3"
+473.astar,7020,387.465824,18.117727,0,S,,,,,,"ref iteration #1"
+473.astar,7020,389.252194,18.03458,1,S,,,,,,"ref iteration #2"
+473.astar,7020,389.275,18.033524,0,S,,,,,,"ref iteration #3"
+483.xalancbmk,6900,222.378539,31.028174,1,S,,,,,,"ref iteration #1"
+483.xalancbmk,6900,218.803282,31.535176,0,S,,,,,,"ref iteration #2"
+483.xalancbmk,6900,224.804035,30.693399,0,S,,,,,,"ref iteration #3"
+
+"Selected Results Table"
+
+Benchmark,"Base Ref Time","Est. Base Run Time","Est. Base Ratio","Base Selected","Base Status","Peak Ref Time","Est. Peak Run Time","Est. Peak Ratio","Peak Selected","Peak Status",Description
+400.perlbench,9770,403.376443,24.220552,1,S,,,,,NR,"SelectedIteration (base #2)"
+401.bzip2,9650,469.814753,20.540011,1,S,,,,,NR,"SelectedIteration (base #3)"
+403.gcc,8050,320.001404,25.15614,1,S,,,,,NR,"SelectedIteration (base #1)"
+429.mcf,9120,371.391575,24.556292,1,S,,,,,NR,"SelectedIteration (base #3)"
+445.gobmk,10490,409.222078,25.634003,1,S,,,,,NR,"SelectedIteration (base #2)"
+456.hmmer,9330,246.510686,37.848258,1,S,,,,,NR,"SelectedIteration (base #2)"
+458.sjeng,12100,544.503256,22.222089,1,S,,,,,NR,"SelectedIteration (base #1)"
+462.libquantum,20720,264.512406,78.33281,1,S,,,,,NR,"SelectedIteration (base #2)"
+464.h264ref,22130,413.811527,53.478452,1,S,,,,,NR,"SelectedIteration (base #2)"
+471.omnetpp,6250,438.044854,14.267945,1,S,,,,,NR,"SelectedIteration (base #2)"
+473.astar,7020,389.252194,18.03458,1,S,,,,,NR,"SelectedIteration (base #2)"
+483.xalancbmk,6900,222.378539,31.028174,1,S,,,,,NR,"SelectedIteration (base #1)"
+
+SPECint_base2006,27.891085,,27.891085
+SPECint2006,"Not Run",,,,,,,"Not Run"
+
+"Run number:",035
+
+"Hardware Vendor:",
+"Hardware Model:",
+"Date tested:",Aug-2025
+"CPU2006 License:",0
+"Test sponsor:",
+"Tested by:",
+"Hardware avail:",Dec-9999
+"Software avail:",Mar-2008
+
+
+HARDWARE
+
+"CPU Name"," "
+"CPU Characteristics"," "
+"CPU MHz"," "
+FPU," "
+"CPU(s) enabled"," cores,  chips,  cores/chip,  threads/core"
+"CPU(s) orderable"," "
+"Primary Cache"," "
+"Secondary Cache"," "
+"L3 Cache"," "
+"Other Cache"," "
+Memory," "
+"Disk Subsystem"," "
+"Other Hardware"," "
+
+SOFTWARE
+
+"Operating System","QEMU AArch64 Usermode"
+Compiler,clang
+"Auto Parallel",No
+"File System"," "
+"System State"," "
+"Base Pointers",64-bit
+"Peak Pointers","Not Applicable"
+"Other Software",None
+
+"Submit Notes"
+
+"The config file option 'submit' was used."
+
+"Base Compiler Invocation"
+400.perlbench
+401.bzip2
+403.gcc
+429.mcf
+445.gobmk
+456.hmmer
+458.sjeng
+462.libquantum
+464.h264ref
+471.omnetpp
+473.astar
+483.xalancbmk
+
+"Base Portability Flags"
+400.perlbench," -DSPEC_CPU_LP64"," -DSPEC_CPU_LINUX_X64"
+401.bzip2," -DSPEC_CPU_LP64"
+403.gcc," -DSPEC_CPU_LP64"
+429.mcf," -DSPEC_CPU_LP64"
+445.gobmk," -DSPEC_CPU_LP64"
+456.hmmer," -DSPEC_CPU_LP64"
+458.sjeng," -DSPEC_CPU_LP64"
+462.libquantum," -DSPEC_CPU_LP64"," -DSPEC_CPU_LINUX"
+464.h264ref," -DSPEC_CPU_LP64"
+471.omnetpp," -DSPEC_CPU_LP64"
+473.astar," -DSPEC_CPU_LP64"
+483.xalancbmk," -DSPEC_CPU_LP64"," -DSPEC_CPU_LINUX"
+
+"Base Optimization Flags"
+400.perlbench
+401.bzip2
+403.gcc
+429.mcf
+445.gobmk
+456.hmmer
+458.sjeng
+462.libquantum
+464.h264ref
+471.omnetpp
+473.astar
+483.xalancbmk
+
+"Base Other Flags"
+400.perlbench
+401.bzip2
+403.gcc
+429.mcf
+445.gobmk
+456.hmmer
+458.sjeng
+462.libquantum
+464.h264ref
+471.omnetpp
+473.astar
+483.xalancbmk
+
+"Base Forbidden Flags"
+400.perlbench
+401.bzip2
+403.gcc
+429.mcf
+445.gobmk
+456.hmmer
+458.sjeng
+462.libquantum
+464.h264ref
+471.omnetpp
+473.astar
+483.xalancbmk
+
+"Base Unknown Flags"
+400.perlbench," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," -Wno-int-conversion"," -Wno-int-conversion"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -std=gnu89"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -static -unwindlib=libunwind -L /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build-hakc/ -l:libc.a -unwindlib=libunwind"
+401.bzip2," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," -Wno-int-conversion"," -Wno-int-conversion"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -std=gnu89"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -static -unwindlib=libunwind -L /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build-hakc/ -l:libc.a -unwindlib=libunwind"
+403.gcc," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," -Wno-int-conversion"," -Wno-int-conversion"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -std=gnu89"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -static -unwindlib=libunwind -L /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build-hakc/ -l:libc.a -unwindlib=libunwind"
+429.mcf," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," -Wno-int-conversion"," -Wno-int-conversion"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -std=gnu89"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -static -unwindlib=libunwind -L /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build-hakc/ -l:libc.a -unwindlib=libunwind"
+445.gobmk," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," -Wno-int-conversion"," -Wno-int-conversion"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -std=gnu89"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -static -unwindlib=libunwind -L /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build-hakc/ -l:libc.a -unwindlib=libunwind"
+456.hmmer," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," -Wno-int-conversion"," -Wno-int-conversion"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -std=gnu89"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -static -unwindlib=libunwind -L /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build-hakc/ -l:libc.a -unwindlib=libunwind"
+458.sjeng," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," -Wno-int-conversion"," -Wno-int-conversion"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -std=gnu89"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -static -unwindlib=libunwind -L /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build-hakc/ -l:libc.a -unwindlib=libunwind"
+462.libquantum," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," -Wno-int-conversion"," -Wno-int-conversion"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -std=gnu89"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -static -unwindlib=libunwind -L /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build-hakc/ -l:libc.a -unwindlib=libunwind"
+464.h264ref," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang"," -Wno-int-conversion"," -fsigned-char"," -Wno-int-conversion"," -fsigned-char"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -std=gnu89"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -static -unwindlib=libunwind -L /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build-hakc/ -l:libc.a -unwindlib=libunwind"
+471.omnetpp," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++"," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++"," -Wno-int-conversion"," -Wno-int-conversion"," -unwindlib=libunwind"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -std=c++98"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -static -unwindlib=libunwind -L /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build-hakc/ -l:libc.a -unwindlib=libunwind"
+473.astar," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++"," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++"," -Wno-int-conversion"," -Wno-int-conversion"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -std=c++98"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -static -unwindlib=libunwind -L /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build-hakc/ -l:libc.a -unwindlib=libunwind"
+483.xalancbmk," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++"," /home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++"," -Wno-int-conversion"," -Wno-int-conversion"," -unwindlib=libunwind"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -std=c++98"," -O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/"," -static -unwindlib=libunwind -L /home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build-hakc/ -l:libc.a -unwindlib=libunwind"
+
+"Peak Compiler Invocation"
+400.perlbench
+401.bzip2
+403.gcc
+429.mcf
+445.gobmk
+456.hmmer
+458.sjeng
+462.libquantum
+464.h264ref
+471.omnetpp
+473.astar
+483.xalancbmk
+
+"Peak Portability Flags"
+400.perlbench
+401.bzip2
+403.gcc
+429.mcf
+445.gobmk
+456.hmmer
+458.sjeng
+462.libquantum
+464.h264ref
+471.omnetpp
+473.astar
+483.xalancbmk
+
+"Peak Optimization Flags"
+400.perlbench
+401.bzip2
+403.gcc
+429.mcf
+445.gobmk
+456.hmmer
+458.sjeng
+462.libquantum
+464.h264ref
+471.omnetpp
+473.astar
+483.xalancbmk
+
+"Peak Other Flags"
+400.perlbench
+401.bzip2
+403.gcc
+429.mcf
+445.gobmk
+456.hmmer
+458.sjeng
+462.libquantum
+464.h264ref
+471.omnetpp
+473.astar
+483.xalancbmk
+
+"Peak Forbidden Flags"
+400.perlbench
+401.bzip2
+403.gcc
+429.mcf
+445.gobmk
+456.hmmer
+458.sjeng
+462.libquantum
+464.h264ref
+471.omnetpp
+473.astar
+483.xalancbmk
+
+"Peak Unknown Flags"
+400.perlbench
+401.bzip2
+403.gcc
+429.mcf
+445.gobmk
+456.hmmer
+458.sjeng
+462.libquantum
+464.h264ref
+471.omnetpp
+473.astar
+483.xalancbmk
+
+ERRORS
+
+##############################################################################
+"#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #"
+"#                                                                            #"
+"# 'reportable' flag not set during run                                       #"
+"# Unknown flags were used! See                                               #"
+"#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #"
+"# for information about how to get rid of this error.                        #"
+"#                                                                            #"
+"#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #"
+##############################################################################
+----------------
+"For questions about","this result, please","contact the tester.",
+"For other inquiries,","please contact",webmaster@spec.org.,
+"Copyright 2006-2008 Standard","Performance Evaluation",Corporation,
+"Tested with SPEC CPU2006 ","v1.1.  Report","generated on ","Tue Aug  5 14:24:23 2025","by SPEC CPU2006 CSV","formatter v6128."

@@ -1,0 +1,1439 @@
+runspec v6152 started at Mon Sep 23 23:52:18 2024 on "localhost"
+runspec is: /root/spec/bin/runspec
+runspec: runspec -c llvm-mte-aarch64-mte -e default --tune base --size ref --iterations 3 --noreportable int
+toolset: unknown
+
+Locating benchmarks...found 31 benchmarks in 6 benchsets.
+Reading config file '/root/spec/config/llvm-mte-aarch64-mte.cfg'
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = default
+Size      = ref
+Machine   = default
+benchmarks= 400.perlbench,401.bzip2,403.gcc,429.mcf,445.gobmk,456.hmmer,458.sjeng,462.libquantum,464.h264ref,471.omnetpp,473.astar,483.xalancbmk,999.specrand
+outputs   = asc, csv, Screen
+username  = root
+Benchmarks selected: 400.perlbench, 401.bzip2, 403.gcc, 429.mcf, 445.gobmk, 456.hmmer, 458.sjeng, 462.libquantum, 464.h264ref, 471.omnetpp, 473.astar, 483.xalancbmk, 999.specrand
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 400.perlbench base default default
+
+------------------------------------------------------------------------
+  Up to date 401.bzip2 base default default
+
+------------------------------------------------------------------------
+  Up to date 403.gcc base default default
+
+------------------------------------------------------------------------
+  Up to date 429.mcf base default default
+
+------------------------------------------------------------------------
+  Up to date 445.gobmk base default default
+
+------------------------------------------------------------------------
+  Up to date 456.hmmer base default default
+
+------------------------------------------------------------------------
+  Up to date 458.sjeng base default default
+
+------------------------------------------------------------------------
+  Up to date 462.libquantum base default default
+
+------------------------------------------------------------------------
+  Up to date 464.h264ref base default default
+
+------------------------------------------------------------------------
+  Up to date 471.omnetpp base default default
+
+------------------------------------------------------------------------
+  Up to date 473.astar base default default
+
+------------------------------------------------------------------------
+  Up to date 483.xalancbmk base default default
+
+------------------------------------------------------------------------
+  Up to date 999.specrand base default default
+
+
+Setting Up Run Directories
+  Setting up 400.perlbench ref base default default: existing (run_base_ref_default.0002)
+  Setting up 401.bzip2 ref base default default: existing (run_base_ref_default.0002)
+  Setting up 403.gcc ref base default default: existing (run_base_ref_default.0002)
+  Setting up 429.mcf ref base default default: existing (run_base_ref_default.0002)
+  Setting up 445.gobmk ref base default default: existing (run_base_ref_default.0002)
+  Setting up 456.hmmer ref base default default: existing (run_base_ref_default.0002)
+  Setting up 458.sjeng ref base default default: existing (run_base_ref_default.0002)
+  Setting up 462.libquantum ref base default default: existing (run_base_ref_default.0002)
+  Setting up 464.h264ref ref base default default: existing (run_base_ref_default.0002)
+  Setting up 471.omnetpp ref base default default: existing (run_base_ref_default.0002)
+  Setting up 473.astar ref base default default: existing (run_base_ref_default.0002)
+  Setting up 483.xalancbmk ref base default default: existing (run_base_ref_default.0002)
+  Setting up 999.specrand ref base default default: existing (run_base_ref_default.0002)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 400.perlbench ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err bench_runner big ../run_base_ref_default.0002/perlbench_base.default -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err bench_runner big ../run_base_ref_default.0002/perlbench_base.default -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err bench_runner big ../run_base_ref_default.0002/perlbench_base.default -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Sep 23 23:52:30 2024 (1727135550)
+Stop command: Tue Sep 24 00:02:08 2024 (1727136128)
+Elapsed time for command: 00:09:38 (578)
+Workload elapsed time (0:1) = 310.156653 seconds
+Workload elapsed time (0:2) = 104.409282 seconds
+Workload elapsed time (0:3) = 155.614364 seconds
+Copy 0 of 400.perlbench (base ref) run 1 finished at Tue Sep 24 00:02:00 2024.  Total elapsed time: 570.180299
+comparing files in '/root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 00:02:08 2024 (1727136128)
+Stop command: Tue Sep 24 00:02:09 2024 (1727136129)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Mon Sep 23 23:52:30 2024 (1727135550)
+  Stop:     Tue Sep 24 00:02:08 2024 (1727136128)
+  Elapsed:  00:09:38 (578)
+  Reported: 570 180520000 570.18052
+ Success 400.perlbench base ref ratio=17.13, runtime=570.180520
+
+-----------------------------------
+  Running (#1) 401.bzip2 ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002
+    -o input.source.out -e input.source.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default input.program 280 (timed)
+    -o text.html.out -e text.html.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default text.html 280 (timed)
+    -o input.combined.out -e input.combined.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default input.combined 200 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 00:02:09 2024 (1727136129)
+Stop command: Tue Sep 24 00:16:15 2024 (1727136975)
+Elapsed time for command: 00:14:06 (846)
+Workload elapsed time (0:1) = 186.370699 seconds
+Workload elapsed time (0:2) = 48.671709 seconds
+Workload elapsed time (0:3) = 74.436355 seconds
+Workload elapsed time (0:4) = 179.28797 seconds
+Workload elapsed time (0:5) = 206.57142 seconds
+Workload elapsed time (0:6) = 141.84438 seconds
+Copy 0 of 401.bzip2 (base ref) run 1 finished at Tue Sep 24 00:16:07 2024.  Total elapsed time: 837.182533
+comparing files in '/root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 00:16:15 2024 (1727136975)
+Stop command: Tue Sep 24 00:16:16 2024 (1727136976)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 00:02:09 2024 (1727136129)
+  Stop:     Tue Sep 24 00:16:15 2024 (1727136975)
+  Elapsed:  00:14:06 (846)
+  Reported: 837 183284000 837.183284
+ Success 401.bzip2 base ref ratio=11.53, runtime=837.183284
+
+-----------------------------------
+  Running (#1) 403.gcc ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002
+    -o 166.out -e 166.err bench_runner big ../run_base_ref_default.0002/gcc_base.default 166.i -o 166.s (timed)
+    -o 200.out -e 200.err bench_runner big ../run_base_ref_default.0002/gcc_base.default 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err bench_runner big ../run_base_ref_default.0002/gcc_base.default c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err bench_runner big ../run_base_ref_default.0002/gcc_base.default cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err bench_runner big ../run_base_ref_default.0002/gcc_base.default expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err bench_runner big ../run_base_ref_default.0002/gcc_base.default expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err bench_runner big ../run_base_ref_default.0002/gcc_base.default g23.i -o g23.s (timed)
+    -o s04.out -e s04.err bench_runner big ../run_base_ref_default.0002/gcc_base.default s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err bench_runner big ../run_base_ref_default.0002/gcc_base.default scilab.i -o scilab.s (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 00:16:17 2024 (1727136977)
+Stop command: Tue Sep 24 00:26:05 2024 (1727137565)
+Elapsed time for command: 00:09:48 (588)
+Workload elapsed time (0:1) = 39.400454 seconds
+Workload elapsed time (0:2) = 67.10036 seconds
+Workload elapsed time (0:3) = 52.843658 seconds
+Workload elapsed time (0:4) = 39.225113 seconds
+Workload elapsed time (0:5) = 48.173815 seconds
+Workload elapsed time (0:6) = 70.337931 seconds
+Workload elapsed time (0:7) = 156.651329 seconds
+Workload elapsed time (0:8) = 84.220753 seconds
+Workload elapsed time (0:9) = 22.27545 seconds
+Copy 0 of 403.gcc (base ref) run 1 finished at Tue Sep 24 00:25:57 2024.  Total elapsed time: 580.228863
+comparing files in '/root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 00:26:05 2024 (1727137565)
+Stop command: Tue Sep 24 00:26:08 2024 (1727137568)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Tue Sep 24 00:16:17 2024 (1727136977)
+  Stop:     Tue Sep 24 00:26:05 2024 (1727137565)
+  Elapsed:  00:09:48 (588)
+  Reported: 580 229674000 580.229674
+ Success 403.gcc base ref ratio=13.87, runtime=580.229674
+
+-----------------------------------
+  Running (#1) 429.mcf ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002
+    -o inp.out -e inp.err bench_runner big ../run_base_ref_default.0002/mcf_base.default inp.in (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 00:26:08 2024 (1727137568)
+Stop command: Tue Sep 24 00:36:27 2024 (1727138187)
+Elapsed time for command: 00:10:19 (619)
+Workload elapsed time (0:1) = 610.842747 seconds
+Copy 0 of 429.mcf (base ref) run 1 finished at Tue Sep 24 00:36:19 2024.  Total elapsed time: 610.842747
+comparing files in '/root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 00:36:27 2024 (1727138187)
+Stop command: Tue Sep 24 00:36:28 2024 (1727138188)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 00:26:08 2024 (1727137568)
+  Stop:     Tue Sep 24 00:36:27 2024 (1727138187)
+  Elapsed:  00:10:19 (619)
+  Reported: 610 842921000 610.842921
+ Success 429.mcf base ref ratio=14.93, runtime=610.842921
+
+-----------------------------------
+  Running (#1) 445.gobmk ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002
+    -i 13x13.tst -o 13x13.out -e 13x13.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 00:36:28 2024 (1727138188)
+Stop command: Tue Sep 24 00:45:27 2024 (1727138727)
+Elapsed time for command: 00:08:59 (539)
+Workload elapsed time (0:1) = 76.12357 seconds
+Workload elapsed time (0:2) = 195.499541 seconds
+Workload elapsed time (0:3) = 89.106415 seconds
+Workload elapsed time (0:4) = 73.657871 seconds
+Workload elapsed time (0:5) = 96.024745 seconds
+Copy 0 of 445.gobmk (base ref) run 1 finished at Tue Sep 24 00:45:19 2024.  Total elapsed time: 530.412142
+comparing files in '/root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 00:45:27 2024 (1727138727)
+Stop command: Tue Sep 24 00:45:28 2024 (1727138728)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 00:36:28 2024 (1727138188)
+  Stop:     Tue Sep 24 00:45:27 2024 (1727138727)
+  Elapsed:  00:08:59 (539)
+  Reported: 530 413418000 530.413418
+ Success 445.gobmk base ref ratio=19.78, runtime=530.413418
+
+-----------------------------------
+  Running (#1) 456.hmmer ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002
+    -o nph3.out -e nph3.err bench_runner big ../run_base_ref_default.0002/hmmer_base.default nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err bench_runner big ../run_base_ref_default.0002/hmmer_base.default --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 00:45:29 2024 (1727138729)
+Stop command: Tue Sep 24 00:50:25 2024 (1727139025)
+Elapsed time for command: 00:04:56 (296)
+Workload elapsed time (0:1) = 90.226768 seconds
+Workload elapsed time (0:2) = 197.765877 seconds
+Copy 0 of 456.hmmer (base ref) run 1 finished at Tue Sep 24 00:50:17 2024.  Total elapsed time: 287.992645
+comparing files in '/root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 00:50:25 2024 (1727139025)
+Stop command: Tue Sep 24 00:50:25 2024 (1727139025)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Tue Sep 24 00:45:29 2024 (1727138729)
+  Stop:     Tue Sep 24 00:50:25 2024 (1727139025)
+  Elapsed:  00:04:56 (296)
+  Reported: 287 992879000 287.992879
+ Success 456.hmmer base ref ratio=32.40, runtime=287.992879
+
+-----------------------------------
+  Running (#1) 458.sjeng ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002
+    -o ref.out -e ref.err bench_runner big ../run_base_ref_default.0002/sjeng_base.default ref.txt (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 00:50:26 2024 (1727139026)
+Stop command: Tue Sep 24 01:02:32 2024 (1727139752)
+Elapsed time for command: 00:12:06 (726)
+Workload elapsed time (0:1) = 717.9796 seconds
+Copy 0 of 458.sjeng (base ref) run 1 finished at Tue Sep 24 01:02:24 2024.  Total elapsed time: 717.9796
+comparing files in '/root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 01:02:32 2024 (1727139752)
+Stop command: Tue Sep 24 01:02:32 2024 (1727139752)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Tue Sep 24 00:50:26 2024 (1727139026)
+  Stop:     Tue Sep 24 01:02:32 2024 (1727139752)
+  Elapsed:  00:12:06 (726)
+  Reported: 717 979786000 717.979786
+ Success 458.sjeng base ref ratio=16.85, runtime=717.979786
+
+-----------------------------------
+  Running (#1) 462.libquantum ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002
+    -o ref.out -e ref.err bench_runner big ../run_base_ref_default.0002/libquantum_base.default 1397 8 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 01:02:32 2024 (1727139752)
+Stop command: Tue Sep 24 01:07:22 2024 (1727140042)
+Elapsed time for command: 00:04:50 (290)
+Workload elapsed time (0:1) = 282.187919 seconds
+Copy 0 of 462.libquantum (base ref) run 1 finished at Tue Sep 24 01:07:14 2024.  Total elapsed time: 282.187919
+comparing files in '/root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 01:07:22 2024 (1727140042)
+Stop command: Tue Sep 24 01:07:23 2024 (1727140043)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 01:02:32 2024 (1727139752)
+  Stop:     Tue Sep 24 01:07:22 2024 (1727140042)
+  Elapsed:  00:04:50 (290)
+  Reported: 282 188124000 282.188124
+ Success 462.libquantum base ref ratio=73.43, runtime=282.188124
+
+-----------------------------------
+  Running (#1) 464.h264ref ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err bench_runner big ../run_base_ref_default.0002/h264ref_base.default -d foreman_ref_encoder_baseline.cfg (timed)
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err bench_runner big ../run_base_ref_default.0002/h264ref_base.default -d foreman_ref_encoder_main.cfg (timed)
+    -o sss_main_encodelog.out -e sss_main_encodelog.err bench_runner big ../run_base_ref_default.0002/h264ref_base.default -d sss_encoder_main.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 01:07:23 2024 (1727140043)
+Stop command: Tue Sep 24 01:16:42 2024 (1727140602)
+Elapsed time for command: 00:09:19 (559)
+Workload elapsed time (0:1) = 67.609568 seconds
+Workload elapsed time (0:2) = 48.209258 seconds
+Workload elapsed time (0:3) = 434.957458 seconds
+Copy 0 of 464.h264ref (base ref) run 1 finished at Tue Sep 24 01:16:34 2024.  Total elapsed time: 550.776284
+comparing files in '/root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 01:16:42 2024 (1727140602)
+Stop command: Tue Sep 24 01:16:43 2024 (1727140603)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 01:07:23 2024 (1727140043)
+  Stop:     Tue Sep 24 01:16:42 2024 (1727140602)
+  Elapsed:  00:09:19 (559)
+  Reported: 550 776604000 550.776604
+ Success 464.h264ref base ref ratio=40.18, runtime=550.776604
+
+-----------------------------------
+  Running (#1) 471.omnetpp ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002
+    -o omnetpp.log -e omnetpp.err bench_runner big ../run_base_ref_default.0002/omnetpp_base.default omnetpp.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 01:16:44 2024 (1727140604)
+Stop command: Tue Sep 24 01:33:39 2024 (1727141619)
+Elapsed time for command: 00:16:55 (1015)
+Workload elapsed time (0:1) = 1007.880676 seconds
+Copy 0 of 471.omnetpp (base ref) run 1 finished at Tue Sep 24 01:33:31 2024.  Total elapsed time: 1007.880676
+comparing files in '/root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 01:33:39 2024 (1727141619)
+Stop command: Tue Sep 24 01:33:40 2024 (1727141620)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 01:16:44 2024 (1727140604)
+  Stop:     Tue Sep 24 01:33:39 2024 (1727141619)
+  Elapsed:  00:16:55 (1015)
+  Reported: 1007 880832000 1007.880832
+ Success 471.omnetpp base ref ratio=6.20, runtime=1007.880832
+
+-----------------------------------
+  Running (#1) 473.astar ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner big ../run_base_ref_default.0002/astar_base.default BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner big ../run_base_ref_default.0002/astar_base.default rivers.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 01:33:40 2024 (1727141620)
+Stop command: Tue Sep 24 01:43:11 2024 (1727142191)
+Elapsed time for command: 00:09:31 (571)
+Workload elapsed time (0:1) = 268.924793 seconds
+Workload elapsed time (0:2) = 293.352114 seconds
+Copy 0 of 473.astar (base ref) run 1 finished at Tue Sep 24 01:43:03 2024.  Total elapsed time: 562.276907
+comparing files in '/root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 01:43:11 2024 (1727142191)
+Stop command: Tue Sep 24 01:43:11 2024 (1727142191)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Tue Sep 24 01:33:40 2024 (1727141620)
+  Stop:     Tue Sep 24 01:43:11 2024 (1727142191)
+  Elapsed:  00:09:31 (571)
+  Reported: 562 277079000 562.277079
+ Success 473.astar base ref ratio=12.48, runtime=562.277079
+
+-----------------------------------
+  Running (#1) 483.xalancbmk ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002
+    -o ref.out -e ref.err bench_runner big ../run_base_ref_default.0002/Xalan_base.default -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 01:43:12 2024 (1727142192)
+Stop command: Tue Sep 24 01:51:52 2024 (1727142712)
+Elapsed time for command: 00:08:40 (520)
+Workload elapsed time (0:1) = 512.556209 seconds
+Copy 0 of 483.xalancbmk (base ref) run 1 finished at Tue Sep 24 01:51:44 2024.  Total elapsed time: 512.556209
+comparing files in '/root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 01:51:52 2024 (1727142712)
+Stop command: Tue Sep 24 01:51:54 2024 (1727142714)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Tue Sep 24 01:43:12 2024 (1727142192)
+  Stop:     Tue Sep 24 01:51:52 2024 (1727142712)
+  Elapsed:  00:08:40 (520)
+  Reported: 512 556400000 512.5564
+ Success 483.xalancbmk base ref ratio=13.46, runtime=512.556400
+
+-----------------------------------
+  Running (#1) 999.specrand ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002
+    -o rand.234923.out -e rand.234923.err bench_runner big ../run_base_ref_default.0002/specrand_base.default 1255432124 234923 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 01:51:54 2024 (1727142714)
+Stop command: Tue Sep 24 01:51:54 2024 (1727142714)
+Elapsed time for command: 00:00:00 (0)
+Workload elapsed time (0:1) = 0.129706 seconds
+Copy 0 of 999.specrand (base ref) run 1 finished at Tue Sep 24 01:51:54 2024.  Total elapsed time: 0.129706
+comparing files in '/root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 01:51:54 2024 (1727142714)
+Stop command: Tue Sep 24 01:52:00 2024 (1727142720)
+Elapsed time for command: 00:00:06 (6)
+Benchmark Times:
+  Start:    Tue Sep 24 01:51:54 2024 (1727142714)
+  Stop:     Tue Sep 24 01:51:54 2024 (1727142714)
+  Elapsed:  00:00:00 (0)
+  Reported: 0 129826000 0.129826
+ Success 999.specrand base ref ratio=77.03, runtime=0.129826
+
+-----------------------------------
+  Running (#2) 400.perlbench ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err bench_runner big ../run_base_ref_default.0002/perlbench_base.default -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err bench_runner big ../run_base_ref_default.0002/perlbench_base.default -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err bench_runner big ../run_base_ref_default.0002/perlbench_base.default -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 01:52:01 2024 (1727142721)
+Stop command: Tue Sep 24 02:01:38 2024 (1727143298)
+Elapsed time for command: 00:09:37 (577)
+Workload elapsed time (0:1) = 306.483902 seconds
+Workload elapsed time (0:2) = 108.736608 seconds
+Workload elapsed time (0:3) = 154.521914 seconds
+Copy 0 of 400.perlbench (base ref) run 2 finished at Tue Sep 24 02:01:30 2024.  Total elapsed time: 569.742424
+comparing files in '/root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 02:01:39 2024 (1727143299)
+Stop command: Tue Sep 24 02:01:39 2024 (1727143299)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Tue Sep 24 01:52:01 2024 (1727142721)
+  Stop:     Tue Sep 24 02:01:38 2024 (1727143298)
+  Elapsed:  00:09:37 (577)
+  Reported: 569 742738000 569.742738
+ Success 400.perlbench base ref ratio=17.15, runtime=569.742738
+
+-----------------------------------
+  Running (#2) 401.bzip2 ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002
+    -o input.source.out -e input.source.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default input.program 280 (timed)
+    -o text.html.out -e text.html.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default text.html 280 (timed)
+    -o input.combined.out -e input.combined.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default input.combined 200 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 02:01:40 2024 (1727143300)
+Stop command: Tue Sep 24 02:15:38 2024 (1727144138)
+Elapsed time for command: 00:13:58 (838)
+Workload elapsed time (0:1) = 170.399271 seconds
+Workload elapsed time (0:2) = 49.14632 seconds
+Workload elapsed time (0:3) = 74.82528 seconds
+Workload elapsed time (0:4) = 189.678468 seconds
+Workload elapsed time (0:5) = 205.41223 seconds
+Workload elapsed time (0:6) = 140.969173 seconds
+Copy 0 of 401.bzip2 (base ref) run 2 finished at Tue Sep 24 02:15:30 2024.  Total elapsed time: 830.430742
+comparing files in '/root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 02:15:38 2024 (1727144138)
+Stop command: Tue Sep 24 02:15:40 2024 (1727144140)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Tue Sep 24 02:01:40 2024 (1727143300)
+  Stop:     Tue Sep 24 02:15:38 2024 (1727144138)
+  Elapsed:  00:13:58 (838)
+  Reported: 830 431078000 830.431078
+ Success 401.bzip2 base ref ratio=11.62, runtime=830.431078
+
+-----------------------------------
+  Running (#2) 403.gcc ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002
+    -o 166.out -e 166.err bench_runner big ../run_base_ref_default.0002/gcc_base.default 166.i -o 166.s (timed)
+    -o 200.out -e 200.err bench_runner big ../run_base_ref_default.0002/gcc_base.default 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err bench_runner big ../run_base_ref_default.0002/gcc_base.default c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err bench_runner big ../run_base_ref_default.0002/gcc_base.default cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err bench_runner big ../run_base_ref_default.0002/gcc_base.default expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err bench_runner big ../run_base_ref_default.0002/gcc_base.default expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err bench_runner big ../run_base_ref_default.0002/gcc_base.default g23.i -o g23.s (timed)
+    -o s04.out -e s04.err bench_runner big ../run_base_ref_default.0002/gcc_base.default s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err bench_runner big ../run_base_ref_default.0002/gcc_base.default scilab.i -o scilab.s (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 02:15:40 2024 (1727144140)
+Stop command: Tue Sep 24 02:25:32 2024 (1727144732)
+Elapsed time for command: 00:09:52 (592)
+Workload elapsed time (0:1) = 39.745196 seconds
+Workload elapsed time (0:2) = 68.079989 seconds
+Workload elapsed time (0:3) = 53.450537 seconds
+Workload elapsed time (0:4) = 38.878954 seconds
+Workload elapsed time (0:5) = 48.995848 seconds
+Workload elapsed time (0:6) = 70.501519 seconds
+Workload elapsed time (0:7) = 157.520382 seconds
+Workload elapsed time (0:8) = 84.235042 seconds
+Workload elapsed time (0:9) = 22.374726 seconds
+Copy 0 of 403.gcc (base ref) run 2 finished at Tue Sep 24 02:25:24 2024.  Total elapsed time: 583.782193
+comparing files in '/root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 02:25:32 2024 (1727144732)
+Stop command: Tue Sep 24 02:25:34 2024 (1727144734)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Tue Sep 24 02:15:40 2024 (1727144140)
+  Stop:     Tue Sep 24 02:25:32 2024 (1727144732)
+  Elapsed:  00:09:52 (592)
+  Reported: 583 782633000 583.782633
+ Success 403.gcc base ref ratio=13.79, runtime=583.782633
+
+-----------------------------------
+  Running (#2) 429.mcf ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002
+    -o inp.out -e inp.err bench_runner big ../run_base_ref_default.0002/mcf_base.default inp.in (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 02:25:34 2024 (1727144734)
+Stop command: Tue Sep 24 02:35:16 2024 (1727145316)
+Elapsed time for command: 00:09:42 (582)
+Workload elapsed time (0:1) = 573.777729 seconds
+Copy 0 of 429.mcf (base ref) run 2 finished at Tue Sep 24 02:35:08 2024.  Total elapsed time: 573.777729
+comparing files in '/root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 02:35:16 2024 (1727145316)
+Stop command: Tue Sep 24 02:35:17 2024 (1727145317)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 02:25:34 2024 (1727144734)
+  Stop:     Tue Sep 24 02:35:16 2024 (1727145316)
+  Elapsed:  00:09:42 (582)
+  Reported: 573 777859000 573.777859
+ Success 429.mcf base ref ratio=15.89, runtime=573.777859
+
+-----------------------------------
+  Running (#2) 445.gobmk ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002
+    -i 13x13.tst -o 13x13.out -e 13x13.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 02:35:17 2024 (1727145317)
+Stop command: Tue Sep 24 02:44:07 2024 (1727145847)
+Elapsed time for command: 00:08:50 (530)
+Workload elapsed time (0:1) = 73.928599 seconds
+Workload elapsed time (0:2) = 191.594007 seconds
+Workload elapsed time (0:3) = 88.777928 seconds
+Workload elapsed time (0:4) = 72.93275 seconds
+Workload elapsed time (0:5) = 94.704403 seconds
+Copy 0 of 445.gobmk (base ref) run 2 finished at Tue Sep 24 02:43:59 2024.  Total elapsed time: 521.937687
+comparing files in '/root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 02:44:07 2024 (1727145847)
+Stop command: Tue Sep 24 02:44:09 2024 (1727145849)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Tue Sep 24 02:35:17 2024 (1727145317)
+  Stop:     Tue Sep 24 02:44:07 2024 (1727145847)
+  Elapsed:  00:08:50 (530)
+  Reported: 521 938085000 521.938085
+ Success 445.gobmk base ref ratio=20.10, runtime=521.938085
+
+-----------------------------------
+  Running (#2) 456.hmmer ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002
+    -o nph3.out -e nph3.err bench_runner big ../run_base_ref_default.0002/hmmer_base.default nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err bench_runner big ../run_base_ref_default.0002/hmmer_base.default --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 02:44:09 2024 (1727145849)
+Stop command: Tue Sep 24 02:49:04 2024 (1727146144)
+Elapsed time for command: 00:04:55 (295)
+Workload elapsed time (0:1) = 89.801073 seconds
+Workload elapsed time (0:2) = 197.693823 seconds
+Copy 0 of 456.hmmer (base ref) run 2 finished at Tue Sep 24 02:48:56 2024.  Total elapsed time: 287.494896
+comparing files in '/root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 02:49:04 2024 (1727146144)
+Stop command: Tue Sep 24 02:49:05 2024 (1727146145)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 02:44:09 2024 (1727145849)
+  Stop:     Tue Sep 24 02:49:04 2024 (1727146144)
+  Elapsed:  00:04:55 (295)
+  Reported: 287 495134000 287.495134
+ Success 456.hmmer base ref ratio=32.45, runtime=287.495134
+
+-----------------------------------
+  Running (#2) 458.sjeng ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002
+    -o ref.out -e ref.err bench_runner big ../run_base_ref_default.0002/sjeng_base.default ref.txt (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 02:49:05 2024 (1727146145)
+Stop command: Tue Sep 24 03:01:15 2024 (1727146875)
+Elapsed time for command: 00:12:10 (730)
+Workload elapsed time (0:1) = 721.518084 seconds
+Copy 0 of 458.sjeng (base ref) run 2 finished at Tue Sep 24 03:01:07 2024.  Total elapsed time: 721.518084
+comparing files in '/root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 03:01:15 2024 (1727146875)
+Stop command: Tue Sep 24 03:01:15 2024 (1727146875)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Tue Sep 24 02:49:05 2024 (1727146145)
+  Stop:     Tue Sep 24 03:01:15 2024 (1727146875)
+  Elapsed:  00:12:10 (730)
+  Reported: 721 518263000 721.518263
+ Success 458.sjeng base ref ratio=16.77, runtime=721.518263
+
+-----------------------------------
+  Running (#2) 462.libquantum ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002
+    -o ref.out -e ref.err bench_runner big ../run_base_ref_default.0002/libquantum_base.default 1397 8 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 03:01:15 2024 (1727146875)
+Stop command: Tue Sep 24 03:06:33 2024 (1727147193)
+Elapsed time for command: 00:05:18 (318)
+Workload elapsed time (0:1) = 309.725882 seconds
+Copy 0 of 462.libquantum (base ref) run 2 finished at Tue Sep 24 03:06:25 2024.  Total elapsed time: 309.725882
+comparing files in '/root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 03:06:33 2024 (1727147193)
+Stop command: Tue Sep 24 03:06:34 2024 (1727147194)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 03:01:15 2024 (1727146875)
+  Stop:     Tue Sep 24 03:06:33 2024 (1727147193)
+  Elapsed:  00:05:18 (318)
+  Reported: 309 726048000 309.726048
+ Success 462.libquantum base ref ratio=66.90, runtime=309.726048
+
+-----------------------------------
+  Running (#2) 464.h264ref ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err bench_runner big ../run_base_ref_default.0002/h264ref_base.default -d foreman_ref_encoder_baseline.cfg (timed)
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err bench_runner big ../run_base_ref_default.0002/h264ref_base.default -d foreman_ref_encoder_main.cfg (timed)
+    -o sss_main_encodelog.out -e sss_main_encodelog.err bench_runner big ../run_base_ref_default.0002/h264ref_base.default -d sss_encoder_main.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 03:06:34 2024 (1727147194)
+Stop command: Tue Sep 24 03:15:51 2024 (1727147751)
+Elapsed time for command: 00:09:17 (557)
+Workload elapsed time (0:1) = 68.519295 seconds
+Workload elapsed time (0:2) = 48.40266 seconds
+Workload elapsed time (0:3) = 431.906901 seconds
+Copy 0 of 464.h264ref (base ref) run 2 finished at Tue Sep 24 03:15:43 2024.  Total elapsed time: 548.828856
+comparing files in '/root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 03:15:51 2024 (1727147751)
+Stop command: Tue Sep 24 03:15:52 2024 (1727147752)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 03:06:34 2024 (1727147194)
+  Stop:     Tue Sep 24 03:15:51 2024 (1727147751)
+  Elapsed:  00:09:17 (557)
+  Reported: 548 829497000 548.829497
+ Success 464.h264ref base ref ratio=40.32, runtime=548.829497
+
+-----------------------------------
+  Running (#2) 471.omnetpp ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002
+    -o omnetpp.log -e omnetpp.err bench_runner big ../run_base_ref_default.0002/omnetpp_base.default omnetpp.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 03:15:52 2024 (1727147752)
+Stop command: Tue Sep 24 03:32:37 2024 (1727148757)
+Elapsed time for command: 00:16:45 (1005)
+Workload elapsed time (0:1) = 996.937856 seconds
+Copy 0 of 471.omnetpp (base ref) run 2 finished at Tue Sep 24 03:32:29 2024.  Total elapsed time: 996.937856
+comparing files in '/root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 03:32:37 2024 (1727148757)
+Stop command: Tue Sep 24 03:32:38 2024 (1727148758)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 03:15:52 2024 (1727147752)
+  Stop:     Tue Sep 24 03:32:37 2024 (1727148757)
+  Elapsed:  00:16:45 (1005)
+  Reported: 996 938036000 996.938036
+ Success 471.omnetpp base ref ratio=6.27, runtime=996.938036
+
+-----------------------------------
+  Running (#2) 473.astar ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner big ../run_base_ref_default.0002/astar_base.default BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner big ../run_base_ref_default.0002/astar_base.default rivers.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 03:32:38 2024 (1727148758)
+Stop command: Tue Sep 24 03:42:15 2024 (1727149335)
+Elapsed time for command: 00:09:37 (577)
+Workload elapsed time (0:1) = 272.515205 seconds
+Workload elapsed time (0:2) = 295.82078 seconds
+Copy 0 of 473.astar (base ref) run 2 finished at Tue Sep 24 03:42:07 2024.  Total elapsed time: 568.335985
+comparing files in '/root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 03:42:15 2024 (1727149335)
+Stop command: Tue Sep 24 03:42:16 2024 (1727149336)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 03:32:38 2024 (1727148758)
+  Stop:     Tue Sep 24 03:42:15 2024 (1727149335)
+  Elapsed:  00:09:37 (577)
+  Reported: 568 336158000 568.336158
+ Success 473.astar base ref ratio=12.35, runtime=568.336158
+
+-----------------------------------
+  Running (#2) 483.xalancbmk ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002
+    -o ref.out -e ref.err bench_runner big ../run_base_ref_default.0002/Xalan_base.default -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 03:42:16 2024 (1727149336)
+Stop command: Tue Sep 24 03:50:58 2024 (1727149858)
+Elapsed time for command: 00:08:42 (522)
+Workload elapsed time (0:1) = 514.45584 seconds
+Copy 0 of 483.xalancbmk (base ref) run 2 finished at Tue Sep 24 03:50:50 2024.  Total elapsed time: 514.45584
+comparing files in '/root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 03:50:58 2024 (1727149858)
+Stop command: Tue Sep 24 03:51:00 2024 (1727149860)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Tue Sep 24 03:42:16 2024 (1727149336)
+  Stop:     Tue Sep 24 03:50:58 2024 (1727149858)
+  Elapsed:  00:08:42 (522)
+  Reported: 514 455979000 514.455979
+ Success 483.xalancbmk base ref ratio=13.41, runtime=514.455979
+
+-----------------------------------
+  Running (#2) 999.specrand ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002
+    -o rand.234923.out -e rand.234923.err bench_runner big ../run_base_ref_default.0002/specrand_base.default 1255432124 234923 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 03:51:00 2024 (1727149860)
+Stop command: Tue Sep 24 03:51:01 2024 (1727149861)
+Elapsed time for command: 00:00:01 (1)
+Workload elapsed time (0:1) = 0.152816 seconds
+Copy 0 of 999.specrand (base ref) run 2 finished at Tue Sep 24 03:51:00 2024.  Total elapsed time: 0.152816
+comparing files in '/root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 03:51:01 2024 (1727149861)
+Stop command: Tue Sep 24 03:51:05 2024 (1727149865)
+Elapsed time for command: 00:00:04 (4)
+Benchmark Times:
+  Start:    Tue Sep 24 03:51:00 2024 (1727149860)
+  Stop:     Tue Sep 24 03:51:01 2024 (1727149861)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 152992000 0.152992
+ Success 999.specrand base ref ratio=65.36, runtime=0.152992
+
+-----------------------------------
+  Running (#3) 400.perlbench ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err bench_runner big ../run_base_ref_default.0002/perlbench_base.default -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err bench_runner big ../run_base_ref_default.0002/perlbench_base.default -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err bench_runner big ../run_base_ref_default.0002/perlbench_base.default -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 03:51:05 2024 (1727149865)
+Stop command: Tue Sep 24 04:00:42 2024 (1727150442)
+Elapsed time for command: 00:09:37 (577)
+Workload elapsed time (0:1) = 303.200124 seconds
+Workload elapsed time (0:2) = 111.340493 seconds
+Workload elapsed time (0:3) = 154.913667 seconds
+Copy 0 of 400.perlbench (base ref) run 3 finished at Tue Sep 24 04:00:34 2024.  Total elapsed time: 569.454284
+comparing files in '/root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 04:00:43 2024 (1727150443)
+Stop command: Tue Sep 24 04:00:43 2024 (1727150443)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Tue Sep 24 03:51:05 2024 (1727149865)
+  Stop:     Tue Sep 24 04:00:42 2024 (1727150442)
+  Elapsed:  00:09:37 (577)
+  Reported: 569 454590000 569.45459
+ Success 400.perlbench base ref ratio=17.16, runtime=569.454590
+
+-----------------------------------
+  Running (#3) 401.bzip2 ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002
+    -o input.source.out -e input.source.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default input.program 280 (timed)
+    -o text.html.out -e text.html.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default text.html 280 (timed)
+    -o input.combined.out -e input.combined.err bench_runner big ../run_base_ref_default.0002/bzip2_base.default input.combined 200 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 04:00:43 2024 (1727150443)
+Stop command: Tue Sep 24 04:14:46 2024 (1727151286)
+Elapsed time for command: 00:14:03 (843)
+Workload elapsed time (0:1) = 185.498976 seconds
+Workload elapsed time (0:2) = 47.11592 seconds
+Workload elapsed time (0:3) = 73.933696 seconds
+Workload elapsed time (0:4) = 193.513549 seconds
+Workload elapsed time (0:5) = 192.74948 seconds
+Workload elapsed time (0:6) = 141.475985 seconds
+Copy 0 of 401.bzip2 (base ref) run 3 finished at Tue Sep 24 04:14:38 2024.  Total elapsed time: 834.287606
+comparing files in '/root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 04:14:46 2024 (1727151286)
+Stop command: Tue Sep 24 04:14:47 2024 (1727151287)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 04:00:43 2024 (1727150443)
+  Stop:     Tue Sep 24 04:14:46 2024 (1727151286)
+  Elapsed:  00:14:03 (843)
+  Reported: 834 288299000 834.288299
+ Success 401.bzip2 base ref ratio=11.57, runtime=834.288299
+
+-----------------------------------
+  Running (#3) 403.gcc ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002
+    -o 166.out -e 166.err bench_runner big ../run_base_ref_default.0002/gcc_base.default 166.i -o 166.s (timed)
+    -o 200.out -e 200.err bench_runner big ../run_base_ref_default.0002/gcc_base.default 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err bench_runner big ../run_base_ref_default.0002/gcc_base.default c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err bench_runner big ../run_base_ref_default.0002/gcc_base.default cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err bench_runner big ../run_base_ref_default.0002/gcc_base.default expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err bench_runner big ../run_base_ref_default.0002/gcc_base.default expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err bench_runner big ../run_base_ref_default.0002/gcc_base.default g23.i -o g23.s (timed)
+    -o s04.out -e s04.err bench_runner big ../run_base_ref_default.0002/gcc_base.default s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err bench_runner big ../run_base_ref_default.0002/gcc_base.default scilab.i -o scilab.s (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 04:14:48 2024 (1727151288)
+Stop command: Tue Sep 24 04:24:40 2024 (1727151880)
+Elapsed time for command: 00:09:52 (592)
+Workload elapsed time (0:1) = 40.590109 seconds
+Workload elapsed time (0:2) = 67.880491 seconds
+Workload elapsed time (0:3) = 53.263098 seconds
+Workload elapsed time (0:4) = 38.819793 seconds
+Workload elapsed time (0:5) = 48.804986 seconds
+Workload elapsed time (0:6) = 70.490205 seconds
+Workload elapsed time (0:7) = 157.57709 seconds
+Workload elapsed time (0:8) = 84.376639 seconds
+Workload elapsed time (0:9) = 22.518708 seconds
+Copy 0 of 403.gcc (base ref) run 3 finished at Tue Sep 24 04:24:32 2024.  Total elapsed time: 584.321119
+comparing files in '/root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 04:24:40 2024 (1727151880)
+Stop command: Tue Sep 24 04:24:43 2024 (1727151883)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Tue Sep 24 04:14:48 2024 (1727151288)
+  Stop:     Tue Sep 24 04:24:40 2024 (1727151880)
+  Elapsed:  00:09:52 (592)
+  Reported: 584 322248000 584.322248
+ Success 403.gcc base ref ratio=13.78, runtime=584.322248
+
+-----------------------------------
+  Running (#3) 429.mcf ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002
+    -o inp.out -e inp.err bench_runner big ../run_base_ref_default.0002/mcf_base.default inp.in (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 04:24:43 2024 (1727151883)
+Stop command: Tue Sep 24 04:34:21 2024 (1727152461)
+Elapsed time for command: 00:09:38 (578)
+Workload elapsed time (0:1) = 569.393921 seconds
+Copy 0 of 429.mcf (base ref) run 3 finished at Tue Sep 24 04:34:13 2024.  Total elapsed time: 569.393921
+comparing files in '/root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 04:34:21 2024 (1727152461)
+Stop command: Tue Sep 24 04:34:22 2024 (1727152462)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 04:24:43 2024 (1727151883)
+  Stop:     Tue Sep 24 04:34:21 2024 (1727152461)
+  Elapsed:  00:09:38 (578)
+  Reported: 569 394085000 569.394085
+ Success 429.mcf base ref ratio=16.02, runtime=569.394085
+
+-----------------------------------
+  Running (#3) 445.gobmk ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002
+    -i 13x13.tst -o 13x13.out -e 13x13.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err bench_runner big ../run_base_ref_default.0002/gobmk_base.default --quiet --mode gtp (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 04:34:22 2024 (1727152462)
+Stop command: Tue Sep 24 04:43:14 2024 (1727152994)
+Elapsed time for command: 00:08:52 (532)
+Workload elapsed time (0:1) = 73.833845 seconds
+Workload elapsed time (0:2) = 195.559987 seconds
+Workload elapsed time (0:3) = 88.866122 seconds
+Workload elapsed time (0:4) = 72.041175 seconds
+Workload elapsed time (0:5) = 94.173567 seconds
+Copy 0 of 445.gobmk (base ref) run 3 finished at Tue Sep 24 04:43:06 2024.  Total elapsed time: 524.474696
+comparing files in '/root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 04:43:15 2024 (1727152995)
+Stop command: Tue Sep 24 04:43:16 2024 (1727152996)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 04:34:22 2024 (1727152462)
+  Stop:     Tue Sep 24 04:43:14 2024 (1727152994)
+  Elapsed:  00:08:52 (532)
+  Reported: 524 475386000 524.475386
+ Success 445.gobmk base ref ratio=20.00, runtime=524.475386
+
+-----------------------------------
+  Running (#3) 456.hmmer ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002
+    -o nph3.out -e nph3.err bench_runner big ../run_base_ref_default.0002/hmmer_base.default nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err bench_runner big ../run_base_ref_default.0002/hmmer_base.default --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 04:43:16 2024 (1727152996)
+Stop command: Tue Sep 24 04:48:12 2024 (1727153292)
+Elapsed time for command: 00:04:56 (296)
+Workload elapsed time (0:1) = 90.196424 seconds
+Workload elapsed time (0:2) = 197.715085 seconds
+Copy 0 of 456.hmmer (base ref) run 3 finished at Tue Sep 24 04:48:04 2024.  Total elapsed time: 287.911509
+comparing files in '/root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 04:48:12 2024 (1727153292)
+Stop command: Tue Sep 24 04:48:13 2024 (1727153293)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 04:43:16 2024 (1727152996)
+  Stop:     Tue Sep 24 04:48:12 2024 (1727153292)
+  Elapsed:  00:04:56 (296)
+  Reported: 287 911899000 287.911899
+ Success 456.hmmer base ref ratio=32.41, runtime=287.911899
+
+-----------------------------------
+  Running (#3) 458.sjeng ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002
+    -o ref.out -e ref.err bench_runner big ../run_base_ref_default.0002/sjeng_base.default ref.txt (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 04:48:13 2024 (1727153293)
+Stop command: Tue Sep 24 05:00:14 2024 (1727154014)
+Elapsed time for command: 00:12:01 (721)
+Workload elapsed time (0:1) = 713.253949 seconds
+Copy 0 of 458.sjeng (base ref) run 3 finished at Tue Sep 24 05:00:06 2024.  Total elapsed time: 713.253949
+comparing files in '/root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 05:00:14 2024 (1727154014)
+Stop command: Tue Sep 24 05:00:15 2024 (1727154015)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 04:48:13 2024 (1727153293)
+  Stop:     Tue Sep 24 05:00:14 2024 (1727154014)
+  Elapsed:  00:12:01 (721)
+  Reported: 713 254130000 713.25413
+ Success 458.sjeng base ref ratio=16.96, runtime=713.254130
+
+-----------------------------------
+  Running (#3) 462.libquantum ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002
+    -o ref.out -e ref.err bench_runner big ../run_base_ref_default.0002/libquantum_base.default 1397 8 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 05:00:15 2024 (1727154015)
+Stop command: Tue Sep 24 05:05:25 2024 (1727154325)
+Elapsed time for command: 00:05:10 (310)
+Workload elapsed time (0:1) = 302.561108 seconds
+Copy 0 of 462.libquantum (base ref) run 3 finished at Tue Sep 24 05:05:17 2024.  Total elapsed time: 302.561108
+comparing files in '/root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 05:05:26 2024 (1727154326)
+Stop command: Tue Sep 24 05:05:26 2024 (1727154326)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Tue Sep 24 05:00:15 2024 (1727154015)
+  Stop:     Tue Sep 24 05:05:25 2024 (1727154325)
+  Elapsed:  00:05:10 (310)
+  Reported: 302 561271000 302.561271
+ Success 462.libquantum base ref ratio=68.48, runtime=302.561271
+
+-----------------------------------
+  Running (#3) 464.h264ref ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err bench_runner big ../run_base_ref_default.0002/h264ref_base.default -d foreman_ref_encoder_baseline.cfg (timed)
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err bench_runner big ../run_base_ref_default.0002/h264ref_base.default -d foreman_ref_encoder_main.cfg (timed)
+    -o sss_main_encodelog.out -e sss_main_encodelog.err bench_runner big ../run_base_ref_default.0002/h264ref_base.default -d sss_encoder_main.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 05:05:26 2024 (1727154326)
+Stop command: Tue Sep 24 05:14:40 2024 (1727154880)
+Elapsed time for command: 00:09:14 (554)
+Workload elapsed time (0:1) = 67.705463 seconds
+Workload elapsed time (0:2) = 48.257486 seconds
+Workload elapsed time (0:3) = 430.19586 seconds
+Copy 0 of 464.h264ref (base ref) run 3 finished at Tue Sep 24 05:14:32 2024.  Total elapsed time: 546.158809
+comparing files in '/root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 05:14:40 2024 (1727154880)
+Stop command: Tue Sep 24 05:14:42 2024 (1727154882)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Tue Sep 24 05:05:26 2024 (1727154326)
+  Stop:     Tue Sep 24 05:14:40 2024 (1727154880)
+  Elapsed:  00:09:14 (554)
+  Reported: 546 159042000 546.159042
+ Success 464.h264ref base ref ratio=40.52, runtime=546.159042
+
+-----------------------------------
+  Running (#3) 471.omnetpp ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002
+    -o omnetpp.log -e omnetpp.err bench_runner big ../run_base_ref_default.0002/omnetpp_base.default omnetpp.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 05:14:42 2024 (1727154882)
+Stop command: Tue Sep 24 05:31:27 2024 (1727155887)
+Elapsed time for command: 00:16:45 (1005)
+Workload elapsed time (0:1) = 996.965523 seconds
+Copy 0 of 471.omnetpp (base ref) run 3 finished at Tue Sep 24 05:31:19 2024.  Total elapsed time: 996.965523
+comparing files in '/root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 05:31:27 2024 (1727155887)
+Stop command: Tue Sep 24 05:31:28 2024 (1727155888)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 05:14:42 2024 (1727154882)
+  Stop:     Tue Sep 24 05:31:27 2024 (1727155887)
+  Elapsed:  00:16:45 (1005)
+  Reported: 996 965693000 996.965693
+ Success 471.omnetpp base ref ratio=6.27, runtime=996.965693
+
+-----------------------------------
+  Running (#3) 473.astar ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner big ../run_base_ref_default.0002/astar_base.default BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner big ../run_base_ref_default.0002/astar_base.default rivers.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 05:31:28 2024 (1727155888)
+Stop command: Tue Sep 24 05:41:05 2024 (1727156465)
+Elapsed time for command: 00:09:37 (577)
+Workload elapsed time (0:1) = 273.40223 seconds
+Workload elapsed time (0:2) = 294.999612 seconds
+Copy 0 of 473.astar (base ref) run 3 finished at Tue Sep 24 05:40:57 2024.  Total elapsed time: 568.401842
+comparing files in '/root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 05:41:05 2024 (1727156465)
+Stop command: Tue Sep 24 05:41:05 2024 (1727156465)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Tue Sep 24 05:31:28 2024 (1727155888)
+  Stop:     Tue Sep 24 05:41:05 2024 (1727156465)
+  Elapsed:  00:09:37 (577)
+  Reported: 568 402010000 568.40201
+ Success 473.astar base ref ratio=12.35, runtime=568.402010
+
+-----------------------------------
+  Running (#3) 483.xalancbmk ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002
+    -o ref.out -e ref.err bench_runner big ../run_base_ref_default.0002/Xalan_base.default -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 05:41:05 2024 (1727156465)
+Stop command: Tue Sep 24 05:49:50 2024 (1727156990)
+Elapsed time for command: 00:08:45 (525)
+Workload elapsed time (0:1) = 516.133414 seconds
+Copy 0 of 483.xalancbmk (base ref) run 3 finished at Tue Sep 24 05:49:42 2024.  Total elapsed time: 516.133414
+comparing files in '/root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 05:49:50 2024 (1727156990)
+Stop command: Tue Sep 24 05:49:51 2024 (1727156991)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Tue Sep 24 05:41:05 2024 (1727156465)
+  Stop:     Tue Sep 24 05:49:50 2024 (1727156990)
+  Elapsed:  00:08:45 (525)
+  Reported: 516 133561000 516.133561
+ Success 483.xalancbmk base ref ratio=13.37, runtime=516.133561
+
+-----------------------------------
+  Running (#3) 999.specrand ref base default default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002
+    -o rand.234923.out -e rand.234923.err bench_runner big ../run_base_ref_default.0002/specrand_base.default 1255432124 234923 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Sep 24 05:49:51 2024 (1727156991)
+Stop command: Tue Sep 24 05:49:52 2024 (1727156992)
+Elapsed time for command: 00:00:01 (1)
+Workload elapsed time (0:1) = 0.128056 seconds
+Copy 0 of 999.specrand (base ref) run 3 finished at Tue Sep 24 05:49:51 2024.  Total elapsed time: 0.128056
+comparing files in '/root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Sep 24 05:49:52 2024 (1727156992)
+Stop command: Tue Sep 24 05:49:56 2024 (1727156996)
+Elapsed time for command: 00:00:04 (4)
+Benchmark Times:
+  Start:    Tue Sep 24 05:49:51 2024 (1727156991)
+  Stop:     Tue Sep 24 05:49:52 2024 (1727156992)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 128255000 0.128255
+ Success 999.specrand base ref ratio=77.97, runtime=0.128255
+Success: 3x400.perlbench 3x401.bzip2 3x403.gcc 3x429.mcf 3x445.gobmk 3x456.hmmer 3x458.sjeng 3x462.libquantum 3x464.h264ref 3x471.omnetpp 3x473.astar 3x483.xalancbmk 3x999.specrand
+Producing Raw Reports
+mach: default
+  ext: default
+    size: ref
+      set: int
+        format: raw -> /root/spec/result/CINT2006.098.ref.rsf
+Parsing flags for 400.perlbench base: done
+Parsing flags for 401.bzip2 base: done
+Parsing flags for 403.gcc base: done
+Parsing flags for 429.mcf base: done
+Parsing flags for 445.gobmk base: done
+Parsing flags for 456.hmmer base: done
+Parsing flags for 458.sjeng base: done
+Parsing flags for 462.libquantum base: done
+Parsing flags for 464.h264ref base: done
+Parsing flags for 471.omnetpp base: done
+Parsing flags for 473.astar base: done
+Parsing flags for 483.xalancbmk base: done
+Doing flag reduction: done
+        format: ASCII -> /root/spec/result/CINT2006.098.ref.txt
+        format: CSV -> /root/spec/result/CINT2006.098.ref.csv
+        format: Screen -> 
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+400.perlbench    9770        570      17.1  *                                  
+401.bzip2        9650        834      11.6  *                                  
+403.gcc          8050        584      13.8  *                                  
+429.mcf          9120        574      15.9  *                                  
+445.gobmk       10490        524      20.0  *                                  
+456.hmmer        9330        288      32.4  *                                  
+458.sjeng       12100        718      16.9  *                                  
+462.libquantum  20720        303      68.5  *                                  
+464.h264ref     22130        549      40.3  *                                  
+471.omnetpp      6250        997       6.27 *                                  
+473.astar        7020        568      12.4  *                                  
+483.xalancbmk    6900        514      13.4  *                                  
+ Est. SPECint_base2006                18.2 
+ Est. SPECint2006                                                   Not Run
+
+      set: fp
+
+The log for this run is in /root/spec/result/CPU2006.098.log
+
+runspec finished at Tue Sep 24 05:49:59 2024; 21461 total seconds elapsed

@@ -1,0 +1,1439 @@
+runspec v6152 started at Sat Aug  9 18:22:47 2025 on "fedora"
+runspec is: /root/mte/mte-playground/spec/bin/runspec
+runspec: runspec --config=llvm-aarch64-mte-tagcfi.cfg --ext=default-static --mach=default --size=ref --tune=base --noreportable -S LOADER=taskset -c 1 -S PASS_ENV=GLIBC_TUNABLES=glibc.mem.tagging=3 int
+toolset: unknown
+
+Locating benchmarks...found 31 benchmarks in 6 benchsets.
+Reading config file '/root/mte/mte-playground/spec/config/llvm-aarch64-mte-tagcfi.cfg'
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = default-static
+Size      = ref
+Machine   = default
+benchmarks= 400.perlbench,401.bzip2,403.gcc,429.mcf,445.gobmk,456.hmmer,458.sjeng,462.libquantum,464.h264ref,471.omnetpp,473.astar,483.xalancbmk,999.specrand
+outputs   = asc, csv, Screen
+username  = root
+Benchmarks selected: 400.perlbench, 401.bzip2, 403.gcc, 429.mcf, 445.gobmk, 456.hmmer, 458.sjeng, 462.libquantum, 464.h264ref, 471.omnetpp, 473.astar, 483.xalancbmk, 999.specrand
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 400.perlbench base default-static default
+
+------------------------------------------------------------------------
+  Up to date 401.bzip2 base default-static default
+
+------------------------------------------------------------------------
+  Up to date 403.gcc base default-static default
+
+------------------------------------------------------------------------
+  Up to date 429.mcf base default-static default
+
+------------------------------------------------------------------------
+  Up to date 445.gobmk base default-static default
+
+------------------------------------------------------------------------
+  Up to date 456.hmmer base default-static default
+
+------------------------------------------------------------------------
+  Up to date 458.sjeng base default-static default
+
+------------------------------------------------------------------------
+  Up to date 462.libquantum base default-static default
+
+------------------------------------------------------------------------
+  Up to date 464.h264ref base default-static default
+
+------------------------------------------------------------------------
+  Up to date 471.omnetpp base default-static default
+
+------------------------------------------------------------------------
+  Up to date 473.astar base default-static default
+
+------------------------------------------------------------------------
+  Up to date 483.xalancbmk base default-static default
+
+------------------------------------------------------------------------
+  Up to date 999.specrand base default-static default
+
+
+Setting Up Run Directories
+  Setting up 400.perlbench ref base default-static default: existing (run_base_ref_default-static.0000)
+  Setting up 401.bzip2 ref base default-static default: existing (run_base_ref_default-static.0000)
+  Setting up 403.gcc ref base default-static default: existing (run_base_ref_default-static.0000)
+  Setting up 429.mcf ref base default-static default: existing (run_base_ref_default-static.0000)
+  Setting up 445.gobmk ref base default-static default: existing (run_base_ref_default-static.0000)
+  Setting up 456.hmmer ref base default-static default: existing (run_base_ref_default-static.0000)
+  Setting up 458.sjeng ref base default-static default: existing (run_base_ref_default-static.0000)
+  Setting up 462.libquantum ref base default-static default: existing (run_base_ref_default-static.0000)
+  Setting up 464.h264ref ref base default-static default: existing (run_base_ref_default-static.0000)
+  Setting up 471.omnetpp ref base default-static default: existing (run_base_ref_default-static.0000)
+  Setting up 473.astar ref base default-static default: existing (run_base_ref_default-static.0000)
+  Setting up 483.xalancbmk ref base default-static default: existing (run_base_ref_default-static.0000)
+  Setting up 999.specrand ref base default-static default: existing (run_base_ref_default-static.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 400.perlbench ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/perlbench_base.default-static -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/perlbench_base.default-static -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/perlbench_base.default-static -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 18:22:56 2025 (1754788976)
+Stop command: Sat Aug  9 18:29:27 2025 (1754789367)
+Elapsed time for command: 00:06:31 (391)
+Workload elapsed time (0:1) = 193.040807 seconds
+Workload elapsed time (0:2) = 79.837106 seconds
+Workload elapsed time (0:3) = 109.374139 seconds
+Copy 0 of 400.perlbench (base ref) run 1 finished at Sat Aug  9 18:29:19 2025.  Total elapsed time: 382.252052
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 18:29:27 2025 (1754789367)
+Stop command: Sat Aug  9 18:29:27 2025 (1754789367)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Aug  9 18:22:56 2025 (1754788976)
+  Stop:     Sat Aug  9 18:29:27 2025 (1754789367)
+  Elapsed:  00:06:31 (391)
+  Reported: 382 252166000 382.252166
+ Success 400.perlbench base ref ratio=25.56, runtime=382.252166
+
+-----------------------------------
+  Running (#1) 401.bzip2 ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000
+    -o input.source.out -e input.source.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static input.program 280 (timed)
+    -o text.html.out -e text.html.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static text.html 280 (timed)
+    -o input.combined.out -e input.combined.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static input.combined 200 (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 18:29:27 2025 (1754789367)
+Stop command: Sat Aug  9 18:38:19 2025 (1754789899)
+Elapsed time for command: 00:08:52 (532)
+Workload elapsed time (0:1) = 103.122173 seconds
+Workload elapsed time (0:2) = 37.879428 seconds
+Workload elapsed time (0:3) = 61.349655 seconds
+Workload elapsed time (0:4) = 117.5706 seconds
+Workload elapsed time (0:5) = 122.446972 seconds
+Workload elapsed time (0:6) = 81.441411 seconds
+Copy 0 of 401.bzip2 (base ref) run 1 finished at Sat Aug  9 18:38:11 2025.  Total elapsed time: 523.810239
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 18:38:19 2025 (1754789899)
+Stop command: Sat Aug  9 18:38:20 2025 (1754789900)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 18:29:27 2025 (1754789367)
+  Stop:     Sat Aug  9 18:38:19 2025 (1754789899)
+  Elapsed:  00:08:52 (532)
+  Reported: 523 810378000 523.810378
+ Success 401.bzip2 base ref ratio=18.42, runtime=523.810378
+
+-----------------------------------
+  Running (#1) 403.gcc ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000
+    -o 166.out -e 166.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static 166.i -o 166.s (timed)
+    -o 200.out -e 200.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static g23.i -o g23.s (timed)
+    -o s04.out -e s04.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static scilab.i -o scilab.s (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 18:38:20 2025 (1754789900)
+Stop command: Sat Aug  9 18:43:25 2025 (1754790205)
+Elapsed time for command: 00:05:05 (305)
+Workload elapsed time (0:1) = 22.8819 seconds
+Workload elapsed time (0:2) = 40.781768 seconds
+Workload elapsed time (0:3) = 30.064097 seconds
+Workload elapsed time (0:4) = 21.990315 seconds
+Workload elapsed time (0:5) = 25.855618 seconds
+Workload elapsed time (0:6) = 37.47621 seconds
+Workload elapsed time (0:7) = 59.438446 seconds
+Workload elapsed time (0:8) = 44.873872 seconds
+Workload elapsed time (0:9) = 13.344095 seconds
+Copy 0 of 403.gcc (base ref) run 1 finished at Sat Aug  9 18:43:17 2025.  Total elapsed time: 296.706321
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 18:43:25 2025 (1754790205)
+Stop command: Sat Aug  9 18:43:26 2025 (1754790206)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 18:38:20 2025 (1754789900)
+  Stop:     Sat Aug  9 18:43:25 2025 (1754790205)
+  Elapsed:  00:05:05 (305)
+  Reported: 296 706499000 296.706499
+ Success 403.gcc base ref ratio=27.13, runtime=296.706499
+
+-----------------------------------
+  Running (#1) 429.mcf ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000
+    -o inp.out -e inp.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/mcf_base.default-static inp.in (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 18:43:26 2025 (1754790206)
+Stop command: Sat Aug  9 18:50:24 2025 (1754790624)
+Elapsed time for command: 00:06:58 (418)
+Workload elapsed time (0:1) = 409.649815 seconds
+Copy 0 of 429.mcf (base ref) run 1 finished at Sat Aug  9 18:50:16 2025.  Total elapsed time: 409.649815
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 18:50:24 2025 (1754790624)
+Stop command: Sat Aug  9 18:50:25 2025 (1754790625)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 18:43:26 2025 (1754790206)
+  Stop:     Sat Aug  9 18:50:24 2025 (1754790624)
+  Elapsed:  00:06:58 (418)
+  Reported: 409 649881000 409.649881
+ Success 429.mcf base ref ratio=22.26, runtime=409.649881
+
+-----------------------------------
+  Running (#1) 445.gobmk ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000
+    -i 13x13.tst -o 13x13.out -e 13x13.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 18:50:25 2025 (1754790625)
+Stop command: Sat Aug  9 18:56:43 2025 (1754791003)
+Elapsed time for command: 00:06:18 (378)
+Workload elapsed time (0:1) = 51.491218 seconds
+Workload elapsed time (0:2) = 132.937247 seconds
+Workload elapsed time (0:3) = 66.43287 seconds
+Workload elapsed time (0:4) = 50.869734 seconds
+Workload elapsed time (0:5) = 68.375954 seconds
+Copy 0 of 445.gobmk (base ref) run 1 finished at Sat Aug  9 18:56:35 2025.  Total elapsed time: 370.107023
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 18:56:43 2025 (1754791003)
+Stop command: Sat Aug  9 18:56:44 2025 (1754791004)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 18:50:25 2025 (1754790625)
+  Stop:     Sat Aug  9 18:56:43 2025 (1754791003)
+  Elapsed:  00:06:18 (378)
+  Reported: 370 107114000 370.107114
+ Success 445.gobmk base ref ratio=28.34, runtime=370.107114
+
+-----------------------------------
+  Running (#1) 456.hmmer ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000
+    -o nph3.out -e nph3.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/hmmer_base.default-static nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/hmmer_base.default-static --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 18:56:44 2025 (1754791004)
+Stop command: Sat Aug  9 19:04:48 2025 (1754791488)
+Elapsed time for command: 00:08:04 (484)
+Workload elapsed time (0:1) = 149.700555 seconds
+Workload elapsed time (0:2) = 326.236891 seconds
+Copy 0 of 456.hmmer (base ref) run 1 finished at Sat Aug  9 19:04:40 2025.  Total elapsed time: 475.937446
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 19:04:48 2025 (1754791488)
+Stop command: Sat Aug  9 19:04:48 2025 (1754791488)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Aug  9 18:56:44 2025 (1754791004)
+  Stop:     Sat Aug  9 19:04:48 2025 (1754791488)
+  Elapsed:  00:08:04 (484)
+  Reported: 475 937511000 475.937511
+ Success 456.hmmer base ref ratio=19.60, runtime=475.937511
+
+-----------------------------------
+  Running (#1) 458.sjeng ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000
+    -o ref.out -e ref.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/sjeng_base.default-static ref.txt (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 19:04:48 2025 (1754791488)
+Stop command: Sat Aug  9 19:12:38 2025 (1754791958)
+Elapsed time for command: 00:07:50 (470)
+Workload elapsed time (0:1) = 462.016448 seconds
+Copy 0 of 458.sjeng (base ref) run 1 finished at Sat Aug  9 19:12:30 2025.  Total elapsed time: 462.016448
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 19:12:38 2025 (1754791958)
+Stop command: Sat Aug  9 19:12:38 2025 (1754791958)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Aug  9 19:04:48 2025 (1754791488)
+  Stop:     Sat Aug  9 19:12:38 2025 (1754791958)
+  Elapsed:  00:07:50 (470)
+  Reported: 462 16576000 462.016576
+ Success 458.sjeng base ref ratio=26.19, runtime=462.016576
+
+-----------------------------------
+  Running (#1) 462.libquantum ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000
+    -o ref.out -e ref.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/libquantum_base.default-static 1397 8 (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 19:12:39 2025 (1754791959)
+Stop command: Sat Aug  9 19:19:21 2025 (1754792361)
+Elapsed time for command: 00:06:42 (402)
+Workload elapsed time (0:1) = 394.585236 seconds
+Copy 0 of 462.libquantum (base ref) run 1 finished at Sat Aug  9 19:19:13 2025.  Total elapsed time: 394.585236
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 19:19:21 2025 (1754792361)
+Stop command: Sat Aug  9 19:19:21 2025 (1754792361)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Aug  9 19:12:39 2025 (1754791959)
+  Stop:     Sat Aug  9 19:19:21 2025 (1754792361)
+  Elapsed:  00:06:42 (402)
+  Reported: 394 585310000 394.58531
+ Success 462.libquantum base ref ratio=52.51, runtime=394.585310
+
+-----------------------------------
+  Running (#1) 464.h264ref ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/h264ref_base.default-static -d foreman_ref_encoder_baseline.cfg (timed)
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/h264ref_base.default-static -d foreman_ref_encoder_main.cfg (timed)
+    -o sss_main_encodelog.out -e sss_main_encodelog.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/h264ref_base.default-static -d sss_encoder_main.cfg (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 19:19:22 2025 (1754792362)
+Stop command: Sat Aug  9 19:27:39 2025 (1754792859)
+Elapsed time for command: 00:08:17 (497)
+Workload elapsed time (0:1) = 57.879243 seconds
+Workload elapsed time (0:2) = 44.499584 seconds
+Workload elapsed time (0:3) = 386.814034 seconds
+Copy 0 of 464.h264ref (base ref) run 1 finished at Sat Aug  9 19:27:31 2025.  Total elapsed time: 489.192861
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 19:27:39 2025 (1754792859)
+Stop command: Sat Aug  9 19:27:40 2025 (1754792860)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 19:19:22 2025 (1754792362)
+  Stop:     Sat Aug  9 19:27:39 2025 (1754792859)
+  Elapsed:  00:08:17 (497)
+  Reported: 489 192937000 489.192937
+ Success 464.h264ref base ref ratio=45.24, runtime=489.192937
+
+-----------------------------------
+  Running (#1) 471.omnetpp ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000
+    -o omnetpp.log -e omnetpp.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/omnetpp_base.default-static omnetpp.ini (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 19:27:40 2025 (1754792860)
+Stop command: Sat Aug  9 19:33:07 2025 (1754793187)
+Elapsed time for command: 00:05:27 (327)
+Workload elapsed time (0:1) = 319.798455 seconds
+Copy 0 of 471.omnetpp (base ref) run 1 finished at Sat Aug  9 19:32:59 2025.  Total elapsed time: 319.798455
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 19:33:07 2025 (1754793187)
+Stop command: Sat Aug  9 19:33:08 2025 (1754793188)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 19:27:40 2025 (1754792860)
+  Stop:     Sat Aug  9 19:33:07 2025 (1754793187)
+  Elapsed:  00:05:27 (327)
+  Reported: 319 798543000 319.798543
+ Success 471.omnetpp base ref ratio=19.54, runtime=319.798543
+
+-----------------------------------
+  Running (#1) 473.astar ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/astar_base.default-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/astar_base.default-static rivers.cfg (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 19:33:08 2025 (1754793188)
+Stop command: Sat Aug  9 19:39:08 2025 (1754793548)
+Elapsed time for command: 00:06:00 (360)
+Workload elapsed time (0:1) = 138.949938 seconds
+Workload elapsed time (0:2) = 212.722285 seconds
+Copy 0 of 473.astar (base ref) run 1 finished at Sat Aug  9 19:39:00 2025.  Total elapsed time: 351.672223
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 19:39:08 2025 (1754793548)
+Stop command: Sat Aug  9 19:39:08 2025 (1754793548)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Aug  9 19:33:08 2025 (1754793188)
+  Stop:     Sat Aug  9 19:39:08 2025 (1754793548)
+  Elapsed:  00:06:00 (360)
+  Reported: 351 672294000 351.672294
+ Success 473.astar base ref ratio=19.96, runtime=351.672294
+
+-----------------------------------
+  Running (#1) 483.xalancbmk ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000
+    -o ref.out -e ref.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/Xalan_base.default-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 19:39:08 2025 (1754793548)
+Stop command: Sat Aug  9 19:43:30 2025 (1754793810)
+Elapsed time for command: 00:04:22 (262)
+Workload elapsed time (0:1) = 253.294967 seconds
+Copy 0 of 483.xalancbmk (base ref) run 1 finished at Sat Aug  9 19:43:22 2025.  Total elapsed time: 253.294967
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 19:43:30 2025 (1754793810)
+Stop command: Sat Aug  9 19:43:31 2025 (1754793811)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 19:39:08 2025 (1754793548)
+  Stop:     Sat Aug  9 19:43:30 2025 (1754793810)
+  Elapsed:  00:04:22 (262)
+  Reported: 253 295034000 253.295034
+ Success 483.xalancbmk base ref ratio=27.24, runtime=253.295034
+
+-----------------------------------
+  Running (#1) 999.specrand ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000
+    -o rand.234923.out -e rand.234923.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/specrand_base.default-static 1255432124 234923 (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 19:43:31 2025 (1754793811)
+Stop command: Sat Aug  9 19:43:32 2025 (1754793812)
+Elapsed time for command: 00:00:01 (1)
+Workload elapsed time (0:1) = 0.098689 seconds
+Copy 0 of 999.specrand (base ref) run 1 finished at Sat Aug  9 19:43:31 2025.  Total elapsed time: 0.098689
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 19:43:32 2025 (1754793812)
+Stop command: Sat Aug  9 19:43:35 2025 (1754793815)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Sat Aug  9 19:43:31 2025 (1754793811)
+  Stop:     Sat Aug  9 19:43:32 2025 (1754793812)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 98735000 0.098735
+ Success 999.specrand base ref ratio=101.28, runtime=0.098735
+
+-----------------------------------
+  Running (#2) 400.perlbench ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/perlbench_base.default-static -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/perlbench_base.default-static -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/perlbench_base.default-static -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 19:43:35 2025 (1754793815)
+Stop command: Sat Aug  9 19:50:05 2025 (1754794205)
+Elapsed time for command: 00:06:30 (390)
+Workload elapsed time (0:1) = 192.137292 seconds
+Workload elapsed time (0:2) = 79.900684 seconds
+Workload elapsed time (0:3) = 109.043886 seconds
+Copy 0 of 400.perlbench (base ref) run 2 finished at Sat Aug  9 19:49:57 2025.  Total elapsed time: 381.081862
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 19:50:05 2025 (1754794205)
+Stop command: Sat Aug  9 19:50:05 2025 (1754794205)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Aug  9 19:43:35 2025 (1754793815)
+  Stop:     Sat Aug  9 19:50:05 2025 (1754794205)
+  Elapsed:  00:06:30 (390)
+  Reported: 381 81953000 381.081953
+ Success 400.perlbench base ref ratio=25.64, runtime=381.081953
+
+-----------------------------------
+  Running (#2) 401.bzip2 ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000
+    -o input.source.out -e input.source.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static input.program 280 (timed)
+    -o text.html.out -e text.html.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static text.html 280 (timed)
+    -o input.combined.out -e input.combined.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static input.combined 200 (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 19:50:05 2025 (1754794205)
+Stop command: Sat Aug  9 19:58:57 2025 (1754794737)
+Elapsed time for command: 00:08:52 (532)
+Workload elapsed time (0:1) = 102.998749 seconds
+Workload elapsed time (0:2) = 37.93325 seconds
+Workload elapsed time (0:3) = 61.311389 seconds
+Workload elapsed time (0:4) = 117.347517 seconds
+Workload elapsed time (0:5) = 123.184343 seconds
+Workload elapsed time (0:6) = 80.779963 seconds
+Copy 0 of 401.bzip2 (base ref) run 2 finished at Sat Aug  9 19:58:49 2025.  Total elapsed time: 523.555211
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 19:58:57 2025 (1754794737)
+Stop command: Sat Aug  9 19:58:58 2025 (1754794738)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 19:50:05 2025 (1754794205)
+  Stop:     Sat Aug  9 19:58:57 2025 (1754794737)
+  Elapsed:  00:08:52 (532)
+  Reported: 523 555334000 523.555334
+ Success 401.bzip2 base ref ratio=18.43, runtime=523.555334
+
+-----------------------------------
+  Running (#2) 403.gcc ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000
+    -o 166.out -e 166.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static 166.i -o 166.s (timed)
+    -o 200.out -e 200.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static g23.i -o g23.s (timed)
+    -o s04.out -e s04.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static scilab.i -o scilab.s (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 19:58:58 2025 (1754794738)
+Stop command: Sat Aug  9 20:04:02 2025 (1754795042)
+Elapsed time for command: 00:05:04 (304)
+Workload elapsed time (0:1) = 22.959151 seconds
+Workload elapsed time (0:2) = 40.629116 seconds
+Workload elapsed time (0:3) = 30.075284 seconds
+Workload elapsed time (0:4) = 21.874546 seconds
+Workload elapsed time (0:5) = 25.701632 seconds
+Workload elapsed time (0:6) = 37.753321 seconds
+Workload elapsed time (0:7) = 59.209394 seconds
+Workload elapsed time (0:8) = 44.25287 seconds
+Workload elapsed time (0:9) = 13.268518 seconds
+Copy 0 of 403.gcc (base ref) run 2 finished at Sat Aug  9 20:03:54 2025.  Total elapsed time: 295.723832
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 20:04:02 2025 (1754795042)
+Stop command: Sat Aug  9 20:04:03 2025 (1754795043)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 19:58:58 2025 (1754794738)
+  Stop:     Sat Aug  9 20:04:02 2025 (1754795042)
+  Elapsed:  00:05:04 (304)
+  Reported: 295 724075000 295.724075
+ Success 403.gcc base ref ratio=27.22, runtime=295.724075
+
+-----------------------------------
+  Running (#2) 429.mcf ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000
+    -o inp.out -e inp.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/mcf_base.default-static inp.in (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 20:04:03 2025 (1754795043)
+Stop command: Sat Aug  9 20:11:02 2025 (1754795462)
+Elapsed time for command: 00:06:59 (419)
+Workload elapsed time (0:1) = 410.269959 seconds
+Copy 0 of 429.mcf (base ref) run 2 finished at Sat Aug  9 20:10:54 2025.  Total elapsed time: 410.269959
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 20:11:02 2025 (1754795462)
+Stop command: Sat Aug  9 20:11:02 2025 (1754795462)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Aug  9 20:04:03 2025 (1754795043)
+  Stop:     Sat Aug  9 20:11:02 2025 (1754795462)
+  Elapsed:  00:06:59 (419)
+  Reported: 410 270025000 410.270025
+ Success 429.mcf base ref ratio=22.23, runtime=410.270025
+
+-----------------------------------
+  Running (#2) 445.gobmk ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000
+    -i 13x13.tst -o 13x13.out -e 13x13.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 20:11:02 2025 (1754795462)
+Stop command: Sat Aug  9 20:17:20 2025 (1754795840)
+Elapsed time for command: 00:06:18 (378)
+Workload elapsed time (0:1) = 51.500192 seconds
+Workload elapsed time (0:2) = 132.908279 seconds
+Workload elapsed time (0:3) = 66.467501 seconds
+Workload elapsed time (0:4) = 50.87573 seconds
+Workload elapsed time (0:5) = 68.39141 seconds
+Copy 0 of 445.gobmk (base ref) run 2 finished at Sat Aug  9 20:17:12 2025.  Total elapsed time: 370.143112
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 20:17:20 2025 (1754795840)
+Stop command: Sat Aug  9 20:17:21 2025 (1754795841)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 20:11:02 2025 (1754795462)
+  Stop:     Sat Aug  9 20:17:20 2025 (1754795840)
+  Elapsed:  00:06:18 (378)
+  Reported: 370 143213000 370.143213
+ Success 445.gobmk base ref ratio=28.34, runtime=370.143213
+
+-----------------------------------
+  Running (#2) 456.hmmer ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000
+    -o nph3.out -e nph3.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/hmmer_base.default-static nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/hmmer_base.default-static --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 20:17:21 2025 (1754795841)
+Stop command: Sat Aug  9 20:25:25 2025 (1754796325)
+Elapsed time for command: 00:08:04 (484)
+Workload elapsed time (0:1) = 149.644112 seconds
+Workload elapsed time (0:2) = 326.491076 seconds
+Copy 0 of 456.hmmer (base ref) run 2 finished at Sat Aug  9 20:25:17 2025.  Total elapsed time: 476.135188
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 20:25:25 2025 (1754796325)
+Stop command: Sat Aug  9 20:25:26 2025 (1754796326)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 20:17:21 2025 (1754795841)
+  Stop:     Sat Aug  9 20:25:25 2025 (1754796325)
+  Elapsed:  00:08:04 (484)
+  Reported: 476 135265000 476.135265
+ Success 456.hmmer base ref ratio=19.60, runtime=476.135265
+
+-----------------------------------
+  Running (#2) 458.sjeng ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000
+    -o ref.out -e ref.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/sjeng_base.default-static ref.txt (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 20:25:26 2025 (1754796326)
+Stop command: Sat Aug  9 20:33:15 2025 (1754796795)
+Elapsed time for command: 00:07:49 (469)
+Workload elapsed time (0:1) = 461.506268 seconds
+Copy 0 of 458.sjeng (base ref) run 2 finished at Sat Aug  9 20:33:07 2025.  Total elapsed time: 461.506268
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 20:33:15 2025 (1754796795)
+Stop command: Sat Aug  9 20:33:16 2025 (1754796796)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 20:25:26 2025 (1754796326)
+  Stop:     Sat Aug  9 20:33:15 2025 (1754796795)
+  Elapsed:  00:07:49 (469)
+  Reported: 461 506342000 461.506342
+ Success 458.sjeng base ref ratio=26.22, runtime=461.506342
+
+-----------------------------------
+  Running (#2) 462.libquantum ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000
+    -o ref.out -e ref.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/libquantum_base.default-static 1397 8 (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 20:33:16 2025 (1754796796)
+Stop command: Sat Aug  9 20:39:58 2025 (1754797198)
+Elapsed time for command: 00:06:42 (402)
+Workload elapsed time (0:1) = 394.260433 seconds
+Copy 0 of 462.libquantum (base ref) run 2 finished at Sat Aug  9 20:39:50 2025.  Total elapsed time: 394.260433
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 20:39:58 2025 (1754797198)
+Stop command: Sat Aug  9 20:39:58 2025 (1754797198)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Aug  9 20:33:16 2025 (1754796796)
+  Stop:     Sat Aug  9 20:39:58 2025 (1754797198)
+  Elapsed:  00:06:42 (402)
+  Reported: 394 260492000 394.260492
+ Success 462.libquantum base ref ratio=52.55, runtime=394.260492
+
+-----------------------------------
+  Running (#2) 464.h264ref ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/h264ref_base.default-static -d foreman_ref_encoder_baseline.cfg (timed)
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/h264ref_base.default-static -d foreman_ref_encoder_main.cfg (timed)
+    -o sss_main_encodelog.out -e sss_main_encodelog.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/h264ref_base.default-static -d sss_encoder_main.cfg (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 20:39:58 2025 (1754797198)
+Stop command: Sat Aug  9 20:48:17 2025 (1754797697)
+Elapsed time for command: 00:08:19 (499)
+Workload elapsed time (0:1) = 58.130726 seconds
+Workload elapsed time (0:2) = 44.420763 seconds
+Workload elapsed time (0:3) = 387.797196 seconds
+Copy 0 of 464.h264ref (base ref) run 2 finished at Sat Aug  9 20:48:09 2025.  Total elapsed time: 490.348685
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 20:48:17 2025 (1754797697)
+Stop command: Sat Aug  9 20:48:18 2025 (1754797698)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 20:39:58 2025 (1754797198)
+  Stop:     Sat Aug  9 20:48:17 2025 (1754797697)
+  Elapsed:  00:08:19 (499)
+  Reported: 490 348783000 490.348783
+ Success 464.h264ref base ref ratio=45.13, runtime=490.348783
+
+-----------------------------------
+  Running (#2) 471.omnetpp ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000
+    -o omnetpp.log -e omnetpp.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/omnetpp_base.default-static omnetpp.ini (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 20:48:18 2025 (1754797698)
+Stop command: Sat Aug  9 20:53:45 2025 (1754798025)
+Elapsed time for command: 00:05:27 (327)
+Workload elapsed time (0:1) = 319.44545 seconds
+Copy 0 of 471.omnetpp (base ref) run 2 finished at Sat Aug  9 20:53:37 2025.  Total elapsed time: 319.44545
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 20:53:45 2025 (1754798025)
+Stop command: Sat Aug  9 20:53:46 2025 (1754798026)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 20:48:18 2025 (1754797698)
+  Stop:     Sat Aug  9 20:53:45 2025 (1754798025)
+  Elapsed:  00:05:27 (327)
+  Reported: 319 445530000 319.44553
+ Success 471.omnetpp base ref ratio=19.57, runtime=319.445530
+
+-----------------------------------
+  Running (#2) 473.astar ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/astar_base.default-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/astar_base.default-static rivers.cfg (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 20:53:46 2025 (1754798026)
+Stop command: Sat Aug  9 20:59:44 2025 (1754798384)
+Elapsed time for command: 00:05:58 (358)
+Workload elapsed time (0:1) = 138.750176 seconds
+Workload elapsed time (0:2) = 211.05312 seconds
+Copy 0 of 473.astar (base ref) run 2 finished at Sat Aug  9 20:59:36 2025.  Total elapsed time: 349.803296
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 20:59:44 2025 (1754798384)
+Stop command: Sat Aug  9 20:59:44 2025 (1754798384)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Aug  9 20:53:46 2025 (1754798026)
+  Stop:     Sat Aug  9 20:59:44 2025 (1754798384)
+  Elapsed:  00:05:58 (358)
+  Reported: 349 803389000 349.803389
+ Success 473.astar base ref ratio=20.07, runtime=349.803389
+
+-----------------------------------
+  Running (#2) 483.xalancbmk ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000
+    -o ref.out -e ref.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/Xalan_base.default-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 20:59:44 2025 (1754798384)
+Stop command: Sat Aug  9 21:04:05 2025 (1754798645)
+Elapsed time for command: 00:04:21 (261)
+Workload elapsed time (0:1) = 252.602114 seconds
+Copy 0 of 483.xalancbmk (base ref) run 2 finished at Sat Aug  9 21:03:57 2025.  Total elapsed time: 252.602114
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 21:04:05 2025 (1754798645)
+Stop command: Sat Aug  9 21:04:06 2025 (1754798646)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 20:59:44 2025 (1754798384)
+  Stop:     Sat Aug  9 21:04:05 2025 (1754798645)
+  Elapsed:  00:04:21 (261)
+  Reported: 252 602182000 252.602182
+ Success 483.xalancbmk base ref ratio=27.32, runtime=252.602182
+
+-----------------------------------
+  Running (#2) 999.specrand ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000
+    -o rand.234923.out -e rand.234923.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/specrand_base.default-static 1255432124 234923 (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 21:04:06 2025 (1754798646)
+Stop command: Sat Aug  9 21:04:07 2025 (1754798647)
+Elapsed time for command: 00:00:01 (1)
+Workload elapsed time (0:1) = 0.100408 seconds
+Copy 0 of 999.specrand (base ref) run 2 finished at Sat Aug  9 21:04:06 2025.  Total elapsed time: 0.100408
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 21:04:07 2025 (1754798647)
+Stop command: Sat Aug  9 21:04:10 2025 (1754798650)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Sat Aug  9 21:04:06 2025 (1754798646)
+  Stop:     Sat Aug  9 21:04:07 2025 (1754798647)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 100454000 0.100454
+ Success 999.specrand base ref ratio=99.55, runtime=0.100454
+
+-----------------------------------
+  Running (#3) 400.perlbench ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/perlbench_base.default-static -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/perlbench_base.default-static -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/perlbench_base.default-static -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 21:04:11 2025 (1754798651)
+Stop command: Sat Aug  9 21:10:40 2025 (1754799040)
+Elapsed time for command: 00:06:29 (389)
+Workload elapsed time (0:1) = 191.927387 seconds
+Workload elapsed time (0:2) = 80.038474 seconds
+Workload elapsed time (0:3) = 109.456917 seconds
+Copy 0 of 400.perlbench (base ref) run 3 finished at Sat Aug  9 21:10:32 2025.  Total elapsed time: 381.422778
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 21:10:40 2025 (1754799040)
+Stop command: Sat Aug  9 21:10:41 2025 (1754799041)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 21:04:11 2025 (1754798651)
+  Stop:     Sat Aug  9 21:10:40 2025 (1754799040)
+  Elapsed:  00:06:29 (389)
+  Reported: 381 422884000 381.422884
+ Success 400.perlbench base ref ratio=25.61, runtime=381.422884
+
+-----------------------------------
+  Running (#3) 401.bzip2 ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000
+    -o input.source.out -e input.source.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static input.program 280 (timed)
+    -o text.html.out -e text.html.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static text.html 280 (timed)
+    -o input.combined.out -e input.combined.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/bzip2_base.default-static input.combined 200 (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 21:10:41 2025 (1754799041)
+Stop command: Sat Aug  9 21:19:33 2025 (1754799573)
+Elapsed time for command: 00:08:52 (532)
+Workload elapsed time (0:1) = 103.404387 seconds
+Workload elapsed time (0:2) = 38.087223 seconds
+Workload elapsed time (0:3) = 61.26007 seconds
+Workload elapsed time (0:4) = 117.904494 seconds
+Workload elapsed time (0:5) = 122.446115 seconds
+Workload elapsed time (0:6) = 80.8535 seconds
+Copy 0 of 401.bzip2 (base ref) run 3 finished at Sat Aug  9 21:19:25 2025.  Total elapsed time: 523.955789
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 21:19:33 2025 (1754799573)
+Stop command: Sat Aug  9 21:19:34 2025 (1754799574)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 21:10:41 2025 (1754799041)
+  Stop:     Sat Aug  9 21:19:33 2025 (1754799573)
+  Elapsed:  00:08:52 (532)
+  Reported: 523 955909000 523.955909
+ Success 401.bzip2 base ref ratio=18.42, runtime=523.955909
+
+-----------------------------------
+  Running (#3) 403.gcc ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000
+    -o 166.out -e 166.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static 166.i -o 166.s (timed)
+    -o 200.out -e 200.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static g23.i -o g23.s (timed)
+    -o s04.out -e s04.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gcc_base.default-static scilab.i -o scilab.s (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 21:19:34 2025 (1754799574)
+Stop command: Sat Aug  9 21:24:38 2025 (1754799878)
+Elapsed time for command: 00:05:04 (304)
+Workload elapsed time (0:1) = 22.822678 seconds
+Workload elapsed time (0:2) = 40.706668 seconds
+Workload elapsed time (0:3) = 29.916221 seconds
+Workload elapsed time (0:4) = 21.807972 seconds
+Workload elapsed time (0:5) = 25.724521 seconds
+Workload elapsed time (0:6) = 37.836222 seconds
+Workload elapsed time (0:7) = 59.558314 seconds
+Workload elapsed time (0:8) = 44.289462 seconds
+Workload elapsed time (0:9) = 13.269881 seconds
+Copy 0 of 403.gcc (base ref) run 3 finished at Sat Aug  9 21:24:30 2025.  Total elapsed time: 295.931939
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 21:24:38 2025 (1754799878)
+Stop command: Sat Aug  9 21:24:39 2025 (1754799879)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 21:19:34 2025 (1754799574)
+  Stop:     Sat Aug  9 21:24:38 2025 (1754799878)
+  Elapsed:  00:05:04 (304)
+  Reported: 295 932111000 295.932111
+ Success 403.gcc base ref ratio=27.20, runtime=295.932111
+
+-----------------------------------
+  Running (#3) 429.mcf ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000
+    -o inp.out -e inp.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/mcf_base.default-static inp.in (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 21:24:39 2025 (1754799879)
+Stop command: Sat Aug  9 21:31:37 2025 (1754800297)
+Elapsed time for command: 00:06:58 (418)
+Workload elapsed time (0:1) = 409.529348 seconds
+Copy 0 of 429.mcf (base ref) run 3 finished at Sat Aug  9 21:31:29 2025.  Total elapsed time: 409.529348
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 21:31:37 2025 (1754800297)
+Stop command: Sat Aug  9 21:31:37 2025 (1754800297)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Aug  9 21:24:39 2025 (1754799879)
+  Stop:     Sat Aug  9 21:31:37 2025 (1754800297)
+  Elapsed:  00:06:58 (418)
+  Reported: 409 529412000 409.529412
+ Success 429.mcf base ref ratio=22.27, runtime=409.529412
+
+-----------------------------------
+  Running (#3) 445.gobmk ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000
+    -i 13x13.tst -o 13x13.out -e 13x13.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/gobmk_base.default-static --quiet --mode gtp (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 21:31:38 2025 (1754800298)
+Stop command: Sat Aug  9 21:37:56 2025 (1754800676)
+Elapsed time for command: 00:06:18 (378)
+Workload elapsed time (0:1) = 51.526168 seconds
+Workload elapsed time (0:2) = 132.95106 seconds
+Workload elapsed time (0:3) = 66.570562 seconds
+Workload elapsed time (0:4) = 50.882551 seconds
+Workload elapsed time (0:5) = 68.377968 seconds
+Copy 0 of 445.gobmk (base ref) run 3 finished at Sat Aug  9 21:37:48 2025.  Total elapsed time: 370.308309
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 21:37:56 2025 (1754800676)
+Stop command: Sat Aug  9 21:37:57 2025 (1754800677)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 21:31:38 2025 (1754800298)
+  Stop:     Sat Aug  9 21:37:56 2025 (1754800676)
+  Elapsed:  00:06:18 (378)
+  Reported: 370 308391000 370.308391
+ Success 445.gobmk base ref ratio=28.33, runtime=370.308391
+
+-----------------------------------
+  Running (#3) 456.hmmer ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000
+    -o nph3.out -e nph3.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/hmmer_base.default-static nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/hmmer_base.default-static --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 21:37:57 2025 (1754800677)
+Stop command: Sat Aug  9 21:46:01 2025 (1754801161)
+Elapsed time for command: 00:08:04 (484)
+Workload elapsed time (0:1) = 149.632609 seconds
+Workload elapsed time (0:2) = 326.142864 seconds
+Copy 0 of 456.hmmer (base ref) run 3 finished at Sat Aug  9 21:45:53 2025.  Total elapsed time: 475.775473
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 21:46:01 2025 (1754801161)
+Stop command: Sat Aug  9 21:46:01 2025 (1754801161)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Aug  9 21:37:57 2025 (1754800677)
+  Stop:     Sat Aug  9 21:46:01 2025 (1754801161)
+  Elapsed:  00:08:04 (484)
+  Reported: 475 775538000 475.775538
+ Success 456.hmmer base ref ratio=19.61, runtime=475.775538
+
+-----------------------------------
+  Running (#3) 458.sjeng ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000
+    -o ref.out -e ref.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/sjeng_base.default-static ref.txt (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 21:46:01 2025 (1754801161)
+Stop command: Sat Aug  9 21:53:51 2025 (1754801631)
+Elapsed time for command: 00:07:50 (470)
+Workload elapsed time (0:1) = 462.159113 seconds
+Copy 0 of 458.sjeng (base ref) run 3 finished at Sat Aug  9 21:53:43 2025.  Total elapsed time: 462.159113
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 21:53:51 2025 (1754801631)
+Stop command: Sat Aug  9 21:53:51 2025 (1754801631)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Sat Aug  9 21:46:01 2025 (1754801161)
+  Stop:     Sat Aug  9 21:53:51 2025 (1754801631)
+  Elapsed:  00:07:50 (470)
+  Reported: 462 159182000 462.159182
+ Success 458.sjeng base ref ratio=26.18, runtime=462.159182
+
+-----------------------------------
+  Running (#3) 462.libquantum ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000
+    -o ref.out -e ref.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/libquantum_base.default-static 1397 8 (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 21:53:51 2025 (1754801631)
+Stop command: Sat Aug  9 22:00:34 2025 (1754802034)
+Elapsed time for command: 00:06:43 (403)
+Workload elapsed time (0:1) = 394.762342 seconds
+Copy 0 of 462.libquantum (base ref) run 3 finished at Sat Aug  9 22:00:26 2025.  Total elapsed time: 394.762342
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 22:00:34 2025 (1754802034)
+Stop command: Sat Aug  9 22:00:35 2025 (1754802035)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 21:53:51 2025 (1754801631)
+  Stop:     Sat Aug  9 22:00:34 2025 (1754802034)
+  Elapsed:  00:06:43 (403)
+  Reported: 394 762401000 394.762401
+ Success 462.libquantum base ref ratio=52.49, runtime=394.762401
+
+-----------------------------------
+  Running (#3) 464.h264ref ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/h264ref_base.default-static -d foreman_ref_encoder_baseline.cfg (timed)
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/h264ref_base.default-static -d foreman_ref_encoder_main.cfg (timed)
+    -o sss_main_encodelog.out -e sss_main_encodelog.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/h264ref_base.default-static -d sss_encoder_main.cfg (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 22:00:35 2025 (1754802035)
+Stop command: Sat Aug  9 22:08:51 2025 (1754802531)
+Elapsed time for command: 00:08:16 (496)
+Workload elapsed time (0:1) = 57.960557 seconds
+Workload elapsed time (0:2) = 44.480978 seconds
+Workload elapsed time (0:3) = 386.303338 seconds
+Copy 0 of 464.h264ref (base ref) run 3 finished at Sat Aug  9 22:08:43 2025.  Total elapsed time: 488.744873
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 22:08:51 2025 (1754802531)
+Stop command: Sat Aug  9 22:08:52 2025 (1754802532)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 22:00:35 2025 (1754802035)
+  Stop:     Sat Aug  9 22:08:51 2025 (1754802531)
+  Elapsed:  00:08:16 (496)
+  Reported: 488 744959000 488.744959
+ Success 464.h264ref base ref ratio=45.28, runtime=488.744959
+
+-----------------------------------
+  Running (#3) 471.omnetpp ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000
+    -o omnetpp.log -e omnetpp.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/omnetpp_base.default-static omnetpp.ini (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 22:08:52 2025 (1754802532)
+Stop command: Sat Aug  9 22:14:22 2025 (1754802862)
+Elapsed time for command: 00:05:30 (330)
+Workload elapsed time (0:1) = 321.821126 seconds
+Copy 0 of 471.omnetpp (base ref) run 3 finished at Sat Aug  9 22:14:14 2025.  Total elapsed time: 321.821126
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 22:14:22 2025 (1754802862)
+Stop command: Sat Aug  9 22:14:23 2025 (1754802863)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 22:08:52 2025 (1754802532)
+  Stop:     Sat Aug  9 22:14:22 2025 (1754802862)
+  Elapsed:  00:05:30 (330)
+  Reported: 321 821194000 321.821194
+ Success 471.omnetpp base ref ratio=19.42, runtime=321.821194
+
+-----------------------------------
+  Running (#3) 473.astar ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/astar_base.default-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/astar_base.default-static rivers.cfg (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 22:14:23 2025 (1754802863)
+Stop command: Sat Aug  9 22:20:20 2025 (1754803220)
+Elapsed time for command: 00:05:57 (357)
+Workload elapsed time (0:1) = 138.565778 seconds
+Workload elapsed time (0:2) = 210.923941 seconds
+Copy 0 of 473.astar (base ref) run 3 finished at Sat Aug  9 22:20:12 2025.  Total elapsed time: 349.489719
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/473.astar/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 22:20:20 2025 (1754803220)
+Stop command: Sat Aug  9 22:20:21 2025 (1754803221)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 22:14:23 2025 (1754802863)
+  Stop:     Sat Aug  9 22:20:20 2025 (1754803220)
+  Elapsed:  00:05:57 (357)
+  Reported: 349 489801000 349.489801
+ Success 473.astar base ref ratio=20.09, runtime=349.489801
+
+-----------------------------------
+  Running (#3) 483.xalancbmk ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000
+    -o ref.out -e ref.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/Xalan_base.default-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 22:20:21 2025 (1754803221)
+Stop command: Sat Aug  9 22:24:42 2025 (1754803482)
+Elapsed time for command: 00:04:21 (261)
+Workload elapsed time (0:1) = 253.058435 seconds
+Copy 0 of 483.xalancbmk (base ref) run 3 finished at Sat Aug  9 22:24:34 2025.  Total elapsed time: 253.058435
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 22:24:42 2025 (1754803482)
+Stop command: Sat Aug  9 22:24:43 2025 (1754803483)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Sat Aug  9 22:20:21 2025 (1754803221)
+  Stop:     Sat Aug  9 22:24:42 2025 (1754803482)
+  Elapsed:  00:04:21 (261)
+  Reported: 253 58501000 253.058501
+ Success 483.xalancbmk base ref ratio=27.27, runtime=253.058501
+
+-----------------------------------
+  Running (#3) 999.specrand ref base default-static default
+Commands to run:
+    -C /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000
+    -o rand.234923.out -e rand.234923.err taskset -c 1 env GLIBC_TUNABLES=glibc.mem.tagging=3 ../run_base_ref_default-static.0000/specrand_base.default-static 1255432124 234923 (timed)
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/mte/mte-playground/spec/bin/specinvoke -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Sat Aug  9 22:24:44 2025 (1754803484)
+Stop command: Sat Aug  9 22:24:44 2025 (1754803484)
+Elapsed time for command: 00:00:00 (0)
+Workload elapsed time (0:1) = 0.100924 seconds
+Copy 0 of 999.specrand (base ref) run 3 finished at Sat Aug  9 22:24:44 2025.  Total elapsed time: 0.100924
+comparing files in '/root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/mte/mte-playground/spec/bin/specinvoke -E -d /root/mte/mte-playground/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_default-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Sat Aug  9 22:24:44 2025 (1754803484)
+Stop command: Sat Aug  9 22:24:48 2025 (1754803488)
+Elapsed time for command: 00:00:04 (4)
+Benchmark Times:
+  Start:    Sat Aug  9 22:24:44 2025 (1754803484)
+  Stop:     Sat Aug  9 22:24:44 2025 (1754803484)
+  Elapsed:  00:00:00 (0)
+  Reported: 0 100965000 0.100965
+ Success 999.specrand base ref ratio=99.04, runtime=0.100965
+Success: 3x400.perlbench 3x401.bzip2 3x403.gcc 3x429.mcf 3x445.gobmk 3x456.hmmer 3x458.sjeng 3x462.libquantum 3x464.h264ref 3x471.omnetpp 3x473.astar 3x483.xalancbmk 3x999.specrand
+Producing Raw Reports
+mach: default
+  ext: default-static
+    size: ref
+      set: int
+        format: raw -> /root/mte/mte-playground/spec/result/CINT2006.003.ref.rsf
+Parsing flags for 400.perlbench base: done
+Parsing flags for 401.bzip2 base: done
+Parsing flags for 403.gcc base: done
+Parsing flags for 429.mcf base: done
+Parsing flags for 445.gobmk base: done
+Parsing flags for 456.hmmer base: done
+Parsing flags for 458.sjeng base: done
+Parsing flags for 462.libquantum base: done
+Parsing flags for 464.h264ref base: done
+Parsing flags for 471.omnetpp base: done
+Parsing flags for 473.astar base: done
+Parsing flags for 483.xalancbmk base: done
+Doing flag reduction: done
+        format: ASCII -> /root/mte/mte-playground/spec/result/CINT2006.003.ref.txt
+        format: CSV -> /root/mte/mte-playground/spec/result/CINT2006.003.ref.csv
+        format: Screen -> 
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+400.perlbench    9770        381       25.6 *                                  
+401.bzip2        9650        524       18.4 *                                  
+403.gcc          8050        296       27.2 *                                  
+429.mcf          9120        410       22.3 *                                  
+445.gobmk       10490        370       28.3 *                                  
+456.hmmer        9330        476       19.6 *                                  
+458.sjeng       12100        462       26.2 *                                  
+462.libquantum  20720        395       52.5 *                                  
+464.h264ref     22130        489       45.2 *                                  
+471.omnetpp      6250        320       19.5 *                                  
+473.astar        7020        350       20.1 *                                  
+483.xalancbmk    6900        253       27.3 *                                  
+ Est. SPECint_base2006                 26.2
+ Est. SPECint2006                                                   Not Run
+
+      set: fp
+
+The log for this run is in /root/mte/mte-playground/spec/result/CPU2006.003.log
+
+runspec finished at Sat Aug  9 22:24:52 2025; 14525 total seconds elapsed

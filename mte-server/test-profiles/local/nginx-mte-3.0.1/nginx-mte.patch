@@ -1,0 +1,24 @@
+diff -Naur nginx-release-1.23.3/src/os/unix/ngx_files.c nginx-1.23.3/src/os/unix/ngx_files.c
+--- nginx-release-1.23.3/src/os/unix/ngx_files.c	2022-12-13 07:53:53.000000000 -0800
++++ nginx-1.23.3/src/os/unix/ngx_files.c	2025-08-21 16:50:49.576624758 -0700
+@@ -633,7 +633,7 @@
+         goto failed;
+     }
+ 
+-    fm->addr = mmap(NULL, fm->size, PROT_READ|PROT_WRITE, MAP_SHARED,
++    fm->addr = mmap(NULL, fm->size, PROT_READ|PROT_WRITE|PROT_MTE, MAP_SHARED,
+                     fm->fd, 0);
+     if (fm->addr != MAP_FAILED) {
+         return NGX_OK;
+diff -Naur nginx-release-1.23.3/src/os/unix/ngx_shmem.c nginx-1.23.3/src/os/unix/ngx_shmem.c
+--- nginx-release-1.23.3/src/os/unix/ngx_shmem.c	2022-12-13 07:53:53.000000000 -0800
++++ nginx-1.23.3/src/os/unix/ngx_shmem.c	2025-08-21 16:50:23.505708982 -0700
+@@ -15,7 +15,7 @@
+ ngx_shm_alloc(ngx_shm_t *shm)
+ {
+     shm->addr = (u_char *) mmap(NULL, shm->size,
+-                                PROT_READ|PROT_WRITE,
++                                PROT_READ|PROT_WRITE|PROT_MTE,
+                                 MAP_ANON|MAP_SHARED, -1, 0);
+ 
+     if (shm->addr == MAP_FAILED) {

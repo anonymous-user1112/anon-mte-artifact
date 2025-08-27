@@ -1,0 +1,922 @@
+20:15:29     INFO - ConsoleLogger online at 20250820 20:15:29Z in /home/XXXXXXXX/firefox-mte
+20:15:29     INFO - Run as ./mach talos-test --activeTests expat_perf_test
+20:15:29     INFO - Dumping config to /home/XXXXXXXX/firefox-mte/testing/mozharness/logs/localconfig.json.
+20:15:29     INFO - {'append_to_log': False,
+20:15:29     INFO -  'base_work_dir': '/home/XXXXXXXX/firefox-mte/testing/mozharness',
+20:15:29     INFO -  'binary_path': '/home/XXXXXXXX/firefox-mte/firefox_release_copy/dist/bin/firefox',
+20:15:29     INFO -  'code_coverage': False,
+20:15:29     INFO -  'config_files': (),
+20:15:29     INFO -  'default_actions': ('populate-webroot', 'create-virtualenv', 'run-tests'),
+20:15:29     INFO -  'disable_ccov_upload': False,
+20:15:29     INFO -  'e10s': True,
+20:15:29     INFO -  'exes': {'python': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python',
+20:15:29     INFO -           'virtualenv': ('/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python',
+20:15:29     INFO -                          '/home/XXXXXXXX/firefox-mte/third_party/python/virtualenv/virtualenv.py')},
+20:15:29     INFO -  'extra_prefs': (),
+20:15:29     INFO -  'find_links': ('https://pypi.pub.build.mozilla.org/pub/',),
+20:15:29     INFO -  'fission': True,
+20:15:29     INFO -  'gecko_profile': False,
+20:15:29     INFO -  'java_code_coverage': False,
+20:15:29     INFO -  'log_level': 'info',
+20:15:29     INFO -  'log_name': 'talos',
+20:15:29     INFO -  'log_to_console': True,
+20:15:29     INFO -  'mozbuild_path': '/home/XXXXXXXX/.mozbuild',
+20:15:29     INFO -  'obj_path': '/home/XXXXXXXX/firefox-mte/firefox_release_copy',
+20:15:29     INFO -  'opt_config_files': (),
+20:15:29     INFO -  'per_test_coverage': False,
+20:15:29     INFO -  'pip_index': False,
+20:15:29     INFO -  'pypi_url': 'http://pypi.python.org/simple',
+20:15:29     INFO -  'python3_manifest': {'win32': 'python3.manifest',
+20:15:29     INFO -                       'win64': 'python3_x64.manifest'},
+20:15:29     INFO -  'repo_path': '/home/XXXXXXXX/firefox-mte',
+20:15:29     INFO -  'requires_gpu': False,
+20:15:29     INFO -  'restartAfterFailure': False,
+20:15:29     INFO -  'run_local': True,
+20:15:29     INFO -  'screenshot_on_failure': False,
+20:15:29     INFO -  'skip_preflight': False,
+20:15:29     INFO -  'system_bits': '32',
+20:15:29     INFO -  'talos_extra_options': ('--develop', '--activeTests', 'expat_perf_test'),
+20:15:29     INFO -  'talos_json': '/home/XXXXXXXX/firefox-mte/testing/talos/talos.json',
+20:15:29     INFO -  'title': 'fedora',
+20:15:29     INFO -  'use_talos_json': False,
+20:15:29     INFO -  'verify': False,
+20:15:29     INFO -  'virtualenv_path': '/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv',
+20:15:29     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+20:15:29     INFO -  'work_dir': 'build'}
+20:15:29     INFO - [mozharness: 2025-08-20 20:15:29.419169Z] Skipping clobber step.
+20:15:29     INFO - [mozharness: 2025-08-20 20:15:29.419197Z] Skipping download-and-extract step.
+20:15:29     INFO - [mozharness: 2025-08-20 20:15:29.419219Z] Running populate-webroot step.
+20:15:29     INFO - Running pre-action listener: _resource_record_pre_action
+20:15:29     INFO - Running main action method: populate_webroot
+20:15:29     INFO - {'suites': {'bcv': {'tests': ['basic_compositor_video']},
+20:15:29     INFO -             'chromez': {'tests': ['about_preferences_basic', 'tresize']},
+20:15:29     INFO -             'damp': {'extra_prefs': ['talos.damp.suite=all'],
+20:15:29     INFO -                      'pagesets_name': 'tp5n.zip',
+20:15:29     INFO -                      'tests': ['damp']},
+20:15:29     INFO -             'damp-inspector': {'extra_prefs': ['talos.damp.suite=inspector'],
+20:15:29     INFO -                                'pagesets_name': 'tp5n.zip',
+20:15:29     INFO -                                'tests': ['damp']},
+20:15:29     INFO -             'damp-other': {'extra_prefs': ['talos.damp.suite=other'],
+20:15:29     INFO -                            'pagesets_name': 'tp5n.zip',
+20:15:29     INFO -                            'tests': ['damp']},
+20:15:29     INFO -             'damp-webconsole': {'extra_prefs': ['talos.damp.suite=webconsole'],
+20:15:29     INFO -                                 'pagesets_name': 'tp5n.zip',
+20:15:29     INFO -                                 'tests': ['damp']},
+20:15:29     INFO -             'dromaeojs': {'tests': ['dromaeo_css', 'kraken']},
+20:15:29     INFO -             'g1': {'pagesets_name': 'tp5n.zip', 'tests': ['tp5o_scroll']},
+20:15:29     INFO -             'g3': {'tests': ['dromaeo_dom']},
+20:15:29     INFO -             'g4': {'tests': ['displaylist_mutate',
+20:15:29     INFO -                              'rasterflood_svg',
+20:15:29     INFO -                              'rasterflood_gradient']},
+20:15:29     INFO -             'g5': {'pagesets_name': 'tp5n.zip',
+20:15:29     INFO -                    'tests': ['ts_paint_webext', 'tp5o_webext']},
+20:15:29     INFO -             'h1': {'tests': ['ts_paint_heavy']},
+20:15:29     INFO -             'motionmark': {'benchmark_zip': 'jetstream.zip',
+20:15:29     INFO -                            'tests': ['motionmark_animometer',
+20:15:29     INFO -                                      'motionmark_htmlsuite',
+20:15:29     INFO -                                      'JetStream',
+20:15:29     INFO -                                      'ARES6']},
+20:15:29     INFO -             'mtetest': {'tests': ['expat_perf_test', 'expat_perf_test_mini']},
+20:15:29     INFO -             'other': {'tests': ['a11yr',
+20:15:29     INFO -                                 'ts_paint',
+20:15:29     INFO -                                 'twinopen',
+20:15:29     INFO -                                 'sessionrestore',
+20:15:29     INFO -                                 'sessionrestore_no_auto_restore',
+20:15:29     INFO -                                 'tabpaint',
+20:15:29     INFO -                                 'cpstartup',
+20:15:29     INFO -                                 'startup_about_home_paint',
+20:15:29     INFO -                                 'cross_origin_pageload',
+20:15:29     INFO -                                 'startup_about_home_paint_cached']},
+20:15:29     INFO -             'pdfpaint': {'tests': ['pdfpaint']},
+20:15:29     INFO -             'perf-reftest': {'tests': ['perf_reftest']},
+20:15:29     INFO -             'perf-reftest-singletons': {'tests': ['perf_reftest_singletons']},
+20:15:29     INFO -             'realworld-webextensions': {'tests': ['startup_about_home_paint_realworld_webextensions'],
+20:15:29     INFO -                                         'webextensions_zip': 'webextensions.zip'},
+20:15:29     INFO -             'sessionrestore-many-windows': {'tests': ['sessionrestore_many_windows']},
+20:15:29     INFO -             'svgr': {'tests': ['tsvgx',
+20:15:29     INFO -                                'tsvgr_opacity',
+20:15:29     INFO -                                'tscrollx',
+20:15:29     INFO -                                'tsvg_static',
+20:15:29     INFO -                                'tart']},
+20:15:29     INFO -             'tabswitch': {'pagesets_name': 'tp5n.zip', 'tests': ['tabswitch']},
+20:15:29     INFO -             'tp5o': {'pagesets_name': 'tp5n.zip', 'tests': ['tp5o']},
+20:15:29     INFO -             'webgl': {'tests': ['canvas2dvideo',
+20:15:29     INFO -                                 'glterrain',
+20:15:29     INFO -                                 'glvideo',
+20:15:29     INFO -                                 'motionmark_webgl',
+20:15:29     INFO -                                 'offscreencanvas_webcodecs_main_webgl_h264',
+20:15:29     INFO -                                 'offscreencanvas_webcodecs_main_webgl_vp9',
+20:15:29     INFO -                                 'offscreencanvas_webcodecs_main_webgl_av1',
+20:15:29     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_h264',
+20:15:29     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_vp9',
+20:15:29     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_av1',
+20:15:29     INFO -                                 'offscreencanvas_webcodecs_main_2d_h264',
+20:15:29     INFO -                                 'offscreencanvas_webcodecs_main_2d_vp9',
+20:15:29     INFO -                                 'offscreencanvas_webcodecs_main_2d_av1',
+20:15:29     INFO -                                 'offscreencanvas_webcodecs_worker_2d_h264',
+20:15:29     INFO -                                 'offscreencanvas_webcodecs_worker_2d_vp9',
+20:15:29     INFO -                                 'offscreencanvas_webcodecs_worker_2d_av1']},
+20:15:29     INFO -             'xperf': {'pagesets_name': 'tp5n.zip',
+20:15:29     INFO -                       'talos_options': ['--xperf_path',
+20:15:29     INFO -                                         '"c:/Program Files (x86)/Windows '
+20:15:29     INFO -                                         'Kits/10/Windows Performance '
+20:15:29     INFO -                                         'Toolkit/xperf.exe"'],
+20:15:29     INFO -                       'tests': ['tp5n']}}}
+20:15:29     INFO - Running post-action listener: _resource_record_post_action
+20:15:29     INFO - [mozharness: 2025-08-20 20:15:29.421628Z] Finished populate-webroot step (success)
+20:15:29     INFO - [mozharness: 2025-08-20 20:15:29.421649Z] Running create-virtualenv step.
+20:15:29     INFO - Running pre-action listener: _resource_record_pre_action
+20:15:29     INFO - Running main action method: create_virtualenv
+20:15:29     INFO - Creating virtualenv /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv
+20:15:29     INFO - Running command: ['/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python', '--version']
+20:15:29     INFO - Copy/paste: /home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python --version
+20:15:29     INFO -  Python 3.11.13
+20:15:29     INFO - Return code: 0
+20:15:29     INFO - Running command: ['/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python', '-m', 'venv', '/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv'] in /home/XXXXXXXX/firefox-mte/testing/mozharness/build
+20:15:29     INFO - Copy/paste: /home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python -m venv /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv
+20:15:32     INFO - Return code: 0
+20:15:32     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/python', '-m', 'pip', 'install', '--only-binary', ':all:', '--disable-pip-version-check', PosixPath('/home/XXXXXXXX/firefox-mte/third_party/python/_venv/wheels/pip-24.0-py3-none-any.whl'), PosixPath('/home/XXXXXXXX/firefox-mte/third_party/python/_venv/wheels/setuptools-70.0.0-py3-none-any.whl'), PosixPath('/home/XXXXXXXX/firefox-mte/third_party/python/_venv/wheels/wheel-0.43.0-py3-none-any.whl')] in /home/XXXXXXXX/firefox-mte/testing/mozharness/build
+20:15:32     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/python -m pip install --only-binary :all: --disable-pip-version-check /home/XXXXXXXX/firefox-mte/third_party/python/_venv/wheels/pip-24.0-py3-none-any.whl /home/XXXXXXXX/firefox-mte/third_party/python/_venv/wheels/setuptools-70.0.0-py3-none-any.whl /home/XXXXXXXX/firefox-mte/third_party/python/_venv/wheels/wheel-0.43.0-py3-none-any.whl
+20:15:33     INFO -  Processing /home/XXXXXXXX/firefox-mte/third_party/python/_venv/wheels/pip-24.0-py3-none-any.whl
+20:15:33     INFO -  Processing /home/XXXXXXXX/firefox-mte/third_party/python/_venv/wheels/setuptools-70.0.0-py3-none-any.whl
+20:15:33     INFO -  Processing /home/XXXXXXXX/firefox-mte/third_party/python/_venv/wheels/wheel-0.43.0-py3-none-any.whl
+20:15:33     INFO -  Installing collected packages: wheel, setuptools, pip
+20:15:33     INFO -    Attempting uninstall: setuptools
+20:15:33     INFO -      Found existing installation: setuptools 74.1.3
+20:15:33     INFO -      Uninstalling setuptools-74.1.3:
+20:15:33     INFO -        Successfully uninstalled setuptools-74.1.3
+20:15:33     INFO -    Attempting uninstall: pip
+20:15:33     INFO -      Found existing installation: pip 24.3.1
+20:15:33     INFO -      Uninstalling pip-24.3.1:
+20:15:33     INFO -        Successfully uninstalled pip-24.3.1
+20:15:35     INFO -  Successfully installed pip-24.0 setuptools-70.0.0 wheel-0.43.0
+20:15:35     INFO - Return code: 0
+20:15:35     INFO - linux64
+20:15:35     INFO - Installing psutil>=5.9.0 into virtualenv /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv
+20:15:36     INFO - find_links: connection checks passed for https://pypi.pub.build.mozilla.org/pub/, adding.
+20:15:36     INFO - retry: Calling run_command with args: [['/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip', 'install', '--no-use-pep517', '--timeout', '120', '--no-index', '--find-links', 'https://pypi.pub.build.mozilla.org/pub/', 'psutil>=5.9.0']], kwargs: {'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': re.compile('\\d+: error: '), 'level': 'error'}, {'regex': re.compile('\\d+: warning: '), 'level': 'warning'}, {'regex': re.compile('Downloading .* \\(.*\\): *([0-9]+%)? *[0-9\\.]+[kmKM]b'), 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': re.compile('Warning:.*Error: '), 'level': 'warning'}, {'regex': re.compile('package.*> (?:Error|ERROR):'), 'level': 'error'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': re.compile('raise \\w*Exception: '), 'level': 'critical'}, {'regex': re.compile('raise \\w*Error: '), 'level': 'critical'}], 'cwd': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build', 'env': {'EXPAT_PIN_CORE': '1', 'MOZCONFIG': 'mozconfig_copy', 'SHELL': '/bin/bash', 'HISTCONTROL': 'ignoredups', 'TERM_PROGRAM_VERSION': '3.5a', 'TMUX': '/tmp/tmux-1000/default,2416415,0', 'HISTSIZE': '1000', 'HOSTNAME': 'fedora', 'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346', 'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins', 'GPG_TTY': '/dev/pts/13', 'EDITOR': '/usr/bin/vim', 'PWD': '/home/XXXXXXXX/firefox-mte', 'LOGNAME': 'XXXXXXXX', 'XDG_SESSION_TYPE': 'tty', 'MOTD_SHOWN': 'pam', 'HOME': '/home/XXXXXXXX', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VIRTUAL_ENV': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common', 'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22', 'XDG_SESSION_CLASS': 'user', 'SELINUX_ROLE_REQUESTED': '', 'TERM': 'tmux-256color', 'LESSOPEN': '||/usr/bin/lesspipe.sh %s', 'USER': 'XXXXXXXX', 'TMUX_PANE': '%1', 'SELINUX_USE_CURRENT_RANGE': '', 'DISPLAY': ':99', 'SHLVL': '3', 'XDG_SESSION_ID': '1323', 'VIRTUAL_ENV_PROMPT': '(venv-3.11) ', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '172.17.128.2 52585 22', 'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ', 'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:', 'PATH': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin', 'SELINUX_LEVEL_REQUESTED': '', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'MAIL': '/var/spool/mail/XXXXXXXX', 'SSH_TTY': '/dev/pts/0', 'OLDPWD': '/home/XXXXXXXX/firefox-mte', 'TERM_PROGRAM': 'tmux', '_': './mach', 'MACH_MAIN_PID': '2614585', 'REQUIRE_GPU': '0'}, 'error_level': 'warning'}, attempt #1
+20:15:36     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip', 'install', '--no-use-pep517', '--timeout', '120', '--no-index', '--find-links', 'https://pypi.pub.build.mozilla.org/pub/', 'psutil>=5.9.0'] in /home/XXXXXXXX/firefox-mte/testing/mozharness/build
+20:15:36     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip install --no-use-pep517 --timeout 120 --no-index --find-links https://pypi.pub.build.mozilla.org/pub/ psutil>=5.9.0
+20:15:36     INFO - Using env: {'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+20:15:36     INFO -  'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:',
+20:15:36     INFO -  'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ',
+20:15:36     INFO -  'DISPLAY': ':99',
+20:15:36     INFO -  'EDITOR': '/usr/bin/vim',
+20:15:36     INFO -  'EXPAT_PIN_CORE': '1',
+20:15:36     INFO -  'GPG_TTY': '/dev/pts/13',
+20:15:36     INFO -  'HISTCONTROL': 'ignoredups',
+20:15:36     INFO -  'HISTSIZE': '1000',
+20:15:36     INFO -  'HOME': '/home/XXXXXXXX',
+20:15:36     INFO -  'HOSTNAME': 'fedora',
+20:15:36     INFO -  'LANG': 'en_US.UTF-8',
+20:15:36     INFO -  'LESSOPEN': '||/usr/bin/lesspipe.sh %s',
+20:15:36     INFO -  'LOGNAME': 'XXXXXXXX',
+20:15:36     INFO -  'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+20:15:36     INFO -  'MACH_MAIN_PID': '2614585',
+20:15:36     INFO -  'MAIL': '/var/spool/mail/XXXXXXXX',
+20:15:36     INFO -  'MOTD_SHOWN': 'pam',
+20:15:36     INFO -  'MOZCONFIG': 'mozconfig_copy',
+20:15:36     INFO -  'OLDPWD': '/home/XXXXXXXX/firefox-mte',
+20:15:36     INFO -  'PATH': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin',
+20:15:36     INFO -  'PWD': '/home/XXXXXXXX/firefox-mte',
+20:15:36     INFO -  'REQUIRE_GPU': '0',
+20:15:36     INFO -  'SELINUX_LEVEL_REQUESTED': '',
+20:15:36     INFO -  'SELINUX_ROLE_REQUESTED': '',
+20:15:36     INFO -  'SELINUX_USE_CURRENT_RANGE': '',
+20:15:36     INFO -  'SHELL': '/bin/bash',
+20:15:36     INFO -  'SHLVL': '3',
+20:15:36     INFO -  'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346',
+20:15:36     INFO -  'SSH_CLIENT': '172.17.128.2 52585 22',
+20:15:36     INFO -  'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22',
+20:15:36     INFO -  'SSH_TTY': '/dev/pts/0',
+20:15:36     INFO -  'TERM': 'tmux-256color',
+20:15:36     INFO -  'TERM_PROGRAM': 'tmux',
+20:15:36     INFO -  'TERM_PROGRAM_VERSION': '3.5a',
+20:15:36     INFO -  'TMUX': '/tmp/tmux-1000/default,2416415,0',
+20:15:36     INFO -  'TMUX_PANE': '%1',
+20:15:36     INFO -  'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins',
+20:15:36     INFO -  'USER': 'XXXXXXXX',
+20:15:36     INFO -  'VIRTUAL_ENV': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common',
+20:15:36     INFO -  'VIRTUAL_ENV_PROMPT': '(venv-3.11) ',
+20:15:36     INFO -  'XDG_RUNTIME_DIR': '/run/user/1000',
+20:15:36     INFO -  'XDG_SESSION_CLASS': 'user',
+20:15:36     INFO -  'XDG_SESSION_ID': '1323',
+20:15:36     INFO -  'XDG_SESSION_TYPE': 'tty',
+20:15:36     INFO -  '_': './mach'}
+20:15:36     INFO -  Looking in links: https://pypi.pub.build.mozilla.org/pub/
+20:15:37     INFO -  Collecting psutil>=5.9.0
+20:15:37     INFO -    Using cached https://pypi.pub.build.mozilla.org/pub/psutil-7.0.0-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (279 kB)
+20:15:37     INFO -  Installing collected packages: psutil
+20:15:37     INFO -  Successfully installed psutil-7.0.0
+20:15:38     INFO - Return code: 0
+20:15:38     INFO - Installing jsonschema==2.5.1 into virtualenv /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv
+20:15:38     INFO - find_links: connection checks passed for https://pypi.pub.build.mozilla.org/pub/, adding.
+20:15:38     INFO - retry: Calling run_command with args: [['/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip', 'install', '--no-use-pep517', '--timeout', '120', '--no-index', '--find-links', 'https://pypi.pub.build.mozilla.org/pub/', 'jsonschema==2.5.1']], kwargs: {'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': re.compile('\\d+: error: '), 'level': 'error'}, {'regex': re.compile('\\d+: warning: '), 'level': 'warning'}, {'regex': re.compile('Downloading .* \\(.*\\): *([0-9]+%)? *[0-9\\.]+[kmKM]b'), 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': re.compile('Warning:.*Error: '), 'level': 'warning'}, {'regex': re.compile('package.*> (?:Error|ERROR):'), 'level': 'error'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': re.compile('raise \\w*Exception: '), 'level': 'critical'}, {'regex': re.compile('raise \\w*Error: '), 'level': 'critical'}], 'cwd': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build', 'env': {'EXPAT_PIN_CORE': '1', 'MOZCONFIG': 'mozconfig_copy', 'SHELL': '/bin/bash', 'HISTCONTROL': 'ignoredups', 'TERM_PROGRAM_VERSION': '3.5a', 'TMUX': '/tmp/tmux-1000/default,2416415,0', 'HISTSIZE': '1000', 'HOSTNAME': 'fedora', 'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346', 'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins', 'GPG_TTY': '/dev/pts/13', 'EDITOR': '/usr/bin/vim', 'PWD': '/home/XXXXXXXX/firefox-mte', 'LOGNAME': 'XXXXXXXX', 'XDG_SESSION_TYPE': 'tty', 'MOTD_SHOWN': 'pam', 'HOME': '/home/XXXXXXXX', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VIRTUAL_ENV': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common', 'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22', 'XDG_SESSION_CLASS': 'user', 'SELINUX_ROLE_REQUESTED': '', 'TERM': 'tmux-256color', 'LESSOPEN': '||/usr/bin/lesspipe.sh %s', 'USER': 'XXXXXXXX', 'TMUX_PANE': '%1', 'SELINUX_USE_CURRENT_RANGE': '', 'DISPLAY': ':99', 'SHLVL': '3', 'XDG_SESSION_ID': '1323', 'VIRTUAL_ENV_PROMPT': '(venv-3.11) ', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '172.17.128.2 52585 22', 'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ', 'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:', 'PATH': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin', 'SELINUX_LEVEL_REQUESTED': '', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'MAIL': '/var/spool/mail/XXXXXXXX', 'SSH_TTY': '/dev/pts/0', 'OLDPWD': '/home/XXXXXXXX/firefox-mte', 'TERM_PROGRAM': 'tmux', '_': './mach', 'MACH_MAIN_PID': '2614585', 'REQUIRE_GPU': '0'}, 'error_level': 'warning'}, attempt #1
+20:15:38     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip', 'install', '--no-use-pep517', '--timeout', '120', '--no-index', '--find-links', 'https://pypi.pub.build.mozilla.org/pub/', 'jsonschema==2.5.1'] in /home/XXXXXXXX/firefox-mte/testing/mozharness/build
+20:15:38     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip install --no-use-pep517 --timeout 120 --no-index --find-links https://pypi.pub.build.mozilla.org/pub/ jsonschema==2.5.1
+20:15:38     INFO - Using env: (same as previous command)
+20:15:39     INFO -  Looking in links: https://pypi.pub.build.mozilla.org/pub/
+20:15:40     INFO -  Collecting jsonschema==2.5.1
+20:15:40     INFO -    Using cached https://pypi.pub.build.mozilla.org/pub/jsonschema-2.5.1-py2.py3-none-any.whl (38 kB)
+20:15:40     INFO -  Installing collected packages: jsonschema
+20:15:40     INFO -  Successfully installed jsonschema-2.5.1
+20:15:40     INFO - Return code: 0
+20:15:40     INFO - Installing None into virtualenv /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv
+20:15:41     INFO - find_links: connection checks passed for https://pypi.pub.build.mozilla.org/pub/, adding.
+20:15:41     INFO - retry: Calling run_command with args: [['/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip', 'install', '--no-use-pep517', '--timeout', '120', '-r', '/home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt', '--no-index', '--find-links', 'https://pypi.pub.build.mozilla.org/pub/']], kwargs: {'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': re.compile('\\d+: error: '), 'level': 'error'}, {'regex': re.compile('\\d+: warning: '), 'level': 'warning'}, {'regex': re.compile('Downloading .* \\(.*\\): *([0-9]+%)? *[0-9\\.]+[kmKM]b'), 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': re.compile('Warning:.*Error: '), 'level': 'warning'}, {'regex': re.compile('package.*> (?:Error|ERROR):'), 'level': 'error'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': re.compile('raise \\w*Exception: '), 'level': 'critical'}, {'regex': re.compile('raise \\w*Error: '), 'level': 'critical'}], 'cwd': '/home/XXXXXXXX/firefox-mte/testing/config', 'env': {'EXPAT_PIN_CORE': '1', 'MOZCONFIG': 'mozconfig_copy', 'SHELL': '/bin/bash', 'HISTCONTROL': 'ignoredups', 'TERM_PROGRAM_VERSION': '3.5a', 'TMUX': '/tmp/tmux-1000/default,2416415,0', 'HISTSIZE': '1000', 'HOSTNAME': 'fedora', 'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346', 'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins', 'GPG_TTY': '/dev/pts/13', 'EDITOR': '/usr/bin/vim', 'PWD': '/home/XXXXXXXX/firefox-mte', 'LOGNAME': 'XXXXXXXX', 'XDG_SESSION_TYPE': 'tty', 'MOTD_SHOWN': 'pam', 'HOME': '/home/XXXXXXXX', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VIRTUAL_ENV': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common', 'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22', 'XDG_SESSION_CLASS': 'user', 'SELINUX_ROLE_REQUESTED': '', 'TERM': 'tmux-256color', 'LESSOPEN': '||/usr/bin/lesspipe.sh %s', 'USER': 'XXXXXXXX', 'TMUX_PANE': '%1', 'SELINUX_USE_CURRENT_RANGE': '', 'DISPLAY': ':99', 'SHLVL': '3', 'XDG_SESSION_ID': '1323', 'VIRTUAL_ENV_PROMPT': '(venv-3.11) ', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '172.17.128.2 52585 22', 'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ', 'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:', 'PATH': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin', 'SELINUX_LEVEL_REQUESTED': '', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'MAIL': '/var/spool/mail/XXXXXXXX', 'SSH_TTY': '/dev/pts/0', 'OLDPWD': '/home/XXXXXXXX/firefox-mte', 'TERM_PROGRAM': 'tmux', '_': './mach', 'MACH_MAIN_PID': '2614585', 'REQUIRE_GPU': '0'}, 'error_level': 'warning'}, attempt #1
+20:15:41     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip', 'install', '--no-use-pep517', '--timeout', '120', '-r', '/home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt', '--no-index', '--find-links', 'https://pypi.pub.build.mozilla.org/pub/'] in /home/XXXXXXXX/firefox-mte/testing/config
+20:15:41     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip install --no-use-pep517 --timeout 120 -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt --no-index --find-links https://pypi.pub.build.mozilla.org/pub/
+20:15:41     INFO - Using env: (same as previous command)
+20:15:41     INFO -  Looking in links: https://pypi.pub.build.mozilla.org/pub/
+20:15:41     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/python/mozterm (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 1))
+20:15:41     INFO -    Preparing metadata (setup.py): started
+20:15:41     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:41     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/xpcom/geckoprocesstypes_generator (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 2))
+20:15:41     INFO -    Preparing metadata (setup.py): started
+20:15:42     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:42     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/manifestparser (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 4))
+20:15:42     INFO -    Preparing metadata (setup.py): started
+20:15:42     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:42     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozcrash (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 5))
+20:15:42     INFO -    Preparing metadata (setup.py): started
+20:15:42     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:42     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozdebug (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 6))
+20:15:42     INFO -    Preparing metadata (setup.py): started
+20:15:42     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:42     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozdevice (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 7))
+20:15:42     INFO -    Preparing metadata (setup.py): started
+20:15:42     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:42     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozfile (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 8))
+20:15:42     INFO -    Preparing metadata (setup.py): started
+20:15:42     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:42     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozgeckoprofiler (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 9))
+20:15:42     INFO -    Preparing metadata (setup.py): started
+20:15:43     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:43     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozhttpd (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 10))
+20:15:43     INFO -    Preparing metadata (setup.py): started
+20:15:43     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:43     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozinfo (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 11))
+20:15:43     INFO -    Preparing metadata (setup.py): started
+20:15:43     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:43     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozinstall (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 12))
+20:15:43     INFO -    Preparing metadata (setup.py): started
+20:15:43     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:43     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozleak (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 13))
+20:15:43     INFO -    Preparing metadata (setup.py): started
+20:15:43     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:43     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozlog (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 14))
+20:15:43     INFO -    Preparing metadata (setup.py): started
+20:15:43     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:43     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/moznetwork (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 15))
+20:15:43     INFO -    Preparing metadata (setup.py): started
+20:15:44     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:44     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozpower (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 16))
+20:15:44     INFO -    Preparing metadata (setup.py): started
+20:15:44     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:44     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozprocess (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 17))
+20:15:44     INFO -    Preparing metadata (setup.py): started
+20:15:44     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:44     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozprofile (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 18))
+20:15:44     INFO -    Preparing metadata (setup.py): started
+20:15:44     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:44     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozproxy (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 19))
+20:15:44     INFO -    Preparing metadata (setup.py): started
+20:15:44     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:44     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozrunner (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 20))
+20:15:44     INFO -    Preparing metadata (setup.py): started
+20:15:44     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:44     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozserve (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 21))
+20:15:44     INFO -    Preparing metadata (setup.py): started
+20:15:45     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:45     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozscreenshot (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 22))
+20:15:45     INFO -    Preparing metadata (setup.py): started
+20:15:45     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:45     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/moztest (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 23))
+20:15:45     INFO -    Preparing metadata (setup.py): started
+20:15:45     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:45     INFO -  Obtaining file:///home/XXXXXXXX/firefox-mte/testing/mozbase/mozversion (from -r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 24))
+20:15:45     INFO -    Preparing metadata (setup.py): started
+20:15:45     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:15:47     INFO -  Collecting six>=1.13.0 (from mozterm==1.0.0->-r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 1))
+20:15:47     INFO -    Using cached https://pypi.pub.build.mozilla.org/pub/six-1.16.0-py2.py3-none-any.whl (11 kB)
+20:15:48     INFO -  Collecting toml>=0.10.2 (from manifestparser==2.4.0->-r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 4))
+20:15:48     INFO -    Using cached https://pypi.pub.build.mozilla.org/pub/toml-0.10.2-py2.py3-none-any.whl (16 kB)
+20:15:48     INFO -  Collecting tomlkit>=0.12.3 (from manifestparser==2.4.0->-r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 4))
+20:15:48     INFO -    Using cached https://pypi.pub.build.mozilla.org/pub/tomlkit-0.12.3-py3-none-any.whl (37 kB)
+20:15:50     INFO -  Collecting distro>=1.4.0 (from mozinfo==1.2.3->-r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 11))
+20:15:50     INFO -    Using cached distro-1.4.0-py2.py3-none-any.whl
+20:15:51     INFO -  Collecting requests (from mozInstall==2.1.0->-r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 12))
+20:15:51     INFO -    Using cached https://pypi.pub.build.mozilla.org/pub/requests-2.32.3-py3-none-any.whl (64 kB)
+20:15:52     INFO -  Collecting blessed>=1.19.1 (from mozlog==8.0.0->-r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 14))
+20:15:52     INFO -    Using cached https://pypi.pub.build.mozilla.org/pub/blessed-1.19.1-py2.py3-none-any.whl (58 kB)
+20:15:53     INFO -  Collecting redo (from mozproxy==1.0->-r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 19))
+20:15:53     INFO -    Using cached redo-2.0.4-py2.py3-none-any.whl
+20:15:55     INFO -  Collecting wcwidth>=0.1.4 (from blessed>=1.19.1->mozlog==8.0.0->-r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 14))
+20:15:55     INFO -    Using cached wcwidth-0.1.7-py2.py3-none-any.whl
+20:15:56     INFO -  Collecting charset-normalizer<4,>=2 (from requests->mozInstall==2.1.0->-r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 12))
+20:15:56     INFO -    Using cached charset_normalizer-2.0.12-py3-none-any.whl
+20:15:57     INFO -  Collecting idna<4,>=2.5 (from requests->mozInstall==2.1.0->-r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 12))
+20:15:57     INFO -    Using cached https://pypi.pub.build.mozilla.org/pub/idna-3.3-py3-none-any.whl (61 kB)
+20:15:59     INFO -  Collecting urllib3<3,>=1.21.1 (from requests->mozInstall==2.1.0->-r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 12))
+20:15:59     INFO -    Using cached https://pypi.pub.build.mozilla.org/pub/urllib3-1.26.17-py2.py3-none-any.whl (143 kB)
+20:16:00     INFO -  Collecting certifi>=2017.4.17 (from requests->mozInstall==2.1.0->-r /home/XXXXXXXX/firefox-mte/testing/config/mozbase_source_requirements.txt (line 12))
+20:16:00     INFO -    Using cached https://pypi.pub.build.mozilla.org/pub/certifi-2024.2.2-py3-none-any.whl (163 kB)
+20:16:00     INFO -  Installing collected packages: wcwidth, redo, mozserve, mozleak, mozgeckoprofiler, geckoprocesstypes, distro, urllib3, tomlkit, toml, six, idna, charset-normalizer, certifi, requests, mozterm, mozfile, blessed, mozlog, mozinfo, mozversion, moztest, mozscreenshot, mozproxy, mozprofile, mozprocess, moznetwork, mozInstall, mozdevice, mozdebug, mozcrash, manifestparser, mozrunner, mozpower, mozhttpd
+20:16:00     INFO -    Running setup.py develop for mozserve
+20:16:00     INFO -    Running setup.py develop for mozleak
+20:16:00     INFO -    Running setup.py develop for mozgeckoprofiler
+20:16:01     INFO -    Running setup.py develop for geckoprocesstypes
+20:16:01     INFO -    Running setup.py develop for mozterm
+20:16:01     INFO -    Running setup.py develop for mozfile
+20:16:02     INFO -    Running setup.py develop for mozlog
+20:16:02     INFO -    Running setup.py develop for mozinfo
+20:16:02     INFO -    Running setup.py develop for mozversion
+20:16:02     INFO -    Running setup.py develop for moztest
+20:16:03     INFO -    Running setup.py develop for mozscreenshot
+20:16:03     INFO -    Running setup.py develop for mozproxy
+20:16:03     INFO -    Running setup.py develop for mozprofile
+20:16:03     INFO -    Running setup.py develop for mozprocess
+20:16:04     INFO -    Running setup.py develop for moznetwork
+20:16:04     INFO -    Running setup.py develop for mozInstall
+20:16:04     INFO -    Running setup.py develop for mozdevice
+20:16:05     INFO -    Running setup.py develop for mozdebug
+20:16:05     INFO -    Running setup.py develop for mozcrash
+20:16:05     INFO -    Running setup.py develop for manifestparser
+20:16:05     INFO -    Running setup.py develop for mozrunner
+20:16:06     INFO -    Running setup.py develop for mozpower
+20:16:06     INFO -    Running setup.py develop for mozhttpd
+20:16:06     INFO -  Successfully installed blessed-1.19.1 certifi-2024.2.2 charset-normalizer-2.0.12 distro-1.4.0 geckoprocesstypes-1.0 idna-3.3 manifestparser-2.4.0 mozInstall-2.1.0 mozcrash-2.2.0 mozdebug-0.3.1 mozdevice-4.2.0 mozfile-3.0.0 mozgeckoprofiler-1.0.0 mozhttpd-0.7.1 mozinfo-1.2.3 mozleak-1.0.0 mozlog-8.0.0 moznetwork-1.1.0 mozpower-1.1.2 mozprocess-1.4.0 mozprofile-3.0.0 mozproxy-1.0 mozrunner-8.3.2 mozscreenshot-1.0.0 mozserve-0.1 mozterm-1.0.0 moztest-1.1.0 mozversion-2.4.0 redo-2.0.4 requests-2.32.3 six-1.16.0 toml-0.10.2 tomlkit-0.12.3 urllib3-1.26.17 wcwidth-0.1.7
+20:16:07     INFO - Return code: 0
+20:16:07     INFO - Done creating virtualenv /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv.
+20:16:07     INFO - Getting output from command: ['/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip', 'list', '--format', 'freeze', '--no-index']
+20:16:07     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip list --format freeze --no-index
+20:16:07     INFO - Reading from file tmpfile_stdout
+20:16:07     INFO - Return code: 0
+20:16:07     INFO - Current package versions:
+20:16:07     INFO -   blessed == 1.19.1
+20:16:07     INFO -   certifi == 2024.2.2
+20:16:07     INFO -   charset-normalizer == 2.0.12
+20:16:07     INFO -   distro == 1.4.0
+20:16:07     INFO -   geckoprocesstypes == 1.0
+20:16:07     INFO -   idna == 3.3
+20:16:07     INFO -   jsonschema == 2.5.1
+20:16:07     INFO -   manifestparser == 2.4.0
+20:16:07     INFO -   mozInstall == 2.1.0
+20:16:07     INFO -   mozcrash == 2.2.0
+20:16:07     INFO -   mozdebug == 0.3.1
+20:16:07     INFO -   mozdevice == 4.2.0
+20:16:07     INFO -   mozfile == 3.0.0
+20:16:07     INFO -   mozgeckoprofiler == 1.0.0
+20:16:07     INFO -   mozhttpd == 0.7.1
+20:16:07     INFO -   mozinfo == 1.2.3
+20:16:07     INFO -   mozleak == 1.0.0
+20:16:07     INFO -   mozlog == 8.0.0
+20:16:07     INFO -   moznetwork == 1.1.0
+20:16:07     INFO -   mozpower == 1.1.2
+20:16:07     INFO -   mozprocess == 1.4.0
+20:16:07     INFO -   mozprofile == 3.0.0
+20:16:07     INFO -   mozproxy == 1.0
+20:16:07     INFO -   mozrunner == 8.3.2
+20:16:07     INFO -   mozscreenshot == 1.0.0
+20:16:07     INFO -   mozserve == 0.1
+20:16:07     INFO -   mozterm == 1.0.0
+20:16:07     INFO -   moztest == 1.1.0
+20:16:07     INFO -   mozversion == 2.4.0
+20:16:07     INFO -   pip == 24.0
+20:16:07     INFO -   psutil == 7.0.0
+20:16:07     INFO -   redo == 2.0.4
+20:16:07     INFO -   requests == 2.32.3
+20:16:07     INFO -   setuptools == 70.0.0
+20:16:07     INFO -   six == 1.16.0
+20:16:07     INFO -   toml == 0.10.2
+20:16:07     INFO -   tomlkit == 0.12.3
+20:16:07     INFO -   urllib3 == 1.26.17
+20:16:07     INFO -   wcwidth == 0.1.7
+20:16:07     INFO -   wheel == 0.43.0
+20:16:07     INFO - Installing None into virtualenv /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv
+20:16:08     INFO - find_links: connection checks passed for https://pypi.pub.build.mozilla.org/pub/, adding.
+20:16:08     INFO - retry: Calling run_command with args: [['/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip', 'install', '--no-use-pep517', '--timeout', '120', '-r', '/home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt', '--no-index', '--find-links', 'https://pypi.pub.build.mozilla.org/pub/']], kwargs: {'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': re.compile('\\d+: error: '), 'level': 'error'}, {'regex': re.compile('\\d+: warning: '), 'level': 'warning'}, {'regex': re.compile('Downloading .* \\(.*\\): *([0-9]+%)? *[0-9\\.]+[kmKM]b'), 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': re.compile('Warning:.*Error: '), 'level': 'warning'}, {'regex': re.compile('package.*> (?:Error|ERROR):'), 'level': 'error'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': re.compile('raise \\w*Exception: '), 'level': 'critical'}, {'regex': re.compile('raise \\w*Error: '), 'level': 'critical'}], 'cwd': '/home/XXXXXXXX/firefox-mte/testing/talos', 'env': {'EXPAT_PIN_CORE': '1', 'MOZCONFIG': 'mozconfig_copy', 'SHELL': '/bin/bash', 'HISTCONTROL': 'ignoredups', 'TERM_PROGRAM_VERSION': '3.5a', 'TMUX': '/tmp/tmux-1000/default,2416415,0', 'HISTSIZE': '1000', 'HOSTNAME': 'fedora', 'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346', 'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins', 'GPG_TTY': '/dev/pts/13', 'EDITOR': '/usr/bin/vim', 'PWD': '/home/XXXXXXXX/firefox-mte', 'LOGNAME': 'XXXXXXXX', 'XDG_SESSION_TYPE': 'tty', 'MOTD_SHOWN': 'pam', 'HOME': '/home/XXXXXXXX', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VIRTUAL_ENV': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common', 'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22', 'XDG_SESSION_CLASS': 'user', 'SELINUX_ROLE_REQUESTED': '', 'TERM': 'tmux-256color', 'LESSOPEN': '||/usr/bin/lesspipe.sh %s', 'USER': 'XXXXXXXX', 'TMUX_PANE': '%1', 'SELINUX_USE_CURRENT_RANGE': '', 'DISPLAY': ':99', 'SHLVL': '3', 'XDG_SESSION_ID': '1323', 'VIRTUAL_ENV_PROMPT': '(venv-3.11) ', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '172.17.128.2 52585 22', 'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ', 'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:', 'PATH': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin', 'SELINUX_LEVEL_REQUESTED': '', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'MAIL': '/var/spool/mail/XXXXXXXX', 'SSH_TTY': '/dev/pts/0', 'OLDPWD': '/home/XXXXXXXX/firefox-mte', 'TERM_PROGRAM': 'tmux', '_': './mach', 'MACH_MAIN_PID': '2614585', 'REQUIRE_GPU': '0'}, 'error_level': 'warning'}, attempt #1
+20:16:08     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip', 'install', '--no-use-pep517', '--timeout', '120', '-r', '/home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt', '--no-index', '--find-links', 'https://pypi.pub.build.mozilla.org/pub/'] in /home/XXXXXXXX/firefox-mte/testing/talos
+20:16:08     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/pip install --no-use-pep517 --timeout 120 -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt --no-index --find-links https://pypi.pub.build.mozilla.org/pub/
+20:16:08     INFO - Using env: (same as previous command)
+20:16:08     INFO -  Looking in links: https://pypi.pub.build.mozilla.org/pub/
+20:16:08     INFO -  Processing /home/XXXXXXXX/firefox-mte/testing/web-platform/tests/tools/wptserve
+20:16:08     INFO -    Preparing metadata (setup.py): started
+20:16:09     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:16:09     INFO -  Processing /home/XXXXXXXX/firefox-mte/testing/web-platform/tests/tools/third_party/h2
+20:16:09     INFO -    Preparing metadata (setup.py): started
+20:16:09     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:16:09     INFO -  Processing /home/XXXXXXXX/firefox-mte/testing/web-platform/tests/tools/third_party/pywebsocket3
+20:16:09     INFO -    Preparing metadata (setup.py): started
+20:16:09     INFO -    Preparing metadata (setup.py): finished with status 'done'
+20:16:09     INFO -  Requirement already satisfied: jsonschema>=2.5.1 in /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/lib64/python3.11/site-packages (from -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 3)) (2.5.1)
+20:16:09     INFO -  Requirement already satisfied: mozlog>=6.0 in /home/XXXXXXXX/firefox-mte/testing/mozbase/mozlog (from -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 4)) (8.0.0)
+20:16:09     INFO -  Requirement already satisfied: mozcrash>=2.0 in /home/XXXXXXXX/firefox-mte/testing/mozbase/mozcrash (from -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 5)) (2.2.0)
+20:16:09     INFO -  Requirement already satisfied: mozfile>=1.2 in /home/XXXXXXXX/firefox-mte/testing/mozbase/mozfile (from -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 6)) (3.0.0)
+20:16:09     INFO -  Requirement already satisfied: mozinfo>=0.8 in /home/XXXXXXXX/firefox-mte/testing/mozbase/mozinfo (from -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 7)) (1.2.3)
+20:16:09     INFO -  Requirement already satisfied: mozprocess>=0.22 in /home/XXXXXXXX/firefox-mte/testing/mozbase/mozprocess (from -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 8)) (1.4.0)
+20:16:09     INFO -  Requirement already satisfied: mozversion>=1.3 in /home/XXXXXXXX/firefox-mte/testing/mozbase/mozversion (from -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 9)) (2.4.0)
+20:16:09     INFO -  Requirement already satisfied: mozprofile>=0.25 in /home/XXXXXXXX/firefox-mte/testing/mozbase/mozprofile (from -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 10)) (3.0.0)
+20:16:09     INFO -  Requirement already satisfied: mozrunner>=7.1.0 in /home/XXXXXXXX/firefox-mte/testing/mozbase/mozrunner (from -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 11)) (8.3.2)
+20:16:09     INFO -  Requirement already satisfied: psutil>=3.1.1 in /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/lib64/python3.11/site-packages (from -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 12)) (7.0.0)
+20:16:10     INFO -  Collecting simplejson>=2.1.1 (from -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 13))
+20:16:10     INFO -    Using cached https://pypi.pub.build.mozilla.org/pub/simplejson-3.20.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (143 kB)
+20:16:10     INFO -  Requirement already satisfied: requests>=2.9.1 in /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/lib64/python3.11/site-packages (from -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 14)) (2.32.3)
+20:16:10     INFO -  Requirement already satisfied: manifestparser>=2.1.0 in /home/XXXXXXXX/firefox-mte/testing/mozbase/manifestparser (from -r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 18)) (2.4.0)
+20:16:10     INFO -  Requirement already satisfied: blessed>=1.19.1 in /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/lib64/python3.11/site-packages (from mozlog>=6.0->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 4)) (1.19.1)
+20:16:10     INFO -  Requirement already satisfied: mozterm in /home/XXXXXXXX/firefox-mte/python/mozterm (from mozlog>=6.0->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 4)) (1.0.0)
+20:16:10     INFO -  Requirement already satisfied: six>=1.13.0 in /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/lib64/python3.11/site-packages (from mozlog>=6.0->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 4)) (1.16.0)
+20:16:10     INFO -  Requirement already satisfied: distro>=1.4.0 in /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/lib64/python3.11/site-packages (from mozinfo>=0.8->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 7)) (1.4.0)
+20:16:10     INFO -  Requirement already satisfied: mozdevice<5,>=4.2.0 in /home/XXXXXXXX/firefox-mte/testing/mozbase/mozdevice (from mozrunner>=7.1.0->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 11)) (4.2.0)
+20:16:10     INFO -  Requirement already satisfied: charset-normalizer<4,>=2 in /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/lib64/python3.11/site-packages (from requests>=2.9.1->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 14)) (2.0.12)
+20:16:10     INFO -  Requirement already satisfied: idna<4,>=2.5 in /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/lib64/python3.11/site-packages (from requests>=2.9.1->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 14)) (3.3)
+20:16:10     INFO -  Requirement already satisfied: urllib3<3,>=1.21.1 in /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/lib64/python3.11/site-packages (from requests>=2.9.1->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 14)) (1.26.17)
+20:16:10     INFO -  Requirement already satisfied: certifi>=2017.4.17 in /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/lib64/python3.11/site-packages (from requests>=2.9.1->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 14)) (2024.2.2)
+20:16:10     INFO -  Collecting hyperframe<7,>=6.0 (from h2==4.1.0->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 16))
+20:16:10     INFO -    Using cached https://pypi.pub.build.mozilla.org/pub/hyperframe-6.0.0-py3-none-any.whl (11 kB)
+20:16:12     INFO -  Collecting hpack<5,>=4.0 (from h2==4.1.0->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 16))
+20:16:12     INFO -    Using cached https://pypi.pub.build.mozilla.org/pub/hpack-4.0.0-py3-none-any.whl (32 kB)
+20:16:12     INFO -  Requirement already satisfied: toml>=0.10.2 in /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/lib64/python3.11/site-packages (from manifestparser>=2.1.0->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 18)) (0.10.2)
+20:16:12     INFO -  Requirement already satisfied: tomlkit>=0.12.3 in /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/lib64/python3.11/site-packages (from manifestparser>=2.1.0->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 18)) (0.12.3)
+20:16:12     INFO -  Requirement already satisfied: wcwidth>=0.1.4 in /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/lib64/python3.11/site-packages (from blessed>=1.19.1->mozlog>=6.0->-r /home/XXXXXXXX/firefox-mte/testing/talos/source_requirements.txt (line 4)) (0.1.7)
+20:16:12     INFO -  Building wheels for collected packages: wptserve, h2, pywebsocket3
+20:16:12     INFO -    Building wheel for wptserve (setup.py): started
+20:16:12     INFO -    Building wheel for wptserve (setup.py): finished with status 'done'
+20:16:12     INFO -    Created wheel for wptserve: filename=wptserve-4.0.2-py3-none-any.whl size=57211 sha256=3dd73e1d7db85e4b25463dd697fc91790da3eb12733b9a20418dbe5756bb7184
+20:16:12     INFO -    Stored in directory: /tmp/pip-ephem-wheel-cache-w9is2s4m/wheels/06/a4/29/51714315e4b3b9a19cc3d5a43efe76410ee2dbca7f448986d0
+20:16:12     INFO -    Building wheel for h2 (setup.py): started
+20:16:12     INFO -    Building wheel for h2 (setup.py): finished with status 'done'
+20:16:12     INFO -    Created wheel for h2: filename=h2-4.1.0-py3-none-any.whl size=57123 sha256=a0c73e2e7e44d6a1f78fdf3e8ab344811d3abee1fc6f004878bf1334b8331a5d
+20:16:12     INFO -    Stored in directory: /tmp/pip-ephem-wheel-cache-w9is2s4m/wheels/79/26/4e/5c8d64f7e9fa859456e8af32c3ff560c8fb7ed8d9d9bd17ddb
+20:16:12     INFO -    Building wheel for pywebsocket3 (setup.py): started
+20:16:13     INFO -    Building wheel for pywebsocket3 (setup.py): finished with status 'done'
+20:16:13     INFO -    Created wheel for pywebsocket3: filename=pywebsocket3-4.0.2-py3-none-any.whl size=63651 sha256=fe4f2c9a58e108170a9c4cac449aa9557e854f5d979b71e38f5d4a2589360a5d
+20:16:13     INFO -    Stored in directory: /tmp/pip-ephem-wheel-cache-w9is2s4m/wheels/8a/b3/a5/1a231b60a2b72847d1f72d1bc947b547fe1a51aa1c0244b27b
+20:16:13     INFO -  Successfully built wptserve h2 pywebsocket3
+20:16:13     INFO -  Installing collected packages: simplejson, pywebsocket3, hyperframe, hpack, h2, wptserve
+20:16:13     INFO -  Successfully installed h2-4.1.0 hpack-4.0.0 hyperframe-6.0.0 pywebsocket3-4.0.2 simplejson-3.20.1 wptserve-4.0.2
+20:16:13     INFO - Return code: 0
+20:16:13     INFO - Running post-action listener: _resource_record_post_action
+20:16:13     INFO - Running post-action listener: _start_resource_monitoring
+20:16:13     INFO - Starting resource monitoring.
+20:16:13     INFO - [mozharness: 2025-08-20 20:16:13.565295Z] Finished create-virtualenv step (success)
+20:16:13     INFO - [mozharness: 2025-08-20 20:16:13.566023Z] Skipping install step.
+20:16:13     INFO - [mozharness: 2025-08-20 20:16:13.566066Z] Running run-tests step.
+20:16:13     INFO - Running pre-action listener: _resource_record_pre_action
+20:16:13     INFO - Running pre-action listener: _set_gcov_prefix
+20:16:13     INFO - Running main action method: run_tests
+20:16:13     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/python', '--version']
+20:16:13     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/python --version
+20:16:13     INFO -  Python 3.11.13
+20:16:13     INFO - Return code: 0
+20:16:13     INFO - ENV: MOZ_UPLOAD_DIR is now /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir
+20:16:13     INFO - ENV: MOZBUILD_PATH is now /home/XXXXXXXX/.mozbuild
+20:16:13     INFO - ENV: MINIDUMP_SAVE_PATH is now /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir
+20:16:13     INFO - ENV: RUST_BACKTRACE is now full
+20:16:13     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/python', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py', '--executablePath', '/home/XXXXXXXX/firefox-mte/firefox_release_copy/dist/bin/firefox', '--title', 'fedora', '--develop', '--activeTests', 'expat_perf_test', '--log-tbpl-level=info'] in /home/XXXXXXXX/firefox-mte/testing/mozharness/build
+20:16:13     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/python /home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py --executablePath /home/XXXXXXXX/firefox-mte/firefox_release_copy/dist/bin/firefox --title fedora --develop --activeTests expat_perf_test --log-tbpl-level=info
+20:16:13     INFO - Using env: {'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+20:16:13     INFO -  'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:',
+20:16:13     INFO -  'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ',
+20:16:13     INFO -  'DISPLAY': ':99',
+20:16:13     INFO -  'EDITOR': '/usr/bin/vim',
+20:16:13     INFO -  'EXPAT_PIN_CORE': '1',
+20:16:13     INFO -  'GPG_TTY': '/dev/pts/13',
+20:16:13     INFO -  'HISTCONTROL': 'ignoredups',
+20:16:13     INFO -  'HISTSIZE': '1000',
+20:16:13     INFO -  'HOME': '/home/XXXXXXXX',
+20:16:13     INFO -  'HOSTNAME': 'fedora',
+20:16:13     INFO -  'LANG': 'en_US.UTF-8',
+20:16:13     INFO -  'LESSOPEN': '||/usr/bin/lesspipe.sh %s',
+20:16:13     INFO -  'LOGNAME': 'XXXXXXXX',
+20:16:13     INFO -  'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+20:16:13     INFO -  'MACH_MAIN_PID': '2614585',
+20:16:13     INFO -  'MAIL': '/var/spool/mail/XXXXXXXX',
+20:16:13     INFO -  'MINIDUMP_SAVE_PATH': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:16:13     INFO -  'MOTD_SHOWN': 'pam',
+20:16:13     INFO -  'MOZBUILD_PATH': '/home/XXXXXXXX/.mozbuild',
+20:16:13     INFO -  'MOZCONFIG': 'mozconfig_copy',
+20:16:13     INFO -  'MOZ_DEVELOPER_OBJ_DIR': '/home/XXXXXXXX/firefox-mte/firefox_release_copy',
+20:16:13     INFO -  'MOZ_DEVELOPER_REPO_DIR': '/home/XXXXXXXX/firefox-mte',
+20:16:13     INFO -  'MOZ_UPLOAD_DIR': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:16:13     INFO -  'OLDPWD': '/home/XXXXXXXX/firefox-mte',
+20:16:13     INFO -  'PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin',
+20:16:13     INFO -  'PWD': '/home/XXXXXXXX/firefox-mte',
+20:16:13     INFO -  'PYTHONPATH': '/home/XXXXXXXX/firefox-mte/testing/talos',
+20:16:13     INFO -  'REQUIRE_GPU': '0',
+20:16:13     INFO -  'RUST_BACKTRACE': 'full',
+20:16:13     INFO -  'SELINUX_LEVEL_REQUESTED': '',
+20:16:13     INFO -  'SELINUX_ROLE_REQUESTED': '',
+20:16:13     INFO -  'SELINUX_USE_CURRENT_RANGE': '',
+20:16:13     INFO -  'SHELL': '/bin/bash',
+20:16:13     INFO -  'SHLVL': '3',
+20:16:13     INFO -  'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346',
+20:16:13     INFO -  'SSH_CLIENT': '172.17.128.2 52585 22',
+20:16:13     INFO -  'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22',
+20:16:13     INFO -  'SSH_TTY': '/dev/pts/0',
+20:16:13     INFO -  'TERM': 'tmux-256color',
+20:16:13     INFO -  'TERM_PROGRAM': 'tmux',
+20:16:13     INFO -  'TERM_PROGRAM_VERSION': '3.5a',
+20:16:13     INFO -  'TMUX': '/tmp/tmux-1000/default,2416415,0',
+20:16:13     INFO -  'TMUX_PANE': '%1',
+20:16:13     INFO -  'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins',
+20:16:13     INFO -  'USER': 'XXXXXXXX',
+20:16:13     INFO -  'VIRTUAL_ENV': 'talos-venv',
+20:16:13     INFO -  'VIRTUAL_ENV_PROMPT': '(venv-3.11) ',
+20:16:13     INFO -  'XDG_RUNTIME_DIR': '/run/user/1000',
+20:16:13     INFO -  'XDG_SESSION_CLASS': 'user',
+20:16:13     INFO -  'XDG_SESSION_ID': '1323',
+20:16:13     INFO -  'XDG_SESSION_TYPE': 'tty',
+20:16:13     INFO -  '_': './mach'}
+20:16:13     INFO - Calling ['/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin/python', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py', '--executablePath', '/home/XXXXXXXX/firefox-mte/firefox_release_copy/dist/bin/firefox', '--title', 'fedora', '--develop', '--activeTests', 'expat_perf_test', '--log-tbpl-level=info'] with output_timeout 3600
+20:16:13     INFO -  mozversion application_buildid: 20250820122224
+20:16:13     INFO -  mozversion application_changeset: 497a35d032e41a640590af9ac68d8a6dd21f4131
+20:16:13     INFO -  mozversion application_display_name: Nightly
+20:16:13     INFO -  mozversion application_id: {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+20:16:13     INFO -  mozversion application_name: Firefox
+20:16:13     INFO -  mozversion application_remotingname: firefox-default
+20:16:13     INFO -  mozversion application_vendor: Mozilla
+20:16:13     INFO -  mozversion application_version: 134.0.1
+20:16:13     INFO -  mozversion platform_buildid: 20250820122224
+20:16:13     INFO -  mozversion platform_changeset: 497a35d032e41a640590af9ac68d8a6dd21f4131
+20:16:13     INFO -  mozversion platform_version: 134.0.1
+20:16:13     INFO -  starting webserver on '127.0.0.1:35807'
+20:16:13     INFO -  SUITE-START | Running 1 tests
+20:16:13     INFO -  TEST-START | expat_perf_test
+20:16:13     INFO -  Initialising browser for expat_perf_test test...
+20:16:13     INFO -  Cloning profile located at /home/XXXXXXXX/firefox-mte/testing/talos/talos/base_profile
+20:16:13     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/base
+20:16:13     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/common
+20:16:13     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/perf
+20:16:13     INFO -  Installing Add-ons:
+20:16:13     INFO -  ['/home/XXXXXXXX/firefox-mte/testing/talos/talos/talos-powers', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/pageloader']
+20:16:13     INFO -  Installing Webextensions:
+20:16:13     INFO -  Application command: /home/XXXXXXXX/firefox-mte/firefox_release_copy/dist/bin/firefox http://127.0.0.1:35807/getInfo.html -profile /tmp/tmpzdsji6v5/profile
+20:16:13     INFO -  TEST-INFO | started process 2616314 (/home/XXXXXXXX/firefox-mte/firefox_release_copy/dist/bin/firefox http://127.0.0.1:35807/getInfo.html)
+20:16:14     INFO -  libEGL warning: DRI3 error: Could not get DRI3 device
+20:16:14     INFO -  libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:16:14     INFO -  libEGL warning: DRI3 error: Could not get DRI3 device
+20:16:14     INFO -  libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:16:14     INFO -  COPY sched_setaffinity on core : 1 (PID:2616314)
+20:16:15     INFO -  console.error: ({})
+20:16:15     INFO -  console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 911))
+20:16:15     INFO -  __metrics
+20:16:15     INFO -  	Screen width/height: 1280/1024
+20:16:15     INFO -  	colorDepth: 24
+20:16:15     INFO -  	Browser inner width/height: 1152/836
+20:16:15     INFO -  __metrics
+20:16:15     INFO -  GetShaderInfoLog() ->
+20:16:15     INFO -  0:2(12): error: extension `GL_EXT_shader_texture_lod' unsupported in fragment shader
+20:16:15     INFO -  GetShaderSource() ->
+20:16:15     INFO -  #extension GL_EXT_shader_texture_lod: require
+20:16:15     INFO -  void main() {}
+20:16:15     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.sys.mjs, line 772: WebGL context was lost.
+20:16:15     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.sys.mjs, line 772: WebGL context was lost.
+20:16:16     INFO -  console.error: AboutHomeStartupCache: "requestCache called with no _procManager!"
+20:16:16     INFO -  about:support	{"application":{"name":"Firefox","osVersion":"Linux 6.14.0-63.fc42.aarch64 #1 SMP PREEMPT_DYNAMIC Mon Mar 24 20:18:11 UTC 2025","version":"134.0.1","buildID":"20250820122224","distributionID":"","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0","safeMode":false,"memorySizeBytes":539257499648,"diskAvailableBytes":268489400320,"updateChannel":"default","supportURL":"https://support.mozilla.org/1/firefox/134.0.1/Linux/en-US/","osTheme":"Adwaita / Adwaita","pointingDevices":[],"numTotalWindows":1,"numFissionWindows":1,"numRemoteWindows":1,"fissionAutoStart":true,"fissionDecisionStatus":"enabledByDefault","remoteAutoStart":true,"policiesStatus":0,"keyLocationServiceGoogleFound":false,"keySafebrowsingGoogleFound":false,"keyMozillaFound":false},"securitySoftware":{"registeredAntiVirus":"","registeredAntiSpyware":"","registeredFirewall":""},"environmentVariables":{"DISPLAY":":99","MOZ_UPLOAD_DIR":"/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir","MOZ_DEVELOPER_REPO_DIR":"/home/XXXXXXXX/firefox-mte","MOZ_DEVELOPER_OBJ_DIR":"/home/XXXXXXXX/firefox-mte/firefox_release_copy","MOZ_CRASHREPORTER_NO_REPORT":"1","MOZ_CRASHREPORTER":"1","MOZ_DISABLE_NONLOCAL_CONNECTIONS":"1","XRE_NO_WINDOWS_CRASH_DIALOG":"1","MOZ_ASSUME_USER_NS":"1","MOZ_CRASHREPORTER_EVENTS_DIRECTORY":"/tmp/tmpzdsji6v5/profile/crashes/events","MOZ_CRASHREPORTER_RESTART_ARG_1":"http://127.0.0.1:35807/getInfo.html","MOZ_CRASHREPORTER_RESTART_ARG_2":"-profile","MOZ_CRASHREPORTER_RESTART_ARG_3":"/tmp/tmpzdsji6v5/profile","MOZ_CRASHREPORTER_RESTART_ARG_4":"","MOZ_CRASHREPORTER_DATA_DIRECTORY":"/home/XXXXXXXX/.mozilla/firefox/Crash Reports","MOZ_CRASHREPORTER_PING_DIRECTORY":"/home/XXXXXXXX/.mozilla/firefox/Pending Pings","MOZ_CRASHREPORTER_STRINGS_OVERRIDE":"/home/XXXXXXXX/firefox-mte/firefox_release_copy/dist/bin/browser/crashreporter-override.ini","MOZ_LAUNCHED_CHILD":"","MOZ_APP_SILENT_START":"","XRE_PROFILE_PATH":"","XRE_PROFILE_LOCAL_PATH":"","XRE_START_OFFLINE":"","XRE_BINARY_PATH":"","XRE_RESTARTED_BY_PROFILE_MANAGER":""},"modifiedPreferences":{"browser.cache.disk.smart_size.enabled":false,"browser.contentblocking.category":"custom","browser.link.open_newwindow":2,"browser.search.region":"US","browser.tabs.remote.systemTriggeredAboutBlankAnywhere":true,"browser.tabs.unloadOnLowMemory":false,"browser.urlbar.quicksuggest.migrationVersion":2,"browser.urlbar.placeholderName":"Google","browser.urlbar.quicksuggest.scenario":"offline","doh-rollout.home-region":"US","dom.forms.autocomplete.formautofill":true,"dom.allow_scripts_to_close_windows":true,"dom.disable_open_during_load":false,"dom.disable_window_flip":true,"dom.disable_window_move_resize":true,"dom.input_events.security.minNumTicks":0,"dom.input_events.security.minTimeElapsedInMS":0,"dom.max_chrome_script_run_time":0,"dom.max_script_run_time":0,"dom.push.connection.enabled":false,"dom.send_after_paint_to_content":true,"extensions.checkCompatibility":false,"extensions.formautofill.creditCards.reauth.optout":"MDIEEPgAAAAAAAAAAAAAAAAAAAEwFAYIKoZIhvcNAwcECB3jiYSO+3RKBAivh2oew0L9aA==","extensions.formautofill.addresses.experiments.enabled":true,"extensions.lastAppVersion":"134.0.1","general.useragent.updates.enabled":false,"gfx.webrender.all":true,"idle.lastDailyNotification":-1,"media.gmp.storage.version.observed":1,"media.allowed-to-play.enabled":true,"media.autoplay.ask-permission":false,"media.autoplay.blocking_policy":0,"media.autoplay.default":0,"media.block-autoplay-until-in-foreground":false,"media.capturestream_hints.enabled":true,"media.geckoview.autoplay.request":false,"media.getdisplaymedia.screencapturekit.picker.enabled":false,"media.gmp-manager.updateEnabled":false,"media.gmp-manager.url":"http://127.0.0.1/gmpmanager-dummy/update.xml","media.libavcodec.allow-obsolete":true,"media.navigator.enabled":true,"media.navigator.permission.disabled":true,"media.peerconnection.enabled":true,"media.wakelock.audio.delay-releasing.ms":0,"media.webspeech.synth.dont_notify_on_error":true,"network.protocol-handler.external.ext+damp":true,"network.protocol-handler.external.ext+twinopen":true,"places.database.lastMaintenance":2147483647,"privacy.bounceTrackingProtection.hasMigratedUserActivationData":true,"privacy.trackingprotection.introURL":"http://127.0.0.1/trackingprotection/tour","privacy.sanitize.pending":"[{\"id\":\"newtab-container\",\"itemsToClear\":[],\"options\":{}}]","privacy.reduceTimerPrecision":false,"privacy.trackingprotection.annotate_channels":false,"privacy.trackingprotection.enabled":false,"privacy.trackingprotection.pbmode.enabled":false,"security.certerrors.mitm.priming.enabled":false,"security.enable_java":false,"security.fileuri.strict_origin_policy":false,"security.turn_off_all_security_so_that_viruses_can_take_over_this_computer":true,"services.sync.engine.addresses.available":true,"signon.management.page.os-auth.optout":"MDIEEPgAAAAAAAAAAAAAAAAAAAEwFAYIKoZIhvcNAwcECDehx5yMM1JDBAjBRCc0lfdbsA==","widget.gtk.overlay-scrollbars.enabled":false},"lockedPreferences":{"fission.autostart.session":true},"printingPreferences":{},"media":{"currentAudioBackend":"pulse-rust","currentMaxAudioChannels":2,"currentPreferredSampleRate":48000,"audioOutputDevices":[{"name":"Dummy Output","groupId":"","vendor":"","type":2,"state":2,"preferred":15,"supportedFormat":12336,"defaultFormat":4096,"maxChannels":2,"defaultRate":48000,"maxRate":384000,"minRate":1,"maxLatency":0,"minLatency":0}],"audioInputDevices":[{"name":"Monitor of Dummy Output","groupId":"","vendor":"","type":1,"state":2,"preferred":15,"supportedFormat":12336,"defaultFormat":4096,"maxChannels":2,"defaultRate":48000,"maxRate":384000,"minRate":1,"maxLatency":0,"minLatency":0}],"codecSupportInfo":"H264 SW\nVP9 SW\nVP8 SW\nAV1 SW\nHEVC NONE\nAAC SW\nMP3 SW\nOpus SW\nVorbis SW\nFLAC SW\nWave SW"},"accessibility":{"isActive":false,"forceDisabled":0,"instantiator":""},"startupCache":{"DiskCachePath":"/tmp/tmpzdsji6v5/profile/startupCache/startupCache.8.little","IgnoreDiskCache":false,"FoundDiskCacheOnInit":false,"WroteToDiskCache":false},"libraryVersions":{"NSPR":{"minVersion":"4.36","version":"4.36"},"NSS":{"minVersion":"3.107","version":"3.107"},"NSSUTIL":{"minVersion":"3.107","version":"3.107"},"NSSSSL":{"minVersion":"3.107","version":"3.107"},"NSSSMIME":{"minVersion":"3.107","version":"3.107"}},"userJS":{"exists":true},"intl":{"localeService":{"requested":["en-US"],"available":["en-US"],"supported":["en-US"],"regionalPrefs":["en-US"],"defaultLocale":"en-US"},"osPrefs":{"systemLocales":["en-US"],"regionalPrefsLocales":["en-US"]}},"contentAnalysis":{"active":false},"crashes":{"submitted":[],"pending":0},"sandbox":{"hasSeccompBPF":true,"hasSeccompTSync":true,"hasPrivilegedUserNamespaces":true,"hasUserNamespaces":true,"canSandboxContent":true,"canSandboxMedia":true,"syscallLog":[],"contentSandboxLevel":4,"effectiveContentSandboxLevel":0},"remoteAgent":{"running":false,"url":""},"graphics":{"desktopEnvironment":"","numTotalWindows":1,"numAcceleratedWindows":1,"windowLayerManagerType":"WebRender","windowLayerManagerRemote":true,"graphicsDevicePixelRatios":[1],"adapterDescription":"llvmpipe (LLVM 20.1.8, 128 bits)","adapterVendorID":"Mesa","adapterDeviceID":"llvmpipe (LLVM 20.1.8, 128 bits)","adapterRAM":0,"adapterDrivers":"","driverVendor":"mesa/llvmpipe","driverVersion":"25.1.7.0","driverDate":"","adapterVendorID2":"0x1a03","adapterDeviceID2":"0x2000","isGPU2Active":false,"targetFrameRate":59,"windowProtocol":"x11","supportFontDetermination":"Fedora Unknown - ID=fedora","webgl1Renderer":"Mesa -- llvmpipe (LLVM 20.1.8, 128 bits)","webgl1Version":"OpenGL ES 3.2 Mesa 25.1.7","webgl1DriverExtensions":"GL_EXT_blend_minmax GL_EXT_multi_draw_arrays GL_EXT_texture_filter_anisotropic GL_EXT_texture_compression_s3tc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_format_BGRA8888 GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_mapbuffer GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_stencil8 GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_vertex_half_float GL_EXT_draw_instanced GL_EXT_texture_sRGB_decode GL_OES_EGL_image GL_OES_depth_texture GL_OES_packed_depth_stencil GL_EXT_texture_type_2_10_10_10_REV GL_NV_conditional_render GL_OES_get_program_binary GL_APPLE_texture_max_level GL_EXT_discard_framebuffer GL_EXT_read_format_bgra GL_EXT_texture_storage GL_NV_pack_subimage GL_NV_texture_barrier GL_EXT_frag_depth GL_NV_fbo_color_attachments GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_vertex_array_object GL_OES_viewport_array GL_ANGLE_pack_reverse_row_order GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_EXT_occlusion_query_boolean GL_EXT_robustness GL_EXT_texture_rg GL_EXT_unpack_subimage GL_NV_draw_buffers GL_NV_read_buffer GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_APPLE_sync GL_EXT_draw_buffers GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_shadow_samplers GL_KHR_debug GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_NV_generate_mipmap_sRGB GL_NV_pixel_buffer_object GL_OES_depth_texture_cube_map GL_OES_required_internalformat GL_OES_surfaceless_context GL_EXT_color_buffer_float GL_EXT_debug_label GL_EXT_sRGB_write_control GL_EXT_separate_shader_objects GL_EXT_shader_framebuffer_fetch GL_EXT_shader_group_vote GL_EXT_shader_implicit_conversions GL_EXT_shader_integer_mix GL_EXT_tessellation_point_size GL_EXT_tessellation_shader GL_ANDROID_extension_pack_es31a GL_ARM_shader_framebuffer_fetch_depth_stencil GL_EXT_base_instance GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_copy_image GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_gpu_shader5 GL_EXT_multi_draw_indirect GL_EXT_polygon_offset_clamp GL_EXT_primitive_bounding_box GL_EXT_render_snorm GL_EXT_shader_io_blocks GL_EXT_texture_border_clamp GL_EXT_texture_buffer GL_EXT_texture_cube_map_array GL_EXT_texture_norm16 GL_EXT_texture_view GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_robust_buffer_access_behavior GL_NV_image_formats GL_NV_shader_noperspective_interpolation GL_OES_copy_image GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_gpu_shader5 GL_OES_primitive_bounding_box GL_OES_sample_shading GL_OES_sample_variables GL_OES_shader_io_blocks GL_OES_shader_multisample_interpolation GL_OES_tessellation_point_size GL_OES_tessellation_shader GL_OES_texture_border_clamp GL_OES_texture_buffer GL_OES_texture_cube_map_array GL_OES_texture_stencil8 GL_OES_texture_storage_multisample_2d_array GL_OES_texture_view GL_EXT_blend_func_extended GL_EXT_buffer_storage GL_EXT_float_blend GL_EXT_geometry_point_size GL_EXT_geometry_shader GL_EXT_texture_filter_minmax GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_KHR_no_error GL_KHR_texture_compression_astc_sliced_3d GL_OES_EGL_image_external_essl3 GL_OES_geometry_point_size GL_OES_geometry_shader GL_OES_shader_image_atomic GL_EXT_clear_texture GL_EXT_clip_cull_distance GL_EXT_conservative_depth GL_EXT_disjoint_timer_query GL_EXT_texture_compression_s3tc_srgb GL_MESA_shader_integer_functions GL_EXT_clip_control GL_EXT_color_buffer_half_float GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_texture_compression_bptc GL_EXT_texture_mirror_clamp_to_edge GL_KHR_parallel_shader_compile GL_NV_alpha_to_coverage_dither_control GL_EXT_EGL_image_storage GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_texture_shadow_lod GL_MESA_framebuffer_flip_y GL_OVR_multiview GL_OVR_multiview2 GL_EXT_depth_clamp GL_EXT_texture_query_lod GL_MESA_sampler_objects GL_EXT_EGL_image_storage_compression GL_EXT_texture_storage_compression GL_MESA_bgra ","webgl1Extensions":"ANGLE_instanced_arrays EXT_blend_minmax EXT_color_buffer_half_float EXT_depth_clamp EXT_float_blend EXT_frag_depth EXT_sRGB EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_element_index_uint OES_fbo_render_mipmap OES_standard_derivatives OES_texture_float OES_texture_float_linear OES_texture_half_float OES_texture_half_float_linear OES_vertex_array_object WEBGL_color_buffer_float WEBGL_compressed_texture_astc WEBGL_compressed_texture_etc WEBGL_compressed_texture_etc1 WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_depth_texture WEBGL_draw_buffers WEBGL_lose_context","webgl1WSIInfo":"outOfProcess: false\ninProcess: true\nEGL_VENDOR: Mesa Project\nEGL_VERSION: 1.5\nEGL_EXTENSIONS: EGL_ANDROID_blob_cache EGL_ANGLE_sync_control_rate EGL_EXT_buffer_age EGL_EXT_config_select_group EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_EXT_query_reset_notification_strategy EGL_EXT_surface_compression EGL_EXT_swap_buffers_with_damage EGL_KHR_cl_event2 EGL_KHR_config_attribs EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_create_context_no_error EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image_base EGL_KHR_no_config_context EGL_KHR_reusable_sync EGL_KHR_surfaceless_context EGL_KHR_swap_buffers_with_damage EGL_EXT_pixel_format_float EGL_KHR_wait_sync EGL_MESA_configless_context EGL_MESA_gl_interop EGL_MESA_query_driver EGL_MESA_x11_native_visual_id \nEGL_EXTENSIONS(nullptr): EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_EXT_platform_base EGL_KHR_client_get_all_proc_addresses EGL_EXT_client_extensions EGL_KHR_debug EGL_EXT_platform_device EGL_EXT_explicit_device EGL_EXT_platform_wayland EGL_KHR_platform_wayland EGL_EXT_platform_x11 EGL_KHR_platform_x11 EGL_EXT_platform_xcb EGL_MESA_platform_gbm EGL_KHR_platform_gbm EGL_MESA_platform_surfaceless","webgl2Renderer":"Mesa -- llvmpipe (LLVM 20.1.8, 128 bits)","webgl2Version":"OpenGL ES 3.2 Mesa 25.1.7","webgl2DriverExtensions":"GL_EXT_blend_minmax GL_EXT_multi_draw_arrays GL_EXT_texture_filter_anisotropic GL_EXT_texture_compression_s3tc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_format_BGRA8888 GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_mapbuffer GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_stencil8 GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_vertex_half_float GL_EXT_draw_instanced GL_EXT_texture_sRGB_decode GL_OES_EGL_image GL_OES_depth_texture GL_OES_packed_depth_stencil GL_EXT_texture_type_2_10_10_10_REV GL_NV_conditional_render GL_OES_get_program_binary GL_APPLE_texture_max_level GL_EXT_discard_framebuffer GL_EXT_read_format_bgra GL_EXT_texture_storage GL_NV_pack_subimage GL_NV_texture_barrier GL_EXT_frag_depth GL_NV_fbo_color_attachments GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_vertex_array_object GL_OES_viewport_array GL_ANGLE_pack_reverse_row_order GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_EXT_occlusion_query_boolean GL_EXT_robustness GL_EXT_texture_rg GL_EXT_unpack_subimage GL_NV_draw_buffers GL_NV_read_buffer GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_APPLE_sync GL_EXT_draw_buffers GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_shadow_samplers GL_KHR_debug GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_NV_generate_mipmap_sRGB GL_NV_pixel_buffer_object GL_OES_depth_texture_cube_map GL_OES_required_internalformat GL_OES_surfaceless_context GL_EXT_color_buffer_float GL_EXT_debug_label GL_EXT_sRGB_write_control GL_EXT_separate_shader_objects GL_EXT_shader_framebuffer_fetch GL_EXT_shader_group_vote GL_EXT_shader_implicit_conversions GL_EXT_shader_integer_mix GL_EXT_tessellation_point_size GL_EXT_tessellation_shader GL_ANDROID_extension_pack_es31a GL_ARM_shader_framebuffer_fetch_depth_stencil GL_EXT_base_instance GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_copy_image GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_gpu_shader5 GL_EXT_multi_draw_indirect GL_EXT_polygon_offset_clamp GL_EXT_primitive_bounding_box GL_EXT_render_snorm GL_EXT_shader_io_blocks GL_EXT_texture_border_clamp GL_EXT_texture_buffer GL_EXT_texture_cube_map_array GL_EXT_texture_norm16 GL_EXT_texture_view GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_robust_buffer_access_behavior GL_NV_image_formats GL_NV_shader_noperspective_interpolation GL_OES_copy_image GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_gpu_shader5 GL_OES_primitive_bounding_box GL_OES_sample_shading GL_OES_sample_variables GL_OES_shader_io_blocks GL_OES_shader_multisample_interpolation GL_OES_tessellation_point_size GL_OES_tessellation_shader GL_OES_texture_border_clamp GL_OES_texture_buffer GL_OES_texture_cube_map_array GL_OES_texture_stencil8 GL_OES_texture_storage_multisample_2d_array GL_OES_texture_view GL_EXT_blend_func_extended GL_EXT_buffer_storage GL_EXT_float_blend GL_EXT_geometry_point_size GL_EXT_geometry_shader GL_EXT_texture_filter_minmax GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_KHR_no_error GL_KHR_texture_compression_astc_sliced_3d GL_OES_EGL_image_external_essl3 GL_OES_geometry_point_size GL_OES_geometry_shader GL_OES_shader_image_atomic GL_EXT_clear_texture GL_EXT_clip_cull_distance GL_EXT_conservative_depth GL_EXT_disjoint_timer_query GL_EXT_texture_compression_s3tc_srgb GL_MESA_shader_integer_functions GL_EXT_clip_control GL_EXT_color_buffer_half_float GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_texture_compression_bptc GL_EXT_texture_mirror_clamp_to_edge GL_KHR_parallel_shader_compile GL_NV_alpha_to_coverage_dither_control GL_EXT_EGL_image_storage GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_texture_shadow_lod GL_MESA_framebuffer_flip_y GL_OVR_multiview GL_OVR_multiview2 GL_EXT_depth_clamp GL_EXT_texture_query_lod GL_MESA_sampler_objects GL_EXT_EGL_image_storage_compression GL_EXT_texture_storage_compression GL_MESA_bgra ","webgl2Extensions":"EXT_color_buffer_float EXT_depth_clamp EXT_float_blend EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_draw_buffers_indexed OES_texture_float_linear OVR_multiview2 WEBGL_compressed_texture_astc WEBGL_compressed_texture_etc WEBGL_compressed_texture_etc1 WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_lose_context","webgl2WSIInfo":"outOfProcess: false\ninProcess: true\nEGL_VENDOR: Mesa Project\nEGL_VERSION: 1.5\nEGL_EXTENSIONS: EGL_ANDROID_blob_cache EGL_ANGLE_sync_control_rate EGL_EXT_buffer_age EGL_EXT_config_select_group EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_EXT_query_reset_notification_strategy EGL_EXT_surface_compression EGL_EXT_swap_buffers_with_damage EGL_KHR_cl_event2 EGL_KHR_config_attribs EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_create_context_no_error EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image_base EGL_KHR_no_config_context EGL_KHR_reusable_sync EGL_KHR_surfaceless_context EGL_KHR_swap_buffers_with_damage EGL_EXT_pixel_format_float EGL_KHR_wait_sync EGL_MESA_configless_context EGL_MESA_gl_interop EGL_MESA_query_driver EGL_MESA_x11_native_visual_id \nEGL_EXTENSIONS(nullptr): EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_EXT_platform_base EGL_KHR_client_get_all_proc_addresses EGL_EXT_client_extensions EGL_KHR_debug EGL_EXT_platform_device EGL_EXT_explicit_device EGL_EXT_platform_wayland EGL_KHR_platform_wayland EGL_EXT_platform_x11 EGL_KHR_platform_x11 EGL_EXT_platform_xcb EGL_MESA_platform_gbm EGL_KHR_platform_gbm EGL_MESA_platform_surfaceless","info":{"AzureFallbackCanvasBackend":"skia","AzureCanvasBackend":"skia","AzureContentBackend":"skia","ApzWheelInput":1,"ApzDragInput":1,"ApzKeyboardInput":1,"ApzAutoscrollInput":1,"ApzZoomingInput":1,"CMSOutputProfile":"Empty profile data","DisplayCount":1,"Display0":"1280x1024@0Hz scales:1.000000|1.000000"},"featureLog":{"features":[{"name":"HW_COMPOSITING","description":"Compositing","status":"available","log":[{"type":"default","status":"available"}]},{"name":"OPENGL_COMPOSITING","description":"OpenGL Compositing","status":"blocklisted","log":[{"type":"default","status":"available"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_SOFTWARE_GL","message":"#BLOCKLIST_FEATURE_FAILURE_SOFTWARE_GL"}]},{"name":"WEBRENDER","description":"WebRender","status":"force_enabled","log":[{"type":"default","status":"available"},{"type":"user","status":"force_enabled","message":"Force enabled by pref"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_SOFTWARE_GL","message":"Blocklisted by gfxInfo"}]},{"name":"WEBRENDER_COMPOSITOR","description":"WebRender native compositor","status":"blocked","log":[{"type":"default","status":"disabled","failureId":"FEATURE_FAILURE_DISABLED","message":"Disabled by default"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_WEBRENDER_COMPOSITOR_DISABLED","message":"Blocklisted by gfxInfo"},{"type":"runtime","status":"blocked","failureId":"FEATURE_FAILURE_DISABLE_RELEASE_OR_BETA","message":"Cannot be enabled in release or beta"}]},{"name":"WEBRENDER_PARTIAL","description":"WebRender partial present","status":"available","log":[{"type":"default","status":"available"}]},{"name":"WEBRENDER_SHADER_CACHE","description":"WebRender shader disk cache","status":"disabled","log":[{"type":"default","status":"disabled","failureId":"FEATURE_FAILURE_DISABLED","message":"Disabled by default"}]},{"name":"WEBRENDER_OPTIMIZED_SHADERS","description":"WebRender optimized shaders","status":"available","log":[{"type":"default","status":"available"}]},{"name":"WEBRENDER_ANGLE","description":"WebRender ANGLE","status":"unavailable","log":[{"type":"default","status":"available"},{"type":"env","status":"unavailable","failureId":"FEATURE_FAILURE_OS_NOT_SUPPORTED","message":"OS not supported"}]},{"name":"WEBRENDER_DCOMP_PRESENT","description":"WebRender DirectComposition","status":"unavailable","log":[{"type":"default","status":"available"},{"type":"user","status":"disabled","failureId":"FEATURE_FAILURE_DCOMP_PREF_DISABLED","message":"User disabled via pref"},{"type":"env","status":"unavailable","failureId":"FEATURE_FAILURE_NO_GPU_PROCESS","message":"Requires GPU process"},{"type":"runtime","status":"unavailable","failureId":"FEATURE_FAILURE_DCOMP_NOT_ANGLE","message":"Requires ANGLE"}]},{"name":"WEBRENDER_SCISSORED_CACHE_CLEARS","description":"WebRender scissored cache clears","status":"available","log":[{"type":"default","status":"available"}]},{"name":"WEBGPU","description":"WebGPU","status":"blocked","log":[{"type":"default","status":"available"},{"type":"runtime","status":"blocked","failureId":"WEBGPU_DISABLE_RELEASE_OR_BETA","message":"WebGPU cannot be enabled in release or beta"}]},{"name":"X11_EGL","description":"X11 EGL","status":"available","log":[{"type":"default","status":"available"}]},{"name":"DMABUF","description":"DMABUF","status":"failed","log":[{"type":"default","status":"available"},{"type":"runtime","status":"failed","failureId":"FEATURE_FAILURE_NO_DRM_DEVICE","message":"Failed to configure"}]},{"name":"HARDWARE_VIDEO_DECODING","description":"Hardware video decoding","status":"unavailable","log":[{"type":"default","status":"available"},{"type":"runtime","status":"unavailable","failureId":"FEATURE_FAILURE_VIDEO_DECODING_TEST_FAILED","message":"Force disabled by gfxInfo"}]},{"name":"DMABUF_SURFACE_EXPORT","description":"WebGL DMABuf surface export","status":"blocked","log":[{"type":"default","status":"available"},{"type":"env","status":"blocked","failureId":"FEATURE_FAILURE_BROKEN_DRIVER","message":"Blocklisted by gfxInfo"}]},{"name":"BACKDROP_FILTER","description":"Backdrop filter","status":"available","log":[{"type":"default","status":"available"}]},{"name":"CANVAS_RENDERER_THREAD","description":"canvas renderer thread","status":"available","log":[{"type":"default","status":"available"}]},{"name":"ACCELERATED_CANVAS2D","description":"Accelerated Canvas2D","status":"available","log":[{"type":"default","status":"available"}]},{"name":"REMOTE_CANVAS","description":"Remote canvas","status":"blocked","log":[{"type":"default","status":"disabled","failureId":"FEATURE_FAILURE_DISABLED","message":"Disabled via pref"},{"type":"env","status":"unavailable-no-gpu-process","failureId":"FEATURE_REMOTE_CANVAS_NO_GPU_PROCESS","message":"Disabled without GPU process"},{"type":"runtime","status":"blocked","failureId":"FEATURE_REMOTE_CANVAS_NOT_WINDOWS","message":"Platform not supported"}]},{"name":"DMABUF_WEBGL","description":"DMABuf for WebGL","status":"available","log":[{"type":"default","status":"available"}]}],"fallbacks":[]},"crashGuards":[],"webgpuDefaultAdapter":{"navigator.gpu":null},"webgpuFallbackAdapter":{"navigator.gpu":null}},"addons":[{"name":"Add-ons Search Detection","type":"extension","version":"2.0.0","isActive":true,"id":"addons-search-detection@mozilla.com"},{"name":"PageLoader extension","type":"extension","version":"1.1","isActive":true,"id":"pageloader@mozilla.org"},{"name":"Talos Powers","type":"extension","version":"1.1","isActive":true,"id":"talos-powers@mozilla.org"},{"name":"System theme — auto","type":"theme","version":"1.4.1","isActive":true,"id":"default-theme@mozilla.org"}],"features":[{"name":"Firefox Screenshots","version":"39.0.1","id":"screenshots@mozilla.org"},{"name":"Form Autofill","version":"1.0.1","id":"formautofill@mozilla.org"},{"name":"Picture-In-Picture","version":"1.0.0","id":"pictureinpicture@mozilla.org"},{"name":"Web Compatibility Interventions","version":"134.5.0","id":"webcompat@mozilla.org"},{"name":"WebCompat Reporter","version":"2.1.0","id":"webcompat-reporter@mozilla.org"}],"experimentalFeatures":[["sidebar-title","sidebar.revamp",false],["vertical-tabs-title","sidebar.verticalTabs",false],["genai-settings-chat-title","browser.ml.chat.enabled",false],["experimental-features-auto-pip","media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled",false],["experimental-features-ime-search","browser.urlbar.keepPanelOpenDuringImeComposition",false],["experimental-features-webrtc-global-mute-toggles","privacy.webrtc.globalMuteToggles",false],["experimental-features-media-jxl","image.jxl.enabled",false],["experimental-features-css-masonry2","layout.css.grid-template-masonry-value.enabled",false],["experimental-features-web-gpu2","dom.webgpu.enabled",false],["experimental-features-devtools-serviceworker-debugger-support","devtools.debugger.features.windowless-service-workers",false]],"processes":{"remoteTypes":{"socket":1,"rdd":1,"webIsolated":1,"extension":1},"maxWebContentProcesses":8},"normandy":{"addonStudies":[],"prefRollouts":[],"prefStudies":[],"nimbusExperiments":[],"nimbusRollouts":[]},"legacyUserStylesheets":{"active":false,"types":[]},"remoteSettings":{"serverURL":"data:,#remote-settings-dummy/v1","pollingEndpoint":"data:,#remote-settings-dummy/v1/buckets/monitor/collections/changes/changeset","serverTimestamp":null,"localTimestamp":null,"lastCheck":"","mainBucket":"main","defaultSigner":"remote-settings.content-signature.mozilla.org","previewMode":false,"collections":[],"history":{"settings-sync":[]},"isSynchronizationBroken":false},"places":[{"efficiencyPerc":24.4,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_schema","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_origins","count":1},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_origins_1","count":"-"},{"efficiencyPerc":0.3,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places","count":1},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_extra","count":0},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_url_hashindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_hostindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_visitcount","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_frecencyindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_lastvisitdateindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_guid_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_originidindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_altfrecencyindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits","count":1},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_extra","count":0},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_placedateindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_fromindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_dateindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_inputhistory","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_inputhistory_1","count":"-"},{"efficiencyPerc":1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks","count":6},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_deleted","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_bookmarks_deleted_1","count":"-"},{"efficiencyPerc":0.2,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_itemindex","count":"-"},{"efficiencyPerc":0.2,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_parentindex","count":"-"},{"efficiencyPerc":0.3,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_itemlastmodifiedindex","count":"-"},{"efficiencyPerc":0.3,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_dateaddedindex","count":"-"},{"efficiencyPerc":0.4,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_guid_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_keywords","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_keywords_1","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_sequence","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_keywords_placepostdata_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_anno_attributes","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_anno_attributes_1","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_annos","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_annos_placeattributeindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_items_annos","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_items_annos_itemattributeindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_meta","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata_placecreated_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata_referrerindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata_search_queries","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_places_metadata_search_queries_1","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_previews_tombstones","count":0}]}
+20:16:16     INFO -  [ERROR glean_core::metrics::ping] Invalid reason code active for ping usage-reporting
+20:16:16     INFO -  [ERROR error_support::handling] logins-unexpected: Error parsing URL: relative URL with a cannot-be-a-base base
+20:16:16     INFO -  [ERROR error_support::handling] suggest-unexpected: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base
+20:16:16     INFO -  console.error: URLBar - QuickSuggest.SuggestBackendRust: "Error initializing SuggestStore" (new Error("reason: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base", "resource://gre/modules/RustSuggest.sys.mjs", 2228))
+20:16:17     INFO -  TEST-INFO | 2616314: exit 0
+20:16:17     INFO -  Browser initialized.
+20:16:17     INFO -  Fission enabled: True
+20:16:17     INFO -  Running cycle 1/1 for expat_perf_test test...
+20:16:17     INFO -  Using env: {'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+20:16:17     INFO -   'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:',
+20:16:17     INFO -   'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ',
+20:16:17     INFO -   'DISPLAY': ':99',
+20:16:17     INFO -   'EDITOR': '/usr/bin/vim',
+20:16:17     INFO -   'EXPAT_PIN_CORE': '1',
+20:16:17     INFO -   'GPG_TTY': '/dev/pts/13',
+20:16:17     INFO -   'HISTCONTROL': 'ignoredups',
+20:16:17     INFO -   'HISTSIZE': '1000',
+20:16:17     INFO -   'HOME': '/home/XXXXXXXX',
+20:16:17     INFO -   'HOSTNAME': 'fedora',
+20:16:17     INFO -   'LANG': 'en_US.UTF-8',
+20:16:17     INFO -   'LD_LIBRARY_PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_copy/dist/bin',
+20:16:17     INFO -   'LESSOPEN': '||/usr/bin/lesspipe.sh %s',
+20:16:17     INFO -   'LOGNAME': 'XXXXXXXX',
+20:16:17     INFO -   'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+20:16:17     INFO -   'MACH_MAIN_PID': '2614585',
+20:16:17     INFO -   'MAIL': '/var/spool/mail/XXXXXXXX',
+20:16:17     INFO -   'MINIDUMP_SAVE_PATH': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:16:17     INFO -   'MOTD_SHOWN': 'pam',
+20:16:17     INFO -   'MOZBUILD_PATH': '/home/XXXXXXXX/.mozbuild',
+20:16:17     INFO -   'MOZCONFIG': 'mozconfig_copy',
+20:16:17     INFO -   'MOZ_CRASHREPORTER': '1',
+20:16:17     INFO -   'MOZ_CRASHREPORTER_NO_REPORT': '1',
+20:16:17     INFO -   'MOZ_DEVELOPER_OBJ_DIR': '/home/XXXXXXXX/firefox-mte/firefox_release_copy',
+20:16:17     INFO -   'MOZ_DEVELOPER_REPO_DIR': '/home/XXXXXXXX/firefox-mte',
+20:16:17     INFO -   'MOZ_DISABLE_NONLOCAL_CONNECTIONS': '1',
+20:16:17     INFO -   'MOZ_UPLOAD_DIR': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:16:17     INFO -   'MOZ_USE_PAGELOADER': '1',
+20:16:17     INFO -   'NO_EM_RESTART': '1',
+20:16:17     INFO -   'OLDPWD': '/home/XXXXXXXX/firefox-mte',
+20:16:17     INFO -   'PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_copy/testing/talos-venv/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin',
+20:16:17     INFO -   'PWD': '/home/XXXXXXXX/firefox-mte',
+20:16:17     INFO -   'PYTHONPATH': '/home/XXXXXXXX/firefox-mte/testing/talos',
+20:16:17     INFO -   'REQUIRE_GPU': '0',
+20:16:17     INFO -   'RUST_BACKTRACE': 'full',
+20:16:17     INFO -   'SELINUX_LEVEL_REQUESTED': '',
+20:16:17     INFO -   'SELINUX_ROLE_REQUESTED': '',
+20:16:17     INFO -   'SELINUX_USE_CURRENT_RANGE': '',
+20:16:17     INFO -   'SHELL': '/bin/bash',
+20:16:17     INFO -   'SHLVL': '3',
+20:16:17     INFO -   'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346',
+20:16:17     INFO -   'SSH_CLIENT': '172.17.128.2 52585 22',
+20:16:17     INFO -   'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22',
+20:16:17     INFO -   'SSH_TTY': '/dev/pts/0',
+20:16:17     INFO -   'TERM': 'tmux-256color',
+20:16:17     INFO -   'TERM_PROGRAM': 'tmux',
+20:16:17     INFO -   'TERM_PROGRAM_VERSION': '3.5a',
+20:16:17     INFO -   'TMUX': '/tmp/tmux-1000/default,2416415,0',
+20:16:17     INFO -   'TMUX_PANE': '%1',
+20:16:17     INFO -   'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins',
+20:16:17     INFO -   'USER': 'XXXXXXXX',
+20:16:17     INFO -   'VIRTUAL_ENV': 'talos-venv',
+20:16:17     INFO -   'VIRTUAL_ENV_PROMPT': '(venv-3.11) ',
+20:16:17     INFO -   'XDG_RUNTIME_DIR': '/run/user/1000',
+20:16:17     INFO -   'XDG_SESSION_CLASS': 'user',
+20:16:17     INFO -   'XDG_SESSION_ID': '1323',
+20:16:17     INFO -   'XDG_SESSION_TYPE': 'tty',
+20:16:17     INFO -   '_': './mach'}
+20:16:17     INFO -  TEST-INFO | started process 2616739 (/home/XXXXXXXX/firefox-mte/firefox_release_copy/dist/bin/firefox -profile /tmp/tmpzdsji6v5/profile)
+20:16:17     INFO -  PID 2616739 | libEGL warning: DRI3 error: Could not get DRI3 device
+20:16:17     INFO -  PID 2616739 | libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:16:17     INFO -  PID 2616739 | libEGL warning: DRI3 error: Could not get DRI3 device
+20:16:17     INFO -  PID 2616739 | libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:16:17     INFO -  PID 2616739 | COPY sched_setaffinity on core : 1 (PID:2616739)
+20:16:18     INFO -  PID 2616739 | console.error: ({})
+20:16:18     INFO -  PID 2616739 | COPY sched_setaffinity on core : 1 (PID:2616948)
+20:16:18     INFO -  PID 2616739 | console.error: (new TypeError("aWindow.docShell is null", "resource://gre/modules/PrivateBrowsingUtils.sys.mjs", 50))
+20:16:18     INFO -  PID 2616739 | console.error: (new InvalidStateError("JSWindowActorParent.sendAsyncMessage: JSWindowActorParent cannot send at the moment", (void 0), 537))
+20:16:19     INFO -  PID 2616739 | [ERROR glean_core::metrics::ping] Invalid reason code active for ping usage-reporting
+20:16:19     INFO -  PID 2616739 | [ERROR error_support::handling] logins-unexpected: Error parsing URL: relative URL with a cannot-be-a-base base
+20:16:19     INFO -  PID 2616739 | [ERROR error_support::handling] suggest-unexpected: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base
+20:16:19     INFO -  PID 2616739 | console.error: URLBar - QuickSuggest.SuggestBackendRust: "Error initializing SuggestStore" (new Error("reason: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base", "resource://gre/modules/RustSuggest.sys.mjs", 2228))
+20:16:19     INFO -  PID 2616739 | COPY sched_setaffinity on core : 1 (PID:2617076)
+20:16:20     INFO -  PID 2616739 | COPY Capture_Time:Expat,1,290461230,2617076|
+20:16:20     INFO -  PID 2616739 | Cycle 1(1): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:21     INFO -  PID 2616739 | COPY Capture_Time:Expat,2,260885329,2617076|
+20:16:21     INFO -  PID 2616739 | Cycle 1(2): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:22     INFO -  PID 2616739 | COPY Capture_Time:Expat,3,247760783,2617076|
+20:16:22     INFO -  PID 2616739 | Cycle 1(3): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:23     INFO -  PID 2616739 | COPY Capture_Time:Expat,4,249027261,2617076|
+20:16:23     INFO -  PID 2616739 | Cycle 1(4): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:25     INFO -  PID 2616739 | COPY Capture_Time:Expat,5,247409341,2617076|
+20:16:25     INFO -  PID 2616739 | Cycle 1(5): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:26     INFO -  PID 2616739 | COPY Capture_Time:Expat,6,248669924,2617076|
+20:16:26     INFO -  PID 2616739 | Cycle 1(6): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:27     INFO -  PID 2616739 | COPY Capture_Time:Expat,7,247813522,2617076|
+20:16:27     INFO -  PID 2616739 | Cycle 1(7): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:28     INFO -  PID 2616739 | COPY Capture_Time:Expat,8,252374082,2617076|
+20:16:28     INFO -  PID 2616739 | Cycle 1(8): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:29     INFO -  PID 2616739 | COPY Capture_Time:Expat,9,258733350,2617076|
+20:16:29     INFO -  PID 2616739 | Cycle 1(9): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:31     INFO -  PID 2616739 | COPY Capture_Time:Expat,10,260627849,2617076|
+20:16:31     INFO -  PID 2616739 | Cycle 1(10): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:32     INFO -  PID 2616739 | COPY Capture_Time:Expat,11,252334725,2617076|
+20:16:32     INFO -  PID 2616739 | Cycle 1(11): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:33     INFO -  PID 2616739 | COPY Capture_Time:Expat,12,247839041,2617076|
+20:16:33     INFO -  PID 2616739 | Cycle 1(12): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:34     INFO -  PID 2616739 | COPY Capture_Time:Expat,13,246415801,2617076|
+20:16:34     INFO -  PID 2616739 | Cycle 1(13): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:35     INFO -  PID 2616739 | COPY Capture_Time:Expat,14,245335641,2617076|
+20:16:35     INFO -  PID 2616739 | Cycle 1(14): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:37     INFO -  PID 2616739 | COPY Capture_Time:Expat,15,246116157,2617076|
+20:16:37     INFO -  PID 2616739 | Cycle 1(15): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:38     INFO -  PID 2616739 | COPY Capture_Time:Expat,16,247862520,2617076|
+20:16:38     INFO -  PID 2616739 | Cycle 1(16): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:39     INFO -  PID 2616739 | COPY Capture_Time:Expat,17,251803941,2617076|
+20:16:39     INFO -  PID 2616739 | Cycle 1(17): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:40     INFO -  PID 2616739 | COPY Capture_Time:Expat,18,248045560,2617076|
+20:16:40     INFO -  PID 2616739 | Cycle 1(18): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:41     INFO -  PID 2616739 | COPY Capture_Time:Expat,19,248042103,2617076|
+20:16:41     INFO -  PID 2616739 | Cycle 1(19): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:42     INFO -  PID 2616739 | COPY Capture_Time:Expat,20,251686225,2617076|
+20:16:43     INFO -  PID 2616739 | Cycle 1(20): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:44     INFO -  PID 2616739 | COPY Capture_Time:Expat,21,253586684,2617076|
+20:16:44     INFO -  PID 2616739 | Cycle 1(21): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:45     INFO -  PID 2616739 | COPY Capture_Time:Expat,22,251788506,2617076|
+20:16:45     INFO -  PID 2616739 | Cycle 1(22): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:46     INFO -  PID 2616739 | COPY Capture_Time:Expat,23,251874284,2617076|
+20:16:46     INFO -  PID 2616739 | Cycle 1(23): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:47     INFO -  PID 2616739 | COPY Capture_Time:Expat,24,249452420,2617076|
+20:16:47     INFO -  PID 2616739 | Cycle 1(24): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:47     INFO -  PID 2616739 | 1755721007802	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, channelStatus: 2152398861, errorCode: 2, reason: error
+20:16:48     INFO -  PID 2616739 | COPY Capture_Time:Expat,25,251671082,2617076|
+20:16:48     INFO -  PID 2616739 | Cycle 1(25): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:50     INFO -  PID 2616739 | COPY Capture_Time:Expat,26,248858962,2617076|
+20:16:50     INFO -  PID 2616739 | Cycle 1(26): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:51     INFO -  PID 2616739 | COPY Capture_Time:Expat,27,250668245,2617076|
+20:16:51     INFO -  PID 2616739 | Cycle 1(27): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:52     INFO -  PID 2616739 | COPY Capture_Time:Expat,28,246899520,2617076|
+20:16:52     INFO -  PID 2616739 | Cycle 1(28): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:53     INFO -  PID 2616739 | COPY Capture_Time:Expat,29,251108704,2617076|
+20:16:53     INFO -  PID 2616739 | Cycle 1(29): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:54     INFO -  PID 2616739 | COPY Capture_Time:Expat,30,254531046,2617076|
+20:16:54     INFO -  PID 2616739 | Cycle 1(30): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:56     INFO -  PID 2616739 | COPY Capture_Time:Expat,31,247989839,2617076|
+20:16:56     INFO -  PID 2616739 | Cycle 1(31): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:57     INFO -  PID 2616739 | COPY Capture_Time:Expat,32,248449577,2617076|
+20:16:57     INFO -  PID 2616739 | Cycle 1(32): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:58     INFO -  PID 2616739 | COPY Capture_Time:Expat,33,254990427,2617076|
+20:16:58     INFO -  PID 2616739 | Cycle 1(33): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:16:59     INFO -  PID 2616739 | COPY Capture_Time:Expat,34,253765847,2617076|
+20:16:59     INFO -  PID 2616739 | Cycle 1(34): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:00     INFO -  PID 2616739 | COPY Capture_Time:Expat,35,252365185,2617076|
+20:17:00     INFO -  PID 2616739 | Cycle 1(35): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:02     INFO -  PID 2616739 | COPY Capture_Time:Expat,36,249789581,2617076|
+20:17:02     INFO -  PID 2616739 | Cycle 1(36): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:03     INFO -  PID 2616739 | COPY Capture_Time:Expat,37,253448742,2617076|
+20:17:03     INFO -  PID 2616739 | Cycle 1(37): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:04     INFO -  PID 2616739 | COPY Capture_Time:Expat,38,250472202,2617076|
+20:17:04     INFO -  PID 2616739 | Cycle 1(38): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:05     INFO -  PID 2616739 | COPY Capture_Time:Expat,39,251968545,2617076|
+20:17:05     INFO -  PID 2616739 | Cycle 1(39): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:06     INFO -  PID 2616739 | COPY Capture_Time:Expat,40,252486506,2617076|
+20:17:06     INFO -  PID 2616739 | Cycle 1(40): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:08     INFO -  PID 2616739 | COPY Capture_Time:Expat,41,249682523,2617076|
+20:17:08     INFO -  PID 2616739 | Cycle 1(41): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:09     INFO -  PID 2616739 | COPY Capture_Time:Expat,42,253647544,2617076|
+20:17:09     INFO -  PID 2616739 | Cycle 1(42): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:10     INFO -  PID 2616739 | COPY Capture_Time:Expat,43,252487886,2617076|
+20:17:10     INFO -  PID 2616739 | Cycle 1(43): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:11     INFO -  PID 2616739 | COPY Capture_Time:Expat,44,255819347,2617076|
+20:17:11     INFO -  PID 2616739 | Cycle 1(44): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:12     INFO -  PID 2616739 | COPY Capture_Time:Expat,45,252367623,2617076|
+20:17:12     INFO -  PID 2616739 | Cycle 1(45): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:14     INFO -  PID 2616739 | COPY Capture_Time:Expat,46,252501987,2617076|
+20:17:14     INFO -  PID 2616739 | Cycle 1(46): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:15     INFO -  PID 2616739 | COPY Capture_Time:Expat,47,252283185,2617076|
+20:17:15     INFO -  PID 2616739 | Cycle 1(47): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:16     INFO -  PID 2616739 | COPY Capture_Time:Expat,48,249819740,2617076|
+20:17:16     INFO -  PID 2616739 | Cycle 1(48): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:17     INFO -  PID 2616739 | COPY Capture_Time:Expat,49,252736746,2617076|
+20:17:17     INFO -  PID 2616739 | Cycle 1(49): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:19     INFO -  PID 2616739 | COPY Capture_Time:Expat,50,263788312,2617076|
+20:17:19     INFO -  PID 2616739 | Cycle 1(50): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:20     INFO -  PID 2616739 | COPY Capture_Time:Expat,51,255474888,2617076|
+20:17:20     INFO -  PID 2616739 | Cycle 1(51): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:21     INFO -  PID 2616739 | COPY Capture_Time:Expat,52,255466288,2617076|
+20:17:21     INFO -  PID 2616739 | Cycle 1(52): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:22     INFO -  PID 2616739 | COPY Capture_Time:Expat,53,256324886,2617076|
+20:17:22     INFO -  PID 2616739 | Cycle 1(53): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:22     INFO -  PID 2616739 | Waiting for idle-callback
+20:17:23     INFO -  PID 2616739 | COPY Capture_Time:Expat,54,253477884,2617076|
+20:17:23     INFO -  PID 2616739 | Cycle 1(54): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:24     INFO -  PID 2616739 | COPY Capture_Time:Expat,55,253705067,2617076|
+20:17:25     INFO -  PID 2616739 | Cycle 1(55): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:26     INFO -  PID 2616739 | COPY Capture_Time:Expat,56,252467545,2617076|
+20:17:26     INFO -  PID 2616739 | Cycle 1(56): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:27     INFO -  PID 2616739 | COPY Capture_Time:Expat,57,251726644,2617076|
+20:17:27     INFO -  PID 2616739 | Cycle 1(57): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:28     INFO -  PID 2616739 | COPY Capture_Time:Expat,58,260760726,2617076|
+20:17:28     INFO -  PID 2616739 | Cycle 1(58): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:29     INFO -  PID 2616739 | COPY Capture_Time:Expat,59,249936264,2617076|
+20:17:29     INFO -  PID 2616739 | Cycle 1(59): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:30     INFO -  PID 2616739 | COPY Capture_Time:Expat,60,252760906,2617076|
+20:17:31     INFO -  PID 2616739 | Cycle 1(60): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:32     INFO -  PID 2616739 | COPY Capture_Time:Expat,61,254888527,2617076|
+20:17:32     INFO -  PID 2616739 | Cycle 1(61): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:33     INFO -  PID 2616739 | COPY Capture_Time:Expat,62,251207985,2617076|
+20:17:33     INFO -  PID 2616739 | Cycle 1(62): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:34     INFO -  PID 2616739 | COPY Capture_Time:Expat,63,254097686,2617076|
+20:17:34     INFO -  PID 2616739 | Cycle 1(63): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:35     INFO -  PID 2616739 | COPY Capture_Time:Expat,64,251203924,2617076|
+20:17:35     INFO -  PID 2616739 | Cycle 1(64): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:36     INFO -  PID 2616739 | COPY Capture_Time:Expat,65,252870326,2617076|
+20:17:37     INFO -  PID 2616739 | Cycle 1(65): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:38     INFO -  PID 2616739 | COPY Capture_Time:Expat,66,255893068,2617076|
+20:17:38     INFO -  PID 2616739 | Cycle 1(66): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:39     INFO -  PID 2616739 | COPY Capture_Time:Expat,67,252530384,2617076|
+20:17:39     INFO -  PID 2616739 | Cycle 1(67): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:40     INFO -  PID 2616739 | COPY Capture_Time:Expat,68,253201925,2617076|
+20:17:40     INFO -  PID 2616739 | Cycle 1(68): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:40     INFO -  PID 2616739 | Waiting for idle-callback
+20:17:41     INFO -  PID 2616739 | COPY Capture_Time:Expat,69,252896525,2617076|
+20:17:41     INFO -  PID 2616739 | Cycle 1(69): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:42     INFO -  PID 2616739 | COPY Capture_Time:Expat,70,254521085,2617076|
+20:17:42     INFO -  PID 2616739 | Cycle 1(70): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:44     INFO -  PID 2616739 | COPY Capture_Time:Expat,71,254784904,2617076|
+20:17:44     INFO -  PID 2616739 | Cycle 1(71): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:45     INFO -  PID 2616739 | COPY Capture_Time:Expat,72,255098027,2617076|
+20:17:45     INFO -  PID 2616739 | Cycle 1(72): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:46     INFO -  PID 2616739 | COPY Capture_Time:Expat,73,253251005,2617076|
+20:17:46     INFO -  PID 2616739 | Cycle 1(73): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:47     INFO -  PID 2616739 | COPY Capture_Time:Expat,74,253560304,2617076|
+20:17:47     INFO -  PID 2616739 | Cycle 1(74): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:48     INFO -  PID 2616739 | COPY Capture_Time:Expat,75,255372067,2617076|
+20:17:48     INFO -  PID 2616739 | Cycle 1(75): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:50     INFO -  PID 2616739 | COPY Capture_Time:Expat,76,249414783,2617076|
+20:17:50     INFO -  PID 2616739 | Cycle 1(76): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:51     INFO -  PID 2616739 | COPY Capture_Time:Expat,77,249287603,2617076|
+20:17:51     INFO -  PID 2616739 | Cycle 1(77): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:52     INFO -  PID 2616739 | COPY Capture_Time:Expat,78,252631505,2617076|
+20:17:52     INFO -  PID 2616739 | Cycle 1(78): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:53     INFO -  PID 2616739 | COPY Capture_Time:Expat,79,249472181,2617076|
+20:17:53     INFO -  PID 2616739 | Cycle 1(79): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:54     INFO -  PID 2616739 | COPY Capture_Time:Expat,80,249605683,2617076|
+20:17:54     INFO -  PID 2616739 | Cycle 1(80): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:56     INFO -  PID 2616739 | COPY Capture_Time:Expat,81,253807365,2617076|
+20:17:56     INFO -  PID 2616739 | Cycle 1(81): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:57     INFO -  PID 2616739 | COPY Capture_Time:Expat,82,249052241,2617076|
+20:17:57     INFO -  PID 2616739 | Cycle 1(82): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:58     INFO -  PID 2616739 | COPY Capture_Time:Expat,83,257413508,2617076|
+20:17:58     INFO -  PID 2616739 | Cycle 1(83): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:17:59     INFO -  PID 2616739 | COPY Capture_Time:Expat,84,251412162,2617076|
+20:17:59     INFO -  PID 2616739 | Cycle 1(84): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:00     INFO -  PID 2616739 | COPY Capture_Time:Expat,85,251435544,2617076|
+20:18:00     INFO -  PID 2616739 | Cycle 1(85): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:02     INFO -  PID 2616739 | COPY Capture_Time:Expat,86,254808286,2617076|
+20:18:02     INFO -  PID 2616739 | Cycle 1(86): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:03     INFO -  PID 2616739 | COPY Capture_Time:Expat,87,253881504,2617076|
+20:18:03     INFO -  PID 2616739 | Cycle 1(87): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:04     INFO -  PID 2616739 | COPY Capture_Time:Expat,88,249178242,2617076|
+20:18:04     INFO -  PID 2616739 | Cycle 1(88): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:05     INFO -  PID 2616739 | COPY Capture_Time:Expat,89,254817908,2617076|
+20:18:05     INFO -  PID 2616739 | Cycle 1(89): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:06     INFO -  PID 2616739 | COPY Capture_Time:Expat,90,247187701,2617076|
+20:18:06     INFO -  PID 2616739 | Cycle 1(90): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:08     INFO -  PID 2616739 | COPY Capture_Time:Expat,91,253144046,2617076|
+20:18:08     INFO -  PID 2616739 | Cycle 1(91): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:08     INFO -  PID 2616739 | Waiting for idle-callback
+20:18:09     INFO -  PID 2616739 | COPY Capture_Time:Expat,92,254917605,2617076|
+20:18:09     INFO -  PID 2616739 | Cycle 1(92): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:10     INFO -  PID 2616739 | COPY Capture_Time:Expat,93,252647103,2617076|
+20:18:10     INFO -  PID 2616739 | Cycle 1(93): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:11     INFO -  PID 2616739 | COPY Capture_Time:Expat,94,255048867,2617076|
+20:18:11     INFO -  PID 2616739 | Cycle 1(94): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:12     INFO -  PID 2616739 | COPY Capture_Time:Expat,95,255034206,2617076|
+20:18:12     INFO -  PID 2616739 | Cycle 1(95): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:14     INFO -  PID 2616739 | COPY Capture_Time:Expat,96,253979525,2617076|
+20:18:14     INFO -  PID 2616739 | Cycle 1(96): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:15     INFO -  PID 2616739 | COPY Capture_Time:Expat,97,254400166,2617076|
+20:18:15     INFO -  PID 2616739 | Cycle 1(97): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:16     INFO -  PID 2616739 | COPY Capture_Time:Expat,98,253720267,2617076|
+20:18:16     INFO -  PID 2616739 | Cycle 1(98): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:17     INFO -  PID 2616739 | COPY Capture_Time:Expat,99,258369689,2617076|
+20:18:18     INFO -  PID 2616739 | Cycle 1(99): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:19     INFO -  PID 2616739 | COPY Capture_Time:Expat,100,271164237,2617076|
+20:18:19     INFO -  PID 2616739 | Cycle 1(100): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:20     INFO -  PID 2616739 | COPY Capture_Time:Expat,101,254152786,2617076|
+20:18:20     INFO -  PID 2616739 | Cycle 1(101): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:21     INFO -  PID 2616739 | COPY Capture_Time:Expat,102,251766462,2617076|
+20:18:21     INFO -  PID 2616739 | Cycle 1(102): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:22     INFO -  PID 2616739 | COPY Capture_Time:Expat,103,250270402,2617076|
+20:18:22     INFO -  PID 2616739 | Cycle 1(103): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:23     INFO -  PID 2616739 | COPY Capture_Time:Expat,104,253331325,2617076|
+20:18:24     INFO -  PID 2616739 | Cycle 1(104): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:25     INFO -  PID 2616739 | COPY Capture_Time:Expat,105,250897263,2617076|
+20:18:25     INFO -  PID 2616739 | Cycle 1(105): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:26     INFO -  PID 2616739 | COPY Capture_Time:Expat,106,249099262,2617076|
+20:18:26     INFO -  PID 2616739 | Cycle 1(106): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:27     INFO -  PID 2616739 | COPY Capture_Time:Expat,107,252516024,2617076|
+20:18:27     INFO -  PID 2616739 | Cycle 1(107): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:28     INFO -  PID 2616739 | COPY Capture_Time:Expat,108,258550248,2617076|
+20:18:28     INFO -  PID 2616739 | Cycle 1(108): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:29     INFO -  PID 2616739 | COPY Capture_Time:Expat,109,254129105,2617076|
+20:18:30     INFO -  PID 2616739 | Cycle 1(109): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:31     INFO -  PID 2616739 | COPY Capture_Time:Expat,110,251213124,2617076|
+20:18:31     INFO -  PID 2616739 | Cycle 1(110): loaded http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:35807/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:18:31     INFO -  PID 2616739 | __start_tp_report
+20:18:31     INFO -  PID 2616739 | _x_x_mozilla_page_load
+20:18:31     INFO -  PID 2616739 | _x_x_mozilla_page_load_details
+20:18:31     INFO -  PID 2616739 | |i|pagename|runs|
+20:18:31     INFO -  PID 2616739 | |0;/mytest_material_common_sprite321x10.svg;658.9765080000002;640.6588569999999;638.7949560000002;703.0715980000004;613.5330199999999;626.2659479999993;622.5616249999985;652.1486450000011;637.2226350000019;647.6328619999986;635.3137939999997;634.192552999999;636.9910740000014;645.1521599999978;638.4411760000003;637.7350749999969;632.5865520000007;625.8236069999984;619.2421430000031;632.1907320000028;629.0655700000025;627.172848000002;626.3300879999988;630.6506699999991;625.4141469999995;627.802429000003;645.003861000001;637.7334550000014;635.8009540000057;645.1088390000004;637.9249559999953;637.5652550000013;650.0690230000037;625.943389;633.7720329999938;631.534391000001;633.9511719999937;629.6097900000022;632.393630999999;648.5199420000063;634.0735330000025;649.3009630000015;632.4053920000079;644.6568199999965;638.9848160000038;647.7516610000021;650.610523000003;648.3962419999953;750.8821880000032;654.4371049999972;629.8591900000029;644.8662799999947;633.2420919999931;624.4507879999946;646.156959999993;631.7142509999976;633.019152000008;644.3845399999991;640.2108569999982;636.4051139999938;644.2327399999922;638.7982359999878;640.5705170000001;636.0764340000023;633.1288320000021;644.9251190000068;634.5957130000024;633.2831520000036;645.6922799999884;636.6219739999942;633.2638520000182;644.9081389999919;639.7616779999953;632.7562710000057;645.3080999999947;635.5045729999838;633.6684319999913;630.8408309999941;635.6980739999854;633.8803529999859;629.3004090000031;636.7455740000005;651.0438829999912;636.589535000021;633.9044129999966;626.2724270000035;645.6464200000046;636.70719500001;634.6877529999911;635.0381930000003;633.7293920000084;650.5408029999962;630.7209509999957;649.0444019999995;647.0421210000059;634.6187730000092;645.1332600000023;635.2362739999953;901.6751070000028;657.2321079999965;634.4186730000074;649.415623000008;634.9677529999899;637.9464349999907;634.6617930000066;616.1967220000079;630.2680100000143;644.578440000012;632.7949530000042;646.4215809999732
+20:18:31     INFO -  PID 2616739 | __end_tp_report
+20:18:31     INFO -  PID 2616739 | __start_cc_report
+20:18:31     INFO -  PID 2616739 | _x_x_mozilla_cycle_collect,3654.7322479999502
+20:18:31     INFO -  PID 2616739 | __end_cc_report
+20:18:31     INFO -  PID 2616739 | __startTimestamp132757.657744__endTimestamp
+20:18:31     INFO -  PID 2616739 |
+20:18:31     INFO -  PID 2616739 | ------- Summary: start -------
+20:18:31     INFO -  PID 2616739 | Number of tests: 1
+20:18:31     INFO -  PID 2616739 |
+20:18:31     INFO -  PID 2616739 | [#0] /mytest_material_common_sprite321x10.svg  Cycles:110  Average:641.38  Median:636.50  stddev:29.20 (4.6%)  stddev-sans-first:29.29
+20:18:31     INFO -  PID 2616739 | Values: 659.0  640.7  638.8  703.1  613.5  626.3  622.6  652.1  637.2  647.6  635.3  634.2  637.0  645.2  638.4  637.7  632.6  625.8  619.2  632.2  629.1  627.2  626.3  630.7  625.4  627.8  645.0  637.7  635.8  645.1  637.9  637.6  650.1  625.9  633.8  631.5  634.0  629.6  632.4  648.5  634.1  649.3  632.4  644.7  639.0  647.8  650.6  648.4  750.9  654.4  629.9  644.9  633.2  624.5  646.2  631.7  633.0  644.4  640.2  636.4  644.2  638.8  640.6  636.1  633.1  644.9  634.6  633.3  645.7  636.6  633.3  644.9  639.8  632.8  645.3  635.5  633.7  630.8  635.7  633.9  629.3  636.7  651.0  636.6  633.9  626.3  645.6  636.7  634.7  635.0  633.7  650.5  630.7  649.0  647.0  634.6  645.1  635.2  901.7  657.2  634.4  649.4  635.0  637.9  634.7  616.2  630.3  644.6  632.8  646.4
+20:18:31     INFO -  PID 2616739 | -------- Summary: end --------
+20:18:31     INFO -  PID 2616739 |
+20:18:31     INFO -  TEST-INFO | 2616739: exit 0
+20:18:31     INFO -  mozcrash checking /tmp/tmpzdsji6v5/profile/minidumps for minidumps...
+20:18:31     INFO -  TEST-OK | expat_perf_test | took 137795ms
+20:18:31     INFO -  SUITE-END | took 137s
+20:18:32     INFO -  Completed test suite (00:02:18)
+20:18:32     INFO -  PERFHERDER_DATA: {"application": {"name": "firefox", "version": "134.0.1"}, "framework": {"name": "talos"}, "suites": [{"name": "expat_perf_test", "extraOptions": ["e10s", "stylo", "fission", "webrender"], "subtests": [{"name": "", "value": 635.7495139999955, "replicates": [658.9765080000002, 640.6588569999999, 638.7949560000002, 703.0715980000004, 613.5330199999999, 626.2659479999993, 622.5616249999985, 652.1486450000011, 637.2226350000019, 647.6328619999986, 635.3137939999997, 634.192552999999, 636.9910740000014, 645.1521599999978, 638.4411760000003, 637.7350749999969, 632.5865520000007, 625.8236069999984, 619.2421430000031, 632.1907320000028, 629.0655700000025, 627.172848000002, 626.3300879999988, 630.6506699999991, 625.4141469999995, 627.802429000003, 645.003861000001, 637.7334550000014, 635.8009540000057, 645.1088390000004, 637.9249559999953, 637.5652550000013, 650.0690230000037, 625.943389, 633.7720329999938, 631.534391000001, 633.9511719999937, 629.6097900000022, 632.393630999999, 648.5199420000063, 634.0735330000025, 649.3009630000015, 632.4053920000079, 644.6568199999965, 638.9848160000038, 647.7516610000021, 650.610523000003, 648.3962419999953, 750.8821880000032, 654.4371049999972, 629.8591900000029, 644.8662799999947, 633.2420919999931, 624.4507879999946, 646.156959999993, 631.7142509999976, 633.019152000008, 644.3845399999991, 640.2108569999982, 636.4051139999938, 644.2327399999922, 638.7982359999878, 640.5705170000001, 636.0764340000023, 633.1288320000021, 644.9251190000068, 634.5957130000024, 633.2831520000036, 645.6922799999884, 636.6219739999942, 633.2638520000182, 644.9081389999919, 639.7616779999953, 632.7562710000057, 645.3080999999947, 635.5045729999838, 633.6684319999913, 630.8408309999941, 635.6980739999854, 633.8803529999859, 629.3004090000031, 636.7455740000005, 651.0438829999912, 636.589535000021, 633.9044129999966, 626.2724270000035, 645.6464200000046, 636.70719500001, 634.6877529999911, 635.0381930000003, 633.7293920000084, 650.5408029999962, 630.7209509999957, 649.0444019999995, 647.0421210000059, 634.6187730000092, 645.1332600000023, 635.2362739999953, 901.6751070000028, 657.2321079999965, 634.4186730000074, 649.415623000008, 634.9677529999899, 637.9464349999907, 634.6617930000066, 616.1967220000079, 630.2680100000143, 644.578440000012, 632.7949530000042, 646.4215809999732], "lowerIsBetter": true, "alertThreshold": 2.0, "shouldAlert": true, "unit": "ms"}], "shouldAlert": true, "lowerIsBetter": true, "alertThreshold": 2.0}]}
+20:18:32     INFO -  Thanks for running Talos locally. Results are in ['/home/XXXXXXXX/firefox-mte/testing/mozharness/build/local.json']
+20:18:32     INFO - Return code: 0
+20:18:32     INFO - Validating PERFHERDER_DATA against /home/XXXXXXXX/firefox-mte/testing/mozharness/external_tools/performance-artifact-schema.json
+20:18:32     INFO - Running post-action listener: _package_coverage_data
+20:18:32     INFO - Running post-action listener: _resource_record_post_action
+20:18:32     INFO - Running post-action listener: process_java_coverage_data
+20:18:32     INFO - [mozharness: 2025-08-20 20:18:32.154030Z] Finished run-tests step (success)
+20:18:32     INFO - Running post-run listener: _resource_record_post_run
+20:18:33     INFO - Total resource usage - Wall time: 139s; CPU: 1%; Read bytes: 0; Write bytes: 60694528; Read time: 0; Write time: 409
+20:18:33     INFO - TinderboxPrint: CPU usage<br/>1.3%
+20:18:33     INFO - TinderboxPrint: I/O read bytes / time<br/>0 / 0
+20:18:33     INFO - TinderboxPrint: I/O write bytes / time<br/>60,694,528 / 409
+20:18:33     INFO - TinderboxPrint: CPU idle<br/>26,224.1 (98.7%)
+20:18:33     INFO - TinderboxPrint: Swap in / out<br/>0 / 0
+20:18:33     INFO - run-tests - Wall time: 139s; CPU: 1%; Read bytes: 0; Write bytes: 60694528; Read time: 0; Write time: 409
+20:18:39     INFO - Glean disabled: not submitting any pings.

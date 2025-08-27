@@ -1,0 +1,200 @@
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 465.tonto (base) did not have enough runs!                                 #
+# 416.gamess (base) did not have enough runs!                                #
+# 436.cactusADM (base) did not have enough runs!                             #
+# 459.GemsFDTD (base) did not have enough runs!                              #
+# 437.leslie3d (base) did not have enough runs!                              #
+# 481.wrf (base) did not have enough runs!                                   #
+# 433.milc (base) did not have enough runs!                                  #
+# 410.bwaves (base) did not have enough runs!                                #
+# 435.gromacs (base) did not have enough runs!                               #
+# 482.sphinx3 (base) did not have enough runs!                               #
+# 434.zeusmp (base) did not have enough runs!                                #
+# 470.lbm (base) did not have enough runs!                                   #
+# 454.calculix (base) did not have enough runs!                              #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+                           SPEC(R) CFP2006 Summary
+                                       
+                           Sat Nov 16 18:42:51 2024
+
+CPU2006 License: 0                                       Test date: Nov-2024
+Test sponsor:                                Hardware availability: Dec-9999
+Tested by:                                   Software availability: Mar-2008
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+410.bwaves                                  NR                                 
+416.gamess                                  NR                                 
+433.milc                                    NR                                 
+434.zeusmp                                  NR                                 
+435.gromacs                                 NR                                 
+436.cactusADM                               NR                                 
+437.leslie3d                                NR                                 
+444.namd         8020       1740       4.61 S                                  
+444.namd         8020       1737       4.62 *                                  
+444.namd         8020       1736       4.62 S                                  
+444.namd         8020       1739       4.61 S                                  
+444.namd         8020       1737       4.62 S                                  
+447.dealII      11440       1286       8.90 S                                  
+447.dealII      11440       1287       8.89 S                                  
+447.dealII      11440       1287       8.89 S                                  
+447.dealII      11440       1287       8.89 *                                  
+447.dealII      11440       1285       8.90 S                                  
+450.soplex       8340       1231       6.77 S                                  
+450.soplex       8340       1236       6.75 S                                  
+450.soplex       8340       1236       6.75 *                                  
+450.soplex       8340       1233       6.76 S                                  
+450.soplex       8340       1238       6.74 S                                  
+453.povray       5320        887       6.00 S                                  
+453.povray       5320        898       5.92 *                                  
+453.povray       5320        898       5.92 S                                  
+453.povray       5320        903       5.89 S                                  
+453.povray       5320        898       5.93 S                                  
+454.calculix                                NR                                 
+459.GemsFDTD                                NR                                 
+465.tonto                                   NR                                 
+470.lbm                                     NR                                 
+481.wrf                                     NR                                 
+482.sphinx3                                 NR                                 
+==============================================================================
+410.bwaves                                  NR                                 
+416.gamess                                  NR                                 
+433.milc                                    NR                                 
+434.zeusmp                                  NR                                 
+435.gromacs                                 NR                                 
+436.cactusADM                               NR                                 
+437.leslie3d                                NR                                 
+444.namd         8020       1737       4.62 *                                  
+447.dealII      11440       1287       8.89 *                                  
+450.soplex       8340       1236       6.75 *                                  
+453.povray       5320        898       5.92 *                                  
+454.calculix                                NR                                 
+459.GemsFDTD                                NR                                 
+465.tonto                                   NR                                 
+470.lbm                                     NR                                 
+481.wrf                                     NR                                 
+482.sphinx3                                 NR                                 
+ Est. SPECfp(R)_base2006                 --
+ Est. SPECfp2006                                                    Not Run
+
+
+                                   HARDWARE
+                                   --------
+            CPU Name:  
+ CPU Characteristics:  
+             CPU MHz:  
+                 FPU:  
+      CPU(s) enabled:  cores,  chips,  cores/chip,  threads/core
+    CPU(s) orderable:  
+       Primary Cache:  
+     Secondary Cache:  
+            L3 Cache:  
+         Other Cache:  
+              Memory:  
+      Disk Subsystem:  
+      Other Hardware:  
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: QEMU AArch64 Usermode
+            Compiler: clang
+       Auto Parallel: No
+         File System:  
+        System State:  
+       Base Pointers: 64-bit
+       Peak Pointers: Not Applicable
+      Other Software: None
+
+
+                                 Submit Notes
+                                 ------------
+    The config file option 'submit' was used.
+
+                              Base Unknown Flags
+                              ------------------
+   444.namd: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in CXX)
+             "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in LD)
+             "-Wno-int-conversion" (in PORTABILITY)
+             "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXXOPTIMIZE)
+             "-std=c++98 -mllvm --tagcfi-extended-vt -mllvm --tagcfi-vtt -nostdinc++ -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/include/c++/12.2.0 -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/include/c++/12.2.0/aarch64-linux-gnu -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/include/c++/12.2.0/backward/ -nostdlib++ -L /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/lib -lstdc++ -Wl,-rpath,/home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/lib -mllvm --tagcfi-ifct-clang -mllvm --tagcfi-ifct" (in EXTRA_CXXFLAGS)
+             "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+             "-Wl,--whole-archive /home/XXXXXXXX/code/llvm-mte/tagcfi/build/lib/clang/18/lib/aarch64-unknown-linux-gnu//libclang_rt.tagcfi-vtt.a -Wl,--no-whole-archive" (in EXTRA_LDFLAGS)
+
+ 447.dealII: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in CXX)
+             "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in LD)
+             "-Wno-int-conversion" (in PORTABILITY)
+             "-include cstdlib -include cstring -include cstddef" (in CXXPORTABILITY)
+             "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXXOPTIMIZE)
+             "-std=c++98 -mllvm --tagcfi-extended-vt -mllvm --tagcfi-vtt -nostdinc++ -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/include/c++/12.2.0 -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/include/c++/12.2.0/aarch64-linux-gnu -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/include/c++/12.2.0/backward/ -nostdlib++ -L /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/lib -lstdc++ -Wl,-rpath,/home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/lib -mllvm --tagcfi-ifct-clang -mllvm --tagcfi-ifct" (in EXTRA_CXXFLAGS)
+             "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+             "-Wl,--whole-archive /home/XXXXXXXX/code/llvm-mte/tagcfi/build/lib/clang/18/lib/aarch64-unknown-linux-gnu//libclang_rt.tagcfi-vtt.a -Wl,--no-whole-archive" (in EXTRA_LDFLAGS)
+
+ 450.soplex: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in CXX)
+             "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in LD)
+             "-Wno-int-conversion" (in PORTABILITY)
+             "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXXOPTIMIZE)
+             "-std=c++98 -mllvm --tagcfi-extended-vt -mllvm --tagcfi-vtt -nostdinc++ -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/include/c++/12.2.0 -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/include/c++/12.2.0/aarch64-linux-gnu -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/include/c++/12.2.0/backward/ -nostdlib++ -L /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/lib -lstdc++ -Wl,-rpath,/home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/lib -mllvm --tagcfi-ifct-clang -mllvm --tagcfi-ifct" (in EXTRA_CXXFLAGS)
+             "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+             "-Wl,--whole-archive /home/XXXXXXXX/code/llvm-mte/tagcfi/build/lib/clang/18/lib/aarch64-unknown-linux-gnu//libclang_rt.tagcfi-vtt.a -Wl,--no-whole-archive" (in EXTRA_LDFLAGS)
+
+ 453.povray: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in CXX)
+             "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in LD)
+             "-Wno-int-conversion" (in PORTABILITY)
+             "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXXOPTIMIZE)
+             "-std=c++98 -mllvm --tagcfi-extended-vt -mllvm --tagcfi-vtt -nostdinc++ -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/include/c++/12.2.0 -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/include/c++/12.2.0/aarch64-linux-gnu -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/include/c++/12.2.0/backward/ -nostdlib++ -L /home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/lib -lstdc++ -Wl,-rpath,/home/XXXXXXXX/code/llvm-mte/tagcfi/install/vtt/lib -mllvm --tagcfi-ifct-clang -mllvm --tagcfi-ifct" (in EXTRA_CXXFLAGS)
+             "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+             "-Wl,--whole-archive /home/XXXXXXXX/code/llvm-mte/tagcfi/build/lib/clang/18/lib/aarch64-unknown-linux-gnu//libclang_rt.tagcfi-vtt.a -Wl,--no-whole-archive" (in EXTRA_LDFLAGS)
+
+
+                            Base Portability Flags
+                            ----------------------
+   444.namd: -DSPEC_CPU_LP64
+ 447.dealII: -DSPEC_CPU_LP64
+ 450.soplex: -DSPEC_CPU_LP64
+ 453.povray: -DSPEC_CPU_LP64
+
+
+    SPEC and SPECfp are registered trademarks of the Standard Performance
+    Evaluation Corporation.  All other brand and product names appearing
+    in this result are trademarks or registered trademarks of their
+    respective holders.
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 465.tonto (base) did not have enough runs!                                 #
+# 416.gamess (base) did not have enough runs!                                #
+# 436.cactusADM (base) did not have enough runs!                             #
+# 459.GemsFDTD (base) did not have enough runs!                              #
+# 437.leslie3d (base) did not have enough runs!                              #
+# 481.wrf (base) did not have enough runs!                                   #
+# 433.milc (base) did not have enough runs!                                  #
+# 410.bwaves (base) did not have enough runs!                                #
+# 435.gromacs (base) did not have enough runs!                               #
+# 482.sphinx3 (base) did not have enough runs!                               #
+# 434.zeusmp (base) did not have enough runs!                                #
+# 470.lbm (base) did not have enough runs!                                   #
+# 454.calculix (base) did not have enough runs!                              #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 2006-2008 Standard Performance Evaluation Corporation
+Tested with SPEC CPU2006 v1.1.
+Report generated on Sun Nov 17 07:38:41 2024 by CPU2006 ASCII formatter v6128.

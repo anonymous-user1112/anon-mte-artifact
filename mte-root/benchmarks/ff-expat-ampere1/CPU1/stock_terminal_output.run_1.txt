@@ -1,0 +1,631 @@
+20:04:25     INFO - ConsoleLogger online at 20250820 20:04:25Z in /home/XXXXXXXX/firefox-mte
+20:04:25     INFO - Run as ./mach talos-test --activeTests expat_perf_test
+20:04:25     INFO - Dumping config to /home/XXXXXXXX/firefox-mte/testing/mozharness/logs/localconfig.json.
+20:04:25     INFO - {'append_to_log': False,
+20:04:25     INFO -  'base_work_dir': '/home/XXXXXXXX/firefox-mte/testing/mozharness',
+20:04:25     INFO -  'binary_path': '/home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox',
+20:04:25     INFO -  'code_coverage': False,
+20:04:25     INFO -  'config_files': (),
+20:04:25     INFO -  'default_actions': ('populate-webroot', 'create-virtualenv', 'run-tests'),
+20:04:25     INFO -  'disable_ccov_upload': False,
+20:04:25     INFO -  'e10s': True,
+20:04:25     INFO -  'exes': {'python': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python',
+20:04:25     INFO -           'virtualenv': ('/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python',
+20:04:25     INFO -                          '/home/XXXXXXXX/firefox-mte/third_party/python/virtualenv/virtualenv.py')},
+20:04:25     INFO -  'extra_prefs': (),
+20:04:25     INFO -  'find_links': ('https://pypi.pub.build.mozilla.org/pub/',),
+20:04:25     INFO -  'fission': True,
+20:04:25     INFO -  'gecko_profile': False,
+20:04:25     INFO -  'java_code_coverage': False,
+20:04:25     INFO -  'log_level': 'info',
+20:04:25     INFO -  'log_name': 'talos',
+20:04:25     INFO -  'log_to_console': True,
+20:04:25     INFO -  'mozbuild_path': '/home/XXXXXXXX/.mozbuild',
+20:04:25     INFO -  'obj_path': '/home/XXXXXXXX/firefox-mte/firefox_release_stock',
+20:04:25     INFO -  'opt_config_files': (),
+20:04:25     INFO -  'per_test_coverage': False,
+20:04:25     INFO -  'pip_index': False,
+20:04:25     INFO -  'pypi_url': 'http://pypi.python.org/simple',
+20:04:25     INFO -  'python3_manifest': {'win32': 'python3.manifest',
+20:04:25     INFO -                       'win64': 'python3_x64.manifest'},
+20:04:25     INFO -  'repo_path': '/home/XXXXXXXX/firefox-mte',
+20:04:25     INFO -  'requires_gpu': False,
+20:04:25     INFO -  'restartAfterFailure': False,
+20:04:25     INFO -  'run_local': True,
+20:04:25     INFO -  'screenshot_on_failure': False,
+20:04:25     INFO -  'skip_preflight': False,
+20:04:25     INFO -  'system_bits': '32',
+20:04:25     INFO -  'talos_extra_options': ('--develop', '--activeTests', 'expat_perf_test'),
+20:04:25     INFO -  'talos_json': '/home/XXXXXXXX/firefox-mte/testing/talos/talos.json',
+20:04:25     INFO -  'title': 'fedora',
+20:04:25     INFO -  'use_talos_json': False,
+20:04:25     INFO -  'verify': False,
+20:04:25     INFO -  'virtualenv_path': '/home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv',
+20:04:25     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+20:04:25     INFO -  'work_dir': 'build'}
+20:04:25     INFO - [mozharness: 2025-08-20 20:04:25.537138Z] Skipping clobber step.
+20:04:25     INFO - [mozharness: 2025-08-20 20:04:25.537164Z] Skipping download-and-extract step.
+20:04:25     INFO - [mozharness: 2025-08-20 20:04:25.537186Z] Running populate-webroot step.
+20:04:25     INFO - Running pre-action listener: _resource_record_pre_action
+20:04:25     INFO - Running main action method: populate_webroot
+20:04:25     INFO - {'suites': {'bcv': {'tests': ['basic_compositor_video']},
+20:04:25     INFO -             'chromez': {'tests': ['about_preferences_basic', 'tresize']},
+20:04:25     INFO -             'damp': {'extra_prefs': ['talos.damp.suite=all'],
+20:04:25     INFO -                      'pagesets_name': 'tp5n.zip',
+20:04:25     INFO -                      'tests': ['damp']},
+20:04:25     INFO -             'damp-inspector': {'extra_prefs': ['talos.damp.suite=inspector'],
+20:04:25     INFO -                                'pagesets_name': 'tp5n.zip',
+20:04:25     INFO -                                'tests': ['damp']},
+20:04:25     INFO -             'damp-other': {'extra_prefs': ['talos.damp.suite=other'],
+20:04:25     INFO -                            'pagesets_name': 'tp5n.zip',
+20:04:25     INFO -                            'tests': ['damp']},
+20:04:25     INFO -             'damp-webconsole': {'extra_prefs': ['talos.damp.suite=webconsole'],
+20:04:25     INFO -                                 'pagesets_name': 'tp5n.zip',
+20:04:25     INFO -                                 'tests': ['damp']},
+20:04:25     INFO -             'dromaeojs': {'tests': ['dromaeo_css', 'kraken']},
+20:04:25     INFO -             'g1': {'pagesets_name': 'tp5n.zip', 'tests': ['tp5o_scroll']},
+20:04:25     INFO -             'g3': {'tests': ['dromaeo_dom']},
+20:04:25     INFO -             'g4': {'tests': ['displaylist_mutate',
+20:04:25     INFO -                              'rasterflood_svg',
+20:04:25     INFO -                              'rasterflood_gradient']},
+20:04:25     INFO -             'g5': {'pagesets_name': 'tp5n.zip',
+20:04:25     INFO -                    'tests': ['ts_paint_webext', 'tp5o_webext']},
+20:04:25     INFO -             'h1': {'tests': ['ts_paint_heavy']},
+20:04:25     INFO -             'motionmark': {'benchmark_zip': 'jetstream.zip',
+20:04:25     INFO -                            'tests': ['motionmark_animometer',
+20:04:25     INFO -                                      'motionmark_htmlsuite',
+20:04:25     INFO -                                      'JetStream',
+20:04:25     INFO -                                      'ARES6']},
+20:04:25     INFO -             'mtetest': {'tests': ['expat_perf_test', 'expat_perf_test_mini']},
+20:04:25     INFO -             'other': {'tests': ['a11yr',
+20:04:25     INFO -                                 'ts_paint',
+20:04:25     INFO -                                 'twinopen',
+20:04:25     INFO -                                 'sessionrestore',
+20:04:25     INFO -                                 'sessionrestore_no_auto_restore',
+20:04:25     INFO -                                 'tabpaint',
+20:04:25     INFO -                                 'cpstartup',
+20:04:25     INFO -                                 'startup_about_home_paint',
+20:04:25     INFO -                                 'cross_origin_pageload',
+20:04:25     INFO -                                 'startup_about_home_paint_cached']},
+20:04:25     INFO -             'pdfpaint': {'tests': ['pdfpaint']},
+20:04:25     INFO -             'perf-reftest': {'tests': ['perf_reftest']},
+20:04:25     INFO -             'perf-reftest-singletons': {'tests': ['perf_reftest_singletons']},
+20:04:25     INFO -             'realworld-webextensions': {'tests': ['startup_about_home_paint_realworld_webextensions'],
+20:04:25     INFO -                                         'webextensions_zip': 'webextensions.zip'},
+20:04:25     INFO -             'sessionrestore-many-windows': {'tests': ['sessionrestore_many_windows']},
+20:04:25     INFO -             'svgr': {'tests': ['tsvgx',
+20:04:25     INFO -                                'tsvgr_opacity',
+20:04:25     INFO -                                'tscrollx',
+20:04:25     INFO -                                'tsvg_static',
+20:04:25     INFO -                                'tart']},
+20:04:25     INFO -             'tabswitch': {'pagesets_name': 'tp5n.zip', 'tests': ['tabswitch']},
+20:04:25     INFO -             'tp5o': {'pagesets_name': 'tp5n.zip', 'tests': ['tp5o']},
+20:04:25     INFO -             'webgl': {'tests': ['canvas2dvideo',
+20:04:25     INFO -                                 'glterrain',
+20:04:25     INFO -                                 'glvideo',
+20:04:25     INFO -                                 'motionmark_webgl',
+20:04:25     INFO -                                 'offscreencanvas_webcodecs_main_webgl_h264',
+20:04:25     INFO -                                 'offscreencanvas_webcodecs_main_webgl_vp9',
+20:04:25     INFO -                                 'offscreencanvas_webcodecs_main_webgl_av1',
+20:04:25     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_h264',
+20:04:25     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_vp9',
+20:04:25     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_av1',
+20:04:25     INFO -                                 'offscreencanvas_webcodecs_main_2d_h264',
+20:04:25     INFO -                                 'offscreencanvas_webcodecs_main_2d_vp9',
+20:04:25     INFO -                                 'offscreencanvas_webcodecs_main_2d_av1',
+20:04:25     INFO -                                 'offscreencanvas_webcodecs_worker_2d_h264',
+20:04:25     INFO -                                 'offscreencanvas_webcodecs_worker_2d_vp9',
+20:04:25     INFO -                                 'offscreencanvas_webcodecs_worker_2d_av1']},
+20:04:25     INFO -             'xperf': {'pagesets_name': 'tp5n.zip',
+20:04:25     INFO -                       'talos_options': ['--xperf_path',
+20:04:25     INFO -                                         '"c:/Program Files (x86)/Windows '
+20:04:25     INFO -                                         'Kits/10/Windows Performance '
+20:04:25     INFO -                                         'Toolkit/xperf.exe"'],
+20:04:25     INFO -                       'tests': ['tp5n']}}}
+20:04:25     INFO - Running post-action listener: _resource_record_post_action
+20:04:25     INFO - [mozharness: 2025-08-20 20:04:25.539619Z] Finished populate-webroot step (success)
+20:04:25     INFO - [mozharness: 2025-08-20 20:04:25.539642Z] Running create-virtualenv step.
+20:04:25     INFO - Running pre-action listener: _resource_record_pre_action
+20:04:25     INFO - Running main action method: create_virtualenv
+20:04:25     INFO - Virtualenv already exists, skipping creation
+20:04:25     INFO - Running post-action listener: _resource_record_post_action
+20:04:25     INFO - Running post-action listener: _start_resource_monitoring
+20:04:25     INFO - Starting resource monitoring.
+20:04:25     INFO - [mozharness: 2025-08-20 20:04:25.551566Z] Finished create-virtualenv step (success)
+20:04:25     INFO - [mozharness: 2025-08-20 20:04:25.552161Z] Skipping install step.
+20:04:25     INFO - [mozharness: 2025-08-20 20:04:25.552198Z] Running run-tests step.
+20:04:25     INFO - Running pre-action listener: _resource_record_pre_action
+20:04:25     INFO - Running pre-action listener: _set_gcov_prefix
+20:04:25     INFO - Running main action method: run_tests
+20:04:25     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin/python', '--version']
+20:04:25     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin/python --version
+20:04:25     INFO -  Python 3.11.13
+20:04:25     INFO - Return code: 0
+20:04:25     INFO - ENV: MOZ_UPLOAD_DIR is now /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir
+20:04:25     INFO - ENV: MOZBUILD_PATH is now /home/XXXXXXXX/.mozbuild
+20:04:25     INFO - ENV: MINIDUMP_SAVE_PATH is now /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir
+20:04:25     INFO - ENV: RUST_BACKTRACE is now full
+20:04:25     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin/python', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py', '--executablePath', '/home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox', '--title', 'fedora', '--develop', '--activeTests', 'expat_perf_test', '--log-tbpl-level=info'] in /home/XXXXXXXX/firefox-mte/testing/mozharness/build
+20:04:25     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin/python /home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py --executablePath /home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox --title fedora --develop --activeTests expat_perf_test --log-tbpl-level=info
+20:04:25     INFO - Using env: {'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+20:04:25     INFO -  'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:',
+20:04:25     INFO -  'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ',
+20:04:25     INFO -  'DISPLAY': ':99',
+20:04:25     INFO -  'EDITOR': '/usr/bin/vim',
+20:04:25     INFO -  'EXPAT_PIN_CORE': '1',
+20:04:25     INFO -  'GPG_TTY': '/dev/pts/13',
+20:04:25     INFO -  'HISTCONTROL': 'ignoredups',
+20:04:25     INFO -  'HISTSIZE': '1000',
+20:04:25     INFO -  'HOME': '/home/XXXXXXXX',
+20:04:25     INFO -  'HOSTNAME': 'fedora',
+20:04:25     INFO -  'LANG': 'en_US.UTF-8',
+20:04:25     INFO -  'LESSOPEN': '||/usr/bin/lesspipe.sh %s',
+20:04:25     INFO -  'LOGNAME': 'XXXXXXXX',
+20:04:25     INFO -  'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+20:04:25     INFO -  'MACH_MAIN_PID': '2600308',
+20:04:25     INFO -  'MAIL': '/var/spool/mail/XXXXXXXX',
+20:04:25     INFO -  'MINIDUMP_SAVE_PATH': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:04:25     INFO -  'MOTD_SHOWN': 'pam',
+20:04:25     INFO -  'MOZBUILD_PATH': '/home/XXXXXXXX/.mozbuild',
+20:04:25     INFO -  'MOZCONFIG': 'mozconfig_stock',
+20:04:25     INFO -  'MOZ_DEVELOPER_OBJ_DIR': '/home/XXXXXXXX/firefox-mte/firefox_release_stock',
+20:04:25     INFO -  'MOZ_DEVELOPER_REPO_DIR': '/home/XXXXXXXX/firefox-mte',
+20:04:25     INFO -  'MOZ_UPLOAD_DIR': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:04:25     INFO -  'OLDPWD': '/home/XXXXXXXX/firefox-mte',
+20:04:25     INFO -  'PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin',
+20:04:25     INFO -  'PWD': '/home/XXXXXXXX/firefox-mte',
+20:04:25     INFO -  'PYTHONPATH': '/home/XXXXXXXX/firefox-mte/testing/talos',
+20:04:25     INFO -  'REQUIRE_GPU': '0',
+20:04:25     INFO -  'RUST_BACKTRACE': 'full',
+20:04:25     INFO -  'SELINUX_LEVEL_REQUESTED': '',
+20:04:25     INFO -  'SELINUX_ROLE_REQUESTED': '',
+20:04:25     INFO -  'SELINUX_USE_CURRENT_RANGE': '',
+20:04:25     INFO -  'SHELL': '/bin/bash',
+20:04:25     INFO -  'SHLVL': '3',
+20:04:25     INFO -  'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346',
+20:04:25     INFO -  'SSH_CLIENT': '172.17.128.2 52585 22',
+20:04:25     INFO -  'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22',
+20:04:25     INFO -  'SSH_TTY': '/dev/pts/0',
+20:04:25     INFO -  'TERM': 'tmux-256color',
+20:04:25     INFO -  'TERM_PROGRAM': 'tmux',
+20:04:25     INFO -  'TERM_PROGRAM_VERSION': '3.5a',
+20:04:25     INFO -  'TMUX': '/tmp/tmux-1000/default,2416415,0',
+20:04:25     INFO -  'TMUX_PANE': '%1',
+20:04:25     INFO -  'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins',
+20:04:25     INFO -  'USER': 'XXXXXXXX',
+20:04:25     INFO -  'VIRTUAL_ENV': 'talos-venv',
+20:04:25     INFO -  'VIRTUAL_ENV_PROMPT': '(venv-3.11) ',
+20:04:25     INFO -  'XDG_RUNTIME_DIR': '/run/user/1000',
+20:04:25     INFO -  'XDG_SESSION_CLASS': 'user',
+20:04:25     INFO -  'XDG_SESSION_ID': '1323',
+20:04:25     INFO -  'XDG_SESSION_TYPE': 'tty',
+20:04:25     INFO -  '_': './mach'}
+20:04:25     INFO - Calling ['/home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin/python', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py', '--executablePath', '/home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox', '--title', 'fedora', '--develop', '--activeTests', 'expat_perf_test', '--log-tbpl-level=info'] with output_timeout 3600
+20:04:25     INFO -  mozversion application_buildid: 20250820120253
+20:04:25     INFO -  mozversion application_changeset: 497a35d032e41a640590af9ac68d8a6dd21f4131
+20:04:25     INFO -  mozversion application_display_name: Nightly
+20:04:25     INFO -  mozversion application_id: {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+20:04:25     INFO -  mozversion application_name: Firefox
+20:04:25     INFO -  mozversion application_remotingname: firefox-default
+20:04:25     INFO -  mozversion application_vendor: Mozilla
+20:04:25     INFO -  mozversion application_version: 134.0.1
+20:04:25     INFO -  mozversion platform_buildid: 20250820120253
+20:04:25     INFO -  mozversion platform_changeset: 497a35d032e41a640590af9ac68d8a6dd21f4131
+20:04:25     INFO -  mozversion platform_version: 134.0.1
+20:04:25     INFO -  starting webserver on '127.0.0.1:56307'
+20:04:25     INFO -  SUITE-START | Running 1 tests
+20:04:25     INFO -  TEST-START | expat_perf_test
+20:04:25     INFO -  Initialising browser for expat_perf_test test...
+20:04:25     INFO -  Cloning profile located at /home/XXXXXXXX/firefox-mte/testing/talos/talos/base_profile
+20:04:25     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/base
+20:04:25     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/common
+20:04:25     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/perf
+20:04:25     INFO -  Installing Add-ons:
+20:04:25     INFO -  ['/home/XXXXXXXX/firefox-mte/testing/talos/talos/talos-powers', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/pageloader']
+20:04:25     INFO -  Installing Webextensions:
+20:04:25     INFO -  Application command: /home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox http://127.0.0.1:56307/getInfo.html -profile /tmp/tmp8s9sjfyu/profile
+20:04:25     INFO -  TEST-INFO | started process 2600369 (/home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox http://127.0.0.1:56307/getInfo.html)
+20:04:26     INFO -  libEGL warning: DRI3 error: Could not get DRI3 device
+20:04:26     INFO -  libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:04:26     INFO -  libEGL warning: DRI3 error: Could not get DRI3 device
+20:04:26     INFO -  libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:04:26     INFO -  STOCK sched_setaffinity on core : 1 (PID:2600369)
+20:04:27     INFO -  console.error: ({})
+20:04:27     INFO -  console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 911))
+20:04:27     INFO -  __metrics
+20:04:27     INFO -  	Screen width/height: 1280/1024
+20:04:27     INFO -  	colorDepth: 24
+20:04:27     INFO -  	Browser inner width/height: 1152/836
+20:04:27     INFO -  __metrics
+20:04:27     INFO -  GetShaderInfoLog() ->
+20:04:27     INFO -  0:2(12): error: extension `GL_EXT_shader_texture_lod' unsupported in fragment shader
+20:04:27     INFO -  GetShaderSource() ->
+20:04:27     INFO -  #extension GL_EXT_shader_texture_lod: require
+20:04:27     INFO -  void main() {}
+20:04:27     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.sys.mjs, line 772: WebGL context was lost.
+20:04:27     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.sys.mjs, line 772: WebGL context was lost.
+20:04:28     INFO -  console.error: AboutHomeStartupCache: "requestCache called with no _procManager!"
+20:04:28     INFO -  about:support	{"application":{"name":"Firefox","osVersion":"Linux 6.14.0-63.fc42.aarch64 #1 SMP PREEMPT_DYNAMIC Mon Mar 24 20:18:11 UTC 2025","version":"134.0.1","buildID":"20250820120253","distributionID":"","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0","safeMode":false,"memorySizeBytes":539257499648,"diskAvailableBytes":268489445376,"updateChannel":"default","supportURL":"https://support.mozilla.org/1/firefox/134.0.1/Linux/en-US/","osTheme":"Adwaita / Adwaita","pointingDevices":[],"numTotalWindows":1,"numFissionWindows":1,"numRemoteWindows":1,"fissionAutoStart":true,"fissionDecisionStatus":"enabledByDefault","remoteAutoStart":true,"policiesStatus":0,"keyLocationServiceGoogleFound":false,"keySafebrowsingGoogleFound":false,"keyMozillaFound":false},"securitySoftware":{"registeredAntiVirus":"","registeredAntiSpyware":"","registeredFirewall":""},"environmentVariables":{"DISPLAY":":99","MOZ_UPLOAD_DIR":"/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir","MOZ_DEVELOPER_REPO_DIR":"/home/XXXXXXXX/firefox-mte","MOZ_DEVELOPER_OBJ_DIR":"/home/XXXXXXXX/firefox-mte/firefox_release_stock","MOZ_CRASHREPORTER_NO_REPORT":"1","MOZ_CRASHREPORTER":"1","MOZ_DISABLE_NONLOCAL_CONNECTIONS":"1","XRE_NO_WINDOWS_CRASH_DIALOG":"1","MOZ_ASSUME_USER_NS":"1","MOZ_CRASHREPORTER_EVENTS_DIRECTORY":"/tmp/tmp8s9sjfyu/profile/crashes/events","MOZ_CRASHREPORTER_RESTART_ARG_1":"http://127.0.0.1:56307/getInfo.html","MOZ_CRASHREPORTER_RESTART_ARG_2":"-profile","MOZ_CRASHREPORTER_RESTART_ARG_3":"/tmp/tmp8s9sjfyu/profile","MOZ_CRASHREPORTER_RESTART_ARG_4":"","MOZ_CRASHREPORTER_DATA_DIRECTORY":"/home/XXXXXXXX/.mozilla/firefox/Crash Reports","MOZ_CRASHREPORTER_PING_DIRECTORY":"/home/XXXXXXXX/.mozilla/firefox/Pending Pings","MOZ_CRASHREPORTER_STRINGS_OVERRIDE":"/home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/browser/crashreporter-override.ini","MOZ_LAUNCHED_CHILD":"","MOZ_APP_SILENT_START":"","XRE_PROFILE_PATH":"","XRE_PROFILE_LOCAL_PATH":"","XRE_START_OFFLINE":"","XRE_BINARY_PATH":"","XRE_RESTARTED_BY_PROFILE_MANAGER":""},"modifiedPreferences":{"browser.cache.disk.smart_size.enabled":false,"browser.contentblocking.category":"custom","browser.link.open_newwindow":2,"browser.search.region":"US","browser.tabs.remote.systemTriggeredAboutBlankAnywhere":true,"browser.tabs.unloadOnLowMemory":false,"browser.urlbar.quicksuggest.migrationVersion":2,"browser.urlbar.placeholderName":"Google","browser.urlbar.quicksuggest.scenario":"offline","doh-rollout.home-region":"US","dom.forms.autocomplete.formautofill":true,"dom.allow_scripts_to_close_windows":true,"dom.disable_open_during_load":false,"dom.disable_window_flip":true,"dom.disable_window_move_resize":true,"dom.input_events.security.minNumTicks":0,"dom.input_events.security.minTimeElapsedInMS":0,"dom.max_chrome_script_run_time":0,"dom.max_script_run_time":0,"dom.push.connection.enabled":false,"dom.send_after_paint_to_content":true,"extensions.checkCompatibility":false,"extensions.formautofill.creditCards.reauth.optout":"MDIEEPgAAAAAAAAAAAAAAAAAAAEwFAYIKoZIhvcNAwcECPwnRPI1wz0OBAh+Tf64WdQXag==","extensions.formautofill.addresses.experiments.enabled":true,"extensions.lastAppVersion":"134.0.1","general.useragent.updates.enabled":false,"gfx.webrender.all":true,"idle.lastDailyNotification":-1,"media.gmp.storage.version.observed":1,"media.allowed-to-play.enabled":true,"media.autoplay.ask-permission":false,"media.autoplay.blocking_policy":0,"media.autoplay.default":0,"media.block-autoplay-until-in-foreground":false,"media.capturestream_hints.enabled":true,"media.geckoview.autoplay.request":false,"media.getdisplaymedia.screencapturekit.picker.enabled":false,"media.gmp-manager.updateEnabled":false,"media.gmp-manager.url":"http://127.0.0.1/gmpmanager-dummy/update.xml","media.libavcodec.allow-obsolete":true,"media.navigator.enabled":true,"media.navigator.permission.disabled":true,"media.peerconnection.enabled":true,"media.wakelock.audio.delay-releasing.ms":0,"media.webspeech.synth.dont_notify_on_error":true,"network.protocol-handler.external.ext+damp":true,"network.protocol-handler.external.ext+twinopen":true,"places.database.lastMaintenance":2147483647,"privacy.bounceTrackingProtection.hasMigratedUserActivationData":true,"privacy.trackingprotection.introURL":"http://127.0.0.1/trackingprotection/tour","privacy.sanitize.pending":"[{\"id\":\"newtab-container\",\"itemsToClear\":[],\"options\":{}}]","privacy.reduceTimerPrecision":false,"privacy.trackingprotection.annotate_channels":false,"privacy.trackingprotection.enabled":false,"privacy.trackingprotection.pbmode.enabled":false,"security.certerrors.mitm.priming.enabled":false,"security.enable_java":false,"security.fileuri.strict_origin_policy":false,"security.turn_off_all_security_so_that_viruses_can_take_over_this_computer":true,"services.sync.engine.addresses.available":true,"signon.management.page.os-auth.optout":"MDIEEPgAAAAAAAAAAAAAAAAAAAEwFAYIKoZIhvcNAwcECAYTSe2gSTu+BAiJgl3kUGrjDw==","widget.gtk.overlay-scrollbars.enabled":false},"lockedPreferences":{"fission.autostart.session":true},"printingPreferences":{},"media":{"currentAudioBackend":"pulse-rust","currentMaxAudioChannels":2,"currentPreferredSampleRate":48000,"audioOutputDevices":[{"name":"Dummy Output","groupId":"","vendor":"","type":2,"state":2,"preferred":15,"supportedFormat":12336,"defaultFormat":4096,"maxChannels":2,"defaultRate":48000,"maxRate":384000,"minRate":1,"maxLatency":0,"minLatency":0}],"audioInputDevices":[{"name":"Monitor of Dummy Output","groupId":"","vendor":"","type":1,"state":2,"preferred":15,"supportedFormat":12336,"defaultFormat":4096,"maxChannels":2,"defaultRate":48000,"maxRate":384000,"minRate":1,"maxLatency":0,"minLatency":0}],"codecSupportInfo":"H264 SW\nVP9 SW\nVP8 SW\nAV1 SW\nHEVC NONE\nAAC SW\nMP3 SW\nOpus SW\nVorbis SW\nFLAC SW\nWave SW"},"accessibility":{"isActive":false,"forceDisabled":0,"instantiator":""},"startupCache":{"DiskCachePath":"/tmp/tmp8s9sjfyu/profile/startupCache/startupCache.8.little","IgnoreDiskCache":false,"FoundDiskCacheOnInit":false,"WroteToDiskCache":false},"libraryVersions":{"NSPR":{"minVersion":"4.36","version":"4.36"},"NSS":{"minVersion":"3.107","version":"3.107"},"NSSUTIL":{"minVersion":"3.107","version":"3.107"},"NSSSSL":{"minVersion":"3.107","version":"3.107"},"NSSSMIME":{"minVersion":"3.107","version":"3.107"}},"userJS":{"exists":true},"intl":{"localeService":{"requested":["en-US"],"available":["en-US"],"supported":["en-US"],"regionalPrefs":["en-US"],"defaultLocale":"en-US"},"osPrefs":{"systemLocales":["en-US"],"regionalPrefsLocales":["en-US"]}},"contentAnalysis":{"active":false},"crashes":{"submitted":[],"pending":0},"sandbox":{"hasSeccompBPF":true,"hasSeccompTSync":true,"hasPrivilegedUserNamespaces":true,"hasUserNamespaces":true,"canSandboxContent":true,"canSandboxMedia":true,"syscallLog":[],"contentSandboxLevel":4,"effectiveContentSandboxLevel":0},"remoteAgent":{"running":false,"url":""},"graphics":{"desktopEnvironment":"","numTotalWindows":1,"numAcceleratedWindows":1,"windowLayerManagerType":"WebRender","windowLayerManagerRemote":true,"graphicsDevicePixelRatios":[1],"adapterDescription":"llvmpipe (LLVM 20.1.8, 128 bits)","adapterVendorID":"Mesa","adapterDeviceID":"llvmpipe (LLVM 20.1.8, 128 bits)","adapterRAM":0,"adapterDrivers":"","driverVendor":"mesa/llvmpipe","driverVersion":"25.1.7.0","driverDate":"","adapterVendorID2":"0x1a03","adapterDeviceID2":"0x2000","isGPU2Active":false,"targetFrameRate":59,"windowProtocol":"x11","supportFontDetermination":"Fedora Unknown - ID=fedora","webgl1Renderer":"Mesa -- llvmpipe (LLVM 20.1.8, 128 bits)","webgl1Version":"OpenGL ES 3.2 Mesa 25.1.7","webgl1DriverExtensions":"GL_EXT_blend_minmax GL_EXT_multi_draw_arrays GL_EXT_texture_filter_anisotropic GL_EXT_texture_compression_s3tc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_format_BGRA8888 GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_mapbuffer GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_stencil8 GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_vertex_half_float GL_EXT_draw_instanced GL_EXT_texture_sRGB_decode GL_OES_EGL_image GL_OES_depth_texture GL_OES_packed_depth_stencil GL_EXT_texture_type_2_10_10_10_REV GL_NV_conditional_render GL_OES_get_program_binary GL_APPLE_texture_max_level GL_EXT_discard_framebuffer GL_EXT_read_format_bgra GL_EXT_texture_storage GL_NV_pack_subimage GL_NV_texture_barrier GL_EXT_frag_depth GL_NV_fbo_color_attachments GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_vertex_array_object GL_OES_viewport_array GL_ANGLE_pack_reverse_row_order GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_EXT_occlusion_query_boolean GL_EXT_robustness GL_EXT_texture_rg GL_EXT_unpack_subimage GL_NV_draw_buffers GL_NV_read_buffer GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_APPLE_sync GL_EXT_draw_buffers GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_shadow_samplers GL_KHR_debug GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_NV_generate_mipmap_sRGB GL_NV_pixel_buffer_object GL_OES_depth_texture_cube_map GL_OES_required_internalformat GL_OES_surfaceless_context GL_EXT_color_buffer_float GL_EXT_debug_label GL_EXT_sRGB_write_control GL_EXT_separate_shader_objects GL_EXT_shader_framebuffer_fetch GL_EXT_shader_group_vote GL_EXT_shader_implicit_conversions GL_EXT_shader_integer_mix GL_EXT_tessellation_point_size GL_EXT_tessellation_shader GL_ANDROID_extension_pack_es31a GL_ARM_shader_framebuffer_fetch_depth_stencil GL_EXT_base_instance GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_copy_image GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_gpu_shader5 GL_EXT_multi_draw_indirect GL_EXT_polygon_offset_clamp GL_EXT_primitive_bounding_box GL_EXT_render_snorm GL_EXT_shader_io_blocks GL_EXT_texture_border_clamp GL_EXT_texture_buffer GL_EXT_texture_cube_map_array GL_EXT_texture_norm16 GL_EXT_texture_view GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_robust_buffer_access_behavior GL_NV_image_formats GL_NV_shader_noperspective_interpolation GL_OES_copy_image GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_gpu_shader5 GL_OES_primitive_bounding_box GL_OES_sample_shading GL_OES_sample_variables GL_OES_shader_io_blocks GL_OES_shader_multisample_interpolation GL_OES_tessellation_point_size GL_OES_tessellation_shader GL_OES_texture_border_clamp GL_OES_texture_buffer GL_OES_texture_cube_map_array GL_OES_texture_stencil8 GL_OES_texture_storage_multisample_2d_array GL_OES_texture_view GL_EXT_blend_func_extended GL_EXT_buffer_storage GL_EXT_float_blend GL_EXT_geometry_point_size GL_EXT_geometry_shader GL_EXT_texture_filter_minmax GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_KHR_no_error GL_KHR_texture_compression_astc_sliced_3d GL_OES_EGL_image_external_essl3 GL_OES_geometry_point_size GL_OES_geometry_shader GL_OES_shader_image_atomic GL_EXT_clear_texture GL_EXT_clip_cull_distance GL_EXT_conservative_depth GL_EXT_disjoint_timer_query GL_EXT_texture_compression_s3tc_srgb GL_MESA_shader_integer_functions GL_EXT_clip_control GL_EXT_color_buffer_half_float GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_texture_compression_bptc GL_EXT_texture_mirror_clamp_to_edge GL_KHR_parallel_shader_compile GL_NV_alpha_to_coverage_dither_control GL_EXT_EGL_image_storage GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_texture_shadow_lod GL_MESA_framebuffer_flip_y GL_OVR_multiview GL_OVR_multiview2 GL_EXT_depth_clamp GL_EXT_texture_query_lod GL_MESA_sampler_objects GL_EXT_EGL_image_storage_compression GL_EXT_texture_storage_compression GL_MESA_bgra ","webgl1Extensions":"ANGLE_instanced_arrays EXT_blend_minmax EXT_color_buffer_half_float EXT_depth_clamp EXT_float_blend EXT_frag_depth EXT_sRGB EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_element_index_uint OES_fbo_render_mipmap OES_standard_derivatives OES_texture_float OES_texture_float_linear OES_texture_half_float OES_texture_half_float_linear OES_vertex_array_object WEBGL_color_buffer_float WEBGL_compressed_texture_astc WEBGL_compressed_texture_etc WEBGL_compressed_texture_etc1 WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_depth_texture WEBGL_draw_buffers WEBGL_lose_context","webgl1WSIInfo":"outOfProcess: false\ninProcess: true\nEGL_VENDOR: Mesa Project\nEGL_VERSION: 1.5\nEGL_EXTENSIONS: EGL_ANDROID_blob_cache EGL_ANGLE_sync_control_rate EGL_EXT_buffer_age EGL_EXT_config_select_group EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_EXT_query_reset_notification_strategy EGL_EXT_surface_compression EGL_EXT_swap_buffers_with_damage EGL_KHR_cl_event2 EGL_KHR_config_attribs EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_create_context_no_error EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image_base EGL_KHR_no_config_context EGL_KHR_reusable_sync EGL_KHR_surfaceless_context EGL_KHR_swap_buffers_with_damage EGL_EXT_pixel_format_float EGL_KHR_wait_sync EGL_MESA_configless_context EGL_MESA_gl_interop EGL_MESA_query_driver EGL_MESA_x11_native_visual_id \nEGL_EXTENSIONS(nullptr): EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_EXT_platform_base EGL_KHR_client_get_all_proc_addresses EGL_EXT_client_extensions EGL_KHR_debug EGL_EXT_platform_device EGL_EXT_explicit_device EGL_EXT_platform_wayland EGL_KHR_platform_wayland EGL_EXT_platform_x11 EGL_KHR_platform_x11 EGL_EXT_platform_xcb EGL_MESA_platform_gbm EGL_KHR_platform_gbm EGL_MESA_platform_surfaceless","webgl2Renderer":"Mesa -- llvmpipe (LLVM 20.1.8, 128 bits)","webgl2Version":"OpenGL ES 3.2 Mesa 25.1.7","webgl2DriverExtensions":"GL_EXT_blend_minmax GL_EXT_multi_draw_arrays GL_EXT_texture_filter_anisotropic GL_EXT_texture_compression_s3tc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_format_BGRA8888 GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_mapbuffer GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_stencil8 GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_vertex_half_float GL_EXT_draw_instanced GL_EXT_texture_sRGB_decode GL_OES_EGL_image GL_OES_depth_texture GL_OES_packed_depth_stencil GL_EXT_texture_type_2_10_10_10_REV GL_NV_conditional_render GL_OES_get_program_binary GL_APPLE_texture_max_level GL_EXT_discard_framebuffer GL_EXT_read_format_bgra GL_EXT_texture_storage GL_NV_pack_subimage GL_NV_texture_barrier GL_EXT_frag_depth GL_NV_fbo_color_attachments GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_vertex_array_object GL_OES_viewport_array GL_ANGLE_pack_reverse_row_order GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_EXT_occlusion_query_boolean GL_EXT_robustness GL_EXT_texture_rg GL_EXT_unpack_subimage GL_NV_draw_buffers GL_NV_read_buffer GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_APPLE_sync GL_EXT_draw_buffers GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_shadow_samplers GL_KHR_debug GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_NV_generate_mipmap_sRGB GL_NV_pixel_buffer_object GL_OES_depth_texture_cube_map GL_OES_required_internalformat GL_OES_surfaceless_context GL_EXT_color_buffer_float GL_EXT_debug_label GL_EXT_sRGB_write_control GL_EXT_separate_shader_objects GL_EXT_shader_framebuffer_fetch GL_EXT_shader_group_vote GL_EXT_shader_implicit_conversions GL_EXT_shader_integer_mix GL_EXT_tessellation_point_size GL_EXT_tessellation_shader GL_ANDROID_extension_pack_es31a GL_ARM_shader_framebuffer_fetch_depth_stencil GL_EXT_base_instance GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_copy_image GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_gpu_shader5 GL_EXT_multi_draw_indirect GL_EXT_polygon_offset_clamp GL_EXT_primitive_bounding_box GL_EXT_render_snorm GL_EXT_shader_io_blocks GL_EXT_texture_border_clamp GL_EXT_texture_buffer GL_EXT_texture_cube_map_array GL_EXT_texture_norm16 GL_EXT_texture_view GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_robust_buffer_access_behavior GL_NV_image_formats GL_NV_shader_noperspective_interpolation GL_OES_copy_image GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_gpu_shader5 GL_OES_primitive_bounding_box GL_OES_sample_shading GL_OES_sample_variables GL_OES_shader_io_blocks GL_OES_shader_multisample_interpolation GL_OES_tessellation_point_size GL_OES_tessellation_shader GL_OES_texture_border_clamp GL_OES_texture_buffer GL_OES_texture_cube_map_array GL_OES_texture_stencil8 GL_OES_texture_storage_multisample_2d_array GL_OES_texture_view GL_EXT_blend_func_extended GL_EXT_buffer_storage GL_EXT_float_blend GL_EXT_geometry_point_size GL_EXT_geometry_shader GL_EXT_texture_filter_minmax GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_KHR_no_error GL_KHR_texture_compression_astc_sliced_3d GL_OES_EGL_image_external_essl3 GL_OES_geometry_point_size GL_OES_geometry_shader GL_OES_shader_image_atomic GL_EXT_clear_texture GL_EXT_clip_cull_distance GL_EXT_conservative_depth GL_EXT_disjoint_timer_query GL_EXT_texture_compression_s3tc_srgb GL_MESA_shader_integer_functions GL_EXT_clip_control GL_EXT_color_buffer_half_float GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_texture_compression_bptc GL_EXT_texture_mirror_clamp_to_edge GL_KHR_parallel_shader_compile GL_NV_alpha_to_coverage_dither_control GL_EXT_EGL_image_storage GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_texture_shadow_lod GL_MESA_framebuffer_flip_y GL_OVR_multiview GL_OVR_multiview2 GL_EXT_depth_clamp GL_EXT_texture_query_lod GL_MESA_sampler_objects GL_EXT_EGL_image_storage_compression GL_EXT_texture_storage_compression GL_MESA_bgra ","webgl2Extensions":"EXT_color_buffer_float EXT_depth_clamp EXT_float_blend EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_draw_buffers_indexed OES_texture_float_linear OVR_multiview2 WEBGL_compressed_texture_astc WEBGL_compressed_texture_etc WEBGL_compressed_texture_etc1 WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_lose_context","webgl2WSIInfo":"outOfProcess: false\ninProcess: true\nEGL_VENDOR: Mesa Project\nEGL_VERSION: 1.5\nEGL_EXTENSIONS: EGL_ANDROID_blob_cache EGL_ANGLE_sync_control_rate EGL_EXT_buffer_age EGL_EXT_config_select_group EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_EXT_query_reset_notification_strategy EGL_EXT_surface_compression EGL_EXT_swap_buffers_with_damage EGL_KHR_cl_event2 EGL_KHR_config_attribs EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_create_context_no_error EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image_base EGL_KHR_no_config_context EGL_KHR_reusable_sync EGL_KHR_surfaceless_context EGL_KHR_swap_buffers_with_damage EGL_EXT_pixel_format_float EGL_KHR_wait_sync EGL_MESA_configless_context EGL_MESA_gl_interop EGL_MESA_query_driver EGL_MESA_x11_native_visual_id \nEGL_EXTENSIONS(nullptr): EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_EXT_platform_base EGL_KHR_client_get_all_proc_addresses EGL_EXT_client_extensions EGL_KHR_debug EGL_EXT_platform_device EGL_EXT_explicit_device EGL_EXT_platform_wayland EGL_KHR_platform_wayland EGL_EXT_platform_x11 EGL_KHR_platform_x11 EGL_EXT_platform_xcb EGL_MESA_platform_gbm EGL_KHR_platform_gbm EGL_MESA_platform_surfaceless","info":{"AzureFallbackCanvasBackend":"skia","AzureCanvasBackend":"skia","AzureContentBackend":"skia","ApzWheelInput":1,"ApzDragInput":1,"ApzKeyboardInput":1,"ApzAutoscrollInput":1,"ApzZoomingInput":1,"CMSOutputProfile":"Empty profile data","DisplayCount":1,"Display0":"1280x1024@0Hz scales:1.000000|1.000000"},"featureLog":{"features":[{"name":"HW_COMPOSITING","description":"Compositing","status":"available","log":[{"type":"default","status":"available"}]},{"name":"OPENGL_COMPOSITING","description":"OpenGL Compositing","status":"blocklisted","log":[{"type":"default","status":"available"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_SOFTWARE_GL","message":"#BLOCKLIST_FEATURE_FAILURE_SOFTWARE_GL"}]},{"name":"WEBRENDER","description":"WebRender","status":"force_enabled","log":[{"type":"default","status":"available"},{"type":"user","status":"force_enabled","message":"Force enabled by pref"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_SOFTWARE_GL","message":"Blocklisted by gfxInfo"}]},{"name":"WEBRENDER_COMPOSITOR","description":"WebRender native compositor","status":"blocked","log":[{"type":"default","status":"disabled","failureId":"FEATURE_FAILURE_DISABLED","message":"Disabled by default"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_WEBRENDER_COMPOSITOR_DISABLED","message":"Blocklisted by gfxInfo"},{"type":"runtime","status":"blocked","failureId":"FEATURE_FAILURE_DISABLE_RELEASE_OR_BETA","message":"Cannot be enabled in release or beta"}]},{"name":"WEBRENDER_PARTIAL","description":"WebRender partial present","status":"available","log":[{"type":"default","status":"available"}]},{"name":"WEBRENDER_SHADER_CACHE","description":"WebRender shader disk cache","status":"disabled","log":[{"type":"default","status":"disabled","failureId":"FEATURE_FAILURE_DISABLED","message":"Disabled by default"}]},{"name":"WEBRENDER_OPTIMIZED_SHADERS","description":"WebRender optimized shaders","status":"available","log":[{"type":"default","status":"available"}]},{"name":"WEBRENDER_ANGLE","description":"WebRender ANGLE","status":"unavailable","log":[{"type":"default","status":"available"},{"type":"env","status":"unavailable","failureId":"FEATURE_FAILURE_OS_NOT_SUPPORTED","message":"OS not supported"}]},{"name":"WEBRENDER_DCOMP_PRESENT","description":"WebRender DirectComposition","status":"unavailable","log":[{"type":"default","status":"available"},{"type":"user","status":"disabled","failureId":"FEATURE_FAILURE_DCOMP_PREF_DISABLED","message":"User disabled via pref"},{"type":"env","status":"unavailable","failureId":"FEATURE_FAILURE_NO_GPU_PROCESS","message":"Requires GPU process"},{"type":"runtime","status":"unavailable","failureId":"FEATURE_FAILURE_DCOMP_NOT_ANGLE","message":"Requires ANGLE"}]},{"name":"WEBRENDER_SCISSORED_CACHE_CLEARS","description":"WebRender scissored cache clears","status":"available","log":[{"type":"default","status":"available"}]},{"name":"WEBGPU","description":"WebGPU","status":"blocked","log":[{"type":"default","status":"available"},{"type":"runtime","status":"blocked","failureId":"WEBGPU_DISABLE_RELEASE_OR_BETA","message":"WebGPU cannot be enabled in release or beta"}]},{"name":"X11_EGL","description":"X11 EGL","status":"available","log":[{"type":"default","status":"available"}]},{"name":"DMABUF","description":"DMABUF","status":"failed","log":[{"type":"default","status":"available"},{"type":"runtime","status":"failed","failureId":"FEATURE_FAILURE_NO_DRM_DEVICE","message":"Failed to configure"}]},{"name":"HARDWARE_VIDEO_DECODING","description":"Hardware video decoding","status":"unavailable","log":[{"type":"default","status":"available"},{"type":"runtime","status":"unavailable","failureId":"FEATURE_FAILURE_VIDEO_DECODING_TEST_FAILED","message":"Force disabled by gfxInfo"}]},{"name":"DMABUF_SURFACE_EXPORT","description":"WebGL DMABuf surface export","status":"blocked","log":[{"type":"default","status":"available"},{"type":"env","status":"blocked","failureId":"FEATURE_FAILURE_BROKEN_DRIVER","message":"Blocklisted by gfxInfo"}]},{"name":"BACKDROP_FILTER","description":"Backdrop filter","status":"available","log":[{"type":"default","status":"available"}]},{"name":"CANVAS_RENDERER_THREAD","description":"canvas renderer thread","status":"available","log":[{"type":"default","status":"available"}]},{"name":"ACCELERATED_CANVAS2D","description":"Accelerated Canvas2D","status":"available","log":[{"type":"default","status":"available"}]},{"name":"REMOTE_CANVAS","description":"Remote canvas","status":"blocked","log":[{"type":"default","status":"disabled","failureId":"FEATURE_FAILURE_DISABLED","message":"Disabled via pref"},{"type":"env","status":"unavailable-no-gpu-process","failureId":"FEATURE_REMOTE_CANVAS_NO_GPU_PROCESS","message":"Disabled without GPU process"},{"type":"runtime","status":"blocked","failureId":"FEATURE_REMOTE_CANVAS_NOT_WINDOWS","message":"Platform not supported"}]},{"name":"DMABUF_WEBGL","description":"DMABuf for WebGL","status":"available","log":[{"type":"default","status":"available"}]}],"fallbacks":[]},"crashGuards":[],"webgpuDefaultAdapter":{"navigator.gpu":null},"webgpuFallbackAdapter":{"navigator.gpu":null}},"addons":[{"name":"Add-ons Search Detection","type":"extension","version":"2.0.0","isActive":true,"id":"addons-search-detection@mozilla.com"},{"name":"PageLoader extension","type":"extension","version":"1.1","isActive":true,"id":"pageloader@mozilla.org"},{"name":"Talos Powers","type":"extension","version":"1.1","isActive":true,"id":"talos-powers@mozilla.org"},{"name":"System theme — auto","type":"theme","version":"1.4.1","isActive":true,"id":"default-theme@mozilla.org"}],"features":[{"name":"Firefox Screenshots","version":"39.0.1","id":"screenshots@mozilla.org"},{"name":"Form Autofill","version":"1.0.1","id":"formautofill@mozilla.org"},{"name":"Picture-In-Picture","version":"1.0.0","id":"pictureinpicture@mozilla.org"},{"name":"Web Compatibility Interventions","version":"134.5.0","id":"webcompat@mozilla.org"},{"name":"WebCompat Reporter","version":"2.1.0","id":"webcompat-reporter@mozilla.org"}],"experimentalFeatures":[["sidebar-title","sidebar.revamp",false],["vertical-tabs-title","sidebar.verticalTabs",false],["genai-settings-chat-title","browser.ml.chat.enabled",false],["experimental-features-auto-pip","media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled",false],["experimental-features-ime-search","browser.urlbar.keepPanelOpenDuringImeComposition",false],["experimental-features-webrtc-global-mute-toggles","privacy.webrtc.globalMuteToggles",false],["experimental-features-media-jxl","image.jxl.enabled",false],["experimental-features-css-masonry2","layout.css.grid-template-masonry-value.enabled",false],["experimental-features-web-gpu2","dom.webgpu.enabled",false],["experimental-features-devtools-serviceworker-debugger-support","devtools.debugger.features.windowless-service-workers",false]],"processes":{"remoteTypes":{"webIsolated":1,"extension":1,"rdd":1,"socket":1},"maxWebContentProcesses":8},"normandy":{"addonStudies":[],"prefRollouts":[],"prefStudies":[],"nimbusExperiments":[],"nimbusRollouts":[]},"legacyUserStylesheets":{"active":false,"types":[]},"remoteSettings":{"serverURL":"data:,#remote-settings-dummy/v1","pollingEndpoint":"data:,#remote-settings-dummy/v1/buckets/monitor/collections/changes/changeset","serverTimestamp":null,"localTimestamp":null,"lastCheck":"","mainBucket":"main","defaultSigner":"remote-settings.content-signature.mozilla.org","previewMode":false,"collections":[],"history":{"settings-sync":[]},"isSynchronizationBroken":false},"places":[{"efficiencyPerc":24.4,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_schema","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_origins","count":1},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_origins_1","count":"-"},{"efficiencyPerc":0.4,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places","count":1},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_extra","count":0},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_url_hashindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_hostindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_visitcount","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_frecencyindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_lastvisitdateindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_guid_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_originidindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_altfrecencyindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits","count":1},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_extra","count":0},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_placedateindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_fromindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_dateindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_inputhistory","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_inputhistory_1","count":"-"},{"efficiencyPerc":1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks","count":6},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_deleted","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_bookmarks_deleted_1","count":"-"},{"efficiencyPerc":0.2,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_itemindex","count":"-"},{"efficiencyPerc":0.2,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_parentindex","count":"-"},{"efficiencyPerc":0.3,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_itemlastmodifiedindex","count":"-"},{"efficiencyPerc":0.3,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_dateaddedindex","count":"-"},{"efficiencyPerc":0.4,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_guid_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_keywords","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_keywords_1","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_sequence","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_keywords_placepostdata_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_anno_attributes","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_anno_attributes_1","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_annos","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_annos_placeattributeindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_items_annos","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_items_annos_itemattributeindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_meta","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata_placecreated_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata_referrerindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata_search_queries","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_places_metadata_search_queries_1","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_previews_tombstones","count":0}]}
+20:04:28     INFO -  [ERROR glean_core::metrics::ping] Invalid reason code active for ping usage-reporting
+20:04:28     INFO -  [ERROR error_support::handling] logins-unexpected: Error parsing URL: relative URL with a cannot-be-a-base base
+20:04:28     INFO -  [ERROR error_support::handling] suggest-unexpected: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base
+20:04:28     INFO -  console.error: URLBar - QuickSuggest.SuggestBackendRust: "Error initializing SuggestStore" (new Error("reason: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base", "resource://gre/modules/RustSuggest.sys.mjs", 2228))
+20:04:31     INFO -  [Parent 2600369, IPC I/O Parent] WARNING: process 2600867 exited on signal 4: file /home/XXXXXXXX/firefox-mte/ipc/chromium/src/base/process_util_posix.cc:335
+20:04:31     INFO -  JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "CrashService waiting for content crash ping to be sent"
+20:04:32     INFO -  TEST-INFO | 2600369: exit 0
+20:04:32     INFO -  Browser initialized.
+20:04:32     INFO -  Fission enabled: True
+20:04:32     INFO -  Running cycle 1/1 for expat_perf_test test...
+20:04:32     INFO -  Using env: {'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+20:04:32     INFO -   'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:',
+20:04:32     INFO -   'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ',
+20:04:32     INFO -   'DISPLAY': ':99',
+20:04:32     INFO -   'EDITOR': '/usr/bin/vim',
+20:04:32     INFO -   'EXPAT_PIN_CORE': '1',
+20:04:32     INFO -   'GPG_TTY': '/dev/pts/13',
+20:04:32     INFO -   'HISTCONTROL': 'ignoredups',
+20:04:32     INFO -   'HISTSIZE': '1000',
+20:04:32     INFO -   'HOME': '/home/XXXXXXXX',
+20:04:32     INFO -   'HOSTNAME': 'fedora',
+20:04:32     INFO -   'LANG': 'en_US.UTF-8',
+20:04:32     INFO -   'LD_LIBRARY_PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin',
+20:04:32     INFO -   'LESSOPEN': '||/usr/bin/lesspipe.sh %s',
+20:04:32     INFO -   'LOGNAME': 'XXXXXXXX',
+20:04:32     INFO -   'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+20:04:32     INFO -   'MACH_MAIN_PID': '2600308',
+20:04:32     INFO -   'MAIL': '/var/spool/mail/XXXXXXXX',
+20:04:32     INFO -   'MINIDUMP_SAVE_PATH': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:04:32     INFO -   'MOTD_SHOWN': 'pam',
+20:04:32     INFO -   'MOZBUILD_PATH': '/home/XXXXXXXX/.mozbuild',
+20:04:32     INFO -   'MOZCONFIG': 'mozconfig_stock',
+20:04:32     INFO -   'MOZ_CRASHREPORTER': '1',
+20:04:32     INFO -   'MOZ_CRASHREPORTER_NO_REPORT': '1',
+20:04:32     INFO -   'MOZ_DEVELOPER_OBJ_DIR': '/home/XXXXXXXX/firefox-mte/firefox_release_stock',
+20:04:32     INFO -   'MOZ_DEVELOPER_REPO_DIR': '/home/XXXXXXXX/firefox-mte',
+20:04:32     INFO -   'MOZ_DISABLE_NONLOCAL_CONNECTIONS': '1',
+20:04:32     INFO -   'MOZ_UPLOAD_DIR': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:04:32     INFO -   'MOZ_USE_PAGELOADER': '1',
+20:04:32     INFO -   'NO_EM_RESTART': '1',
+20:04:32     INFO -   'OLDPWD': '/home/XXXXXXXX/firefox-mte',
+20:04:32     INFO -   'PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin',
+20:04:32     INFO -   'PWD': '/home/XXXXXXXX/firefox-mte',
+20:04:32     INFO -   'PYTHONPATH': '/home/XXXXXXXX/firefox-mte/testing/talos',
+20:04:32     INFO -   'REQUIRE_GPU': '0',
+20:04:32     INFO -   'RUST_BACKTRACE': 'full',
+20:04:32     INFO -   'SELINUX_LEVEL_REQUESTED': '',
+20:04:32     INFO -   'SELINUX_ROLE_REQUESTED': '',
+20:04:32     INFO -   'SELINUX_USE_CURRENT_RANGE': '',
+20:04:32     INFO -   'SHELL': '/bin/bash',
+20:04:32     INFO -   'SHLVL': '3',
+20:04:32     INFO -   'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346',
+20:04:32     INFO -   'SSH_CLIENT': '172.17.128.2 52585 22',
+20:04:32     INFO -   'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22',
+20:04:32     INFO -   'SSH_TTY': '/dev/pts/0',
+20:04:32     INFO -   'TERM': 'tmux-256color',
+20:04:32     INFO -   'TERM_PROGRAM': 'tmux',
+20:04:32     INFO -   'TERM_PROGRAM_VERSION': '3.5a',
+20:04:32     INFO -   'TMUX': '/tmp/tmux-1000/default,2416415,0',
+20:04:32     INFO -   'TMUX_PANE': '%1',
+20:04:32     INFO -   'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins',
+20:04:32     INFO -   'USER': 'XXXXXXXX',
+20:04:32     INFO -   'VIRTUAL_ENV': 'talos-venv',
+20:04:32     INFO -   'VIRTUAL_ENV_PROMPT': '(venv-3.11) ',
+20:04:32     INFO -   'XDG_RUNTIME_DIR': '/run/user/1000',
+20:04:32     INFO -   'XDG_SESSION_CLASS': 'user',
+20:04:32     INFO -   'XDG_SESSION_ID': '1323',
+20:04:32     INFO -   'XDG_SESSION_TYPE': 'tty',
+20:04:32     INFO -   '_': './mach'}
+20:04:32     INFO -  TEST-INFO | started process 2600953 (/home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox -profile /tmp/tmp8s9sjfyu/profile)
+20:04:32     INFO -  PID 2600953 | libEGL warning: DRI3 error: Could not get DRI3 device
+20:04:32     INFO -  PID 2600953 | libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:04:32     INFO -  PID 2600953 | libEGL warning: DRI3 error: Could not get DRI3 device
+20:04:32     INFO -  PID 2600953 | libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:04:32     INFO -  PID 2600953 | STOCK sched_setaffinity on core : 1 (PID:2600953)
+20:04:33     INFO -  PID 2600953 | console.error: ({})
+20:04:34     INFO -  PID 2600953 | [ERROR glean_core::metrics::ping] Invalid reason code active for ping usage-reporting
+20:04:34     INFO -  PID 2600953 | [ERROR error_support::handling] logins-unexpected: Error parsing URL: relative URL with a cannot-be-a-base base
+20:04:34     INFO -  PID 2600953 | [ERROR error_support::handling] suggest-unexpected: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base
+20:04:34     INFO -  PID 2600953 | console.error: URLBar - QuickSuggest.SuggestBackendRust: "Error initializing SuggestStore" (new Error("reason: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base", "resource://gre/modules/RustSuggest.sys.mjs", 2228))
+20:04:34     INFO -  PID 2600953 | STOCK sched_setaffinity on core : 1 (PID:2601305)
+20:04:35     INFO -  PID 2600953 | STOCK Capture_Time:Expat,1,274088120,2601305|
+20:04:35     INFO -  PID 2600953 | Cycle 1(1): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:36     INFO -  PID 2600953 | STOCK Capture_Time:Expat,2,238311717,2601305|
+20:04:36     INFO -  PID 2600953 | Cycle 1(2): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:37     INFO -  PID 2600953 | STOCK Capture_Time:Expat,3,222858766,2601305|
+20:04:37     INFO -  PID 2600953 | [Parent 2600953, IPC I/O Parent] WARNING: process 2601166 exited on signal 4: file /home/XXXXXXXX/firefox-mte/ipc/chromium/src/base/process_util_posix.cc:335
+20:04:37     INFO -  PID 2600953 | Cycle 1(3): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:38     INFO -  PID 2600953 | console.error: AboutHomeStartupCache: "requestCache called with no _procManager!"
+20:04:38     INFO -  PID 2600953 | STOCK Capture_Time:Expat,4,225396528,2601305|
+20:04:38     INFO -  PID 2600953 | Cycle 1(4): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:39     INFO -  PID 2600953 | STOCK Capture_Time:Expat,5,228271029,2601305|
+20:04:40     INFO -  PID 2600953 | [Parent 2600953, IPC I/O Parent] WARNING: process 2601224 exited on signal 4: file /home/XXXXXXXX/firefox-mte/ipc/chromium/src/base/process_util_posix.cc:335
+20:04:40     INFO -  PID 2600953 | Cycle 1(5): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:41     INFO -  PID 2600953 | STOCK Capture_Time:Expat,6,225331986,2601305|
+20:04:41     INFO -  PID 2600953 | Cycle 1(6): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:42     INFO -  PID 2600953 | STOCK Capture_Time:Expat,7,222475966,2601305|
+20:04:42     INFO -  PID 2600953 | Cycle 1(7): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:43     INFO -  PID 2600953 | STOCK Capture_Time:Expat,8,226056708,2601305|
+20:04:43     INFO -  PID 2600953 | Cycle 1(8): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:44     INFO -  PID 2600953 | STOCK Capture_Time:Expat,9,236786255,2601305|
+20:04:44     INFO -  PID 2600953 | Cycle 1(9): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:45     INFO -  PID 2600953 | STOCK Capture_Time:Expat,10,229157108,2601305|
+20:04:46     INFO -  PID 2600953 | Cycle 1(10): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:47     INFO -  PID 2600953 | STOCK Capture_Time:Expat,11,228479108,2601305|
+20:04:47     INFO -  PID 2600953 | Cycle 1(11): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:48     INFO -  PID 2600953 | STOCK Capture_Time:Expat,12,224420185,2601305|
+20:04:48     INFO -  PID 2600953 | Cycle 1(12): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:49     INFO -  PID 2600953 | STOCK Capture_Time:Expat,13,225543246,2601305|
+20:04:49     INFO -  PID 2600953 | Cycle 1(13): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:50     INFO -  PID 2600953 | STOCK Capture_Time:Expat,14,221579745,2601305|
+20:04:50     INFO -  PID 2600953 | Cycle 1(14): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:51     INFO -  PID 2600953 | STOCK Capture_Time:Expat,15,223667027,2601305|
+20:04:51     INFO -  PID 2600953 | Cycle 1(15): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:52     INFO -  PID 2600953 | STOCK Capture_Time:Expat,16,223123085,2601305|
+20:04:53     INFO -  PID 2600953 | Cycle 1(16): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:54     INFO -  PID 2600953 | STOCK Capture_Time:Expat,17,223928585,2601305|
+20:04:54     INFO -  PID 2600953 | Cycle 1(17): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:55     INFO -  PID 2600953 | STOCK Capture_Time:Expat,18,221314462,2601305|
+20:04:55     INFO -  PID 2600953 | Cycle 1(18): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:56     INFO -  PID 2600953 | STOCK Capture_Time:Expat,19,225433767,2601305|
+20:04:56     INFO -  PID 2600953 | Cycle 1(19): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:57     INFO -  PID 2600953 | STOCK Capture_Time:Expat,20,220702861,2601305|
+20:04:57     INFO -  PID 2600953 | Cycle 1(20): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:58     INFO -  PID 2600953 | STOCK Capture_Time:Expat,21,226330708,2601305|
+20:04:58     INFO -  PID 2600953 | Cycle 1(21): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:04:59     INFO -  PID 2600953 | STOCK Capture_Time:Expat,22,225851626,2601305|
+20:05:00     INFO -  PID 2600953 | Cycle 1(22): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:01     INFO -  PID 2600953 | STOCK Capture_Time:Expat,23,224819407,2601305|
+20:05:01     INFO -  PID 2600953 | Cycle 1(23): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:02     INFO -  PID 2600953 | STOCK Capture_Time:Expat,24,228487230,2601305|
+20:05:02     INFO -  PID 2600953 | Cycle 1(24): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:02     INFO -  PID 2600953 | 1755720302827	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, channelStatus: 2152398861, errorCode: 2, reason: error
+20:05:03     INFO -  PID 2600953 | STOCK Capture_Time:Expat,25,225129128,2601305|
+20:05:03     INFO -  PID 2600953 | Cycle 1(25): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:04     INFO -  PID 2600953 | STOCK Capture_Time:Expat,26,224376982,2601305|
+20:05:04     INFO -  PID 2600953 | Cycle 1(26): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:05     INFO -  PID 2600953 | STOCK Capture_Time:Expat,27,227216506,2601305|
+20:05:05     INFO -  PID 2600953 | Cycle 1(27): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:05     INFO -  PID 2600953 | Waiting for idle-callback
+20:05:07     INFO -  PID 2600953 | STOCK Capture_Time:Expat,28,224938848,2601305|
+20:05:07     INFO -  PID 2600953 | Cycle 1(28): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:08     INFO -  PID 2600953 | STOCK Capture_Time:Expat,29,225456548,2601305|
+20:05:08     INFO -  PID 2600953 | Cycle 1(29): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:10     INFO -  PID 2600953 | STOCK Capture_Time:Expat,30,227420830,2601305|
+20:05:10     INFO -  PID 2600953 | Cycle 1(30): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:11     INFO -  PID 2600953 | STOCK Capture_Time:Expat,31,228329630,2601305|
+20:05:11     INFO -  PID 2600953 | Cycle 1(31): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:12     INFO -  PID 2600953 | STOCK Capture_Time:Expat,32,227927810,2601305|
+20:05:12     INFO -  PID 2600953 | Cycle 1(32): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:13     INFO -  PID 2600953 | STOCK Capture_Time:Expat,33,232005830,2601305|
+20:05:13     INFO -  PID 2600953 | Cycle 1(33): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:14     INFO -  PID 2600953 | STOCK Capture_Time:Expat,34,224842443,2601305|
+20:05:14     INFO -  PID 2600953 | Cycle 1(34): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:15     INFO -  PID 2600953 | STOCK Capture_Time:Expat,35,226941506,2601305|
+20:05:16     INFO -  PID 2600953 | Cycle 1(35): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:17     INFO -  PID 2600953 | STOCK Capture_Time:Expat,36,224818426,2601305|
+20:05:17     INFO -  PID 2600953 | Cycle 1(36): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:18     INFO -  PID 2600953 | STOCK Capture_Time:Expat,37,228324391,2601305|
+20:05:18     INFO -  PID 2600953 | Cycle 1(37): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:19     INFO -  PID 2600953 | STOCK Capture_Time:Expat,38,226870007,2601305|
+20:05:19     INFO -  PID 2600953 | Cycle 1(38): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:20     INFO -  PID 2600953 | STOCK Capture_Time:Expat,39,226959227,2601305|
+20:05:20     INFO -  PID 2600953 | Cycle 1(39): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:21     INFO -  PID 2600953 | STOCK Capture_Time:Expat,40,221256524,2601305|
+20:05:21     INFO -  PID 2600953 | Cycle 1(40): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:22     INFO -  PID 2600953 | STOCK Capture_Time:Expat,41,228612347,2601305|
+20:05:23     INFO -  PID 2600953 | Cycle 1(41): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:24     INFO -  PID 2600953 | STOCK Capture_Time:Expat,42,228615469,2601305|
+20:05:24     INFO -  PID 2600953 | Cycle 1(42): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:25     INFO -  PID 2600953 | STOCK Capture_Time:Expat,43,224001547,2601305|
+20:05:25     INFO -  PID 2600953 | Cycle 1(43): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:26     INFO -  PID 2600953 | STOCK Capture_Time:Expat,44,227100967,2601305|
+20:05:26     INFO -  PID 2600953 | Cycle 1(44): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:27     INFO -  PID 2600953 | STOCK Capture_Time:Expat,45,226311687,2601305|
+20:05:27     INFO -  PID 2600953 | Cycle 1(45): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:27     INFO -  PID 2600953 | Waiting for idle-callback
+20:05:28     INFO -  PID 2600953 | STOCK Capture_Time:Expat,46,225489608,2601305|
+20:05:28     INFO -  PID 2600953 | Cycle 1(46): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:30     INFO -  PID 2600953 | STOCK Capture_Time:Expat,47,230808212,2601305|
+20:05:30     INFO -  PID 2600953 | Cycle 1(47): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:31     INFO -  PID 2600953 | STOCK Capture_Time:Expat,48,226280588,2601305|
+20:05:31     INFO -  PID 2600953 | Cycle 1(48): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:32     INFO -  PID 2600953 | STOCK Capture_Time:Expat,49,225845488,2601305|
+20:05:32     INFO -  PID 2600953 | Cycle 1(49): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:33     INFO -  PID 2600953 | STOCK Capture_Time:Expat,50,227808510,2601305|
+20:05:33     INFO -  PID 2600953 | Cycle 1(50): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:34     INFO -  PID 2600953 | STOCK Capture_Time:Expat,51,227529409,2601305|
+20:05:34     INFO -  PID 2600953 | Cycle 1(51): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:35     INFO -  PID 2600953 | STOCK Capture_Time:Expat,52,227354305,2601305|
+20:05:35     INFO -  PID 2600953 | Cycle 1(52): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:37     INFO -  PID 2600953 | STOCK Capture_Time:Expat,53,225631305,2601305|
+20:05:37     INFO -  PID 2600953 | Cycle 1(53): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:38     INFO -  PID 2600953 | STOCK Capture_Time:Expat,54,223531964,2601305|
+20:05:38     INFO -  PID 2600953 | Cycle 1(54): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:38     INFO -  PID 2600953 | Waiting for idle-callback
+20:05:39     INFO -  PID 2600953 | STOCK Capture_Time:Expat,55,222585206,2601305|
+20:05:39     INFO -  PID 2600953 | Cycle 1(55): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:40     INFO -  PID 2600953 | STOCK Capture_Time:Expat,56,225864967,2601305|
+20:05:41     INFO -  PID 2600953 | Cycle 1(56): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:42     INFO -  PID 2600953 | STOCK Capture_Time:Expat,57,222791367,2601305|
+20:05:42     INFO -  PID 2600953 | Cycle 1(57): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:43     INFO -  PID 2600953 | STOCK Capture_Time:Expat,58,226392708,2601305|
+20:05:43     INFO -  PID 2600953 | Cycle 1(58): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:44     INFO -  PID 2600953 | STOCK Capture_Time:Expat,59,230073069,2601305|
+20:05:44     INFO -  PID 2600953 | Cycle 1(59): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:45     INFO -  PID 2600953 | STOCK Capture_Time:Expat,60,229180990,2601305|
+20:05:45     INFO -  PID 2600953 | Cycle 1(60): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:46     INFO -  PID 2600953 | STOCK Capture_Time:Expat,61,226684128,2601305|
+20:05:46     INFO -  PID 2600953 | Cycle 1(61): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:48     INFO -  PID 2600953 | STOCK Capture_Time:Expat,62,228174829,2601305|
+20:05:48     INFO -  PID 2600953 | Cycle 1(62): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:49     INFO -  PID 2600953 | STOCK Capture_Time:Expat,63,227281610,2601305|
+20:05:49     INFO -  PID 2600953 | Cycle 1(63): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:50     INFO -  PID 2600953 | STOCK Capture_Time:Expat,64,228264448,2601305|
+20:05:50     INFO -  PID 2600953 | Cycle 1(64): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:51     INFO -  PID 2600953 | STOCK Capture_Time:Expat,65,228283888,2601305|
+20:05:51     INFO -  PID 2600953 | Cycle 1(65): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:52     INFO -  PID 2600953 | STOCK Capture_Time:Expat,66,230189791,2601305|
+20:05:52     INFO -  PID 2600953 | Cycle 1(66): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:53     INFO -  PID 2600953 | STOCK Capture_Time:Expat,67,228260190,2601305|
+20:05:53     INFO -  PID 2600953 | Cycle 1(67): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:55     INFO -  PID 2600953 | STOCK Capture_Time:Expat,68,225757166,2601305|
+20:05:55     INFO -  PID 2600953 | Cycle 1(68): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:56     INFO -  PID 2600953 | STOCK Capture_Time:Expat,69,228133731,2601305|
+20:05:56     INFO -  PID 2600953 | Cycle 1(69): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:57     INFO -  PID 2600953 | STOCK Capture_Time:Expat,70,231474310,2601305|
+20:05:57     INFO -  PID 2600953 | Cycle 1(70): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:58     INFO -  PID 2600953 | STOCK Capture_Time:Expat,71,228818348,2601305|
+20:05:58     INFO -  PID 2600953 | Cycle 1(71): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:05:59     INFO -  PID 2600953 | STOCK Capture_Time:Expat,72,229790631,2601305|
+20:05:59     INFO -  PID 2600953 | Cycle 1(72): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:00     INFO -  PID 2600953 | STOCK Capture_Time:Expat,73,229533210,2601305|
+20:06:00     INFO -  PID 2600953 | Cycle 1(73): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:02     INFO -  PID 2600953 | STOCK Capture_Time:Expat,74,228977291,2601305|
+20:06:02     INFO -  PID 2600953 | Cycle 1(74): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:03     INFO -  PID 2600953 | STOCK Capture_Time:Expat,75,230282550,2601305|
+20:06:03     INFO -  PID 2600953 | Cycle 1(75): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:04     INFO -  PID 2600953 | STOCK Capture_Time:Expat,76,229869871,2601305|
+20:06:04     INFO -  PID 2600953 | Cycle 1(76): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:05     INFO -  PID 2600953 | STOCK Capture_Time:Expat,77,227759627,2601305|
+20:06:05     INFO -  PID 2600953 | Cycle 1(77): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:06     INFO -  PID 2600953 | STOCK Capture_Time:Expat,78,229713171,2601305|
+20:06:06     INFO -  PID 2600953 | Cycle 1(78): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:07     INFO -  PID 2600953 | STOCK Capture_Time:Expat,79,230477751,2601305|
+20:06:08     INFO -  PID 2600953 | Cycle 1(79): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:08     INFO -  PID 2600953 | Waiting for idle-callback
+20:06:09     INFO -  PID 2600953 | STOCK Capture_Time:Expat,80,227343289,2601305|
+20:06:09     INFO -  PID 2600953 | Cycle 1(80): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:10     INFO -  PID 2600953 | STOCK Capture_Time:Expat,81,229627670,2601305|
+20:06:10     INFO -  PID 2600953 | Cycle 1(81): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:10     INFO -  PID 2600953 | Waiting for idle-callback
+20:06:12     INFO -  PID 2600953 | STOCK Capture_Time:Expat,82,225628306,2601305|
+20:06:12     INFO -  PID 2600953 | Cycle 1(82): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:14     INFO -  PID 2600953 | STOCK Capture_Time:Expat,83,229664268,2601305|
+20:06:14     INFO -  PID 2600953 | Cycle 1(83): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:15     INFO -  PID 2600953 | STOCK Capture_Time:Expat,84,227057187,2601305|
+20:06:15     INFO -  PID 2600953 | Cycle 1(84): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:16     INFO -  PID 2600953 | STOCK Capture_Time:Expat,85,229433850,2601305|
+20:06:16     INFO -  PID 2600953 | Cycle 1(85): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:17     INFO -  PID 2600953 | STOCK Capture_Time:Expat,86,224169828,2601305|
+20:06:17     INFO -  PID 2600953 | Cycle 1(86): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:18     INFO -  PID 2600953 | STOCK Capture_Time:Expat,87,224825166,2601305|
+20:06:18     INFO -  PID 2600953 | Cycle 1(87): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:19     INFO -  PID 2600953 | STOCK Capture_Time:Expat,88,224959446,2601305|
+20:06:19     INFO -  PID 2600953 | Cycle 1(88): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:21     INFO -  PID 2600953 | STOCK Capture_Time:Expat,89,227069309,2601305|
+20:06:21     INFO -  PID 2600953 | Cycle 1(89): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:22     INFO -  PID 2600953 | STOCK Capture_Time:Expat,90,226893686,2601305|
+20:06:22     INFO -  PID 2600953 | Cycle 1(90): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:23     INFO -  PID 2600953 | STOCK Capture_Time:Expat,91,228122408,2601305|
+20:06:23     INFO -  PID 2600953 | Cycle 1(91): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:24     INFO -  PID 2600953 | STOCK Capture_Time:Expat,92,225021367,2601305|
+20:06:24     INFO -  PID 2600953 | Cycle 1(92): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:25     INFO -  PID 2600953 | STOCK Capture_Time:Expat,93,228871908,2601305|
+20:06:25     INFO -  PID 2600953 | Cycle 1(93): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:26     INFO -  PID 2600953 | STOCK Capture_Time:Expat,94,229237329,2601305|
+20:06:27     INFO -  PID 2600953 | Cycle 1(94): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:28     INFO -  PID 2600953 | STOCK Capture_Time:Expat,95,225981849,2601305|
+20:06:28     INFO -  PID 2600953 | Cycle 1(95): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:29     INFO -  PID 2600953 | STOCK Capture_Time:Expat,96,232885151,2601305|
+20:06:29     INFO -  PID 2600953 | Cycle 1(96): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:30     INFO -  PID 2600953 | STOCK Capture_Time:Expat,97,231901371,2601305|
+20:06:30     INFO -  PID 2600953 | Cycle 1(97): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:31     INFO -  PID 2600953 | STOCK Capture_Time:Expat,98,230939032,2601305|
+20:06:31     INFO -  PID 2600953 | Cycle 1(98): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:33     INFO -  PID 2600953 | STOCK Capture_Time:Expat,99,233031670,2601305|
+20:06:33     INFO -  PID 2600953 | Cycle 1(99): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:34     INFO -  PID 2600953 | STOCK Capture_Time:Expat,100,231552570,2601305|
+20:06:34     INFO -  PID 2600953 | Cycle 1(100): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:35     INFO -  PID 2600953 | STOCK Capture_Time:Expat,101,229802591,2601305|
+20:06:35     INFO -  PID 2600953 | Cycle 1(101): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:36     INFO -  PID 2600953 | STOCK Capture_Time:Expat,102,227081488,2601305|
+20:06:36     INFO -  PID 2600953 | Cycle 1(102): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:37     INFO -  PID 2600953 | STOCK Capture_Time:Expat,103,225655528,2601305|
+20:06:37     INFO -  PID 2600953 | Cycle 1(103): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:38     INFO -  PID 2600953 | STOCK Capture_Time:Expat,104,228714108,2601305|
+20:06:38     INFO -  PID 2600953 | Cycle 1(104): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:40     INFO -  PID 2600953 | STOCK Capture_Time:Expat,105,226172927,2601305|
+20:06:40     INFO -  PID 2600953 | Cycle 1(105): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:41     INFO -  PID 2600953 | STOCK Capture_Time:Expat,106,228771149,2601305|
+20:06:41     INFO -  PID 2600953 | Cycle 1(106): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:42     INFO -  PID 2600953 | STOCK Capture_Time:Expat,107,229081091,2601305|
+20:06:42     INFO -  PID 2600953 | Cycle 1(107): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:43     INFO -  PID 2600953 | STOCK Capture_Time:Expat,108,229933009,2601305|
+20:06:43     INFO -  PID 2600953 | Cycle 1(108): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:44     INFO -  PID 2600953 | STOCK Capture_Time:Expat,109,229689991,2601305|
+20:06:44     INFO -  PID 2600953 | Cycle 1(109): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:45     INFO -  PID 2600953 | STOCK Capture_Time:Expat,110,231308671,2601305|
+20:06:46     INFO -  PID 2600953 | Cycle 1(110): loaded http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56307/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:06:46     INFO -  PID 2600953 | Waiting for idle-callback
+20:06:46     INFO -  PID 2600953 | __start_tp_report
+20:06:46     INFO -  PID 2600953 | _x_x_mozilla_page_load
+20:06:46     INFO -  PID 2600953 | _x_x_mozilla_page_load_details
+20:06:46     INFO -  PID 2600953 | |i|pagename|runs|
+20:06:46     INFO -  PID 2600953 | |0;/mytest_material_common_sprite321x10.svg;652.2926239999999;638.4732359999998;648.1958620000005;627.1453280000005;700.1648760000007;631.8555919999999;612.7388190000001;618.8999829999993;610.6126580000018;608.703035999999;610.8475770000023;605.9125940000013;597.4446300000018;601.5743719999991;596.3673280000003;603.6648129999994;597.6183889999993;599.5547299999998;599.2383100000006;599.7626500000006;614.8426799999979;610.6755370000028;604.7180329999974;609.2413159999996;609.7616770000022;598.9244100000033;609.490555999997;614.4997999999978;613.2876000000033;609.3149979999944;605.7409750000006;609.4760170000009;629.1783699999942;617.8922230000026;601.5545710000006;610.2069180000035;607.0059149999943;610.1735779999944;609.5016370000012;606.0432749999964;609.7419969999974;610.1846380000061;623.916065999998;615.7979809999961;609.4036560000022;606.6384749999997;624.6160870000022;617.7809219999981;615.3061409999937;616.6715010000044;613.3532990000022;610.1754969999965;618.2129419999983;614.2478600000104;613.6999789999973;612.5045590000082;600.5436310000077;617.3905420000083;610.1480759999977;609.6339559999906;619.1077229999937;615.4918400000024;615.9419009999983;609.4566959999938;609.3796169999987;609.3943770000042;624.5652870000049;607.4692559999967;614.9182000000001;610.1242980000097;619.5360230000078;609.811618000007;613.6989200000098;609.7410769999988;609.1471769999916;610.1691370000044;606.8978950000019;609.7632759999979;610.2976570000028;611.3961180000042;609.7374770000024;612.7871190000005;608.0842960000155;608.2659750000021;624.3281259999931;608.4162559999968;617.7640419999952;613.6699399999925;617.0749210000067;614.9995390000113;616.4173410000076;608.3694359999936;612.1921980000043;612.4332379999978;622.9453060000087;608.5220559999871;612.2943989999912;610.2530180000031;791.529634999999;614.6718199999887;644.1638190000231;614.4873399999924;598.2107889999897;617.9161220000096;615.5890209999925;610.1606380000012;608.5560960000148;629.4378100000031;609.7852359999815;611.7240180000372
+20:06:46     INFO -  PID 2600953 | __end_tp_report
+20:06:46     INFO -  PID 2600953 | __start_cc_report
+20:06:46     INFO -  PID 2600953 | _x_x_mozilla_cycle_collect,4117.833803999936
+20:06:46     INFO -  PID 2600953 | __end_cc_report
+20:06:46     INFO -  PID 2600953 | __startTimestamp132509.208686__endTimestamp
+20:06:46     INFO -  PID 2600953 |
+20:06:46     INFO -  PID 2600953 | ------- Summary: start -------
+20:06:46     INFO -  PID 2600953 | Number of tests: 1
+20:06:46     INFO -  PID 2600953 |
+20:06:46     INFO -  PID 2600953 | [#0] /mytest_material_common_sprite321x10.svg  Cycles:110  Average:615.31  Median:610.64  stddev:21.07 (3.5%)  stddev-sans-first:20.86
+20:06:46     INFO -  PID 2600953 | Values: 652.3  638.5  648.2  627.1  700.2  631.9  612.7  618.9  610.6  608.7  610.8  605.9  597.4  601.6  596.4  603.7  597.6  599.6  599.2  599.8  614.8  610.7  604.7  609.2  609.8  598.9  609.5  614.5  613.3  609.3  605.7  609.5  629.2  617.9  601.6  610.2  607.0  610.2  609.5  606.0  609.7  610.2  623.9  615.8  609.4  606.6  624.6  617.8  615.3  616.7  613.4  610.2  618.2  614.2  613.7  612.5  600.5  617.4  610.1  609.6  619.1  615.5  615.9  609.5  609.4  609.4  624.6  607.5  614.9  610.1  619.5  609.8  613.7  609.7  609.1  610.2  606.9  609.8  610.3  611.4  609.7  612.8  608.1  608.3  624.3  608.4  617.8  613.7  617.1  615.0  616.4  608.4  612.2  612.4  622.9  608.5  612.3  610.3  791.5  614.7  644.2  614.5  598.2  617.9  615.6  610.2  608.6  629.4  609.8  611.7
+20:06:46     INFO -  PID 2600953 | -------- Summary: end --------
+20:06:46     INFO -  PID 2600953 |
+20:06:46     INFO -  PID 2600953 | console.error: AboutHomeStartupCache: "requestCache called with no _procManager!"
+20:06:46     INFO -  TEST-INFO | 2600953: exit 0
+20:06:46     INFO -  mozcrash checking /tmp/tmp8s9sjfyu/profile/minidumps for minidumps...
+20:06:46     INFO -  mozcrash Saved minidump as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/5e4cf400-b49d-03e0-62db-9f5d5343c167.dmp
+20:06:46     INFO -  mozcrash Saved app info as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/5e4cf400-b49d-03e0-62db-9f5d5343c167.extra
+20:06:46     INFO -  PROCESS-CRASH | None [unknown top frame] | expat_perf_test
+20:06:46     INFO -  Crash dump filename: /tmp/tmp8s9sjfyu/profile/minidumps/5e4cf400-b49d-03e0-62db-9f5d5343c167.dmp
+20:06:46     INFO -  Process type: content
+20:06:46     INFO -  Process pid: unknown
+20:06:46     INFO -  MINIDUMP_STACKWALK binary not found: /home/XXXXXXXX/.mozbuild/minidump-stackwalk/minidump-stackwalk. Use mach bootstrap --no-system-changes to install minidump-stackwalk.
+20:06:46     INFO -  mozcrash Saved minidump as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/21311e2c-8aea-7f77-fe11-af37de539269.dmp
+20:06:46     INFO -  mozcrash Saved app info as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/21311e2c-8aea-7f77-fe11-af37de539269.extra
+20:06:46     INFO -  PROCESS-CRASH | None [unknown top frame] | expat_perf_test
+20:06:46     INFO -  Crash dump filename: /tmp/tmp8s9sjfyu/profile/minidumps/21311e2c-8aea-7f77-fe11-af37de539269.dmp
+20:06:46     INFO -  Process type: content
+20:06:46     INFO -  Process pid: unknown
+20:06:46     INFO -  MINIDUMP_STACKWALK binary not found: /home/XXXXXXXX/.mozbuild/minidump-stackwalk/minidump-stackwalk. Use mach bootstrap --no-system-changes to install minidump-stackwalk.
+20:06:46     INFO -  mozcrash Saved minidump as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/15268ae8-4926-bba1-4b12-b65af88d1220.dmp
+20:06:46     INFO -  mozcrash Saved app info as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/15268ae8-4926-bba1-4b12-b65af88d1220.extra
+20:06:46     INFO -  PROCESS-CRASH | None [unknown top frame] | expat_perf_test
+20:06:46     INFO -  Crash dump filename: /tmp/tmp8s9sjfyu/profile/minidumps/15268ae8-4926-bba1-4b12-b65af88d1220.dmp
+20:06:46     INFO -  Process type: content
+20:06:46     INFO -  Process pid: unknown
+20:06:46     INFO -  MINIDUMP_STACKWALK binary not found: /home/XXXXXXXX/.mozbuild/minidump-stackwalk/minidump-stackwalk. Use mach bootstrap --no-system-changes to install minidump-stackwalk.
+20:06:46     INFO -  TEST-UNEXPECTED-ERROR | expat_perf_test | Found crashes after test run, terminating test
+20:06:46    ERROR -  Traceback (most recent call last):
+20:06:46     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py", line 351, in run_tests
+20:06:46     INFO -      mytest.runTest(browser_config, test, utility_path=utility_path)
+20:06:46     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/ttest.py", line 61, in runTest
+20:06:46     INFO -      return self._runTest(
+20:06:46     INFO -             ^^^^^^^^^^^^^^
+20:06:46     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/ttest.py", line 254, in _runTest
+20:06:46     INFO -      self.check_for_crashes(
+20:06:46     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/ttest.py", line 45, in check_for_crashes
+20:06:46     INFO -      raise TalosCrash("Found crashes after test run, terminating test")
+20:06:46     INFO -  talos.utils.TalosCrash: Found crashes after test run, terminating test
+20:06:46     INFO -  TEST-INFO took 140631ms
+20:06:46     INFO -  SUITE-END | took 140s
+20:06:46     INFO - Return code: 2
+20:06:46  WARNING - setting return code to 2
+20:06:46     INFO - Running post-action listener: _package_coverage_data
+20:06:46     INFO - Running post-action listener: _resource_record_post_action
+20:06:46     INFO - Running post-action listener: process_java_coverage_data
+20:06:46     INFO - [mozharness: 2025-08-20 20:06:46.992612Z] Finished run-tests step (success)
+20:06:46     INFO - Running post-run listener: _resource_record_post_run
+20:06:48     INFO - Total resource usage - Wall time: 142s; CPU: 1%; Read bytes: 0; Write bytes: 68956160; Read time: 0; Write time: 458
+20:06:48     INFO - TinderboxPrint: CPU usage<br/>1.3%
+20:06:48     INFO - TinderboxPrint: I/O read bytes / time<br/>0 / 0
+20:06:48     INFO - TinderboxPrint: I/O write bytes / time<br/>68,956,160 / 458
+20:06:48     INFO - TinderboxPrint: CPU idle<br/>26,742.1 (98.7%)
+20:06:48     INFO - TinderboxPrint: Swap in / out<br/>0 / 0
+20:06:48     INFO - run-tests - Wall time: 141s; CPU: 1%; Read bytes: 0; Write bytes: 68956160; Read time: 0; Write time: 458
+20:06:54     INFO - Glean disabled: not submitting any pings.
+Failed to run test benchmark for /home/XXXXXXXX/benchmarks/ff-expat-ampere1/CPU1/stock. Retrying...

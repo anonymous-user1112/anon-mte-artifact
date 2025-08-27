@@ -1,0 +1,387 @@
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 623.xalancbmk_s (base) did not have enough runs!                           #
+# 657.xz_s (base) did not have enough runs!                                  #
+# 600.perlbench_s (base) did not have enough runs!                           #
+# 605.mcf_s (base) did not have enough runs!                                 #
+# 648.exchange2_s (base) did not have enough runs!                           #
+# 625.x264_s (base) did not have enough runs!                                #
+# 631.deepsjeng_s (base) did not have enough runs!                           #
+# 620.omnetpp_s (base) did not have enough runs!                             #
+# 641.leela_s (base) did not have enough runs!                               #
+# 602.gcc_s (base) did not have enough runs!                                 #
+# Unknown flags were used! See                                               #
+#      https://www.spec.org/cpu2017/Docs/runcpu.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+                                                                                                                 SPEC(R) CPU2017 Integer Speed Result
+                                                                                                                              Supermicro
+                                                                                                                          MegaDC ARS-211M-NR
+                                                                                                                 (R13SPD , Ampere AmpereOne A192-32X)
+
+                                                                                             CPU2017 License: 001176                                  Test date: Aug-2025
+                                                                                             Test sponsor: Supermicro                     Hardware availability: Aug-2024
+                                                                                             Tested by:    Supermicro                     Software availability: Jul-2023
+
+                       Estimated                       Estimated
+                 Base     Base        Base        Peak     Peak        Peak
+Benchmarks      Threads  Run Time     Ratio      Threads  Run Time     Ratio
+--------------- -------  ---------  ---------    -------  ---------  ---------
+600.perlbench_s       1       1119      1.59   *
+602.gcc_s             1       1990      2.00   *
+605.mcf_s             1       1956      2.41   *
+620.omnetpp_s         1       1499      1.09   *
+623.xalancbmk_s       1       1652      0.858  *
+625.x264_s            1       1905      0.926  *
+631.deepsjeng_s       1       1148      1.25   *
+641.leela_s           1       2534      0.673  *
+648.exchange2_s                               NR
+657.xz_s              1       6411      0.964  *
+=================================================================================
+600.perlbench_s       1       1119      1.59   *
+602.gcc_s             1       1990      2.00   *
+605.mcf_s             1       1956      2.41   *
+620.omnetpp_s         1       1499      1.09   *
+623.xalancbmk_s       1       1652      0.858  *
+625.x264_s            1       1905      0.926  *
+631.deepsjeng_s       1       1148      1.25   *
+641.leela_s           1       2534      0.673  *
+648.exchange2_s                               NR
+657.xz_s              1       6411      0.964  *
+ Est. SPECspeed2017_int_base            1.21 
+ Est. SPECspeed2017_int_peak                                           Not Run
+
+
+                                                                                                                               HARDWARE
+                                                                                                                               --------
+            CPU Name: AmpereOne A192-32X
+            Max MHz.: 3200
+             Nominal: 3200
+             Enabled: 192 cores, 1 chip
+           Orderable: 1 chip
+            Cache L1: 16 KB I + 64 KB D on chip per core
+                  L2: 2 MB I+D on chip per core
+                  L3: 64 MB I+D on chip per chip
+               Other: None
+              Memory: 512 GB (8 x 64 GB 2Rx4 PC5-5600B-R,
+                      502.223 GB fixme: If using DDR4, the format is:
+                      'N GB (N x N GB nRxn PC4-nnnnX-X)'
+             Storage: 828 GB  add more disk info here
+               Other: CPU Cooling: Air
+
+
+                                                                                                                               SOFTWARE
+                                                                                                                               --------
+                  OS: Fedora release 42 (Adams)
+                      6.14.0-63.fc42.aarch64
+            Compiler: C/C++/Fortran: Version 13.2.0 of GCC, the
+                      GNU Compiler Collection
+            Parallel: No
+            Firmware: Version 1.0 released Jul-2024
+         File System: xfs
+        System State: Run level 3 (multi-user)
+       Base Pointers: 64-bit
+       Peak Pointers: Not Applicable
+               Other: Jemalloc memory allocator library v5.3.0
+
+
+                                                                                                                            Compiler Notes
+                                                                                                                            --------------
+     Binaries were compiled on a system with 1x AmpereOne CPU
+     chip + 512 GB Memory using Fedora Linux 37
+
+                                                                                                                             Submit Notes
+                                                                                                                             ------------
+     The config file option 'submit' was used.
+     'numactl' was used to bind copies to the cores.
+
+                                                                                                                        Operating System Notes
+                                                                                                                        ----------------------
+     'ulimit -s unlimited' was used to set environment stack size
+     Set dirty_ratio=8 to limit dirty cache to 8% of memory
+          echo 8 | sudo tee /proc/sys/vm/dirty_ratio
+     Set swappiness=1 to swap only if necessary
+          echo 1 | sudo tee /proc/sys/vm/swappiness
+     Set zone_reclaim_mode=1 to free local node memory and avoid remote memory
+          echo 1 | sudo tee /proc/sys/vm/zone_reclaim_mode
+     Set drop_caches=3 to reset caches before invoking runcpu
+          echo 3 | sudo tee /proc/sys/vm/drop_caches
+     Set numa_balancing=0 to disable automatic numa balancing
+          echo 0 | sudo tee /proc/sys/kernel/numa_balancing
+     Switch off all ktune and tuned settings
+          sudo tuned-adm off
+     Transparent huge pages set to 'never'
+          sudo bash -c "echo never > /sys/kernel/mm/transparent_hugepage/enabled"
+    
+     runcpu command invoked through numactl i.e.
+     1P: numactl --interleave=0-3 runcpu <etc>
+     2P: numactl --interleave=all runcpu <etc>
+
+                                                                                                                             General Notes
+                                                                                                                             -------------
+     Jemalloc v5.3.0 is available via
+     https://github.com/jemalloc/jemalloc/releases/download/5.3.0/jemalloc-5.3.0.tar.bz2
+     It was built on Fedora Linux 37 using Version 13.2.0 of GCC
+     The configure options are
+     "--with-lg-page=16" for building libjemalloc.so, and
+     "--with-lg-quantum=3 --with-lg-page=18" for building libjemalloc_ext.so
+     Tuned MALLOC_CONF in terms of https://jemalloc.net/jemalloc.3.html
+    
+      NA: The test sponsor attests, as of date of publication, that CVE-2017-5754 (Meltdown)
+      is mitigated in the system as tested and documented.
+      Yes: The test sponsor attests, as of date of publication, that CVE-2017-5753 (Spectre variant 1)
+      is mitigated in the system as tested and documented.
+      Yes: The test sponsor attests, as of date of publication, that CVE-2017-5715 (Spectre variant 2)
+      is mitigated in the system as tested and documented.
+
+                                                                                                                            Platform Notes
+                                                                                                                            --------------
+     Note: lscpu is not able to detect the SLC.
+     SLC is defined at https://developer.arm.com/documentation/100180/0103/bry1436285730281
+     BIOS Settings:
+     Sub-NUMA Mode = Quadrant
+     Sysinfo program /root/mte/spec17/bin/sysinfo
+     Rev: r5974 of 2018-05-19 9bcde8f2999c33d61f64985e45859ea9
+     running on fedora Tue Aug 12 07:13:24 2025
+    
+     SUT (System Under Test) info as seen by some common utilities.
+     For more information on this section, see
+        https://www.spec.org/cpu2017/Docs/config.html#sysinfo
+    
+     From /proc/cpuinfo
+     *
+     * Did not identify cpu model.  If you would
+     * like to write your own sysinfo program, see
+     * www.spec.org/cpu2017/config.html#sysinfo
+     *
+     *
+     * 0 "physical id" tags found.  Perhaps this is an older system,
+     * or a virtualized system.  Not attempting to guess how to
+     * count chips/cores for this system.
+     *
+           192 "processors"
+        cores, siblings (Caution: counting these is hw and system dependent. The following
+        excerpts from /proc/cpuinfo might not be reliable.  Use with caution.)
+    
+     From lscpu:
+          Architecture:                         aarch64
+          CPU op-mode(s):                       64-bit
+          Byte Order:                           Little Endian
+          CPU(s):                               192
+          On-line CPU(s) list:                  0-191
+          Vendor ID:                            Ampere
+          BIOS Vendor ID:                       Ampere (R)
+          Model name:                           Ampere-1a
+          BIOS Model name:                      AmpereOne (R) A192-32X CPU @ 3.2GHz
+          BIOS CPU family:                      257
+          Model:                                0
+          Thread(s) per core:                   1
+          Core(s) per socket:                   192
+          Socket(s):                            1
+          Stepping:                             0x0
+          Frequency boost:                      disabled
+          CPU(s) scaling MHz:                   81%
+          CPU max MHz:                          3200.0000
+          CPU min MHz:                          1000.0000
+          BogoMIPS:                             2000.00
+          Flags:                                fp asimd evtstrm aes pmull sha1 sha2 crc32
+          atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp
+          sha512 asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp flagm2 frint i8mm
+          bf16 rng bti mte ecv mte3
+          L1d cache:                            12 MiB (192 instances)
+          L1i cache:                            3 MiB (192 instances)
+          L2 cache:                             384 MiB (192 instances)
+          NUMA node(s):                         1
+          NUMA node0 CPU(s):                    0-191
+          Vulnerability Gather data sampling:   Not affected
+          Vulnerability Ghostwrite:             Not affected
+          Vulnerability Itlb multihit:          Not affected
+          Vulnerability L1tf:                   Not affected
+          Vulnerability Mds:                    Not affected
+          Vulnerability Meltdown:               Not affected
+          Vulnerability Mmio stale data:        Not affected
+          Vulnerability Reg file data sampling: Not affected
+          Vulnerability Retbleed:               Not affected
+          Vulnerability Spec rstack overflow:   Not affected
+          Vulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled
+          via prctl
+          Vulnerability Spectre v1:             Mitigation; __user pointer sanitization
+          Vulnerability Spectre v2:             Not affected
+          Vulnerability Srbds:                  Not affected
+          Vulnerability Tsx async abort:        Not affected
+        WARNING: the 'lscpu' utility claims that 1 "Socket(s)" were seen, which does not match
+        the could not determine "physyical id"s seen in /proc/cpuinfo.  The tester should
+        verify the count independently.
+    
+     From numactl --hardware  WARNING: a numactl 'node' might or might not correspond to a
+     physical chip.
+    
+     From /proc/meminfo
+        MemTotal:       526618656 kB
+        HugePages_Total:       0
+        Hugepagesize:       2048 kB
+    
+     From /etc/*release* /etc/*version*
+        fedora-release: Fedora release 42 (Adams)
+        os-release:
+           NAME="Fedora Linux"
+           VERSION="42 (Adams)"
+           RELEASE_TYPE=stable
+           ID=fedora
+           VERSION_ID=42
+           VERSION_CODENAME=""
+           PLATFORM_ID="platform:f42"
+           PRETTY_NAME="Fedora Linux 42 (Adams)"
+        redhat-release: Fedora release 42 (Adams)
+        system-release: Fedora release 42 (Adams)
+        system-release-cpe: cpe:/o:fedoraproject:fedora:42
+    
+     uname -a:
+        Linux fedora 6.14.0-63.fc42.aarch64 #1 SMP PREEMPT_DYNAMIC Mon Mar 24 20:18:11 UTC
+        2025 aarch64 GNU/Linux
+    
+     Kernel self-reported vulnerability status:
+    
+     CVE-2017-5754 (Meltdown):          Not affected
+     CVE-2017-5753 (Spectre variant 1): Mitigation: __user pointer sanitization
+     CVE-2017-5715 (Spectre variant 2): Not affected
+    
+    
+     SPEC is set to: /root/mte/spec17
+        Filesystem     Type  Size  Used Avail Use% Mounted on
+        /dev/nvme0n1p4 xfs   828G   45G  783G   6% /
+    
+     Additional information from dmidecode follows.  WARNING: Use caution when you interpret
+     this section. The 'dmidecode' program reads system data which is "intended to allow
+     hardware to be accurately determined", but the intent may not be met, as there are
+     frequent changes to hardware, firmware, and the "DMTF SMBIOS" standard.
+       BIOS EDK II 04.04.00004001 2025-02-04 22:23:30 02/04/2025
+       Memory:
+        8x SK Hynix HMCG94AGBRA181N 64 GB 2 rank 5600
+    
+     (End of data from sysinfo program)
+
+                                                                                                                        Compiler Version Notes
+                                                                                                                        ----------------------
+    ==============================================================================
+     CC  600.perlbench_s(base) 602.gcc_s(base) 605.mcf_s(base) 625.x264_s(base)
+          657.xz_s(base)
+    ------------------------------------------------------------------------------
+    clang version 18.1.0rc (git@github.com:XXXXXXXX/llvm-mte.git
+      464a00b150ec9bb9d88363bf3016ce0778bc0dde)
+    Target: aarch64-unknown-linux-gnu
+    Thread model: posix
+    InstalledDir: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin
+    ------------------------------------------------------------------------------
+    
+    ==============================================================================
+     CXXC 620.omnetpp_s(base) 623.xalancbmk_s(base) 631.deepsjeng_s(base)
+          641.leela_s(base)
+    ------------------------------------------------------------------------------
+    clang version 18.1.0rc (git@github.com:XXXXXXXX/llvm-mte.git
+      464a00b150ec9bb9d88363bf3016ce0778bc0dde)
+    Target: aarch64-unknown-linux-gnu
+    Thread model: posix
+    InstalledDir: /home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin
+    ------------------------------------------------------------------------------
+
+                                                                                                                          Base Unknown Flags
+                                                                                                                          ------------------
+ 600.perlbench_s: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CC)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in LD)
+                  "-fgnu89-inline -fcommon" (in EXTRA_CFLAGS)
+                  "-static -unwindlib=libunwind" (in EXTRA_LDFLAGS)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a" (in EXTRA_LIBS)
+
+       602.gcc_s: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CC)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in LD)
+                  "-fgnu89-inline -fcommon" (in EXTRA_CFLAGS)
+                  "-static -unwindlib=libunwind" (in EXTRA_LDFLAGS)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a" (in EXTRA_LIBS)
+
+       605.mcf_s: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CC)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in LD)
+                  "-fgnu89-inline -fcommon" (in EXTRA_CFLAGS)
+                  "-static -unwindlib=libunwind" (in EXTRA_LDFLAGS)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a" (in EXTRA_LIBS)
+
+   620.omnetpp_s: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++ -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXX)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++ -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in LD)
+                  "-static -unwindlib=libunwind" (in EXTRA_LDFLAGS)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a" (in EXTRA_LIBS)
+
+ 623.xalancbmk_s: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++ -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXX)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++ -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in LD)
+                  "-static -unwindlib=libunwind" (in EXTRA_LDFLAGS)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a" (in EXTRA_LIBS)
+
+      625.x264_s: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CC)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in LD)
+                  "-fgnu89-inline -fcommon" (in EXTRA_CFLAGS)
+                  "-static -unwindlib=libunwind" (in EXTRA_LDFLAGS)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a" (in EXTRA_LIBS)
+
+ 631.deepsjeng_s: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++ -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXX)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++ -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in LD)
+                  "-static -unwindlib=libunwind" (in EXTRA_LDFLAGS)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a" (in EXTRA_LIBS)
+
+     641.leela_s: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++ -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXX)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang++ -std=c++03 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in LD)
+                  "-static -unwindlib=libunwind" (in EXTRA_LDFLAGS)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a" (in EXTRA_LIBS)
+
+        657.xz_s: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CC)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/build//bin/clang -std=c99 --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/build//../downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in LD)
+                  "-fgnu89-inline -fcommon" (in EXTRA_CFLAGS)
+                  "-static -unwindlib=libunwind" (in EXTRA_LDFLAGS)
+                  "/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/glibc/.build//libc.a" (in EXTRA_LIBS)
+
+
+                                                                                                                        Base Portability Flags
+                                                                                                                        ----------------------
+ 600.perlbench_s: -DSPEC_LINUX_AARCH64 -DSPEC_LP64
+       602.gcc_s: -DSPEC_LP64
+       605.mcf_s: -DSPEC_LP64
+   620.omnetpp_s: -DSPEC_LP64
+ 623.xalancbmk_s: -DSPEC_LINUX -DSPEC_LP64
+      625.x264_s: -DSPEC_LP64
+ 631.deepsjeng_s: -DSPEC_LP64
+     641.leela_s: -DSPEC_LP64
+        657.xz_s: -DSPEC_LP64
+
+
+  SPEC is a registered trademark of the Standard Performance Evaluation
+    Corporation.  All other brand and product names appearing in this
+    result are trademarks or registered trademarks of their respective
+    holders.
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 623.xalancbmk_s (base) did not have enough runs!                           #
+# 657.xz_s (base) did not have enough runs!                                  #
+# 600.perlbench_s (base) did not have enough runs!                           #
+# 605.mcf_s (base) did not have enough runs!                                 #
+# 648.exchange2_s (base) did not have enough runs!                           #
+# 625.x264_s (base) did not have enough runs!                                #
+# 631.deepsjeng_s (base) did not have enough runs!                           #
+# 620.omnetpp_s (base) did not have enough runs!                             #
+# 641.leela_s (base) did not have enough runs!                               #
+# 602.gcc_s (base) did not have enough runs!                                 #
+# Unknown flags were used! See                                               #
+#      https://www.spec.org/cpu2017/Docs/runcpu.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact info@spec.org.
+Copyright 2017-2025 Standard Performance Evaluation Corporation
+Tested with SPEC CPU2017 v1.0.5 on 2025-08-12 07:13:23-0700.
+Report generated on 2025-08-12 12:52:43 by CPU2017 ASCII formatter v5942.

@@ -1,0 +1,647 @@
+05:41:03     INFO - ConsoleLogger online at 20250122 05:41:03Z in /media/shr/extradrive1/Code/mte-root/firefox-mte
+05:41:03     INFO - Run as ./mach talos-test --activeTests expat_perf_test
+05:41:03     INFO - Dumping config to /media/shr/extradrive1/Code/mte-root/firefox-mte/testing/mozharness/logs/localconfig.json.
+05:41:03     INFO - {'append_to_log': False,
+05:41:03     INFO -  'base_work_dir': '/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/mozharness',
+05:41:03     INFO -  'binary_path': '/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/dist/bin/firefox',
+05:41:03     INFO -  'code_coverage': False,
+05:41:03     INFO -  'config_files': (),
+05:41:03     INFO -  'default_actions': ('populate-webroot', 'create-virtualenv', 'run-tests'),
+05:41:03     INFO -  'disable_ccov_upload': False,
+05:41:03     INFO -  'e10s': True,
+05:41:03     INFO -  'exes': {'python': '/home/shr/.mozbuild/srcdirs/firefox-mte-cb41cbd9d0a9/_virtualenvs/common/bin/python',
+05:41:03     INFO -           'virtualenv': ('/home/shr/.mozbuild/srcdirs/firefox-mte-cb41cbd9d0a9/_virtualenvs/common/bin/python',
+05:41:03     INFO -                          '/media/shr/extradrive1/Code/mte-root/firefox-mte/third_party/python/virtualenv/virtualenv.py')},
+05:41:03     INFO -  'extra_prefs': (),
+05:41:03     INFO -  'find_links': ('https://pypi.pub.build.mozilla.org/pub/',),
+05:41:03     INFO -  'fission': True,
+05:41:03     INFO -  'gecko_profile': False,
+05:41:03     INFO -  'java_code_coverage': False,
+05:41:03     INFO -  'log_level': 'info',
+05:41:03     INFO -  'log_name': 'talos',
+05:41:03     INFO -  'log_to_console': True,
+05:41:03     INFO -  'mozbuild_path': '/home/shr/.mozbuild',
+05:41:03     INFO -  'obj_path': '/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy',
+05:41:03     INFO -  'opt_config_files': (),
+05:41:03     INFO -  'per_test_coverage': False,
+05:41:03     INFO -  'pip_index': False,
+05:41:03     INFO -  'pypi_url': 'http://pypi.python.org/simple',
+05:41:03     INFO -  'python3_manifest': {'win32': 'python3.manifest',
+05:41:03     INFO -                       'win64': 'python3_x64.manifest'},
+05:41:03     INFO -  'repo_path': '/media/shr/extradrive1/Code/mte-root/firefox-mte',
+05:41:03     INFO -  'requires_gpu': False,
+05:41:03     INFO -  'restartAfterFailure': False,
+05:41:03     INFO -  'run_local': True,
+05:41:03     INFO -  'screenshot_on_failure': False,
+05:41:03     INFO -  'skip_preflight': False,
+05:41:03     INFO -  'system_bits': '32',
+05:41:03     INFO -  'talos_extra_options': ('--develop', '--activeTests', 'expat_perf_test'),
+05:41:03     INFO -  'talos_json': '/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/talos/talos.json',
+05:41:03     INFO -  'title': 'XXXXXXXXwork',
+05:41:03     INFO -  'use_talos_json': False,
+05:41:03     INFO -  'verify': False,
+05:41:03     INFO -  'virtualenv_path': '/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/testing/talos-venv',
+05:41:03     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+05:41:03     INFO -  'work_dir': 'build'}
+05:41:03     INFO - [mozharness: 2025-01-22 05:41:03.695312Z] Skipping clobber step.
+05:41:03     INFO - [mozharness: 2025-01-22 05:41:03.695355Z] Skipping download-and-extract step.
+05:41:03     INFO - [mozharness: 2025-01-22 05:41:03.695388Z] Running populate-webroot step.
+05:41:03     INFO - Running pre-action listener: _resource_record_pre_action
+05:41:03     INFO - Running main action method: populate_webroot
+05:41:03     INFO - {'suites': {'bcv': {'tests': ['basic_compositor_video']},
+05:41:03     INFO -             'chromez': {'tests': ['about_preferences_basic', 'tresize']},
+05:41:03     INFO -             'damp': {'extra_prefs': ['talos.damp.suite=all'],
+05:41:03     INFO -                      'pagesets_name': 'tp5n.zip',
+05:41:03     INFO -                      'tests': ['damp']},
+05:41:03     INFO -             'damp-inspector': {'extra_prefs': ['talos.damp.suite=inspector'],
+05:41:03     INFO -                                'pagesets_name': 'tp5n.zip',
+05:41:03     INFO -                                'tests': ['damp']},
+05:41:03     INFO -             'damp-other': {'extra_prefs': ['talos.damp.suite=other'],
+05:41:03     INFO -                            'pagesets_name': 'tp5n.zip',
+05:41:03     INFO -                            'tests': ['damp']},
+05:41:03     INFO -             'damp-webconsole': {'extra_prefs': ['talos.damp.suite=webconsole'],
+05:41:03     INFO -                                 'pagesets_name': 'tp5n.zip',
+05:41:03     INFO -                                 'tests': ['damp']},
+05:41:03     INFO -             'dromaeojs': {'tests': ['dromaeo_css', 'kraken']},
+05:41:03     INFO -             'g1': {'pagesets_name': 'tp5n.zip', 'tests': ['tp5o_scroll']},
+05:41:03     INFO -             'g3': {'tests': ['dromaeo_dom']},
+05:41:03     INFO -             'g4': {'tests': ['displaylist_mutate',
+05:41:03     INFO -                              'rasterflood_svg',
+05:41:03     INFO -                              'rasterflood_gradient']},
+05:41:03     INFO -             'g5': {'pagesets_name': 'tp5n.zip',
+05:41:03     INFO -                    'tests': ['ts_paint_webext', 'tp5o_webext']},
+05:41:03     INFO -             'h1': {'tests': ['ts_paint_heavy']},
+05:41:03     INFO -             'motionmark': {'benchmark_zip': 'jetstream.zip',
+05:41:03     INFO -                            'tests': ['motionmark_animometer',
+05:41:03     INFO -                                      'motionmark_htmlsuite',
+05:41:03     INFO -                                      'JetStream',
+05:41:03     INFO -                                      'ARES6']},
+05:41:03     INFO -             'mtetest': {'tests': ['expat_perf_test']},
+05:41:03     INFO -             'other': {'tests': ['a11yr',
+05:41:03     INFO -                                 'ts_paint',
+05:41:03     INFO -                                 'twinopen',
+05:41:03     INFO -                                 'sessionrestore',
+05:41:03     INFO -                                 'sessionrestore_no_auto_restore',
+05:41:03     INFO -                                 'tabpaint',
+05:41:03     INFO -                                 'cpstartup',
+05:41:03     INFO -                                 'startup_about_home_paint',
+05:41:03     INFO -                                 'cross_origin_pageload',
+05:41:03     INFO -                                 'startup_about_home_paint_cached']},
+05:41:03     INFO -             'pdfpaint': {'tests': ['pdfpaint']},
+05:41:03     INFO -             'perf-reftest': {'tests': ['perf_reftest']},
+05:41:03     INFO -             'perf-reftest-singletons': {'tests': ['perf_reftest_singletons']},
+05:41:03     INFO -             'realworld-webextensions': {'tests': ['startup_about_home_paint_realworld_webextensions'],
+05:41:03     INFO -                                         'webextensions_zip': 'webextensions.zip'},
+05:41:03     INFO -             'sessionrestore-many-windows': {'tests': ['sessionrestore_many_windows']},
+05:41:03     INFO -             'svgr': {'tests': ['tsvgx',
+05:41:03     INFO -                                'tsvgr_opacity',
+05:41:03     INFO -                                'tscrollx',
+05:41:03     INFO -                                'tsvg_static',
+05:41:03     INFO -                                'tart']},
+05:41:03     INFO -             'tabswitch': {'pagesets_name': 'tp5n.zip', 'tests': ['tabswitch']},
+05:41:03     INFO -             'tp5o': {'pagesets_name': 'tp5n.zip', 'tests': ['tp5o']},
+05:41:03     INFO -             'webgl': {'tests': ['canvas2dvideo',
+05:41:03     INFO -                                 'glterrain',
+05:41:03     INFO -                                 'glvideo',
+05:41:03     INFO -                                 'motionmark_webgl',
+05:41:03     INFO -                                 'offscreencanvas_webcodecs_main_webgl_h264',
+05:41:03     INFO -                                 'offscreencanvas_webcodecs_main_webgl_vp9',
+05:41:03     INFO -                                 'offscreencanvas_webcodecs_main_webgl_av1',
+05:41:03     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_h264',
+05:41:03     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_vp9',
+05:41:03     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_av1',
+05:41:03     INFO -                                 'offscreencanvas_webcodecs_main_2d_h264',
+05:41:03     INFO -                                 'offscreencanvas_webcodecs_main_2d_vp9',
+05:41:03     INFO -                                 'offscreencanvas_webcodecs_main_2d_av1',
+05:41:03     INFO -                                 'offscreencanvas_webcodecs_worker_2d_h264',
+05:41:03     INFO -                                 'offscreencanvas_webcodecs_worker_2d_vp9',
+05:41:03     INFO -                                 'offscreencanvas_webcodecs_worker_2d_av1']},
+05:41:03     INFO -             'xperf': {'pagesets_name': 'tp5n.zip',
+05:41:03     INFO -                       'talos_options': ['--xperf_path',
+05:41:03     INFO -                                         '"c:/Program Files (x86)/Windows '
+05:41:03     INFO -                                         'Kits/10/Windows Performance '
+05:41:03     INFO -                                         'Toolkit/xperf.exe"'],
+05:41:03     INFO -                       'tests': ['tp5n']}}}
+05:41:03     INFO - Running post-action listener: _resource_record_post_action
+05:41:03     INFO - [mozharness: 2025-01-22 05:41:03.698610Z] Finished populate-webroot step (success)
+05:41:03     INFO - [mozharness: 2025-01-22 05:41:03.698648Z] Running create-virtualenv step.
+05:41:03     INFO - Running pre-action listener: _resource_record_pre_action
+05:41:03     INFO - Running main action method: create_virtualenv
+05:41:03     INFO - Virtualenv already exists, skipping creation
+05:41:03     INFO - Running post-action listener: _resource_record_post_action
+05:41:03     INFO - Running post-action listener: _start_resource_monitoring
+05:41:03     INFO - Starting resource monitoring.
+05:41:03     INFO - [mozharness: 2025-01-22 05:41:03.706194Z] Finished create-virtualenv step (success)
+05:41:03     INFO - [mozharness: 2025-01-22 05:41:03.710029Z] Skipping install step.
+05:41:03     INFO - [mozharness: 2025-01-22 05:41:03.710145Z] Running run-tests step.
+05:41:03     INFO - Running pre-action listener: _resource_record_pre_action
+05:41:03     INFO - Running pre-action listener: _set_gcov_prefix
+05:41:03     INFO - Running main action method: run_tests
+05:41:03     INFO - Running command: ['/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/testing/talos-venv/bin/python', '--version']
+05:41:03     INFO - Copy/paste: /media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/testing/talos-venv/bin/python --version
+05:41:03     INFO -  Python 3.11.11
+05:41:03     INFO - Return code: 0
+05:41:03     INFO - ENV: MOZ_UPLOAD_DIR is now /media/shr/extradrive1/Code/mte-root/firefox-mte/testing/mozharness/build/blobber_upload_dir
+05:41:03     INFO - ENV: MOZBUILD_PATH is now /home/shr/.mozbuild
+05:41:03     INFO - ENV: MINIDUMP_SAVE_PATH is now /media/shr/extradrive1/Code/mte-root/firefox-mte/testing/mozharness/build/blobber_upload_dir
+05:41:03     INFO - ENV: RUST_BACKTRACE is now full
+05:41:03     INFO - Running command: ['/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/testing/talos-venv/bin/python', '/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/talos/talos/run_tests.py', '--executablePath', '/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/dist/bin/firefox', '--title', 'XXXXXXXXwork', '--develop', '--activeTests', 'expat_perf_test', '--log-tbpl-level=info'] in /media/shr/extradrive1/Code/mte-root/firefox-mte/testing/mozharness/build
+05:41:03     INFO - Copy/paste: /media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/testing/talos-venv/bin/python /media/shr/extradrive1/Code/mte-root/firefox-mte/testing/talos/talos/run_tests.py --executablePath /media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/dist/bin/firefox --title XXXXXXXXwork --develop --activeTests expat_perf_test --log-tbpl-level=info
+05:41:03     INFO - Using env: {'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com ',
+05:41:03     INFO -  'DISPLAY': 'localhost:10.0',
+05:41:03     INFO -  'HOME': '/home/shr',
+05:41:03     INFO -  'LANG': 'en_US.UTF-8',
+05:41:03     INFO -  'LESSCLOSE': '/usr/bin/lesspipe %s %s',
+05:41:03     INFO -  'LESSOPEN': '| /usr/bin/lesspipe %s',
+05:41:03     INFO -  'LOGNAME': 'shr',
+05:41:03     INFO -  'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+05:41:03     INFO -  'MACH_MAIN_PID': '2003129',
+05:41:03     INFO -  'MAIL': '/var/mail/shr',
+05:41:03     INFO -  'MINIDUMP_SAVE_PATH': '/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+05:41:03     INFO -  'MOZBUILD_PATH': '/home/shr/.mozbuild',
+05:41:03     INFO -  'MOZCONFIG': 'mozconfig_copy',
+05:41:03     INFO -  'MOZ_DEVELOPER_OBJ_DIR': '/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy',
+05:41:03     INFO -  'MOZ_DEVELOPER_REPO_DIR': '/media/shr/extradrive1/Code/mte-root/firefox-mte',
+05:41:03     INFO -  'MOZ_UPLOAD_DIR': '/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+05:41:03     INFO -  'OLDPWD': '/media/shr/extradrive1/Code/mte-root/firefox-mte',
+05:41:03     INFO -  'PATH': '/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/testing/talos-venv/bin:/home/shr/.mozbuild/srcdirs/firefox-mte-cb41cbd9d0a9/_virtualenvs/common/bin:/home/shr/.mozbuild/srcdirs/firefox-mte-cb41cbd9d0a9/_virtualenvs/mach/bin:/home/shr/.pyenv/versions/3.11.11/bin:/home/shr/.pyenv/libexec:/home/shr/.pyenv/plugins/python-build/bin:/home/shr/.pyenv/plugins/pyenv-virtualenv/bin:/home/shr/.pyenv/plugins/pyenv-update/bin:/home/shr/.pyenv/plugins/pyenv-doctor/bin:/home/shr/.pyenv/shims:/home/shr/.pyenv/bin:/home/shr/.local/bin:/home/shr/.pyenv/plugins/pyenv-virtualenv/shims:/home/shr/.pyenv/bin:/home/shr/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/snap/bin:/home/shr/.local/bin:/home/shr/.local/bin',
+05:41:03     INFO -  'PWD': '/media/shr/extradrive1/Code/mte-root/firefox-mte',
+05:41:03     INFO -  'PYENV_DIR': '/media/shr/extradrive1/Code/mte-root/firefox-mte',
+05:41:03     INFO -  'PYENV_HOOK_PATH': '/home/shr/.pyenv/pyenv.d:/usr/etc/pyenv.d:/usr/local/etc/pyenv.d:/etc/pyenv.d:/usr/lib/pyenv/hooks:/home/shr/.pyenv/plugins/pyenv-virtualenv/etc/pyenv.d',
+05:41:03     INFO -  'PYENV_ROOT': '/home/shr/.pyenv',
+05:41:03     INFO -  'PYENV_SHELL': 'bash',
+05:41:03     INFO -  'PYENV_VERSION': '3.11.11',
+05:41:03     INFO -  'PYENV_VIRTUALENV_INIT': '1',
+05:41:03     INFO -  'PYTHONPATH': '/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/talos',
+05:41:03     INFO -  'REQUIRE_GPU': '0',
+05:41:03     INFO -  'RUST_BACKTRACE': 'full',
+05:41:03     INFO -  'SHELL': '/bin/bash',
+05:41:03     INFO -  'SHLVL': '2',
+05:41:03     INFO -  'SSH_CLIENT': '172.28.156.215 51402 2262',
+05:41:03     INFO -  'SSH_CONNECTION': '172.28.156.215 51402 172.28.8.253 2262',
+05:41:03     INFO -  'SSH_TTY': '/dev/pts/6',
+05:41:03     INFO -  'TERM': 'xterm-256color',
+05:41:03     INFO -  'USER': 'shr',
+05:41:03     INFO -  'VIRTUAL_ENV': 'talos-venv',
+05:41:03     INFO -  'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'}
+05:41:03     INFO - Calling ['/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/testing/talos-venv/bin/python', '/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/talos/talos/run_tests.py', '--executablePath', '/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/dist/bin/firefox', '--title', 'XXXXXXXXwork', '--develop', '--activeTests', 'expat_perf_test', '--log-tbpl-level=info'] with output_timeout 3600
+05:41:03     INFO -  mozversion application_buildid: 20250121223953
+05:41:03     INFO -  mozversion application_changeset: 497a35d032e41a640590af9ac68d8a6dd21f4131
+05:41:03     INFO -  mozversion application_display_name: Nightly
+05:41:03     INFO -  mozversion application_id: {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+05:41:03     INFO -  mozversion application_name: Firefox
+05:41:03     INFO -  mozversion application_remotingname: firefox-default
+05:41:03     INFO -  mozversion application_vendor: Mozilla
+05:41:03     INFO -  mozversion application_version: 134.0.1
+05:41:03     INFO -  mozversion platform_buildid: 20250121223953
+05:41:03     INFO -  mozversion platform_changeset: 497a35d032e41a640590af9ac68d8a6dd21f4131
+05:41:03     INFO -  mozversion platform_version: 134.0.1
+05:41:03     INFO -  starting webserver on '127.0.0.1:40453'
+05:41:03     INFO -  SUITE-START | Running 1 tests
+05:41:03     INFO -  TEST-START | expat_perf_test
+05:41:03     INFO -  Initialising browser for expat_perf_test test...
+05:41:03     INFO -  Cloning profile located at /media/shr/extradrive1/Code/mte-root/firefox-mte/testing/talos/talos/base_profile
+05:41:03     INFO -  Merging profile: /media/shr/extradrive1/Code/mte-root/firefox-mte/testing/profiles/base
+05:41:03     INFO -  Merging profile: /media/shr/extradrive1/Code/mte-root/firefox-mte/testing/profiles/common
+05:41:04     INFO -  Merging profile: /media/shr/extradrive1/Code/mte-root/firefox-mte/testing/profiles/perf
+05:41:04     INFO -  Installing Add-ons:
+05:41:04     INFO -  ['/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/talos/talos/talos-powers', '/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/talos/talos/pageloader']
+05:41:04     INFO -  Installing Webextensions:
+05:41:04     INFO -  Application command: /media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/dist/bin/firefox http://127.0.0.1:40453/getInfo.html -profile /tmp/tmpbzscs5w8/profile
+05:41:04     INFO -  TEST-INFO | started process 2003263 (/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/dist/bin/firefox http://127.0.0.1:40453/getInfo.html)
+05:41:14     INFO -  [GFX1-]: glxtest: ManageChildProcess failed
+05:41:14     INFO -  [GFX1-]: glxtest: X error, error_code=1, request_code=155, minor_code=1
+05:41:16     INFO -  [Parent 2003263, Main Thread] WARNING: Failed to create DBus proxy for org.a11y.Bus: Failed to execute child process “dbus-launch” (No such file or directory)
+05:41:16     INFO -  : 'glib warning', file /media/shr/extradrive1/Code/mte-root/firefox-mte/toolkit/xre/nsSigHandlers.cpp:201
+05:41:16     INFO -  ** (firefox-default:2003263): WARNING **: 23:41:16.007: Failed to create DBus proxy for org.a11y.Bus: Failed to execute child process “dbus-launch” (No such file or directory)
+05:41:19     INFO -  console.error: ({})
+05:41:19     INFO -  console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 911))
+05:41:20     INFO -  __metrics
+05:41:20     INFO -  	Screen width/height: 1920/1080
+05:41:20     INFO -  	colorDepth: 24
+05:41:20     INFO -  	Browser inner width/height: 1280/862
+05:41:20     INFO -  __metrics
+05:41:20     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.sys.mjs, line 739: WebGL warning: <Create>: WebglAllowWindowsNativeGl:false restricts context creation on this system.
+05:41:20     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.sys.mjs, line 739: Failed to create WebGL context: WebGL creation failed:
+05:41:20     INFO -  * WebglAllowWindowsNativeGl:false restricts context creation on this system. ()
+05:41:20     INFO -  * Exhausted GL driver options. (FEATURE_FAILURE_WEBGL_EXHAUSTED_DRIVERS)
+05:41:20     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.sys.mjs, line 739: WebGL warning: <Create>: AllowWebgl2:false restricts context creation on this system.
+05:41:20     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.sys.mjs, line 739: Failed to create WebGL context: WebGL creation failed:
+05:41:20     INFO -  * AllowWebgl2:false restricts context creation on this system. ()
+05:41:23     INFO -  console.error: AboutHomeStartupCache: "requestCache called with no _procManager!"
+05:41:23     INFO -  about:support	{"application":{"name":"Firefox","osVersion":"Linux 6.9.3-76060903-generic #202405300957~1728589823~24.04~3d61696~dev-Ubuntu SMP PREEMPT_DY","version":"134.0.1","buildID":"20250121223953","distributionID":"","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0","safeMode":false,"memorySizeBytes":134813638656,"diskAvailableBytes":3634012835840,"updateChannel":"default","supportURL":"https://support.mozilla.org/1/firefox/134.0.1/Linux/en-US/","osTheme":"Yaru / Yaru","pointingDevices":[],"numTotalWindows":1,"numFissionWindows":1,"numRemoteWindows":1,"fissionAutoStart":true,"fissionDecisionStatus":"enabledByDefault","remoteAutoStart":true,"policiesStatus":0,"keyLocationServiceGoogleFound":false,"keySafebrowsingGoogleFound":false,"keyMozillaFound":false},"securitySoftware":{"registeredAntiVirus":"","registeredAntiSpyware":"","registeredFirewall":""},"environmentVariables":{"DISPLAY":"localhost:10.0","MOZ_UPLOAD_DIR":"/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/mozharness/build/blobber_upload_dir","MOZ_DEVELOPER_REPO_DIR":"/media/shr/extradrive1/Code/mte-root/firefox-mte","MOZ_DEVELOPER_OBJ_DIR":"/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy","MOZ_CRASHREPORTER_NO_REPORT":"1","MOZ_CRASHREPORTER":"1","MOZ_DISABLE_NONLOCAL_CONNECTIONS":"1","XRE_NO_WINDOWS_CRASH_DIALOG":"1","MOZ_ASSUME_USER_NS":"1","MOZ_CRASHREPORTER_EVENTS_DIRECTORY":"/tmp/tmpbzscs5w8/profile/crashes/events","MOZ_CRASHREPORTER_RESTART_ARG_1":"http://127.0.0.1:40453/getInfo.html","MOZ_CRASHREPORTER_RESTART_ARG_2":"-profile","MOZ_CRASHREPORTER_RESTART_ARG_3":"/tmp/tmpbzscs5w8/profile","MOZ_CRASHREPORTER_RESTART_ARG_4":"","MOZ_CRASHREPORTER_DATA_DIRECTORY":"/home/shr/.mozilla/firefox/Crash Reports","MOZ_CRASHREPORTER_PING_DIRECTORY":"/home/shr/.mozilla/firefox/Pending Pings","MOZ_CRASHREPORTER_STRINGS_OVERRIDE":"/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/dist/bin/browser/crashreporter-override.ini","MOZ_LAUNCHED_CHILD":"","MOZ_APP_SILENT_START":"","XRE_PROFILE_PATH":"","XRE_PROFILE_LOCAL_PATH":"","XRE_START_OFFLINE":"","XRE_BINARY_PATH":"","XRE_RESTARTED_BY_PROFILE_MANAGER":""},"modifiedPreferences":{"browser.cache.disk.smart_size.enabled":false,"browser.contentblocking.category":"custom","browser.link.open_newwindow":2,"browser.search.region":"US","browser.tabs.remote.systemTriggeredAboutBlankAnywhere":true,"browser.tabs.unloadOnLowMemory":false,"browser.urlbar.quicksuggest.migrationVersion":2,"browser.urlbar.placeholderName":"Google","browser.urlbar.quicksuggest.scenario":"offline","doh-rollout.home-region":"US","dom.forms.autocomplete.formautofill":true,"dom.allow_scripts_to_close_windows":true,"dom.disable_open_during_load":false,"dom.disable_window_flip":true,"dom.disable_window_move_resize":true,"dom.input_events.security.minNumTicks":0,"dom.input_events.security.minTimeElapsedInMS":0,"dom.max_chrome_script_run_time":0,"dom.max_script_run_time":0,"dom.push.connection.enabled":false,"dom.send_after_paint_to_content":true,"extensions.checkCompatibility":false,"extensions.formautofill.creditCards.reauth.optout":"MDIEEPgAAAAAAAAAAAAAAAAAAAEwFAYIKoZIhvcNAwcECIKqB3u7iJs/BAgm6i8rK9QaNw==","extensions.formautofill.addresses.experiments.enabled":true,"extensions.lastAppVersion":"134.0.1","general.useragent.updates.enabled":false,"gfx.webrender.all":true,"idle.lastDailyNotification":-1,"media.gmp.storage.version.observed":1,"media.allowed-to-play.enabled":true,"media.autoplay.ask-permission":false,"media.autoplay.blocking_policy":0,"media.autoplay.default":0,"media.block-autoplay-until-in-foreground":false,"media.capturestream_hints.enabled":true,"media.geckoview.autoplay.request":false,"media.getdisplaymedia.screencapturekit.picker.enabled":false,"media.gmp-manager.updateEnabled":false,"media.gmp-manager.url":"http://127.0.0.1/gmpmanager-dummy/update.xml","media.libavcodec.allow-obsolete":true,"media.navigator.enabled":true,"media.navigator.permission.disabled":true,"media.peerconnection.enabled":true,"media.wakelock.audio.delay-releasing.ms":0,"media.webspeech.synth.dont_notify_on_error":true,"network.protocol-handler.external.ext+damp":true,"network.protocol-handler.external.ext+twinopen":true,"places.database.lastMaintenance":2147483647,"privacy.bounceTrackingProtection.hasMigratedUserActivationData":true,"privacy.trackingprotection.introURL":"http://127.0.0.1/trackingprotection/tour","privacy.sanitize.pending":"[{\"id\":\"newtab-container\",\"itemsToClear\":[],\"options\":{}}]","privacy.reduceTimerPrecision":false,"privacy.trackingprotection.annotate_channels":false,"privacy.trackingprotection.enabled":false,"privacy.trackingprotection.pbmode.enabled":false,"security.certerrors.mitm.priming.enabled":false,"security.enable_java":false,"security.fileuri.strict_origin_policy":false,"security.turn_off_all_security_so_that_viruses_can_take_over_this_computer":true,"services.sync.engine.addresses.available":true,"signon.management.page.os-auth.optout":"MDIEEPgAAAAAAAAAAAAAAAAAAAEwFAYIKoZIhvcNAwcECE2DeulJFA//BAjVH/2TB6Gamw==","widget.gtk.overlay-scrollbars.enabled":false},"lockedPreferences":{"fission.autostart.session":true},"printingPreferences":{},"media":{"currentAudioBackend":"(remote error)","currentMaxAudioChannels":0,"currentPreferredSampleRate":44100,"audioOutputDevices":[],"audioInputDevices":[],"codecSupportInfo":"H264 SW\nVP9 SW\nVP8 SW\nAV1 SW\nHEVC NONE\nAAC SW\nMP3 SW\nOpus SW\nVorbis SW\nFLAC SW\nWave SW"},"accessibility":{"isActive":false,"forceDisabled":0,"instantiator":""},"startupCache":{"DiskCachePath":"/tmp/tmpbzscs5w8/profile/startupCache/startupCache.8.little","IgnoreDiskCache":false,"FoundDiskCacheOnInit":false,"WroteToDiskCache":false},"libraryVersions":{"NSPR":{"minVersion":"4.36","version":"4.36"},"NSS":{"minVersion":"3.107","version":"3.107"},"NSSUTIL":{"minVersion":"3.107","version":"3.107"},"NSSSSL":{"minVersion":"3.107","version":"3.107"},"NSSSMIME":{"minVersion":"3.107","version":"3.107"}},"userJS":{"exists":true},"intl":{"localeService":{"requested":["en-US"],"available":["en-US"],"supported":["en-US"],"regionalPrefs":["en-US"],"defaultLocale":"en-US"},"osPrefs":{"systemLocales":["en-US"],"regionalPrefsLocales":["en-US"]}},"contentAnalysis":{"active":false},"crashes":{"submitted":[],"pending":0},"sandbox":{"hasSeccompBPF":true,"hasSeccompTSync":true,"hasPrivilegedUserNamespaces":true,"hasUserNamespaces":true,"canSandboxContent":true,"canSandboxMedia":true,"syscallLog":[],"contentSandboxLevel":4,"effectiveContentSandboxLevel":4},"remoteAgent":{"running":false,"url":""},"graphics":{"desktopEnvironment":"gnome shell","numTotalWindows":1,"numAcceleratedWindows":1,"windowLayerManagerType":"WebRender","windowLayerManagerRemote":true,"graphicsDevicePixelRatios":[1],"adapterDescription":"llvmpipe (LLVM 17.0.6, 256 bits) (See failure log)","adapterVendorID":"Mesa","adapterDeviceID":"llvmpipe (LLVM 17.0.6, 256 bits)","adapterRAM":0,"adapterDrivers":"","driverVendor":"mesa/llvmpipe","driverVersion":"24.0.9.0","driverDate":"","adapterVendorID2":"0x8086","adapterDeviceID2":"0xa780","isGPU2Active":false,"targetFrameRate":60,"windowProtocol":"x11","supportFontDetermination":"Ubuntu Unknown - VERSION_ID=\"24.04\"\nID=ubuntu","webgl1Renderer":"WebGL creation failed: \n* WebglAllowWindowsNativeGl:false restricts context creation on this system. ()\n* Exhausted GL driver options. (FEATURE_FAILURE_WEBGL_EXHAUSTED_DRIVERS)","webgl1Version":"-","webgl1DriverExtensions":"-","webgl1Extensions":"-","webgl1WSIInfo":"-","webgl2Renderer":"WebGL creation failed: \n* AllowWebgl2:false restricts context creation on this system. ()","webgl2Version":"-","webgl2DriverExtensions":"-","webgl2Extensions":"-","webgl2WSIInfo":"-","info":{"AzureFallbackCanvasBackend":"skia","AzureCanvasBackend":"skia","AzureContentBackend":"skia","ApzWheelInput":1,"ApzDragInput":1,"ApzKeyboardInput":1,"ApzAutoscrollInput":1,"ApzZoomingInput":1,"CMSOutputProfile":"AAAF7GxjbXMEMAAAbW50clJHQiBYWVogB+YACgAKAAAAKwAUYWNzcEFQUEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1sY21zGihHVLeFQr2wg3HMZjTdqwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOZGVzYwAAASwAAAAmY3BydAAAAVQAAACGd3RwdAAAAdwAAAAUY2hhZAAAAfAAAAAsclhZWgAAAhwAAAAUYlhZWgAAAjAAAAAUZ1hZWgAAAkQAAAAUclRSQwAAAlgAAAAQZ1RSQwAAAlgAAAAQYlRSQwAAAlgAAAAQY2hybQAAAmgAAAAkbWV0YQAAAowAAALuZG1uZAAABXwAAABGZG1kZAAABcQAAAAmbWx1YwAAAAAAAAABAAAADGVuVVMAAAAKAAAAHABYAEcAMgA3ADAAAG1sdWMAAAAAAAAAAQAAAAxlblVTAAAAagAAABwAVABoAGkAcwAgAHAAcgBvAGYAaQBsAGUAIABpAHMAIABmAHIAZQBlACAAbwBmACAAawBuAG8AdwBuACAAYwBvAHAAeQByAGkAZwBoAHQAIAByAGUAcwB0AHIAaQBjAHQAaQBvAG4AcwAuAABYWVogAAAAAAAA9tYAAQAAAADTLXNmMzIAAAAAAAELtwAABZb///NWAAAHKQAA/df///u2///9pQAAA9oAAMD2WFlaIAAAAAAAAG4wAAA18wAAAKBYWVogAAAAAAAAJn4AABAeAAC/qVhZWiAAAAAAAABiKAAAufAAABLkcGFyYQAAAAAAAAAAAAIzM2Nocm0AAAAAAAMAAAAAqkAAAFQAAABOAAAAnsAAACaAAAAPQGRpY3QAAAAAAAAACgAAABAAAACwAAAAFgAAAMYAAAAqAAAA8AAAABQAAAEEAAAACgAAAQ4AAAAWAAABJAAAABgAAAE8AAAAFgAAAVIAAAAIAAABWgAAACIAAAF8AAAAKgAAAaYAAAASAAABuAAAAAYAAAG+AAAAFAAAAdIAAAAqAAAB/AAAABAAAAIMAAAAQAAAAkwAAAAWAAACYgAAAAwAAAJuAAAAIgAAApAAAABeAEMATQBGAF8AcAByAG8AZAB1AGMAdABnAG4AbwBtAGUALQBzAGUAdAB0AGkAbgBnAHMALQBkAGEAZQBtAG8AbgBFAEQASQBEAF8AbQBvAGQAZQBsAFgARwAyADcAMABFAEQASQBEAF8AcwBlAHIAaQBhAGwAVgBYAFIAMgAwADMAMQAwADAAMgA3ADEARABBAFQAQQBfAHMAbwB1AHIAYwBlAGUAZABpAGQARQBEAEkARABfAG0AYQBuAHUAZgBhAGMAdAB1AHIAZQByAFYAaQBlAHcAUwBvAG4AaQBjACAAQwBvAHIAcABvAHIAYQB0AGkAbwBuAEUARABJAEQAXwBtAG4AZgB0AFYAUwBDAEMATQBGAF8AYgBpAG4AYQByAHkAZwBuAG8AbQBlAC0AcwBlAHQAdABpAG4AZwBzAC0AZABhAGUAbQBvAG4ARQBEAEkARABfAG0AZAA1AGYAZABkADIAMAA1AGEAMgA1ADEANQA5ADcANwA0ADQAYgBlADQAYQBmADEAYQBkAGQAYwAwADcAMQAwADgAYgBDAE0ARgBfAHYAZQByAHMAaQBvAG4AMwAuADMANgAuADEATQBBAFAAUABJAE4ARwBfAGQAZQB2AGkAYwBlAF8AaQBkAHgAcgBhAG4AZAByAC0AVgBpAGUAdwBTAG8AbgBpAGMAIABDAG8AcgBwAG8AcgBhAHQAaQBvAG4ALQBYAEcAMgA3ADAALQBWAFgAUgAyADAAMwAxADAAMAAyADcAMQAAbWx1YwAAAAAAAAABAAAADGVuVVMAAAAqAAAAHABWAGkAZQB3AFMAbwBuAGkAYwAgAEMAbwByAHAAbwByAGEAdABpAG8AbgAAbWx1YwAAAAAAAAABAAAADGVuVVMAAAAKAAAAHABYAEcAMgA3ADAAAA==","DisplayCount":1,"Display0":"1920x1080@60Hz scales:1.000000|1.000000"},"failures":["[GFX1-]: glxtest: ManageChildProcess failed\n","[GFX1-]: glxtest: X error, error_code=1, request_code=155, minor_code=1"],"indices":[0,1],"featureLog":{"features":[{"name":"HW_COMPOSITING","description":"Compositing","status":"available","log":[{"type":"default","status":"available"}]},{"name":"OPENGL_COMPOSITING","description":"OpenGL Compositing","status":"blocklisted","log":[{"type":"default","status":"available"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"#BLOCKLIST_FEATURE_FAILURE_GLXTEST_FAILED"}]},{"name":"WEBRENDER","description":"WebRender","status":"force_enabled","log":[{"type":"default","status":"available"},{"type":"user","status":"force_enabled","message":"Force enabled by pref"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"Blocklisted by gfxInfo"}]},{"name":"WEBRENDER_COMPOSITOR","description":"WebRender native compositor","status":"blocked","log":[{"type":"default","status":"disabled","failureId":"FEATURE_FAILURE_DISABLED","message":"Disabled by default"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"Blocklisted by gfxInfo"},{"type":"runtime","status":"blocked","failureId":"FEATURE_FAILURE_DISABLE_RELEASE_OR_BETA","message":"Cannot be enabled in release or beta"}]},{"name":"WEBRENDER_PARTIAL","description":"WebRender partial present","status":"blocklisted","log":[{"type":"default","status":"available"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"Blocklisted by gfxInfo"}]},{"name":"WEBRENDER_SHADER_CACHE","description":"WebRender shader disk cache","status":"blocklisted","log":[{"type":"default","status":"disabled","failureId":"FEATURE_FAILURE_DISABLED","message":"Disabled by default"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"Blocklisted by gfxInfo"}]},{"name":"WEBRENDER_OPTIMIZED_SHADERS","description":"WebRender optimized shaders","status":"blocklisted","log":[{"type":"default","status":"available"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"Blocklisted by gfxInfo"}]},{"name":"WEBRENDER_ANGLE","description":"WebRender ANGLE","status":"unavailable","log":[{"type":"default","status":"available"},{"type":"env","status":"unavailable","failureId":"FEATURE_FAILURE_OS_NOT_SUPPORTED","message":"OS not supported"}]},{"name":"WEBRENDER_DCOMP_PRESENT","description":"WebRender DirectComposition","status":"unavailable","log":[{"type":"default","status":"available"},{"type":"user","status":"disabled","failureId":"FEATURE_FAILURE_DCOMP_PREF_DISABLED","message":"User disabled via pref"},{"type":"env","status":"unavailable","failureId":"FEATURE_FAILURE_NO_GPU_PROCESS","message":"Requires GPU process"},{"type":"runtime","status":"unavailable","failureId":"FEATURE_FAILURE_DCOMP_NOT_ANGLE","message":"Requires ANGLE"}]},{"name":"WEBRENDER_SCISSORED_CACHE_CLEARS","description":"WebRender scissored cache clears","status":"blocklisted","log":[{"type":"default","status":"available"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"Blocklisted by gfxInfo"}]},{"name":"WEBGPU","description":"WebGPU","status":"blocked","log":[{"type":"default","status":"available"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"#BLOCKLIST_FEATURE_FAILURE_GLXTEST_FAILED"},{"type":"runtime","status":"blocked","failureId":"WEBGPU_DISABLE_RELEASE_OR_BETA","message":"WebGPU cannot be enabled in release or beta"}]},{"name":"X11_EGL","description":"X11 EGL","status":"broken","log":[{"type":"default","status":"available"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"Blocklisted by gfxInfo"},{"type":"runtime","status":"broken","failureId":"FEATURE_FAILURE_GLXTEST_NO_EGL","message":"glxtest could not use EGL"}]},{"name":"DMABUF","description":"DMABUF","status":"unavailable","log":[{"type":"default","status":"available"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"Blocklisted by gfxInfo"},{"type":"runtime","status":"unavailable","failureId":"FEATURE_FAILURE_REQUIRES_EGL","message":"Requires EGL"}]},{"name":"HARDWARE_VIDEO_DECODING","description":"Hardware video decoding","status":"unavailable","log":[{"type":"default","status":"available"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"Blocklisted by gfxInfo"},{"type":"runtime","status":"unavailable","failureId":"FEATURE_FAILURE_REQUIRES_EGL","message":"Requires EGL"}]},{"name":"DMABUF_SURFACE_EXPORT","description":"WebGL DMABuf surface export","status":"blocked","log":[{"type":"default","status":"available"},{"type":"env","status":"blocked","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"Blocklisted by gfxInfo"}]},{"name":"BACKDROP_FILTER","description":"Backdrop filter","status":"available","log":[{"type":"default","status":"available"}]},{"name":"CANVAS_RENDERER_THREAD","description":"canvas renderer thread","status":"blocked","log":[{"type":"default","status":"blocked","failureId":"FEATURE_FAILURE_THREAD_UNSAFE_GL","message":"Thread unsafe GL"}]},{"name":"ACCELERATED_CANVAS2D","description":"Accelerated Canvas2D","status":"blocklisted","log":[{"type":"default","status":"available"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"#BLOCKLIST_FEATURE_FAILURE_GLXTEST_FAILED"}]},{"name":"REMOTE_CANVAS","description":"Remote canvas","status":"blocked","log":[{"type":"default","status":"disabled","failureId":"FEATURE_FAILURE_DISABLED","message":"Disabled via pref"},{"type":"env","status":"unavailable-no-gpu-process","failureId":"FEATURE_REMOTE_CANVAS_NO_GPU_PROCESS","message":"Disabled without GPU process"},{"type":"runtime","status":"blocked","failureId":"FEATURE_REMOTE_CANVAS_NOT_WINDOWS","message":"Platform not supported"}]},{"name":"DMABUF_WEBGL","description":"DMABuf for WebGL","status":"blocked","log":[{"type":"default","status":"available"},{"type":"env","status":"blocked","failureId":"FEATURE_FAILURE_GLXTEST_FAILED","message":"Blocklisted by gfxInfo"}]}],"fallbacks":[]},"crashGuards":[],"webgpuDefaultAdapter":{"navigator.gpu":null},"webgpuFallbackAdapter":{"navigator.gpu":null}},"addons":[{"name":"Add-ons Search Detection","type":"extension","version":"2.0.0","isActive":true,"id":"addons-search-detection@mozilla.com"},{"name":"PageLoader extension","type":"extension","version":"1.1","isActive":true,"id":"pageloader@mozilla.org"},{"name":"Talos Powers","type":"extension","version":"1.1","isActive":true,"id":"talos-powers@mozilla.org"},{"name":"System theme — auto","type":"theme","version":"1.4.1","isActive":true,"id":"default-theme@mozilla.org"}],"features":[{"name":"Firefox Screenshots","version":"39.0.1","id":"screenshots@mozilla.org"},{"name":"Form Autofill","version":"1.0.1","id":"formautofill@mozilla.org"},{"name":"Picture-In-Picture","version":"1.0.0","id":"pictureinpicture@mozilla.org"},{"name":"Web Compatibility Interventions","version":"134.5.0","id":"webcompat@mozilla.org"},{"name":"WebCompat Reporter","version":"2.1.0","id":"webcompat-reporter@mozilla.org"}],"experimentalFeatures":[["sidebar-title","sidebar.revamp",false],["vertical-tabs-title","sidebar.verticalTabs",false],["genai-settings-chat-title","browser.ml.chat.enabled",false],["experimental-features-auto-pip","media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled",false],["experimental-features-ime-search","browser.urlbar.keepPanelOpenDuringImeComposition",false],["experimental-features-webrtc-global-mute-toggles","privacy.webrtc.globalMuteToggles",false],["experimental-features-media-jxl","image.jxl.enabled",false],["experimental-features-css-masonry2","layout.css.grid-template-masonry-value.enabled",false],["experimental-features-web-gpu2","dom.webgpu.enabled",false],["experimental-features-devtools-serviceworker-debugger-support","devtools.debugger.features.windowless-service-workers",false]],"processes":{"remoteTypes":{"rdd":1,"extension":1,"socket":1,"webIsolated":1},"maxWebContentProcesses":8},"normandy":{"addonStudies":[],"prefRollouts":[],"prefStudies":[],"nimbusExperiments":[],"nimbusRollouts":[]},"legacyUserStylesheets":{"active":false,"types":[]},"remoteSettings":{"serverURL":"data:,#remote-settings-dummy/v1","pollingEndpoint":"data:,#remote-settings-dummy/v1/buckets/monitor/collections/changes/changeset","serverTimestamp":null,"localTimestamp":null,"lastCheck":"","mainBucket":"main","defaultSigner":"remote-settings.content-signature.mozilla.org","previewMode":false,"collections":[],"history":{"settings-sync":[]},"isSynchronizationBroken":false},"places":[{"efficiencyPerc":24.4,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_schema","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_origins","count":1},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_origins_1","count":"-"},{"efficiencyPerc":0.3,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places","count":1},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_extra","count":0},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_url_hashindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_hostindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_visitcount","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_frecencyindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_lastvisitdateindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_guid_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_originidindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_altfrecencyindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits","count":1},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_extra","count":0},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_placedateindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_fromindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_dateindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_inputhistory","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_inputhistory_1","count":"-"},{"efficiencyPerc":1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks","count":6},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_deleted","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_bookmarks_deleted_1","count":"-"},{"efficiencyPerc":0.2,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_itemindex","count":"-"},{"efficiencyPerc":0.2,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_parentindex","count":"-"},{"efficiencyPerc":0.3,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_itemlastmodifiedindex","count":"-"},{"efficiencyPerc":0.3,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_dateaddedindex","count":"-"},{"efficiencyPerc":0.4,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_guid_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_keywords","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_keywords_1","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_sequence","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_keywords_placepostdata_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_anno_attributes","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_anno_attributes_1","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_annos","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_annos_placeattributeindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_items_annos","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_items_annos_itemattributeindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_meta","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata_placecreated_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata_referrerindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata_search_queries","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_places_metadata_search_queries_1","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_previews_tombstones","count":0}]}
+05:41:23     INFO -  [ERROR glean_core::metrics::ping] Invalid reason code active for ping usage-reporting
+05:41:23     INFO -  [ERROR error_support::handling] logins-unexpected: Error parsing URL: relative URL with a cannot-be-a-base base
+05:41:23     INFO -  [ERROR error_support::handling] suggest-unexpected: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base
+05:41:23     INFO -  console.error: URLBar - QuickSuggest.SuggestBackendRust: "Error initializing SuggestStore" (new Error("reason: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base", "resource://gre/modules/RustSuggest.sys.mjs", 2228))
+05:41:24     INFO -  [GFX1-]: Failed to connect WebRenderBridgeChild. isParent=false
+05:41:26     INFO -  TEST-INFO | 2003263: exit 0
+05:41:26     INFO -  Browser initialized.
+05:41:26     INFO -  Fission enabled: True
+05:41:26     INFO -  Running cycle 1/1 for expat_perf_test test...
+05:41:26     INFO -  Using env: {'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com ',
+05:41:26     INFO -   'DISPLAY': 'localhost:10.0',
+05:41:26     INFO -   'HOME': '/home/shr',
+05:41:26     INFO -   'LANG': 'en_US.UTF-8',
+05:41:26     INFO -   'LD_LIBRARY_PATH': '/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/dist/bin',
+05:41:26     INFO -   'LESSCLOSE': '/usr/bin/lesspipe %s %s',
+05:41:26     INFO -   'LESSOPEN': '| /usr/bin/lesspipe %s',
+05:41:26     INFO -   'LOGNAME': 'shr',
+05:41:26     INFO -   'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+05:41:26     INFO -   'MACH_MAIN_PID': '2003129',
+05:41:26     INFO -   'MAIL': '/var/mail/shr',
+05:41:26     INFO -   'MINIDUMP_SAVE_PATH': '/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+05:41:26     INFO -   'MOZBUILD_PATH': '/home/shr/.mozbuild',
+05:41:26     INFO -   'MOZCONFIG': 'mozconfig_copy',
+05:41:26     INFO -   'MOZ_CRASHREPORTER': '1',
+05:41:26     INFO -   'MOZ_CRASHREPORTER_NO_REPORT': '1',
+05:41:26     INFO -   'MOZ_DEVELOPER_OBJ_DIR': '/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy',
+05:41:26     INFO -   'MOZ_DEVELOPER_REPO_DIR': '/media/shr/extradrive1/Code/mte-root/firefox-mte',
+05:41:26     INFO -   'MOZ_DISABLE_NONLOCAL_CONNECTIONS': '1',
+05:41:26     INFO -   'MOZ_UPLOAD_DIR': '/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+05:41:26     INFO -   'MOZ_USE_PAGELOADER': '1',
+05:41:26     INFO -   'NO_EM_RESTART': '1',
+05:41:26     INFO -   'OLDPWD': '/media/shr/extradrive1/Code/mte-root/firefox-mte',
+05:41:26     INFO -   'PATH': '/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/testing/talos-venv/bin:/home/shr/.mozbuild/srcdirs/firefox-mte-cb41cbd9d0a9/_virtualenvs/common/bin:/home/shr/.mozbuild/srcdirs/firefox-mte-cb41cbd9d0a9/_virtualenvs/mach/bin:/home/shr/.pyenv/versions/3.11.11/bin:/home/shr/.pyenv/libexec:/home/shr/.pyenv/plugins/python-build/bin:/home/shr/.pyenv/plugins/pyenv-virtualenv/bin:/home/shr/.pyenv/plugins/pyenv-update/bin:/home/shr/.pyenv/plugins/pyenv-doctor/bin:/home/shr/.pyenv/shims:/home/shr/.pyenv/bin:/home/shr/.local/bin:/home/shr/.pyenv/plugins/pyenv-virtualenv/shims:/home/shr/.pyenv/bin:/home/shr/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/snap/bin:/home/shr/.local/bin:/home/shr/.local/bin',
+05:41:26     INFO -   'PWD': '/media/shr/extradrive1/Code/mte-root/firefox-mte',
+05:41:26     INFO -   'PYENV_DIR': '/media/shr/extradrive1/Code/mte-root/firefox-mte',
+05:41:26     INFO -   'PYENV_HOOK_PATH': '/home/shr/.pyenv/pyenv.d:/usr/etc/pyenv.d:/usr/local/etc/pyenv.d:/etc/pyenv.d:/usr/lib/pyenv/hooks:/home/shr/.pyenv/plugins/pyenv-virtualenv/etc/pyenv.d',
+05:41:26     INFO -   'PYENV_ROOT': '/home/shr/.pyenv',
+05:41:26     INFO -   'PYENV_SHELL': 'bash',
+05:41:26     INFO -   'PYENV_VERSION': '3.11.11',
+05:41:26     INFO -   'PYENV_VIRTUALENV_INIT': '1',
+05:41:26     INFO -   'PYTHONPATH': '/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/talos',
+05:41:26     INFO -   'REQUIRE_GPU': '0',
+05:41:26     INFO -   'RUST_BACKTRACE': 'full',
+05:41:26     INFO -   'SHELL': '/bin/bash',
+05:41:26     INFO -   'SHLVL': '2',
+05:41:26     INFO -   'SSH_CLIENT': '172.28.156.215 51402 2262',
+05:41:26     INFO -   'SSH_CONNECTION': '172.28.156.215 51402 172.28.8.253 2262',
+05:41:26     INFO -   'SSH_TTY': '/dev/pts/6',
+05:41:26     INFO -   'TERM': 'xterm-256color',
+05:41:26     INFO -   'USER': 'shr',
+05:41:26     INFO -   'VIRTUAL_ENV': 'talos-venv',
+05:41:26     INFO -   'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'}
+05:41:26     INFO -  TEST-INFO | started process 2003595 (/media/shr/extradrive1/Code/mte-root/firefox-mte/firefox_release_copy/dist/bin/firefox -profile /tmp/tmpbzscs5w8/profile)
+05:41:36     INFO -  PID 2003595 | [GFX1-]: glxtest: ManageChildProcess failed
+05:41:36     INFO -  PID 2003595 |
+05:41:36     INFO -  PID 2003595 | [GFX1-]: glxtest: X error, error_code=1, request_code=155, minor_code=1
+05:41:37     INFO -  PID 2003595 | [Parent 2003595, Main Thread] WARNING: Failed to create DBus proxy for org.a11y.Bus: Failed to execute child process “dbus-launch” (No such file or directory)
+05:41:37     INFO -  PID 2003595 | : 'glib warning', file /media/shr/extradrive1/Code/mte-root/firefox-mte/toolkit/xre/nsSigHandlers.cpp:201
+05:41:37     INFO -  PID 2003595 |
+05:41:37     INFO -  PID 2003595 | ** (firefox-default:2003595): WARNING **: 23:41:37.529: Failed to create DBus proxy for org.a11y.Bus: Failed to execute child process “dbus-launch” (No such file or directory)
+05:41:37     INFO -  PID 2003595 |
+05:41:40     INFO -  PID 2003595 | console.error: ({})
+05:41:46     INFO -  PID 2003595 | Cycle 1(1): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:41:47     INFO -  PID 2003595 | [ERROR glean_core::metrics::ping] Invalid reason code active for ping usage-reporting
+05:41:47     INFO -  PID 2003595 | console.error: (new TypeError("aWindow.docShell is null", "resource://gre/modules/PrivateBrowsingUtils.sys.mjs", 50))
+05:41:47     INFO -  PID 2003595 | console.error: (new InvalidStateError("JSWindowActorParent.sendAsyncMessage: JSWindowActorParent cannot send at the moment", (void 0), 537))
+05:41:47     INFO -  PID 2003595 | [ERROR error_support::handling] logins-unexpected: Error parsing URL: relative URL with a cannot-be-a-base base
+05:41:47     INFO -  PID 2003595 | [ERROR error_support::handling] suggest-unexpected: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base
+05:41:47     INFO -  PID 2003595 | console.error: URLBar - QuickSuggest.SuggestBackendRust: "Error initializing SuggestStore" (new Error("reason: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base", "resource://gre/modules/RustSuggest.sys.mjs", 2228))
+05:41:48     INFO -  PID 2003595 | Capture_Time:Expat,1,9419232,2003792|
+05:41:48     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 9419232
+05:41:49     INFO -  PID 2003595 | Cycle 1(2): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:41:50     INFO -  PID 2003595 | Capture_Time:Expat,2,4062440,2003792|
+05:41:50     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 4062440
+05:41:50     INFO -  PID 2003595 | Cycle 1(3): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:41:51     INFO -  PID 2003595 | Capture_Time:Expat,3,1447985,2003792|
+05:41:51     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1447985
+05:41:52     INFO -  PID 2003595 | Cycle 1(4): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:41:53     INFO -  PID 2003595 | Capture_Time:Expat,4,8645204,2003792|
+05:41:53     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 8645204
+05:41:53     INFO -  PID 2003595 | Cycle 1(5): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:41:54     INFO -  PID 2003595 | Capture_Time:Expat,5,1329911,2003792|
+05:41:54     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1329911
+05:41:55     INFO -  PID 2003595 | Cycle 1(6): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:41:56     INFO -  PID 2003595 | Capture_Time:Expat,6,1379792,2003792|
+05:41:56     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1379792
+05:41:56     INFO -  PID 2003595 | Cycle 1(7): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:41:57     INFO -  PID 2003595 | Capture_Time:Expat,7,2511072,2003792|
+05:41:57     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2511072
+05:41:58     INFO -  PID 2003595 | Cycle 1(8): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:41:59     INFO -  PID 2003595 | Capture_Time:Expat,8,1374269,2003792|
+05:41:59     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1374269
+05:41:59     INFO -  PID 2003595 | Cycle 1(9): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:00     INFO -  PID 2003595 | Capture_Time:Expat,9,1336690,2003792|
+05:42:00     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1336690
+05:42:01     INFO -  PID 2003595 | Cycle 1(10): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:02     INFO -  PID 2003595 | Capture_Time:Expat,10,3691647,2003792|
+05:42:02     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 3691647
+05:42:02     INFO -  PID 2003595 | Cycle 1(11): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:03     INFO -  PID 2003595 | Capture_Time:Expat,11,2408918,2003792|
+05:42:03     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2408918
+05:42:04     INFO -  PID 2003595 | Cycle 1(12): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:04     INFO -  PID 2003595 | Waiting for idle-callback
+05:42:05     INFO -  PID 2003595 | Capture_Time:Expat,12,1349206,2003792|
+05:42:05     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1349206
+05:42:05     INFO -  PID 2003595 | Cycle 1(13): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:06     INFO -  PID 2003595 | 1737524526779	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, channelStatus: 2152398861, errorCode: 2, reason: error
+05:42:07     INFO -  PID 2003595 | Capture_Time:Expat,13,2463552,2003792|
+05:42:07     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2463552
+05:42:07     INFO -  PID 2003595 | Cycle 1(14): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:08     INFO -  PID 2003595 | Capture_Time:Expat,14,1357299,2003792|
+05:42:08     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1357299
+05:42:08     INFO -  PID 2003595 | Cycle 1(15): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:09     INFO -  PID 2003595 | Capture_Time:Expat,15,1366837,2003792|
+05:42:09     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1366837
+05:42:10     INFO -  PID 2003595 | Cycle 1(16): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:11     INFO -  PID 2003595 | Capture_Time:Expat,16,2378076,2003792|
+05:42:11     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2378076
+05:42:11     INFO -  PID 2003595 | Cycle 1(17): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:12     INFO -  PID 2003595 | Capture_Time:Expat,17,1239294,2003792|
+05:42:12     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1239294
+05:42:13     INFO -  PID 2003595 | Cycle 1(18): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:14     INFO -  PID 2003595 | Capture_Time:Expat,18,2490518,2003792|
+05:42:14     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2490518
+05:42:14     INFO -  PID 2003595 | Cycle 1(19): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:15     INFO -  PID 2003595 | Capture_Time:Expat,19,1301133,2003792|
+05:42:15     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1301133
+05:42:16     INFO -  PID 2003595 | Cycle 1(20): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:17     INFO -  PID 2003595 | Capture_Time:Expat,20,1328189,2003792|
+05:42:17     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1328189
+05:42:17     INFO -  PID 2003595 | Cycle 1(21): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:18     INFO -  PID 2003595 | Capture_Time:Expat,21,1266083,2003792|
+05:42:18     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1266083
+05:42:19     INFO -  PID 2003595 | Cycle 1(22): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:19     INFO -  PID 2003595 | Waiting for idle-callback
+05:42:20     INFO -  PID 2003595 | Capture_Time:Expat,22,2092108,2003792|
+05:42:20     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2092108
+05:42:20     INFO -  PID 2003595 | Cycle 1(23): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:20     INFO -  PID 2003595 | Waiting for idle-callback
+05:42:22     INFO -  PID 2003595 | Capture_Time:Expat,23,1300881,2003792|
+05:42:22     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1300881
+05:42:22     INFO -  PID 2003595 | Cycle 1(24): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:23     INFO -  PID 2003595 | Capture_Time:Expat,24,2882683,2003792|
+05:42:23     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2882683
+05:42:24     INFO -  PID 2003595 | Cycle 1(25): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:25     INFO -  PID 2003595 | Capture_Time:Expat,25,1302089,2003792|
+05:42:25     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1302089
+05:42:25     INFO -  PID 2003595 | Cycle 1(26): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:26     INFO -  PID 2003595 | Capture_Time:Expat,26,2479643,2003792|
+05:42:26     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2479643
+05:42:27     INFO -  PID 2003595 | Cycle 1(27): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:28     INFO -  PID 2003595 | Capture_Time:Expat,27,1738453,2003792|
+05:42:28     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1738453
+05:42:28     INFO -  PID 2003595 | Cycle 1(28): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:29     INFO -  PID 2003595 | Capture_Time:Expat,28,3110699,2003792|
+05:42:29     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 3110699
+05:42:30     INFO -  PID 2003595 | Cycle 1(29): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:31     INFO -  PID 2003595 | Capture_Time:Expat,29,1449545,2003792|
+05:42:31     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1449545
+05:42:31     INFO -  PID 2003595 | Cycle 1(30): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:32     INFO -  PID 2003595 | Capture_Time:Expat,30,1253321,2003792|
+05:42:32     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1253321
+05:42:33     INFO -  PID 2003595 | Cycle 1(31): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:34     INFO -  PID 2003595 | Capture_Time:Expat,31,2133807,2003792|
+05:42:34     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2133807
+05:42:34     INFO -  PID 2003595 | Cycle 1(32): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:35     INFO -  PID 2003595 | Capture_Time:Expat,32,2243713,2003792|
+05:42:35     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2243713
+05:42:36     INFO -  PID 2003595 | Cycle 1(33): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:36     INFO -  PID 2003595 | Waiting for idle-callback
+05:42:37     INFO -  PID 2003595 | Capture_Time:Expat,33,1321864,2003792|
+05:42:37     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1321864
+05:42:37     INFO -  PID 2003595 | Cycle 1(34): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:38     INFO -  PID 2003595 | Capture_Time:Expat,34,1279797,2003792|
+05:42:38     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1279797
+05:42:39     INFO -  PID 2003595 | Cycle 1(35): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:40     INFO -  PID 2003595 | Capture_Time:Expat,35,1698690,2003792|
+05:42:40     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1698690
+05:42:40     INFO -  PID 2003595 | Cycle 1(36): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:41     INFO -  PID 2003595 | Capture_Time:Expat,36,2951382,2003792|
+05:42:41     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2951382
+05:42:42     INFO -  PID 2003595 | Cycle 1(37): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:43     INFO -  PID 2003595 | Capture_Time:Expat,37,1327869,2003792|
+05:42:43     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1327869
+05:42:43     INFO -  PID 2003595 | Cycle 1(38): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:44     INFO -  PID 2003595 | Capture_Time:Expat,38,1630497,2003792|
+05:42:44     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1630497
+05:42:45     INFO -  PID 2003595 | Cycle 1(39): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:46     INFO -  PID 2003595 | Capture_Time:Expat,39,9013309,2003792|
+05:42:46     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 9013309
+05:42:46     INFO -  PID 2003595 | Cycle 1(40): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:47     INFO -  PID 2003595 | Capture_Time:Expat,40,1327856,2003792|
+05:42:47     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1327856
+05:42:48     INFO -  PID 2003595 | Cycle 1(41): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:49     INFO -  PID 2003595 | Capture_Time:Expat,41,2503018,2003792|
+05:42:49     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2503018
+05:42:49     INFO -  PID 2003595 | Cycle 1(42): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:50     INFO -  PID 2003595 | Capture_Time:Expat,42,2180282,2003792|
+05:42:50     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2180282
+05:42:51     INFO -  PID 2003595 | Cycle 1(43): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:52     INFO -  PID 2003595 | Capture_Time:Expat,43,1363860,2003792|
+05:42:52     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1363860
+05:42:52     INFO -  PID 2003595 | Cycle 1(44): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:53     INFO -  PID 2003595 | Capture_Time:Expat,44,1365649,2003792|
+05:42:53     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1365649
+05:42:54     INFO -  PID 2003595 | Cycle 1(45): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:55     INFO -  PID 2003595 | Capture_Time:Expat,45,1840323,2003792|
+05:42:55     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1840323
+05:42:55     INFO -  PID 2003595 | Cycle 1(46): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:56     INFO -  PID 2003595 | Capture_Time:Expat,46,1906221,2003792|
+05:42:56     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1906221
+05:42:57     INFO -  PID 2003595 | Cycle 1(47): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:58     INFO -  PID 2003595 | Capture_Time:Expat,47,1364840,2003792|
+05:42:58     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1364840
+05:42:58     INFO -  PID 2003595 | Cycle 1(48): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:42:59     INFO -  PID 2003595 | Capture_Time:Expat,48,1327030,2003792|
+05:42:59     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1327030
+05:43:00     INFO -  PID 2003595 | Cycle 1(49): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:01     INFO -  PID 2003595 | Capture_Time:Expat,49,1338728,2003792|
+05:43:01     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1338728
+05:43:01     INFO -  PID 2003595 | Cycle 1(50): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:02     INFO -  PID 2003595 | Capture_Time:Expat,50,1277799,2003792|
+05:43:02     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1277799
+05:43:03     INFO -  PID 2003595 | Cycle 1(51): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:04     INFO -  PID 2003595 | Capture_Time:Expat,51,1304113,2003792|
+05:43:04     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1304113
+05:43:04     INFO -  PID 2003595 | Cycle 1(52): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:05     INFO -  PID 2003595 | Capture_Time:Expat,52,1322180,2003792|
+05:43:05     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1322180
+05:43:06     INFO -  PID 2003595 | Cycle 1(53): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:07     INFO -  PID 2003595 | Capture_Time:Expat,53,1315905,2003792|
+05:43:07     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1315905
+05:43:07     INFO -  PID 2003595 | Cycle 1(54): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:08     INFO -  PID 2003595 | Capture_Time:Expat,54,1393926,2003792|
+05:43:08     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1393926
+05:43:09     INFO -  PID 2003595 | Cycle 1(55): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:09     INFO -  PID 2003595 | Waiting for idle-callback
+05:43:10     INFO -  PID 2003595 | Capture_Time:Expat,55,1308411,2003792|
+05:43:10     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1308411
+05:43:10     INFO -  PID 2003595 | Cycle 1(56): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:11     INFO -  PID 2003595 | Capture_Time:Expat,56,1473735,2003792|
+05:43:11     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1473735
+05:43:12     INFO -  PID 2003595 | Cycle 1(57): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:13     INFO -  PID 2003595 | Capture_Time:Expat,57,1313492,2003792|
+05:43:13     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1313492
+05:43:13     INFO -  PID 2003595 | Cycle 1(58): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:14     INFO -  PID 2003595 | Capture_Time:Expat,58,1723510,2003792|
+05:43:14     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1723510
+05:43:15     INFO -  PID 2003595 | Cycle 1(59): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:16     INFO -  PID 2003595 | Capture_Time:Expat,59,1265228,2003792|
+05:43:16     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1265228
+05:43:16     INFO -  PID 2003595 | Cycle 1(60): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:17     INFO -  PID 2003595 | Capture_Time:Expat,60,1379220,2003792|
+05:43:17     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1379220
+05:43:18     INFO -  PID 2003595 | Cycle 1(61): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:19     INFO -  PID 2003595 | Capture_Time:Expat,61,916403,2003792|
+05:43:19     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 916403
+05:43:19     INFO -  PID 2003595 | Cycle 1(62): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:20     INFO -  PID 2003595 | Capture_Time:Expat,62,1349310,2003792|
+05:43:20     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1349310
+05:43:21     INFO -  PID 2003595 | Cycle 1(63): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:22     INFO -  PID 2003595 | Capture_Time:Expat,63,1627201,2003792|
+05:43:22     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1627201
+05:43:22     INFO -  PID 2003595 | Cycle 1(64): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:23     INFO -  PID 2003595 | Capture_Time:Expat,64,1680189,2003792|
+05:43:23     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1680189
+05:43:23     INFO -  PID 2003595 | Cycle 1(65): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:25     INFO -  PID 2003595 | Capture_Time:Expat,65,1919694,2003792|
+05:43:25     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1919694
+05:43:25     INFO -  PID 2003595 | Cycle 1(66): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:25     INFO -  PID 2003595 | Waiting for idle-callback
+05:43:27     INFO -  PID 2003595 | Capture_Time:Expat,66,5351910,2003792|
+05:43:27     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 5351910
+05:43:27     INFO -  PID 2003595 | Cycle 1(67): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:29     INFO -  PID 2003595 | Capture_Time:Expat,67,1326202,2003792|
+05:43:29     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1326202
+05:43:29     INFO -  PID 2003595 | Cycle 1(68): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:30     INFO -  PID 2003595 | Capture_Time:Expat,68,4245631,2003792|
+05:43:30     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 4245631
+05:43:30     INFO -  PID 2003595 | Cycle 1(69): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:32     INFO -  PID 2003595 | Capture_Time:Expat,69,2525166,2003792|
+05:43:32     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2525166
+05:43:32     INFO -  PID 2003595 | Cycle 1(70): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:33     INFO -  PID 2003595 | Capture_Time:Expat,70,1318726,2003792|
+05:43:33     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1318726
+05:43:33     INFO -  PID 2003595 | Cycle 1(71): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:35     INFO -  PID 2003595 | Capture_Time:Expat,71,3729993,2003792|
+05:43:35     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 3729993
+05:43:35     INFO -  PID 2003595 | Cycle 1(72): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:36     INFO -  PID 2003595 | Capture_Time:Expat,72,1298418,2003792|
+05:43:36     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1298418
+05:43:36     INFO -  PID 2003595 | Cycle 1(73): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:38     INFO -  PID 2003595 | Capture_Time:Expat,73,1676441,2003792|
+05:43:38     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1676441
+05:43:38     INFO -  PID 2003595 | Cycle 1(74): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:39     INFO -  PID 2003595 | Capture_Time:Expat,74,2306856,2003792|
+05:43:39     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2306856
+05:43:39     INFO -  PID 2003595 | Cycle 1(75): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:41     INFO -  PID 2003595 | Capture_Time:Expat,75,1891792,2003792|
+05:43:41     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1891792
+05:43:41     INFO -  PID 2003595 | Cycle 1(76): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:42     INFO -  PID 2003595 | Capture_Time:Expat,76,1921451,2003792|
+05:43:42     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1921451
+05:43:42     INFO -  PID 2003595 | Cycle 1(77): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:44     INFO -  PID 2003595 | Capture_Time:Expat,77,9252796,2003792|
+05:43:44     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 9252796
+05:43:44     INFO -  PID 2003595 | Cycle 1(78): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:45     INFO -  PID 2003595 | Capture_Time:Expat,78,1289692,2003792|
+05:43:45     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1289692
+05:43:45     INFO -  PID 2003595 | Cycle 1(79): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:47     INFO -  PID 2003595 | Capture_Time:Expat,79,4999169,2003792|
+05:43:47     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 4999169
+05:43:47     INFO -  PID 2003595 | Cycle 1(80): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:48     INFO -  PID 2003595 | Capture_Time:Expat,80,2066856,2003792|
+05:43:48     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2066856
+05:43:48     INFO -  PID 2003595 | Cycle 1(81): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:49     INFO -  PID 2003595 | Capture_Time:Expat,81,2446323,2003792|
+05:43:49     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2446323
+05:43:50     INFO -  PID 2003595 | Cycle 1(82): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:51     INFO -  PID 2003595 | Capture_Time:Expat,82,3527662,2003792|
+05:43:51     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 3527662
+05:43:51     INFO -  PID 2003595 | Cycle 1(83): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:52     INFO -  PID 2003595 | Capture_Time:Expat,83,1604525,2003792|
+05:43:52     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1604525
+05:43:53     INFO -  PID 2003595 | Cycle 1(84): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:54     INFO -  PID 2003595 | Capture_Time:Expat,84,1334866,2003792|
+05:43:54     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1334866
+05:43:54     INFO -  PID 2003595 | Cycle 1(85): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:55     INFO -  PID 2003595 | Capture_Time:Expat,85,3374800,2003792|
+05:43:55     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 3374800
+05:43:56     INFO -  PID 2003595 | Cycle 1(86): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:57     INFO -  PID 2003595 | Capture_Time:Expat,86,1840658,2003792|
+05:43:57     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1840658
+05:43:57     INFO -  PID 2003595 | Cycle 1(87): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:43:58     INFO -  PID 2003595 | Capture_Time:Expat,87,1331829,2003792|
+05:43:58     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1331829
+05:43:59     INFO -  PID 2003595 | Cycle 1(88): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:44:00     INFO -  PID 2003595 | Capture_Time:Expat,88,4292400,2003792|
+05:44:00     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 4292400
+05:44:00     INFO -  PID 2003595 | Cycle 1(89): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:44:01     INFO -  PID 2003595 | Capture_Time:Expat,89,1845651,2003792|
+05:44:01     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1845651
+05:44:02     INFO -  PID 2003595 | Cycle 1(90): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:44:03     INFO -  PID 2003595 | Capture_Time:Expat,90,1317903,2003792|
+05:44:03     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1317903
+05:44:03     INFO -  PID 2003595 | Cycle 1(91): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:44:04     INFO -  PID 2003595 | Capture_Time:Expat,91,4248968,2003792|
+05:44:04     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 4248968
+05:44:05     INFO -  PID 2003595 | Cycle 1(92): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:44:06     INFO -  PID 2003595 | Capture_Time:Expat,92,1190349,2003792|
+05:44:06     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1190349
+05:44:06     INFO -  PID 2003595 | Cycle 1(93): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:44:07     INFO -  PID 2003595 | Capture_Time:Expat,93,2849393,2003792|
+05:44:07     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2849393
+05:44:08     INFO -  PID 2003595 | Cycle 1(94): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:44:09     INFO -  PID 2003595 | Capture_Time:Expat,94,1333864,2003792|
+05:44:09     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1333864
+05:44:09     INFO -  PID 2003595 | Cycle 1(95): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:44:10     INFO -  PID 2003595 | Capture_Time:Expat,95,3527403,2003792|
+05:44:10     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 3527403
+05:44:11     INFO -  PID 2003595 | Cycle 1(96): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:44:12     INFO -  PID 2003595 | Capture_Time:Expat,96,1323098,2003792|
+05:44:12     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 1323098
+05:44:13     INFO -  PID 2003595 | Cycle 1(97): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:44:14     INFO -  PID 2003595 | Capture_Time:Expat,97,9701971,2003792|
+05:44:14     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 9701971
+05:44:14     INFO -  PID 2003595 | Cycle 1(98): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:44:15     INFO -  PID 2003595 | Capture_Time:Expat,98,2022881,2003792|
+05:44:15     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 2022881
+05:44:15     INFO -  PID 2003595 | Cycle 1(99): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:44:15     INFO -  PID 2003595 | Waiting for idle-callback
+05:44:17     INFO -  PID 2003595 | Capture_Time:Expat,99,7246812,2003792|
+05:44:17     INFO -  PID 2003595 | !!!!!!Expat nanoseconds: 7246812
+05:44:17     INFO -  PID 2003595 | Cycle 1(100): loaded http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:40453/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+05:44:17     INFO -  PID 2003595 | __start_tp_report
+05:44:17     INFO -  PID 2003595 | _x_x_mozilla_page_load
+05:44:17     INFO -  PID 2003595 | _x_x_mozilla_page_load_details
+05:44:17     INFO -  PID 2003595 | |i|pagename|runs|
+05:44:17     INFO -  PID 2003595 | |0;/mytest_material_common_sprite321x10.svg;128.2754219999997;2303.8773139999985;1070.093911;988.2962289999996;1075.7113860000009;927.8751780000002;934.4217930000013;986.2857749999966;999.8328150000016;964.7711259999996;975.8826970000009;977.5711120000014;950.8397460000015;996.7702979999995;933.182836;995.0175200000012;850.2347259999951;993.155866000001;1006.4137530000007;902.5206400000025;974.7085989999978;921.3323470000032;984.9071870000043;938.1932930000039;928.7647449999931;909.456714999993;975.1427820000026;967.2379050000018;911.6048489999957;964.9086810000008;891.8799470000013;965.7529050000012;992.8190869999962;970.9154639999979;940.6082279999973;976.9111540000013;1012.209858999995;977.864287000004;991.2289280000114;982.0176340000035;881.4612740000011;927.2422989999905;933.4285609999934;1012.3308730000135;1067.6406100000022;1012.110428;958.2020829999965;1000.7758509999985;927.7156830000022;930.5805009999895;966.5700490000017;974.4290849999961;980.1921839999995;878.8042980000027;960.9166059999989;935.3259950000065;910.3149179999891;999.5507619999989;943.4713990000018;969.0865049999993;950.9480169999879;869.7223289999965;994.84954499999;915.3548470000096;925.5264620000089;946.2204920000077;929.421508000014;976.9696549999935;963.6060970000108;977.0869990000065;960.1644809999998;963.0313599999936;915.5480590000079;967.2135760000092;918.5166530000133;1030.4361869999993;977.4288430000015;931.9424609999987;946.3430900000094;944.522552999988;973.0290150000073;971.4675579999894;933.4213129999989;942.9491830000188;998.9885429999849;931.2516640000104;936.4772149999917;1042.3647139999957;1048.5885479999997;934.1065830000152;954.1431589999702;966.4124260000244;905.8605610000086;936.1398049999843;981.9996249999967;966.0621810000157;1335.539134999999;912.4608160000353;985.4181809999864;945.6633240000228
+05:44:17     INFO -  PID 2003595 | __end_tp_report
+05:44:17     INFO -  PID 2003595 | __start_cc_report
+05:44:17     INFO -  PID 2003595 | _x_x_mozilla_cycle_collect,3015.378491999958
+05:44:17     INFO -  PID 2003595 | __end_cc_report
+05:44:17     INFO -  PID 2003595 | __startTimestamp158800.123033__endTimestamp
+05:44:17     INFO -  PID 2003595 |
+05:44:17     INFO -  PID 2003595 | ------- Summary: start -------
+05:44:17     INFO -  PID 2003595 | Number of tests: 1
+05:44:17     INFO -  PID 2003595 |
+05:44:17     INFO -  PID 2003595 | [#0] /mytest_material_common_sprite321x10.svg  Cycles:100  Average:969.17  Median:945.09  stddev:168.04 (17.8%)  stddev-sans-first:145.73
+05:44:17     INFO -  PID 2003595 | Values: 128.3  2303.9  1070.1  988.3  1075.7  927.9  934.4  986.3  999.8  964.8  975.9  977.6  950.8  996.8  933.2  995.0  850.2  993.2  1006.4  902.5  974.7  921.3  984.9  938.2  928.8  909.5  975.1  967.2  911.6  964.9  891.9  965.8  992.8  970.9  940.6  976.9  1012.2  977.9  991.2  982.0  881.5  927.2  933.4  1012.3  1067.6  1012.1  958.2  1000.8  927.7  930.6  966.6  974.4  980.2  878.8  960.9  935.3  910.3  999.6  943.5  969.1  950.9  869.7  994.8  915.4  925.5  946.2  929.4  977.0  963.6  977.1  960.2  963.0  915.5  967.2  918.5  1030.4  977.4  931.9  946.3  944.5  973.0  971.5  933.4  942.9  999.0  931.3  936.5  1042.4  1048.6  934.1  954.1  966.4  905.9  936.1  982.0  966.1  1335.5  912.5  985.4  945.7
+05:44:17     INFO -  PID 2003595 | -------- Summary: end --------
+05:44:17     INFO -  PID 2003595 |
+05:44:18     INFO -  TEST-INFO | 2003595: exit 0
+05:44:18     INFO -  mozcrash checking /tmp/tmpbzscs5w8/profile/minidumps for minidumps...
+05:44:18     INFO -  TEST-OK | expat_perf_test | took 194774ms
+05:44:18     INFO -  SUITE-END | took 194s
+05:44:19     INFO -  Completed test suite (00:03:15)
+05:44:19     INFO -  PERFHERDER_DATA: {"application": {"name": "firefox", "version": "134.0.1"}, "framework": {"name": "talos"}, "suites": [{"name": "expat_perf_test", "extraOptions": ["e10s", "stylo", "fission", "webrender"], "subtests": [{"name": "", "value": 963.6060970000108, "replicates": [128.2754219999997, 2303.8773139999985, 1070.093911, 988.2962289999996, 1075.7113860000009, 927.8751780000002, 934.4217930000013, 986.2857749999966, 999.8328150000016, 964.7711259999996, 975.8826970000009, 977.5711120000014, 950.8397460000015, 996.7702979999995, 933.182836, 995.0175200000012, 850.2347259999951, 993.155866000001, 1006.4137530000007, 902.5206400000025, 974.7085989999978, 921.3323470000032, 984.9071870000043, 938.1932930000039, 928.7647449999931, 909.456714999993, 975.1427820000026, 967.2379050000018, 911.6048489999957, 964.9086810000008, 891.8799470000013, 965.7529050000012, 992.8190869999962, 970.9154639999979, 940.6082279999973, 976.9111540000013, 1012.209858999995, 977.864287000004, 991.2289280000114, 982.0176340000035, 881.4612740000011, 927.2422989999905, 933.4285609999934, 1012.3308730000135, 1067.6406100000022, 1012.110428, 958.2020829999965, 1000.7758509999985, 927.7156830000022, 930.5805009999895, 966.5700490000017, 974.4290849999961, 980.1921839999995, 878.8042980000027, 960.9166059999989, 935.3259950000065, 910.3149179999891, 999.5507619999989, 943.4713990000018, 969.0865049999993, 950.9480169999879, 869.7223289999965, 994.84954499999, 915.3548470000096, 925.5264620000089, 946.2204920000077, 929.421508000014, 976.9696549999935, 963.6060970000108, 977.0869990000065, 960.1644809999998, 963.0313599999936, 915.5480590000079, 967.2135760000092, 918.5166530000133, 1030.4361869999993, 977.4288430000015, 931.9424609999987, 946.3430900000094, 944.522552999988, 973.0290150000073, 971.4675579999894, 933.4213129999989, 942.9491830000188, 998.9885429999849, 931.2516640000104, 936.4772149999917, 1042.3647139999957, 1048.5885479999997, 934.1065830000152, 954.1431589999702, 966.4124260000244, 905.8605610000086, 936.1398049999843, 981.9996249999967, 966.0621810000157, 1335.539134999999, 912.4608160000353, 985.4181809999864, 945.6633240000228], "lowerIsBetter": true, "alertThreshold": 2.0, "shouldAlert": true, "unit": "ms"}], "shouldAlert": true, "lowerIsBetter": true, "alertThreshold": 2.0}]}
+05:44:19     INFO -  Thanks for running Talos locally. Results are in ['/media/shr/extradrive1/Code/mte-root/firefox-mte/testing/mozharness/build/local.json']
+05:44:19     INFO - Return code: 0
+05:44:19     INFO - Validating PERFHERDER_DATA against /media/shr/extradrive1/Code/mte-root/firefox-mte/testing/mozharness/external_tools/performance-artifact-schema.json
+05:44:19     INFO - Running post-action listener: _package_coverage_data
+05:44:19     INFO - Running post-action listener: _resource_record_post_action
+05:44:19     INFO - Running post-action listener: process_java_coverage_data
+05:44:19     INFO - [mozharness: 2025-01-22 05:44:19.106052Z] Finished run-tests step (success)
+05:44:19     INFO - Running post-run listener: _resource_record_post_run
+05:44:19     INFO - Total resource usage - Wall time: 196s; CPU: 2%; Read bytes: 8192; Write bytes: 206766080; Read time: 7; Write time: 8128
+05:44:19     INFO - TinderboxPrint: CPU usage<br/>2.5%
+05:44:19     INFO - TinderboxPrint: I/O read bytes / time<br/>8,192 / 7
+05:44:19     INFO - TinderboxPrint: I/O write bytes / time<br/>206,766,080 / 8,128
+05:44:19     INFO - TinderboxPrint: CPU idle<br/>6,083.0 (97.5%)
+05:44:19     INFO - TinderboxPrint: CPU user<br/>132.2 (2.1%)
+05:44:19     INFO - TinderboxPrint: Swap in / out<br/>0 / 0
+05:44:19     INFO - run-tests - Wall time: 195s; CPU: 2%; Read bytes: 8192; Write bytes: 206766080; Read time: 7; Write time: 8128
+05:44:19     INFO - Glean disabled: not submitting any pings.

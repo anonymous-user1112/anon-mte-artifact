@@ -1,0 +1,602 @@
+20:12:07     INFO - ConsoleLogger online at 20250820 20:12:07Z in /home/XXXXXXXX/firefox-mte
+20:12:07     INFO - Run as ./mach talos-test --activeTests expat_perf_test
+20:12:07     INFO - Dumping config to /home/XXXXXXXX/firefox-mte/testing/mozharness/logs/localconfig.json.
+20:12:07     INFO - {'append_to_log': False,
+20:12:07     INFO -  'base_work_dir': '/home/XXXXXXXX/firefox-mte/testing/mozharness',
+20:12:07     INFO -  'binary_path': '/home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox',
+20:12:07     INFO -  'code_coverage': False,
+20:12:07     INFO -  'config_files': (),
+20:12:07     INFO -  'default_actions': ('populate-webroot', 'create-virtualenv', 'run-tests'),
+20:12:07     INFO -  'disable_ccov_upload': False,
+20:12:07     INFO -  'e10s': True,
+20:12:07     INFO -  'exes': {'python': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python',
+20:12:07     INFO -           'virtualenv': ('/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python',
+20:12:07     INFO -                          '/home/XXXXXXXX/firefox-mte/third_party/python/virtualenv/virtualenv.py')},
+20:12:07     INFO -  'extra_prefs': (),
+20:12:07     INFO -  'find_links': ('https://pypi.pub.build.mozilla.org/pub/',),
+20:12:07     INFO -  'fission': True,
+20:12:07     INFO -  'gecko_profile': False,
+20:12:07     INFO -  'java_code_coverage': False,
+20:12:07     INFO -  'log_level': 'info',
+20:12:07     INFO -  'log_name': 'talos',
+20:12:07     INFO -  'log_to_console': True,
+20:12:07     INFO -  'mozbuild_path': '/home/XXXXXXXX/.mozbuild',
+20:12:07     INFO -  'obj_path': '/home/XXXXXXXX/firefox-mte/firefox_release_stock',
+20:12:07     INFO -  'opt_config_files': (),
+20:12:07     INFO -  'per_test_coverage': False,
+20:12:07     INFO -  'pip_index': False,
+20:12:07     INFO -  'pypi_url': 'http://pypi.python.org/simple',
+20:12:07     INFO -  'python3_manifest': {'win32': 'python3.manifest',
+20:12:07     INFO -                       'win64': 'python3_x64.manifest'},
+20:12:07     INFO -  'repo_path': '/home/XXXXXXXX/firefox-mte',
+20:12:07     INFO -  'requires_gpu': False,
+20:12:07     INFO -  'restartAfterFailure': False,
+20:12:07     INFO -  'run_local': True,
+20:12:07     INFO -  'screenshot_on_failure': False,
+20:12:07     INFO -  'skip_preflight': False,
+20:12:07     INFO -  'system_bits': '32',
+20:12:07     INFO -  'talos_extra_options': ('--develop', '--activeTests', 'expat_perf_test'),
+20:12:07     INFO -  'talos_json': '/home/XXXXXXXX/firefox-mte/testing/talos/talos.json',
+20:12:07     INFO -  'title': 'fedora',
+20:12:07     INFO -  'use_talos_json': False,
+20:12:07     INFO -  'verify': False,
+20:12:07     INFO -  'virtualenv_path': '/home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv',
+20:12:07     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+20:12:07     INFO -  'work_dir': 'build'}
+20:12:07     INFO - [mozharness: 2025-08-20 20:12:07.956127Z] Skipping clobber step.
+20:12:07     INFO - [mozharness: 2025-08-20 20:12:07.956155Z] Skipping download-and-extract step.
+20:12:07     INFO - [mozharness: 2025-08-20 20:12:07.956176Z] Running populate-webroot step.
+20:12:07     INFO - Running pre-action listener: _resource_record_pre_action
+20:12:07     INFO - Running main action method: populate_webroot
+20:12:07     INFO - {'suites': {'bcv': {'tests': ['basic_compositor_video']},
+20:12:07     INFO -             'chromez': {'tests': ['about_preferences_basic', 'tresize']},
+20:12:07     INFO -             'damp': {'extra_prefs': ['talos.damp.suite=all'],
+20:12:07     INFO -                      'pagesets_name': 'tp5n.zip',
+20:12:07     INFO -                      'tests': ['damp']},
+20:12:07     INFO -             'damp-inspector': {'extra_prefs': ['talos.damp.suite=inspector'],
+20:12:07     INFO -                                'pagesets_name': 'tp5n.zip',
+20:12:07     INFO -                                'tests': ['damp']},
+20:12:07     INFO -             'damp-other': {'extra_prefs': ['talos.damp.suite=other'],
+20:12:07     INFO -                            'pagesets_name': 'tp5n.zip',
+20:12:07     INFO -                            'tests': ['damp']},
+20:12:07     INFO -             'damp-webconsole': {'extra_prefs': ['talos.damp.suite=webconsole'],
+20:12:07     INFO -                                 'pagesets_name': 'tp5n.zip',
+20:12:07     INFO -                                 'tests': ['damp']},
+20:12:07     INFO -             'dromaeojs': {'tests': ['dromaeo_css', 'kraken']},
+20:12:07     INFO -             'g1': {'pagesets_name': 'tp5n.zip', 'tests': ['tp5o_scroll']},
+20:12:07     INFO -             'g3': {'tests': ['dromaeo_dom']},
+20:12:07     INFO -             'g4': {'tests': ['displaylist_mutate',
+20:12:07     INFO -                              'rasterflood_svg',
+20:12:07     INFO -                              'rasterflood_gradient']},
+20:12:07     INFO -             'g5': {'pagesets_name': 'tp5n.zip',
+20:12:07     INFO -                    'tests': ['ts_paint_webext', 'tp5o_webext']},
+20:12:07     INFO -             'h1': {'tests': ['ts_paint_heavy']},
+20:12:07     INFO -             'motionmark': {'benchmark_zip': 'jetstream.zip',
+20:12:07     INFO -                            'tests': ['motionmark_animometer',
+20:12:07     INFO -                                      'motionmark_htmlsuite',
+20:12:07     INFO -                                      'JetStream',
+20:12:07     INFO -                                      'ARES6']},
+20:12:07     INFO -             'mtetest': {'tests': ['expat_perf_test', 'expat_perf_test_mini']},
+20:12:07     INFO -             'other': {'tests': ['a11yr',
+20:12:07     INFO -                                 'ts_paint',
+20:12:07     INFO -                                 'twinopen',
+20:12:07     INFO -                                 'sessionrestore',
+20:12:07     INFO -                                 'sessionrestore_no_auto_restore',
+20:12:07     INFO -                                 'tabpaint',
+20:12:07     INFO -                                 'cpstartup',
+20:12:07     INFO -                                 'startup_about_home_paint',
+20:12:07     INFO -                                 'cross_origin_pageload',
+20:12:07     INFO -                                 'startup_about_home_paint_cached']},
+20:12:07     INFO -             'pdfpaint': {'tests': ['pdfpaint']},
+20:12:07     INFO -             'perf-reftest': {'tests': ['perf_reftest']},
+20:12:07     INFO -             'perf-reftest-singletons': {'tests': ['perf_reftest_singletons']},
+20:12:07     INFO -             'realworld-webextensions': {'tests': ['startup_about_home_paint_realworld_webextensions'],
+20:12:07     INFO -                                         'webextensions_zip': 'webextensions.zip'},
+20:12:07     INFO -             'sessionrestore-many-windows': {'tests': ['sessionrestore_many_windows']},
+20:12:07     INFO -             'svgr': {'tests': ['tsvgx',
+20:12:07     INFO -                                'tsvgr_opacity',
+20:12:07     INFO -                                'tscrollx',
+20:12:07     INFO -                                'tsvg_static',
+20:12:07     INFO -                                'tart']},
+20:12:07     INFO -             'tabswitch': {'pagesets_name': 'tp5n.zip', 'tests': ['tabswitch']},
+20:12:07     INFO -             'tp5o': {'pagesets_name': 'tp5n.zip', 'tests': ['tp5o']},
+20:12:07     INFO -             'webgl': {'tests': ['canvas2dvideo',
+20:12:07     INFO -                                 'glterrain',
+20:12:07     INFO -                                 'glvideo',
+20:12:07     INFO -                                 'motionmark_webgl',
+20:12:07     INFO -                                 'offscreencanvas_webcodecs_main_webgl_h264',
+20:12:07     INFO -                                 'offscreencanvas_webcodecs_main_webgl_vp9',
+20:12:07     INFO -                                 'offscreencanvas_webcodecs_main_webgl_av1',
+20:12:07     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_h264',
+20:12:07     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_vp9',
+20:12:07     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_av1',
+20:12:07     INFO -                                 'offscreencanvas_webcodecs_main_2d_h264',
+20:12:07     INFO -                                 'offscreencanvas_webcodecs_main_2d_vp9',
+20:12:07     INFO -                                 'offscreencanvas_webcodecs_main_2d_av1',
+20:12:07     INFO -                                 'offscreencanvas_webcodecs_worker_2d_h264',
+20:12:07     INFO -                                 'offscreencanvas_webcodecs_worker_2d_vp9',
+20:12:07     INFO -                                 'offscreencanvas_webcodecs_worker_2d_av1']},
+20:12:07     INFO -             'xperf': {'pagesets_name': 'tp5n.zip',
+20:12:07     INFO -                       'talos_options': ['--xperf_path',
+20:12:07     INFO -                                         '"c:/Program Files (x86)/Windows '
+20:12:07     INFO -                                         'Kits/10/Windows Performance '
+20:12:07     INFO -                                         'Toolkit/xperf.exe"'],
+20:12:07     INFO -                       'tests': ['tp5n']}}}
+20:12:07     INFO - Running post-action listener: _resource_record_post_action
+20:12:07     INFO - [mozharness: 2025-08-20 20:12:07.958538Z] Finished populate-webroot step (success)
+20:12:07     INFO - [mozharness: 2025-08-20 20:12:07.958560Z] Running create-virtualenv step.
+20:12:07     INFO - Running pre-action listener: _resource_record_pre_action
+20:12:07     INFO - Running main action method: create_virtualenv
+20:12:07     INFO - Virtualenv already exists, skipping creation
+20:12:07     INFO - Running post-action listener: _resource_record_post_action
+20:12:07     INFO - Running post-action listener: _start_resource_monitoring
+20:12:07     INFO - Starting resource monitoring.
+20:12:07     INFO - [mozharness: 2025-08-20 20:12:07.970775Z] Finished create-virtualenv step (success)
+20:12:07     INFO - [mozharness: 2025-08-20 20:12:07.971341Z] Skipping install step.
+20:12:07     INFO - [mozharness: 2025-08-20 20:12:07.971380Z] Running run-tests step.
+20:12:07     INFO - Running pre-action listener: _resource_record_pre_action
+20:12:07     INFO - Running pre-action listener: _set_gcov_prefix
+20:12:07     INFO - Running main action method: run_tests
+20:12:07     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin/python', '--version']
+20:12:07     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin/python --version
+20:12:07     INFO -  Python 3.11.13
+20:12:07     INFO - Return code: 0
+20:12:07     INFO - ENV: MOZ_UPLOAD_DIR is now /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir
+20:12:07     INFO - ENV: MOZBUILD_PATH is now /home/XXXXXXXX/.mozbuild
+20:12:07     INFO - ENV: MINIDUMP_SAVE_PATH is now /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir
+20:12:07     INFO - ENV: RUST_BACKTRACE is now full
+20:12:07     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin/python', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py', '--executablePath', '/home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox', '--title', 'fedora', '--develop', '--activeTests', 'expat_perf_test', '--log-tbpl-level=info'] in /home/XXXXXXXX/firefox-mte/testing/mozharness/build
+20:12:07     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin/python /home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py --executablePath /home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox --title fedora --develop --activeTests expat_perf_test --log-tbpl-level=info
+20:12:07     INFO - Using env: {'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+20:12:07     INFO -  'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:',
+20:12:07     INFO -  'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ',
+20:12:07     INFO -  'DISPLAY': ':99',
+20:12:07     INFO -  'EDITOR': '/usr/bin/vim',
+20:12:07     INFO -  'EXPAT_PIN_CORE': '1',
+20:12:07     INFO -  'GPG_TTY': '/dev/pts/13',
+20:12:07     INFO -  'HISTCONTROL': 'ignoredups',
+20:12:07     INFO -  'HISTSIZE': '1000',
+20:12:07     INFO -  'HOME': '/home/XXXXXXXX',
+20:12:07     INFO -  'HOSTNAME': 'fedora',
+20:12:07     INFO -  'LANG': 'en_US.UTF-8',
+20:12:07     INFO -  'LESSOPEN': '||/usr/bin/lesspipe.sh %s',
+20:12:07     INFO -  'LOGNAME': 'XXXXXXXX',
+20:12:07     INFO -  'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+20:12:07     INFO -  'MACH_MAIN_PID': '2610527',
+20:12:07     INFO -  'MAIL': '/var/spool/mail/XXXXXXXX',
+20:12:07     INFO -  'MINIDUMP_SAVE_PATH': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:12:07     INFO -  'MOTD_SHOWN': 'pam',
+20:12:07     INFO -  'MOZBUILD_PATH': '/home/XXXXXXXX/.mozbuild',
+20:12:07     INFO -  'MOZCONFIG': 'mozconfig_stock',
+20:12:07     INFO -  'MOZ_DEVELOPER_OBJ_DIR': '/home/XXXXXXXX/firefox-mte/firefox_release_stock',
+20:12:07     INFO -  'MOZ_DEVELOPER_REPO_DIR': '/home/XXXXXXXX/firefox-mte',
+20:12:07     INFO -  'MOZ_UPLOAD_DIR': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:12:07     INFO -  'OLDPWD': '/home/XXXXXXXX/firefox-mte',
+20:12:07     INFO -  'PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin',
+20:12:07     INFO -  'PWD': '/home/XXXXXXXX/firefox-mte',
+20:12:07     INFO -  'PYTHONPATH': '/home/XXXXXXXX/firefox-mte/testing/talos',
+20:12:07     INFO -  'REQUIRE_GPU': '0',
+20:12:07     INFO -  'RUST_BACKTRACE': 'full',
+20:12:07     INFO -  'SELINUX_LEVEL_REQUESTED': '',
+20:12:07     INFO -  'SELINUX_ROLE_REQUESTED': '',
+20:12:07     INFO -  'SELINUX_USE_CURRENT_RANGE': '',
+20:12:07     INFO -  'SHELL': '/bin/bash',
+20:12:07     INFO -  'SHLVL': '3',
+20:12:07     INFO -  'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346',
+20:12:07     INFO -  'SSH_CLIENT': '172.17.128.2 52585 22',
+20:12:07     INFO -  'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22',
+20:12:07     INFO -  'SSH_TTY': '/dev/pts/0',
+20:12:07     INFO -  'TERM': 'tmux-256color',
+20:12:07     INFO -  'TERM_PROGRAM': 'tmux',
+20:12:07     INFO -  'TERM_PROGRAM_VERSION': '3.5a',
+20:12:07     INFO -  'TMUX': '/tmp/tmux-1000/default,2416415,0',
+20:12:07     INFO -  'TMUX_PANE': '%1',
+20:12:07     INFO -  'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins',
+20:12:07     INFO -  'USER': 'XXXXXXXX',
+20:12:07     INFO -  'VIRTUAL_ENV': 'talos-venv',
+20:12:07     INFO -  'VIRTUAL_ENV_PROMPT': '(venv-3.11) ',
+20:12:07     INFO -  'XDG_RUNTIME_DIR': '/run/user/1000',
+20:12:07     INFO -  'XDG_SESSION_CLASS': 'user',
+20:12:07     INFO -  'XDG_SESSION_ID': '1323',
+20:12:07     INFO -  'XDG_SESSION_TYPE': 'tty',
+20:12:07     INFO -  '_': './mach'}
+20:12:07     INFO - Calling ['/home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin/python', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py', '--executablePath', '/home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox', '--title', 'fedora', '--develop', '--activeTests', 'expat_perf_test', '--log-tbpl-level=info'] with output_timeout 3600
+20:12:08     INFO -  mozversion application_buildid: 20250820120253
+20:12:08     INFO -  mozversion application_changeset: 497a35d032e41a640590af9ac68d8a6dd21f4131
+20:12:08     INFO -  mozversion application_display_name: Nightly
+20:12:08     INFO -  mozversion application_id: {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+20:12:08     INFO -  mozversion application_name: Firefox
+20:12:08     INFO -  mozversion application_remotingname: firefox-default
+20:12:08     INFO -  mozversion application_vendor: Mozilla
+20:12:08     INFO -  mozversion application_version: 134.0.1
+20:12:08     INFO -  mozversion platform_buildid: 20250820120253
+20:12:08     INFO -  mozversion platform_changeset: 497a35d032e41a640590af9ac68d8a6dd21f4131
+20:12:08     INFO -  mozversion platform_version: 134.0.1
+20:12:08     INFO -  starting webserver on '127.0.0.1:41421'
+20:12:08     INFO -  SUITE-START | Running 1 tests
+20:12:08     INFO -  TEST-START | expat_perf_test
+20:12:08     INFO -  Initialising browser for expat_perf_test test...
+20:12:08     INFO -  Cloning profile located at /home/XXXXXXXX/firefox-mte/testing/talos/talos/base_profile
+20:12:08     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/base
+20:12:08     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/common
+20:12:08     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/perf
+20:12:08     INFO -  Installing Add-ons:
+20:12:08     INFO -  ['/home/XXXXXXXX/firefox-mte/testing/talos/talos/talos-powers', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/pageloader']
+20:12:08     INFO -  Installing Webextensions:
+20:12:08     INFO -  Application command: /home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox http://127.0.0.1:41421/getInfo.html -profile /tmp/tmp3k297zkg/profile
+20:12:08     INFO -  TEST-INFO | started process 2610589 (/home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox http://127.0.0.1:41421/getInfo.html)
+20:12:08     INFO -  ExceptionHandler::GenerateDump attempting to generate: /tmp/tmp3k297zkg/profile/minidumps/602f468d-b937-3846-d6bf-c872b954fa56.dmp
+20:12:08     INFO -  ExceptionHandler::GenerateDump cloned child 2610726
+20:12:08     INFO -  ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+20:12:08     INFO -  ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+20:12:08     INFO -  ExceptionHandler::GenerateDump minidump generation  succeeded
+20:12:08     INFO -   
+20:12:08     INFO -  TEST-INFO | 2610589: exit 4
+20:12:08     INFO -  Browser initialized.
+20:12:08     INFO -  Fission enabled: True
+20:12:09     INFO -  Running cycle 1/1 for expat_perf_test test...
+20:12:09     INFO -  Using env: {'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+20:12:09     INFO -   'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:',
+20:12:09     INFO -   'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ',
+20:12:09     INFO -   'DISPLAY': ':99',
+20:12:09     INFO -   'EDITOR': '/usr/bin/vim',
+20:12:09     INFO -   'EXPAT_PIN_CORE': '1',
+20:12:09     INFO -   'GPG_TTY': '/dev/pts/13',
+20:12:09     INFO -   'HISTCONTROL': 'ignoredups',
+20:12:09     INFO -   'HISTSIZE': '1000',
+20:12:09     INFO -   'HOME': '/home/XXXXXXXX',
+20:12:09     INFO -   'HOSTNAME': 'fedora',
+20:12:09     INFO -   'LANG': 'en_US.UTF-8',
+20:12:09     INFO -   'LD_LIBRARY_PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin',
+20:12:09     INFO -   'LESSOPEN': '||/usr/bin/lesspipe.sh %s',
+20:12:09     INFO -   'LOGNAME': 'XXXXXXXX',
+20:12:09     INFO -   'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+20:12:09     INFO -   'MACH_MAIN_PID': '2610527',
+20:12:09     INFO -   'MAIL': '/var/spool/mail/XXXXXXXX',
+20:12:09     INFO -   'MINIDUMP_SAVE_PATH': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:12:09     INFO -   'MOTD_SHOWN': 'pam',
+20:12:09     INFO -   'MOZBUILD_PATH': '/home/XXXXXXXX/.mozbuild',
+20:12:09     INFO -   'MOZCONFIG': 'mozconfig_stock',
+20:12:09     INFO -   'MOZ_CRASHREPORTER': '1',
+20:12:09     INFO -   'MOZ_CRASHREPORTER_NO_REPORT': '1',
+20:12:09     INFO -   'MOZ_DEVELOPER_OBJ_DIR': '/home/XXXXXXXX/firefox-mte/firefox_release_stock',
+20:12:09     INFO -   'MOZ_DEVELOPER_REPO_DIR': '/home/XXXXXXXX/firefox-mte',
+20:12:09     INFO -   'MOZ_DISABLE_NONLOCAL_CONNECTIONS': '1',
+20:12:09     INFO -   'MOZ_UPLOAD_DIR': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:12:09     INFO -   'MOZ_USE_PAGELOADER': '1',
+20:12:09     INFO -   'NO_EM_RESTART': '1',
+20:12:09     INFO -   'OLDPWD': '/home/XXXXXXXX/firefox-mte',
+20:12:09     INFO -   'PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_stock/testing/talos-venv/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin',
+20:12:09     INFO -   'PWD': '/home/XXXXXXXX/firefox-mte',
+20:12:09     INFO -   'PYTHONPATH': '/home/XXXXXXXX/firefox-mte/testing/talos',
+20:12:09     INFO -   'REQUIRE_GPU': '0',
+20:12:09     INFO -   'RUST_BACKTRACE': 'full',
+20:12:09     INFO -   'SELINUX_LEVEL_REQUESTED': '',
+20:12:09     INFO -   'SELINUX_ROLE_REQUESTED': '',
+20:12:09     INFO -   'SELINUX_USE_CURRENT_RANGE': '',
+20:12:09     INFO -   'SHELL': '/bin/bash',
+20:12:09     INFO -   'SHLVL': '3',
+20:12:09     INFO -   'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346',
+20:12:09     INFO -   'SSH_CLIENT': '172.17.128.2 52585 22',
+20:12:09     INFO -   'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22',
+20:12:09     INFO -   'SSH_TTY': '/dev/pts/0',
+20:12:09     INFO -   'TERM': 'tmux-256color',
+20:12:09     INFO -   'TERM_PROGRAM': 'tmux',
+20:12:09     INFO -   'TERM_PROGRAM_VERSION': '3.5a',
+20:12:09     INFO -   'TMUX': '/tmp/tmux-1000/default,2416415,0',
+20:12:09     INFO -   'TMUX_PANE': '%1',
+20:12:09     INFO -   'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins',
+20:12:09     INFO -   'USER': 'XXXXXXXX',
+20:12:09     INFO -   'VIRTUAL_ENV': 'talos-venv',
+20:12:09     INFO -   'VIRTUAL_ENV_PROMPT': '(venv-3.11) ',
+20:12:09     INFO -   'XDG_RUNTIME_DIR': '/run/user/1000',
+20:12:09     INFO -   'XDG_SESSION_CLASS': 'user',
+20:12:09     INFO -   'XDG_SESSION_ID': '1323',
+20:12:09     INFO -   'XDG_SESSION_TYPE': 'tty',
+20:12:09     INFO -   '_': './mach'}
+20:12:09     INFO -  TEST-INFO | started process 2610737 (/home/XXXXXXXX/firefox-mte/firefox_release_stock/dist/bin/firefox -profile /tmp/tmp3k297zkg/profile)
+20:12:09     INFO -  PID 2610737 | libEGL warning: DRI3 error: Could not get DRI3 device
+20:12:09     INFO -  PID 2610737 | libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:12:09     INFO -  PID 2610737 | libEGL warning: DRI3 error: Could not get DRI3 device
+20:12:09     INFO -  PID 2610737 | libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:12:09     INFO -  PID 2610737 | STOCK sched_setaffinity on core : 1 (PID:2610737)
+20:12:10     INFO -  PID 2610737 | console.error: ({})
+20:12:11     INFO -  PID 2610737 | [ERROR glean_core::metrics::ping] Invalid reason code active for ping usage-reporting
+20:12:11     INFO -  PID 2610737 | [ERROR error_support::handling] logins-unexpected: Error parsing URL: relative URL with a cannot-be-a-base base
+20:12:11     INFO -  PID 2610737 | [ERROR error_support::handling] suggest-unexpected: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base
+20:12:11     INFO -  PID 2610737 | console.error: URLBar - QuickSuggest.SuggestBackendRust: "Error initializing SuggestStore" (new Error("reason: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base", "resource://gre/modules/RustSuggest.sys.mjs", 2228))
+20:12:12     INFO -  PID 2610737 | STOCK sched_setaffinity on core : 1 (PID:2611087)
+20:12:12     INFO -  PID 2610737 | STOCK Capture_Time:Expat,1,267124174,2611087|
+20:12:12     INFO -  PID 2610737 | Cycle 1(1): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:13     INFO -  PID 2610737 | STOCK Capture_Time:Expat,2,237274474,2611087|
+20:12:13     INFO -  PID 2610737 | Cycle 1(2): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:14     INFO -  PID 2610737 | STOCK Capture_Time:Expat,3,230954528,2611087|
+20:12:14     INFO -  PID 2610737 | Cycle 1(3): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:16     INFO -  PID 2610737 | STOCK Capture_Time:Expat,4,233233693,2611087|
+20:12:16     INFO -  PID 2610737 | Cycle 1(4): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:17     INFO -  PID 2610737 | STOCK Capture_Time:Expat,5,226774588,2611087|
+20:12:17     INFO -  PID 2610737 | Cycle 1(5): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:18     INFO -  PID 2610737 | STOCK Capture_Time:Expat,6,227264268,2611087|
+20:12:18     INFO -  PID 2610737 | Cycle 1(6): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:19     INFO -  PID 2610737 | console.error: AboutHomeStartupCache: "A privileged about content process shut down while cache streams were still en route."
+20:12:19     INFO -  PID 2610737 | [Parent 2610737, IPC I/O Parent] WARNING: process 2610980 exited on signal 4: file /home/XXXXXXXX/firefox-mte/ipc/chromium/src/base/process_util_posix.cc:335
+20:12:19     INFO -  PID 2610737 | STOCK Capture_Time:Expat,7,240481137,2611087|
+20:12:19     INFO -  PID 2610737 | Cycle 1(7): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:20     INFO -  PID 2610737 | STOCK Capture_Time:Expat,8,231126491,2611087|
+20:12:20     INFO -  PID 2610737 | Cycle 1(8): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:22     INFO -  PID 2610737 | STOCK Capture_Time:Expat,9,265309694,2611087|
+20:12:22     INFO -  PID 2610737 | Cycle 1(9): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:23     INFO -  PID 2610737 | STOCK Capture_Time:Expat,10,229134989,2611087|
+20:12:23     INFO -  PID 2610737 | Cycle 1(10): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:24     INFO -  PID 2610737 | STOCK Capture_Time:Expat,11,230996949,2611087|
+20:12:24     INFO -  PID 2610737 | Cycle 1(11): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:25     INFO -  PID 2610737 | STOCK Capture_Time:Expat,12,229476209,2611087|
+20:12:25     INFO -  PID 2610737 | Cycle 1(12): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:26     INFO -  PID 2610737 | STOCK Capture_Time:Expat,13,226994646,2611087|
+20:12:26     INFO -  PID 2610737 | Cycle 1(13): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:28     INFO -  PID 2610737 | STOCK Capture_Time:Expat,14,229869850,2611087|
+20:12:28     INFO -  PID 2610737 | Cycle 1(14): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:29     INFO -  PID 2610737 | STOCK Capture_Time:Expat,15,229551271,2611087|
+20:12:29     INFO -  PID 2610737 | Cycle 1(15): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:30     INFO -  PID 2610737 | STOCK Capture_Time:Expat,16,228966290,2611087|
+20:12:30     INFO -  PID 2610737 | Cycle 1(16): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:31     INFO -  PID 2610737 | STOCK Capture_Time:Expat,17,226647347,2611087|
+20:12:31     INFO -  PID 2610737 | Cycle 1(17): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:32     INFO -  PID 2610737 | STOCK Capture_Time:Expat,18,227872170,2611087|
+20:12:32     INFO -  PID 2610737 | Cycle 1(18): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:33     INFO -  PID 2610737 | STOCK Capture_Time:Expat,19,227933248,2611087|
+20:12:33     INFO -  PID 2610737 | Cycle 1(19): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:35     INFO -  PID 2610737 | STOCK Capture_Time:Expat,20,226689808,2611087|
+20:12:35     INFO -  PID 2610737 | Cycle 1(20): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:36     INFO -  PID 2610737 | STOCK Capture_Time:Expat,21,230331472,2611087|
+20:12:36     INFO -  PID 2610737 | Cycle 1(21): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:37     INFO -  PID 2610737 | STOCK Capture_Time:Expat,22,229265169,2611087|
+20:12:37     INFO -  PID 2610737 | Cycle 1(22): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:38     INFO -  PID 2610737 | STOCK Capture_Time:Expat,23,227879966,2611087|
+20:12:38     INFO -  PID 2610737 | Cycle 1(23): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:39     INFO -  PID 2610737 | 1755720759720	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, channelStatus: 2152398861, errorCode: 2, reason: error
+20:12:39     INFO -  PID 2610737 | STOCK Capture_Time:Expat,24,229141490,2611087|
+20:12:39     INFO -  PID 2610737 | Cycle 1(24): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:40     INFO -  PID 2610737 | STOCK Capture_Time:Expat,25,226823306,2611087|
+20:12:41     INFO -  PID 2610737 | Cycle 1(25): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:42     INFO -  PID 2610737 | STOCK Capture_Time:Expat,26,227850308,2611087|
+20:12:42     INFO -  PID 2610737 | Cycle 1(26): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:43     INFO -  PID 2610737 | STOCK Capture_Time:Expat,27,227826647,2611087|
+20:12:43     INFO -  PID 2610737 | Cycle 1(27): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:43     INFO -  PID 2610737 | Waiting for idle-callback
+20:12:44     INFO -  PID 2610737 | STOCK Capture_Time:Expat,28,227496648,2611087|
+20:12:44     INFO -  PID 2610737 | Cycle 1(28): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:46     INFO -  PID 2610737 | STOCK Capture_Time:Expat,29,227680707,2611087|
+20:12:46     INFO -  PID 2610737 | Cycle 1(29): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:47     INFO -  PID 2610737 | STOCK Capture_Time:Expat,30,230144850,2611087|
+20:12:47     INFO -  PID 2610737 | Cycle 1(30): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:48     INFO -  PID 2610737 | STOCK Capture_Time:Expat,31,223241584,2611087|
+20:12:48     INFO -  PID 2610737 | Cycle 1(31): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:49     INFO -  PID 2610737 | STOCK Capture_Time:Expat,32,230072630,2611087|
+20:12:49     INFO -  PID 2610737 | Cycle 1(32): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:50     INFO -  PID 2610737 | STOCK Capture_Time:Expat,33,232436753,2611087|
+20:12:50     INFO -  PID 2610737 | Cycle 1(33): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:50     INFO -  PID 2610737 | Waiting for idle-callback
+20:12:51     INFO -  PID 2610737 | STOCK Capture_Time:Expat,34,225635026,2611087|
+20:12:51     INFO -  PID 2610737 | Cycle 1(34): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:53     INFO -  PID 2610737 | STOCK Capture_Time:Expat,35,227338549,2611087|
+20:12:53     INFO -  PID 2610737 | Cycle 1(35): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:54     INFO -  PID 2610737 | STOCK Capture_Time:Expat,36,230667270,2611087|
+20:12:54     INFO -  PID 2610737 | Cycle 1(36): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:55     INFO -  PID 2610737 | STOCK Capture_Time:Expat,37,230566670,2611087|
+20:12:55     INFO -  PID 2610737 | Cycle 1(37): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:56     INFO -  PID 2610737 | STOCK Capture_Time:Expat,38,229729111,2611087|
+20:12:56     INFO -  PID 2610737 | Cycle 1(38): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:57     INFO -  PID 2610737 | STOCK Capture_Time:Expat,39,228045009,2611087|
+20:12:57     INFO -  PID 2610737 | Cycle 1(39): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:12:58     INFO -  PID 2610737 | STOCK Capture_Time:Expat,40,231623132,2611087|
+20:12:58     INFO -  PID 2610737 | Cycle 1(40): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:00     INFO -  PID 2610737 | STOCK Capture_Time:Expat,41,226232626,2611087|
+20:13:00     INFO -  PID 2610737 | Cycle 1(41): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:01     INFO -  PID 2610737 | STOCK Capture_Time:Expat,42,230734571,2611087|
+20:13:01     INFO -  PID 2610737 | Cycle 1(42): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:02     INFO -  PID 2610737 | STOCK Capture_Time:Expat,43,229014328,2611087|
+20:13:02     INFO -  PID 2610737 | Cycle 1(43): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:03     INFO -  PID 2610737 | STOCK Capture_Time:Expat,44,228922250,2611087|
+20:13:03     INFO -  PID 2610737 | Cycle 1(44): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:04     INFO -  PID 2610737 | STOCK Capture_Time:Expat,45,230887749,2611087|
+20:13:04     INFO -  PID 2610737 | Cycle 1(45): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:05     INFO -  PID 2610737 | STOCK Capture_Time:Expat,46,232429471,2611087|
+20:13:06     INFO -  PID 2610737 | Cycle 1(46): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:07     INFO -  PID 2610737 | STOCK Capture_Time:Expat,47,228480110,2611087|
+20:13:07     INFO -  PID 2610737 | Cycle 1(47): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:08     INFO -  PID 2610737 | STOCK Capture_Time:Expat,48,230491371,2611087|
+20:13:08     INFO -  PID 2610737 | Cycle 1(48): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:09     INFO -  PID 2610737 | STOCK Capture_Time:Expat,49,229644890,2611087|
+20:13:09     INFO -  PID 2610737 | Cycle 1(49): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:10     INFO -  PID 2610737 | STOCK Capture_Time:Expat,50,232363893,2611087|
+20:13:10     INFO -  PID 2610737 | Cycle 1(50): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:11     INFO -  PID 2610737 | STOCK Capture_Time:Expat,51,230316771,2611087|
+20:13:11     INFO -  PID 2610737 | Cycle 1(51): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:13     INFO -  PID 2610737 | STOCK Capture_Time:Expat,52,227284527,2611087|
+20:13:13     INFO -  PID 2610737 | Cycle 1(52): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:14     INFO -  PID 2610737 | STOCK Capture_Time:Expat,53,230686511,2611087|
+20:13:14     INFO -  PID 2610737 | Cycle 1(53): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:15     INFO -  PID 2610737 | STOCK Capture_Time:Expat,54,228831851,2611087|
+20:13:15     INFO -  PID 2610737 | Cycle 1(54): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:15     INFO -  PID 2610737 | Waiting for idle-callback
+20:13:16     INFO -  PID 2610737 | STOCK Capture_Time:Expat,55,228212550,2611087|
+20:13:17     INFO -  PID 2610737 | Cycle 1(55): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:18     INFO -  PID 2610737 | STOCK Capture_Time:Expat,56,227842889,2611087|
+20:13:18     INFO -  PID 2610737 | Cycle 1(56): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:19     INFO -  PID 2610737 | STOCK Capture_Time:Expat,57,231989911,2611087|
+20:13:19     INFO -  PID 2610737 | Cycle 1(57): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:20     INFO -  PID 2610737 | STOCK Capture_Time:Expat,58,230751470,2611087|
+20:13:20     INFO -  PID 2610737 | Cycle 1(58): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:21     INFO -  PID 2610737 | STOCK Capture_Time:Expat,59,232269889,2611087|
+20:13:21     INFO -  PID 2610737 | Cycle 1(59): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:22     INFO -  PID 2610737 | STOCK Capture_Time:Expat,60,232042530,2611087|
+20:13:22     INFO -  PID 2610737 | Cycle 1(60): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:24     INFO -  PID 2610737 | STOCK Capture_Time:Expat,61,230681911,2611087|
+20:13:24     INFO -  PID 2610737 | Cycle 1(61): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:25     INFO -  PID 2610737 | STOCK Capture_Time:Expat,62,227646709,2611087|
+20:13:25     INFO -  PID 2610737 | Cycle 1(62): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:26     INFO -  PID 2610737 | STOCK Capture_Time:Expat,63,229691130,2611087|
+20:13:26     INFO -  PID 2610737 | Cycle 1(63): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:27     INFO -  PID 2610737 | STOCK Capture_Time:Expat,64,234848553,2611087|
+20:13:27     INFO -  PID 2610737 | Cycle 1(64): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:28     INFO -  PID 2610737 | STOCK Capture_Time:Expat,65,233512273,2611087|
+20:13:28     INFO -  PID 2610737 | Cycle 1(65): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:29     INFO -  PID 2610737 | STOCK Capture_Time:Expat,66,229772391,2611087|
+20:13:29     INFO -  PID 2610737 | Cycle 1(66): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:31     INFO -  PID 2610737 | STOCK Capture_Time:Expat,67,230838769,2611087|
+20:13:31     INFO -  PID 2610737 | Cycle 1(67): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:32     INFO -  PID 2610737 | STOCK Capture_Time:Expat,68,230570008,2611087|
+20:13:32     INFO -  PID 2610737 | Cycle 1(68): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:33     INFO -  PID 2610737 | STOCK Capture_Time:Expat,69,228681909,2611087|
+20:13:33     INFO -  PID 2610737 | Cycle 1(69): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:34     INFO -  PID 2610737 | STOCK Capture_Time:Expat,70,229189008,2611087|
+20:13:34     INFO -  PID 2610737 | Cycle 1(70): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:35     INFO -  PID 2610737 | STOCK Capture_Time:Expat,71,230662612,2611087|
+20:13:35     INFO -  PID 2610737 | Cycle 1(71): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:36     INFO -  PID 2610737 | STOCK Capture_Time:Expat,72,226995188,2611087|
+20:13:37     INFO -  PID 2610737 | Cycle 1(72): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:38     INFO -  PID 2610737 | STOCK Capture_Time:Expat,73,228758151,2611087|
+20:13:38     INFO -  PID 2610737 | Cycle 1(73): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:39     INFO -  PID 2610737 | STOCK Capture_Time:Expat,74,232025972,2611087|
+20:13:39     INFO -  PID 2610737 | Cycle 1(74): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:40     INFO -  PID 2610737 | STOCK Capture_Time:Expat,75,230256172,2611087|
+20:13:40     INFO -  PID 2610737 | Cycle 1(75): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:41     INFO -  PID 2610737 | STOCK Capture_Time:Expat,76,229534568,2611087|
+20:13:41     INFO -  PID 2610737 | Cycle 1(76): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:41     INFO -  PID 2610737 | Waiting for idle-callback
+20:13:42     INFO -  PID 2610737 | STOCK Capture_Time:Expat,77,228820129,2611087|
+20:13:42     INFO -  PID 2610737 | Cycle 1(77): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:44     INFO -  PID 2610737 | STOCK Capture_Time:Expat,78,232918973,2611087|
+20:13:44     INFO -  PID 2610737 | Cycle 1(78): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:44     INFO -  PID 2610737 | Waiting for idle-callback
+20:13:45     INFO -  PID 2610737 | STOCK Capture_Time:Expat,79,228649230,2611087|
+20:13:45     INFO -  PID 2610737 | Cycle 1(79): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:46     INFO -  PID 2610737 | STOCK Capture_Time:Expat,80,231746130,2611087|
+20:13:46     INFO -  PID 2610737 | Cycle 1(80): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:47     INFO -  PID 2610737 | STOCK Capture_Time:Expat,81,230629768,2611087|
+20:13:47     INFO -  PID 2610737 | Cycle 1(81): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:48     INFO -  PID 2610737 | STOCK Capture_Time:Expat,82,233053730,2611087|
+20:13:48     INFO -  PID 2610737 | Cycle 1(82): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:49     INFO -  PID 2610737 | STOCK Capture_Time:Expat,83,233654493,2611087|
+20:13:49     INFO -  PID 2610737 | Cycle 1(83): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:51     INFO -  PID 2610737 | STOCK Capture_Time:Expat,84,230135470,2611087|
+20:13:51     INFO -  PID 2610737 | Cycle 1(84): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:52     INFO -  PID 2610737 | STOCK Capture_Time:Expat,85,232451812,2611087|
+20:13:52     INFO -  PID 2610737 | Cycle 1(85): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:53     INFO -  PID 2610737 | STOCK Capture_Time:Expat,86,231399691,2611087|
+20:13:53     INFO -  PID 2610737 | Cycle 1(86): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:54     INFO -  PID 2610737 | STOCK Capture_Time:Expat,87,230269628,2611087|
+20:13:54     INFO -  PID 2610737 | Cycle 1(87): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:55     INFO -  PID 2610737 | STOCK Capture_Time:Expat,88,232571472,2611087|
+20:13:55     INFO -  PID 2610737 | Cycle 1(88): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:56     INFO -  PID 2610737 | STOCK Capture_Time:Expat,89,228468610,2611087|
+20:13:56     INFO -  PID 2610737 | Cycle 1(89): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:58     INFO -  PID 2610737 | STOCK Capture_Time:Expat,90,229669589,2611087|
+20:13:58     INFO -  PID 2610737 | Cycle 1(90): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:13:59     INFO -  PID 2610737 | STOCK Capture_Time:Expat,91,233681272,2611087|
+20:13:59     INFO -  PID 2610737 | Cycle 1(91): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:00     INFO -  PID 2610737 | STOCK Capture_Time:Expat,92,230338931,2611087|
+20:14:00     INFO -  PID 2610737 | Cycle 1(92): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:01     INFO -  PID 2610737 | STOCK Capture_Time:Expat,93,232140611,2611087|
+20:14:01     INFO -  PID 2610737 | Cycle 1(93): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:02     INFO -  PID 2610737 | STOCK Capture_Time:Expat,94,233387431,2611087|
+20:14:02     INFO -  PID 2610737 | Cycle 1(94): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:03     INFO -  PID 2610737 | STOCK Capture_Time:Expat,95,229184170,2611087|
+20:14:04     INFO -  PID 2610737 | Cycle 1(95): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:05     INFO -  PID 2610737 | STOCK Capture_Time:Expat,96,227933787,2611087|
+20:14:05     INFO -  PID 2610737 | Cycle 1(96): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:06     INFO -  PID 2610737 | STOCK Capture_Time:Expat,97,236167151,2611087|
+20:14:06     INFO -  PID 2610737 | Cycle 1(97): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:07     INFO -  PID 2610737 | STOCK Capture_Time:Expat,98,230630230,2611087|
+20:14:07     INFO -  PID 2610737 | Cycle 1(98): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:08     INFO -  PID 2610737 | STOCK Capture_Time:Expat,99,235398673,2611087|
+20:14:08     INFO -  PID 2610737 | Cycle 1(99): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:09     INFO -  PID 2610737 | STOCK Capture_Time:Expat,100,344887785,2611087|
+20:14:10     INFO -  PID 2610737 | Cycle 1(100): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:11     INFO -  PID 2610737 | STOCK Capture_Time:Expat,101,231331410,2611087|
+20:14:11     INFO -  PID 2610737 | Cycle 1(101): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:12     INFO -  PID 2610737 | STOCK Capture_Time:Expat,102,232534131,2611087|
+20:14:12     INFO -  PID 2610737 | Cycle 1(102): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:13     INFO -  PID 2610737 | STOCK Capture_Time:Expat,103,235999034,2611087|
+20:14:13     INFO -  PID 2610737 | Cycle 1(103): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:14     INFO -  PID 2610737 | STOCK Capture_Time:Expat,104,231541867,2611087|
+20:14:14     INFO -  PID 2610737 | Cycle 1(104): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:15     INFO -  PID 2610737 | STOCK Capture_Time:Expat,105,232568832,2611087|
+20:14:15     INFO -  PID 2610737 | Cycle 1(105): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:17     INFO -  PID 2610737 | STOCK Capture_Time:Expat,106,233019891,2611087|
+20:14:17     INFO -  PID 2610737 | Cycle 1(106): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:17     INFO -  PID 2610737 | Waiting for idle-callback
+20:14:18     INFO -  PID 2610737 | STOCK Capture_Time:Expat,107,226307086,2611087|
+20:14:18     INFO -  PID 2610737 | Cycle 1(107): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:19     INFO -  PID 2610737 | STOCK Capture_Time:Expat,108,224698687,2611087|
+20:14:19     INFO -  PID 2610737 | Cycle 1(108): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:20     INFO -  PID 2610737 | STOCK Capture_Time:Expat,109,229222611,2611087|
+20:14:20     INFO -  PID 2610737 | Cycle 1(109): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:21     INFO -  PID 2610737 | STOCK Capture_Time:Expat,110,231653269,2611087|
+20:14:21     INFO -  PID 2610737 | Cycle 1(110): loaded http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:41421/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:14:21     INFO -  PID 2610737 | __start_tp_report
+20:14:21     INFO -  PID 2610737 | _x_x_mozilla_page_load
+20:14:21     INFO -  PID 2610737 | _x_x_mozilla_page_load_details
+20:14:21     INFO -  PID 2610737 | |i|pagename|runs|
+20:14:21     INFO -  PID 2610737 | |0;/mytest_material_common_sprite321x10.svg;648.4478019999999;618.4166230000001;615.2180599999997;628.81261;603.7981530000006;610.4430570000004;740.8048620000027;631.9714309999999;654.8776069999985;611.4793580000005;609.0699760000007;609.1448569999993;605.9533540000011;629.8728699999992;611.7617180000016;609.5761369999964;612.5882789999996;609.0642769999977;610.1129970000002;600.6029710000003;609.0655759999972;612.640198000001;606.2571540000026;645.2315589999998;616.8521409999994;613.6691989999999;613.6323190000003;611.6998380000005;610.0129959999977;608.8244559999948;607.5245359999972;610.1434980000049;613.4960189999983;624.4658069999932;607.3856749999904;609.2917970000053;612.0768779999999;604.6198740000036;609.7136570000002;611.3853979999913;604.3333140000032;610.2215969999961;609.1986160000015;605.844094;609.3886569999959;612.8334389999945;612.8117389999898;608.3149570000023;646.1276409999991;611.2987179999909;608.7200569999986;630.3710500000016;606.6830950000003;611.8779380000051;614.3426999999938;611.3189579999889;612.4058789999981;604.5154930000135;609.9770379999827;608.8222360000073;623.5166470000113;607.2854960000113;614.1494790000143;611.6362979999976;627.7418679999973;612.0912790000002;609.6152369999909;608.5654170000053;615.4505599999975;618.0733620000101;615.3481609999872;611.6246180000162;609.8131769999891;612.1452779999963;615.4356209999823;609.6565770000016;610.4334169999929;610.2146769999817;618.7315830000007;610.6949369999929;611.6904389999982;611.4353780000092;608.5644770000072;610.3590580000018;621.217364000011;610.1299370000052;608.9273559999856;612.3095990000002;615.904481000005;616.8099810000131;609.1701159999939;612.3410589999985;610.4822580000036;628.6605299999937;612.9980789999972;612.7154989999835;610.1017170000123;610.8757769999938;609.3900770000037;742.1889220000012;612.9216389999929;612.9955389999959;623.3614260000031;607.4924140000076;611.1258970000054;607.611315999995;620.4238039999909;602.8370929999946;603.1285130000033;609.1646769999934
+20:14:21     INFO -  PID 2610737 | __end_tp_report
+20:14:21     INFO -  PID 2610737 | __start_cc_report
+20:14:21     INFO -  PID 2610737 | _x_x_mozilla_cycle_collect,4360.1400170000325
+20:14:21     INFO -  PID 2610737 | __end_cc_report
+20:14:21     INFO -  PID 2610737 | __startTimestamp131035.85520499999__endTimestamp
+20:14:21     INFO -  PID 2610737 |
+20:14:21     INFO -  PID 2610737 | ------- Summary: start -------
+20:14:21     INFO -  PID 2610737 | Number of tests: 1
+20:14:21     INFO -  PID 2610737 |
+20:14:21     INFO -  PID 2610737 | [#0] /mytest_material_common_sprite321x10.svg  Cycles:110  Average:615.90  Median:611.41  stddev:19.39 (3.2%)  stddev-sans-first:19.23
+20:14:21     INFO -  PID 2610737 | Values: 648.4  618.4  615.2  628.8  603.8  610.4  740.8  632.0  654.9  611.5  609.1  609.1  606.0  629.9  611.8  609.6  612.6  609.1  610.1  600.6  609.1  612.6  606.3  645.2  616.9  613.7  613.6  611.7  610.0  608.8  607.5  610.1  613.5  624.5  607.4  609.3  612.1  604.6  609.7  611.4  604.3  610.2  609.2  605.8  609.4  612.8  612.8  608.3  646.1  611.3  608.7  630.4  606.7  611.9  614.3  611.3  612.4  604.5  610.0  608.8  623.5  607.3  614.1  611.6  627.7  612.1  609.6  608.6  615.5  618.1  615.3  611.6  609.8  612.1  615.4  609.7  610.4  610.2  618.7  610.7  611.7  611.4  608.6  610.4  621.2  610.1  608.9  612.3  615.9  616.8  609.2  612.3  610.5  628.7  613.0  612.7  610.1  610.9  609.4  742.2  612.9  613.0  623.4  607.5  611.1  607.6  620.4  602.8  603.1  609.2
+20:14:21     INFO -  PID 2610737 | -------- Summary: end --------
+20:14:21     INFO -  PID 2610737 |
+20:14:21     INFO -  PID 2610737 | console.error: AboutHomeStartupCache: "requestCache called with no _procManager!"
+20:14:22     INFO -  TEST-INFO | 2610737: exit 0
+20:14:22     INFO -  mozcrash checking /tmp/tmp3k297zkg/profile/minidumps for minidumps...
+20:14:22     INFO -  mozcrash Saved minidump as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/602f468d-b937-3846-d6bf-c872b954fa56.dmp
+20:14:22     INFO -  mozcrash Saved app info as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/602f468d-b937-3846-d6bf-c872b954fa56.extra
+20:14:22     INFO -  PROCESS-CRASH | None [unknown top frame] | expat_perf_test
+20:14:22     INFO -  Crash dump filename: /tmp/tmp3k297zkg/profile/minidumps/602f468d-b937-3846-d6bf-c872b954fa56.dmp
+20:14:22     INFO -  Process type: main
+20:14:22     INFO -  Process pid: unknown
+20:14:22     INFO -  MINIDUMP_STACKWALK binary not found: /home/XXXXXXXX/.mozbuild/minidump-stackwalk/minidump-stackwalk. Use mach bootstrap --no-system-changes to install minidump-stackwalk.
+20:14:22     INFO -  mozcrash Saved minidump as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/5db046e7-aa03-1683-bff0-175728ed8222.dmp
+20:14:22     INFO -  mozcrash Saved app info as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/5db046e7-aa03-1683-bff0-175728ed8222.extra
+20:14:22     INFO -  PROCESS-CRASH | None [unknown top frame] | expat_perf_test
+20:14:22     INFO -  Crash dump filename: /tmp/tmp3k297zkg/profile/minidumps/5db046e7-aa03-1683-bff0-175728ed8222.dmp
+20:14:22     INFO -  Process type: content
+20:14:22     INFO -  Process pid: unknown
+20:14:22     INFO -  MINIDUMP_STACKWALK binary not found: /home/XXXXXXXX/.mozbuild/minidump-stackwalk/minidump-stackwalk. Use mach bootstrap --no-system-changes to install minidump-stackwalk.
+20:14:22     INFO -  TEST-UNEXPECTED-ERROR | expat_perf_test | Found crashes after test run, terminating test
+20:14:22    ERROR -  Traceback (most recent call last):
+20:14:22     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py", line 351, in run_tests
+20:14:22     INFO -      mytest.runTest(browser_config, test, utility_path=utility_path)
+20:14:22     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/ttest.py", line 61, in runTest
+20:14:22     INFO -      return self._runTest(
+20:14:22     INFO -             ^^^^^^^^^^^^^^
+20:14:22     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/ttest.py", line 254, in _runTest
+20:14:22     INFO -      self.check_for_crashes(
+20:14:22     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/ttest.py", line 45, in check_for_crashes
+20:14:22     INFO -      raise TalosCrash("Found crashes after test run, terminating test")
+20:14:22     INFO -  talos.utils.TalosCrash: Found crashes after test run, terminating test
+20:14:22     INFO -  TEST-INFO took 133959ms
+20:14:22     INFO -  SUITE-END | took 133s
+20:14:22     INFO - Return code: 2
+20:14:22  WARNING - setting return code to 2
+20:14:22     INFO - Running post-action listener: _package_coverage_data
+20:14:22     INFO - Running post-action listener: _resource_record_post_action
+20:14:22     INFO - Running post-action listener: process_java_coverage_data
+20:14:22     INFO - [mozharness: 2025-08-20 20:14:22.742732Z] Finished run-tests step (success)
+20:14:22     INFO - Running post-run listener: _resource_record_post_run
+20:14:23     INFO - Total resource usage - Wall time: 135s; CPU: 1%; Read bytes: 0; Write bytes: 36159488; Read time: 0; Write time: 123
+20:14:23     INFO - TinderboxPrint: CPU usage<br/>1.4%
+20:14:23     INFO - TinderboxPrint: I/O read bytes / time<br/>0 / 0
+20:14:23     INFO - TinderboxPrint: I/O write bytes / time<br/>36,159,488 / 123
+20:14:23     INFO - TinderboxPrint: CPU idle<br/>25,455.3 (98.6%)
+20:14:23     INFO - TinderboxPrint: Swap in / out<br/>0 / 0
+20:14:24     INFO - run-tests - Wall time: 135s; CPU: 1%; Read bytes: 0; Write bytes: 36159488; Read time: 0; Write time: 123
+20:14:30     INFO - Glean disabled: not submitting any pings.
+Failed to run test benchmark for /home/XXXXXXXX/benchmarks/ff-expat-ampere1/CPU1/stock. Retrying...

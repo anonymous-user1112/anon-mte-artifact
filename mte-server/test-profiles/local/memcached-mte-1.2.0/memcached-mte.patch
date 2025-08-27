@@ -1,0 +1,11 @@
+--- memcached-1.6.19-orig/restart.c	2022-11-24 16:28:47.000000000 -0800
++++ memcached-1.6.19/restart.c	2025-08-21 16:42:54.551836933 -0700
+@@ -316,7 +316,7 @@
+         fprintf(stderr, "[restart] memory limit not divisible evenly by pagesize (please report bug)\n");
+         abort();
+     }
+-    mmap_base = mmap(NULL, limit, PROT_READ|PROT_WRITE, MAP_SHARED, mmap_fd, 0);
++    mmap_base = mmap(NULL, limit, PROT_READ|PROT_WRITE|PROT_MTE, MAP_SHARED, mmap_fd, 0);
+     if (mmap_base == MAP_FAILED) {
+         perror("failed to mmap, aborting");
+         abort();

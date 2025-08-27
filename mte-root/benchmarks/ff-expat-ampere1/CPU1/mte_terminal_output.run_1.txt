@@ -1,0 +1,384 @@
+20:25:00     INFO - ConsoleLogger online at 20250820 20:25:00Z in /home/XXXXXXXX/firefox-mte
+20:25:00     INFO - Run as ./mach talos-test --activeTests expat_perf_test
+20:25:00     INFO - Dumping config to /home/XXXXXXXX/firefox-mte/testing/mozharness/logs/localconfig.json.
+20:25:00     INFO - {'append_to_log': False,
+20:25:00     INFO -  'base_work_dir': '/home/XXXXXXXX/firefox-mte/testing/mozharness',
+20:25:00     INFO -  'binary_path': '/home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox',
+20:25:00     INFO -  'code_coverage': False,
+20:25:00     INFO -  'config_files': (),
+20:25:00     INFO -  'default_actions': ('populate-webroot', 'create-virtualenv', 'run-tests'),
+20:25:00     INFO -  'disable_ccov_upload': False,
+20:25:00     INFO -  'e10s': True,
+20:25:00     INFO -  'exes': {'python': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python',
+20:25:00     INFO -           'virtualenv': ('/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python',
+20:25:00     INFO -                          '/home/XXXXXXXX/firefox-mte/third_party/python/virtualenv/virtualenv.py')},
+20:25:00     INFO -  'extra_prefs': (),
+20:25:00     INFO -  'find_links': ('https://pypi.pub.build.mozilla.org/pub/',),
+20:25:00     INFO -  'fission': True,
+20:25:00     INFO -  'gecko_profile': False,
+20:25:00     INFO -  'java_code_coverage': False,
+20:25:00     INFO -  'log_level': 'info',
+20:25:00     INFO -  'log_name': 'talos',
+20:25:00     INFO -  'log_to_console': True,
+20:25:00     INFO -  'mozbuild_path': '/home/XXXXXXXX/.mozbuild',
+20:25:00     INFO -  'obj_path': '/home/XXXXXXXX/firefox-mte/firefox_release_mte',
+20:25:00     INFO -  'opt_config_files': (),
+20:25:00     INFO -  'per_test_coverage': False,
+20:25:00     INFO -  'pip_index': False,
+20:25:00     INFO -  'pypi_url': 'http://pypi.python.org/simple',
+20:25:00     INFO -  'python3_manifest': {'win32': 'python3.manifest',
+20:25:00     INFO -                       'win64': 'python3_x64.manifest'},
+20:25:00     INFO -  'repo_path': '/home/XXXXXXXX/firefox-mte',
+20:25:00     INFO -  'requires_gpu': False,
+20:25:00     INFO -  'restartAfterFailure': False,
+20:25:00     INFO -  'run_local': True,
+20:25:00     INFO -  'screenshot_on_failure': False,
+20:25:00     INFO -  'skip_preflight': False,
+20:25:00     INFO -  'system_bits': '32',
+20:25:00     INFO -  'talos_extra_options': ('--develop', '--activeTests', 'expat_perf_test'),
+20:25:00     INFO -  'talos_json': '/home/XXXXXXXX/firefox-mte/testing/talos/talos.json',
+20:25:00     INFO -  'title': 'fedora',
+20:25:00     INFO -  'use_talos_json': False,
+20:25:00     INFO -  'verify': False,
+20:25:00     INFO -  'virtualenv_path': '/home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv',
+20:25:00     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+20:25:00     INFO -  'work_dir': 'build'}
+20:25:00     INFO - [mozharness: 2025-08-20 20:25:00.810322Z] Skipping clobber step.
+20:25:00     INFO - [mozharness: 2025-08-20 20:25:00.810350Z] Skipping download-and-extract step.
+20:25:00     INFO - [mozharness: 2025-08-20 20:25:00.810372Z] Running populate-webroot step.
+20:25:00     INFO - Running pre-action listener: _resource_record_pre_action
+20:25:00     INFO - Running main action method: populate_webroot
+20:25:00     INFO - {'suites': {'bcv': {'tests': ['basic_compositor_video']},
+20:25:00     INFO -             'chromez': {'tests': ['about_preferences_basic', 'tresize']},
+20:25:00     INFO -             'damp': {'extra_prefs': ['talos.damp.suite=all'],
+20:25:00     INFO -                      'pagesets_name': 'tp5n.zip',
+20:25:00     INFO -                      'tests': ['damp']},
+20:25:00     INFO -             'damp-inspector': {'extra_prefs': ['talos.damp.suite=inspector'],
+20:25:00     INFO -                                'pagesets_name': 'tp5n.zip',
+20:25:00     INFO -                                'tests': ['damp']},
+20:25:00     INFO -             'damp-other': {'extra_prefs': ['talos.damp.suite=other'],
+20:25:00     INFO -                            'pagesets_name': 'tp5n.zip',
+20:25:00     INFO -                            'tests': ['damp']},
+20:25:00     INFO -             'damp-webconsole': {'extra_prefs': ['talos.damp.suite=webconsole'],
+20:25:00     INFO -                                 'pagesets_name': 'tp5n.zip',
+20:25:00     INFO -                                 'tests': ['damp']},
+20:25:00     INFO -             'dromaeojs': {'tests': ['dromaeo_css', 'kraken']},
+20:25:00     INFO -             'g1': {'pagesets_name': 'tp5n.zip', 'tests': ['tp5o_scroll']},
+20:25:00     INFO -             'g3': {'tests': ['dromaeo_dom']},
+20:25:00     INFO -             'g4': {'tests': ['displaylist_mutate',
+20:25:00     INFO -                              'rasterflood_svg',
+20:25:00     INFO -                              'rasterflood_gradient']},
+20:25:00     INFO -             'g5': {'pagesets_name': 'tp5n.zip',
+20:25:00     INFO -                    'tests': ['ts_paint_webext', 'tp5o_webext']},
+20:25:00     INFO -             'h1': {'tests': ['ts_paint_heavy']},
+20:25:00     INFO -             'motionmark': {'benchmark_zip': 'jetstream.zip',
+20:25:00     INFO -                            'tests': ['motionmark_animometer',
+20:25:00     INFO -                                      'motionmark_htmlsuite',
+20:25:00     INFO -                                      'JetStream',
+20:25:00     INFO -                                      'ARES6']},
+20:25:00     INFO -             'mtetest': {'tests': ['expat_perf_test', 'expat_perf_test_mini']},
+20:25:00     INFO -             'other': {'tests': ['a11yr',
+20:25:00     INFO -                                 'ts_paint',
+20:25:00     INFO -                                 'twinopen',
+20:25:00     INFO -                                 'sessionrestore',
+20:25:00     INFO -                                 'sessionrestore_no_auto_restore',
+20:25:00     INFO -                                 'tabpaint',
+20:25:00     INFO -                                 'cpstartup',
+20:25:00     INFO -                                 'startup_about_home_paint',
+20:25:00     INFO -                                 'cross_origin_pageload',
+20:25:00     INFO -                                 'startup_about_home_paint_cached']},
+20:25:00     INFO -             'pdfpaint': {'tests': ['pdfpaint']},
+20:25:00     INFO -             'perf-reftest': {'tests': ['perf_reftest']},
+20:25:00     INFO -             'perf-reftest-singletons': {'tests': ['perf_reftest_singletons']},
+20:25:00     INFO -             'realworld-webextensions': {'tests': ['startup_about_home_paint_realworld_webextensions'],
+20:25:00     INFO -                                         'webextensions_zip': 'webextensions.zip'},
+20:25:00     INFO -             'sessionrestore-many-windows': {'tests': ['sessionrestore_many_windows']},
+20:25:00     INFO -             'svgr': {'tests': ['tsvgx',
+20:25:00     INFO -                                'tsvgr_opacity',
+20:25:00     INFO -                                'tscrollx',
+20:25:00     INFO -                                'tsvg_static',
+20:25:00     INFO -                                'tart']},
+20:25:00     INFO -             'tabswitch': {'pagesets_name': 'tp5n.zip', 'tests': ['tabswitch']},
+20:25:00     INFO -             'tp5o': {'pagesets_name': 'tp5n.zip', 'tests': ['tp5o']},
+20:25:00     INFO -             'webgl': {'tests': ['canvas2dvideo',
+20:25:00     INFO -                                 'glterrain',
+20:25:00     INFO -                                 'glvideo',
+20:25:00     INFO -                                 'motionmark_webgl',
+20:25:00     INFO -                                 'offscreencanvas_webcodecs_main_webgl_h264',
+20:25:00     INFO -                                 'offscreencanvas_webcodecs_main_webgl_vp9',
+20:25:00     INFO -                                 'offscreencanvas_webcodecs_main_webgl_av1',
+20:25:00     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_h264',
+20:25:00     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_vp9',
+20:25:00     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_av1',
+20:25:00     INFO -                                 'offscreencanvas_webcodecs_main_2d_h264',
+20:25:00     INFO -                                 'offscreencanvas_webcodecs_main_2d_vp9',
+20:25:00     INFO -                                 'offscreencanvas_webcodecs_main_2d_av1',
+20:25:00     INFO -                                 'offscreencanvas_webcodecs_worker_2d_h264',
+20:25:00     INFO -                                 'offscreencanvas_webcodecs_worker_2d_vp9',
+20:25:00     INFO -                                 'offscreencanvas_webcodecs_worker_2d_av1']},
+20:25:00     INFO -             'xperf': {'pagesets_name': 'tp5n.zip',
+20:25:00     INFO -                       'talos_options': ['--xperf_path',
+20:25:00     INFO -                                         '"c:/Program Files (x86)/Windows '
+20:25:00     INFO -                                         'Kits/10/Windows Performance '
+20:25:00     INFO -                                         'Toolkit/xperf.exe"'],
+20:25:00     INFO -                       'tests': ['tp5n']}}}
+20:25:00     INFO - Running post-action listener: _resource_record_post_action
+20:25:00     INFO - [mozharness: 2025-08-20 20:25:00.812807Z] Finished populate-webroot step (success)
+20:25:00     INFO - [mozharness: 2025-08-20 20:25:00.812829Z] Running create-virtualenv step.
+20:25:00     INFO - Running pre-action listener: _resource_record_pre_action
+20:25:00     INFO - Running main action method: create_virtualenv
+20:25:00     INFO - Virtualenv already exists, skipping creation
+20:25:00     INFO - Running post-action listener: _resource_record_post_action
+20:25:00     INFO - Running post-action listener: _start_resource_monitoring
+20:25:00     INFO - Starting resource monitoring.
+20:25:00     INFO - [mozharness: 2025-08-20 20:25:00.824767Z] Finished create-virtualenv step (success)
+20:25:00     INFO - [mozharness: 2025-08-20 20:25:00.825373Z] Skipping install step.
+20:25:00     INFO - [mozharness: 2025-08-20 20:25:00.825410Z] Running run-tests step.
+20:25:00     INFO - Running pre-action listener: _resource_record_pre_action
+20:25:00     INFO - Running pre-action listener: _set_gcov_prefix
+20:25:00     INFO - Running main action method: run_tests
+20:25:00     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin/python', '--version']
+20:25:00     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin/python --version
+20:25:00     INFO -  Python 3.11.13
+20:25:00     INFO - Return code: 0
+20:25:00     INFO - ENV: MOZ_UPLOAD_DIR is now /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir
+20:25:00     INFO - ENV: MOZBUILD_PATH is now /home/XXXXXXXX/.mozbuild
+20:25:00     INFO - ENV: MINIDUMP_SAVE_PATH is now /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir
+20:25:00     INFO - ENV: RUST_BACKTRACE is now full
+20:25:00     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin/python', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py', '--executablePath', '/home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox', '--title', 'fedora', '--develop', '--activeTests', 'expat_perf_test', '--log-tbpl-level=info'] in /home/XXXXXXXX/firefox-mte/testing/mozharness/build
+20:25:00     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin/python /home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py --executablePath /home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox --title fedora --develop --activeTests expat_perf_test --log-tbpl-level=info
+20:25:00     INFO - Using env: {'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+20:25:00     INFO -  'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:',
+20:25:00     INFO -  'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ',
+20:25:00     INFO -  'DISPLAY': ':99',
+20:25:00     INFO -  'EDITOR': '/usr/bin/vim',
+20:25:00     INFO -  'EXPAT_PIN_CORE': '1',
+20:25:00     INFO -  'GPG_TTY': '/dev/pts/13',
+20:25:00     INFO -  'HISTCONTROL': 'ignoredups',
+20:25:00     INFO -  'HISTSIZE': '1000',
+20:25:00     INFO -  'HOME': '/home/XXXXXXXX',
+20:25:00     INFO -  'HOSTNAME': 'fedora',
+20:25:00     INFO -  'LANG': 'en_US.UTF-8',
+20:25:00     INFO -  'LESSOPEN': '||/usr/bin/lesspipe.sh %s',
+20:25:00     INFO -  'LOGNAME': 'XXXXXXXX',
+20:25:00     INFO -  'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+20:25:00     INFO -  'MACH_MAIN_PID': '2624476',
+20:25:00     INFO -  'MAIL': '/var/spool/mail/XXXXXXXX',
+20:25:00     INFO -  'MINIDUMP_SAVE_PATH': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:25:00     INFO -  'MOTD_SHOWN': 'pam',
+20:25:00     INFO -  'MOZBUILD_PATH': '/home/XXXXXXXX/.mozbuild',
+20:25:00     INFO -  'MOZCONFIG': 'mozconfig_mte',
+20:25:00     INFO -  'MOZ_DEVELOPER_OBJ_DIR': '/home/XXXXXXXX/firefox-mte/firefox_release_mte',
+20:25:00     INFO -  'MOZ_DEVELOPER_REPO_DIR': '/home/XXXXXXXX/firefox-mte',
+20:25:00     INFO -  'MOZ_UPLOAD_DIR': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:25:00     INFO -  'OLDPWD': '/home/XXXXXXXX/firefox-mte',
+20:25:00     INFO -  'PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin',
+20:25:00     INFO -  'PWD': '/home/XXXXXXXX/firefox-mte',
+20:25:00     INFO -  'PYTHONPATH': '/home/XXXXXXXX/firefox-mte/testing/talos',
+20:25:00     INFO -  'REQUIRE_GPU': '0',
+20:25:00     INFO -  'RUST_BACKTRACE': 'full',
+20:25:00     INFO -  'SELINUX_LEVEL_REQUESTED': '',
+20:25:00     INFO -  'SELINUX_ROLE_REQUESTED': '',
+20:25:00     INFO -  'SELINUX_USE_CURRENT_RANGE': '',
+20:25:00     INFO -  'SHELL': '/bin/bash',
+20:25:00     INFO -  'SHLVL': '3',
+20:25:00     INFO -  'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346',
+20:25:00     INFO -  'SSH_CLIENT': '172.17.128.2 52585 22',
+20:25:00     INFO -  'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22',
+20:25:00     INFO -  'SSH_TTY': '/dev/pts/0',
+20:25:00     INFO -  'TERM': 'tmux-256color',
+20:25:00     INFO -  'TERM_PROGRAM': 'tmux',
+20:25:00     INFO -  'TERM_PROGRAM_VERSION': '3.5a',
+20:25:00     INFO -  'TMUX': '/tmp/tmux-1000/default,2416415,0',
+20:25:00     INFO -  'TMUX_PANE': '%1',
+20:25:00     INFO -  'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins',
+20:25:00     INFO -  'USER': 'XXXXXXXX',
+20:25:00     INFO -  'VIRTUAL_ENV': 'talos-venv',
+20:25:00     INFO -  'VIRTUAL_ENV_PROMPT': '(venv-3.11) ',
+20:25:00     INFO -  'XDG_RUNTIME_DIR': '/run/user/1000',
+20:25:00     INFO -  'XDG_SESSION_CLASS': 'user',
+20:25:00     INFO -  'XDG_SESSION_ID': '1323',
+20:25:00     INFO -  'XDG_SESSION_TYPE': 'tty',
+20:25:00     INFO -  '_': './mach'}
+20:25:00     INFO - Calling ['/home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin/python', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py', '--executablePath', '/home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox', '--title', 'fedora', '--develop', '--activeTests', 'expat_perf_test', '--log-tbpl-level=info'] with output_timeout 3600
+20:25:01     INFO -  mozversion application_buildid: 20250820124010
+20:25:01     INFO -  mozversion application_changeset: 497a35d032e41a640590af9ac68d8a6dd21f4131
+20:25:01     INFO -  mozversion application_display_name: Nightly
+20:25:01     INFO -  mozversion application_id: {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+20:25:01     INFO -  mozversion application_name: Firefox
+20:25:01     INFO -  mozversion application_remotingname: firefox-default
+20:25:01     INFO -  mozversion application_vendor: Mozilla
+20:25:01     INFO -  mozversion application_version: 134.0.1
+20:25:01     INFO -  mozversion platform_buildid: 20250820124010
+20:25:01     INFO -  mozversion platform_changeset: 497a35d032e41a640590af9ac68d8a6dd21f4131
+20:25:01     INFO -  mozversion platform_version: 134.0.1
+20:25:01     INFO -  starting webserver on '127.0.0.1:48983'
+20:25:01     INFO -  SUITE-START | Running 1 tests
+20:25:01     INFO -  TEST-START | expat_perf_test
+20:25:01     INFO -  Initialising browser for expat_perf_test test...
+20:25:01     INFO -  Cloning profile located at /home/XXXXXXXX/firefox-mte/testing/talos/talos/base_profile
+20:25:01     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/base
+20:25:01     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/common
+20:25:01     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/perf
+20:25:01     INFO -  Installing Add-ons:
+20:25:01     INFO -  ['/home/XXXXXXXX/firefox-mte/testing/talos/talos/talos-powers', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/pageloader']
+20:25:01     INFO -  Installing Webextensions:
+20:25:01     INFO -  Application command: /home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox http://127.0.0.1:48983/getInfo.html -profile /tmp/tmpyyv9p4gx/profile
+20:25:01     INFO -  TEST-INFO | started process 2624538 (/home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox http://127.0.0.1:48983/getInfo.html)
+20:25:01     INFO -  libEGL warning: DRI3 error: Could not get DRI3 device
+20:25:01     INFO -  libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:25:01     INFO -  libEGL warning: DRI3 error: Could not get DRI3 device
+20:25:01     INFO -  libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:25:01     INFO -  MTE sched_setaffinity on core : 1 (PID:2624538)
+20:25:02     INFO -  console.error: ({})
+20:25:02     INFO -  console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 911))
+20:25:03     INFO -  __metrics
+20:25:03     INFO -  	Screen width/height: 1280/1024
+20:25:03     INFO -  	colorDepth: 24
+20:25:03     INFO -  	Browser inner width/height: 1152/836
+20:25:03     INFO -  __metrics
+20:25:03     INFO -  GetShaderInfoLog() ->
+20:25:03     INFO -  0:2(12): error: extension `GL_EXT_shader_texture_lod' unsupported in fragment shader
+20:25:03     INFO -  GetShaderSource() ->
+20:25:03     INFO -  #extension GL_EXT_shader_texture_lod: require
+20:25:03     INFO -  void main() {}
+20:25:03     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.sys.mjs, line 772: WebGL context was lost.
+20:25:03     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.sys.mjs, line 772: WebGL context was lost.
+20:25:03     INFO -  console.error: AboutHomeStartupCache: "requestCache called with no _procManager!"
+20:25:03     INFO -  about:support	{"application":{"name":"Firefox","osVersion":"Linux 6.14.0-63.fc42.aarch64 #1 SMP PREEMPT_DYNAMIC Mon Mar 24 20:18:11 UTC 2025","version":"134.0.1","buildID":"20250820124010","distributionID":"","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0","safeMode":false,"memorySizeBytes":539257499648,"diskAvailableBytes":268447387648,"updateChannel":"default","supportURL":"https://support.mozilla.org/1/firefox/134.0.1/Linux/en-US/","osTheme":"Adwaita / Adwaita","pointingDevices":[],"numTotalWindows":1,"numFissionWindows":1,"numRemoteWindows":1,"fissionAutoStart":true,"fissionDecisionStatus":"enabledByDefault","remoteAutoStart":true,"policiesStatus":0,"keyLocationServiceGoogleFound":false,"keySafebrowsingGoogleFound":false,"keyMozillaFound":false},"securitySoftware":{"registeredAntiVirus":"","registeredAntiSpyware":"","registeredFirewall":""},"environmentVariables":{"DISPLAY":":99","MOZ_UPLOAD_DIR":"/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir","MOZ_DEVELOPER_REPO_DIR":"/home/XXXXXXXX/firefox-mte","MOZ_DEVELOPER_OBJ_DIR":"/home/XXXXXXXX/firefox-mte/firefox_release_mte","MOZ_CRASHREPORTER_NO_REPORT":"1","MOZ_CRASHREPORTER":"1","MOZ_DISABLE_NONLOCAL_CONNECTIONS":"1","XRE_NO_WINDOWS_CRASH_DIALOG":"1","MOZ_ASSUME_USER_NS":"1","MOZ_CRASHREPORTER_EVENTS_DIRECTORY":"/tmp/tmpyyv9p4gx/profile/crashes/events","MOZ_CRASHREPORTER_RESTART_ARG_1":"http://127.0.0.1:48983/getInfo.html","MOZ_CRASHREPORTER_RESTART_ARG_2":"-profile","MOZ_CRASHREPORTER_RESTART_ARG_3":"/tmp/tmpyyv9p4gx/profile","MOZ_CRASHREPORTER_RESTART_ARG_4":"","MOZ_CRASHREPORTER_DATA_DIRECTORY":"/home/XXXXXXXX/.mozilla/firefox/Crash Reports","MOZ_CRASHREPORTER_PING_DIRECTORY":"/home/XXXXXXXX/.mozilla/firefox/Pending Pings","MOZ_CRASHREPORTER_STRINGS_OVERRIDE":"/home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/browser/crashreporter-override.ini","MOZ_LAUNCHED_CHILD":"","MOZ_APP_SILENT_START":"","XRE_PROFILE_PATH":"","XRE_PROFILE_LOCAL_PATH":"","XRE_START_OFFLINE":"","XRE_BINARY_PATH":"","XRE_RESTARTED_BY_PROFILE_MANAGER":""},"modifiedPreferences":{"browser.cache.disk.smart_size.enabled":false,"browser.contentblocking.category":"custom","browser.link.open_newwindow":2,"browser.search.region":"US","browser.tabs.remote.systemTriggeredAboutBlankAnywhere":true,"browser.tabs.unloadOnLowMemory":false,"browser.urlbar.quicksuggest.migrationVersion":2,"browser.urlbar.placeholderName":"Google","browser.urlbar.quicksuggest.scenario":"offline","doh-rollout.home-region":"US","dom.forms.autocomplete.formautofill":true,"dom.allow_scripts_to_close_windows":true,"dom.disable_open_during_load":false,"dom.disable_window_flip":true,"dom.disable_window_move_resize":true,"dom.input_events.security.minNumTicks":0,"dom.input_events.security.minTimeElapsedInMS":0,"dom.max_chrome_script_run_time":0,"dom.max_script_run_time":0,"dom.push.connection.enabled":false,"dom.send_after_paint_to_content":true,"extensions.checkCompatibility":false,"extensions.formautofill.creditCards.reauth.optout":"MDIEEPgAAAAAAAAAAAAAAAAAAAEwFAYIKoZIhvcNAwcECDn0uioWqmlaBAggL2PFUo9wWg==","extensions.formautofill.addresses.experiments.enabled":true,"extensions.lastAppVersion":"134.0.1","general.useragent.updates.enabled":false,"gfx.webrender.all":true,"idle.lastDailyNotification":-1,"media.gmp.storage.version.observed":1,"media.allowed-to-play.enabled":true,"media.autoplay.ask-permission":false,"media.autoplay.blocking_policy":0,"media.autoplay.default":0,"media.block-autoplay-until-in-foreground":false,"media.capturestream_hints.enabled":true,"media.geckoview.autoplay.request":false,"media.getdisplaymedia.screencapturekit.picker.enabled":false,"media.gmp-manager.updateEnabled":false,"media.gmp-manager.url":"http://127.0.0.1/gmpmanager-dummy/update.xml","media.libavcodec.allow-obsolete":true,"media.navigator.enabled":true,"media.navigator.permission.disabled":true,"media.peerconnection.enabled":true,"media.wakelock.audio.delay-releasing.ms":0,"media.webspeech.synth.dont_notify_on_error":true,"network.protocol-handler.external.ext+damp":true,"network.protocol-handler.external.ext+twinopen":true,"places.database.lastMaintenance":2147483647,"privacy.bounceTrackingProtection.hasMigratedUserActivationData":true,"privacy.trackingprotection.introURL":"http://127.0.0.1/trackingprotection/tour","privacy.sanitize.pending":"[{\"id\":\"newtab-container\",\"itemsToClear\":[],\"options\":{}}]","privacy.reduceTimerPrecision":false,"privacy.trackingprotection.annotate_channels":false,"privacy.trackingprotection.enabled":false,"privacy.trackingprotection.pbmode.enabled":false,"security.certerrors.mitm.priming.enabled":false,"security.enable_java":false,"security.fileuri.strict_origin_policy":false,"security.turn_off_all_security_so_that_viruses_can_take_over_this_computer":true,"services.sync.engine.addresses.available":true,"signon.management.page.os-auth.optout":"MDIEEPgAAAAAAAAAAAAAAAAAAAEwFAYIKoZIhvcNAwcECJwMN+k1CkT5BAjgHtFd881yRQ==","widget.gtk.overlay-scrollbars.enabled":false},"lockedPreferences":{"fission.autostart.session":true},"printingPreferences":{},"media":{"currentAudioBackend":"pulse-rust","currentMaxAudioChannels":2,"currentPreferredSampleRate":48000,"audioOutputDevices":[{"name":"Dummy Output","groupId":"","vendor":"","type":2,"state":2,"preferred":15,"supportedFormat":12336,"defaultFormat":4096,"maxChannels":2,"defaultRate":48000,"maxRate":384000,"minRate":1,"maxLatency":0,"minLatency":0}],"audioInputDevices":[{"name":"Monitor of Dummy Output","groupId":"","vendor":"","type":1,"state":2,"preferred":15,"supportedFormat":12336,"defaultFormat":4096,"maxChannels":2,"defaultRate":48000,"maxRate":384000,"minRate":1,"maxLatency":0,"minLatency":0}],"codecSupportInfo":"H264 SW\nVP9 SW\nVP8 SW\nAV1 SW\nHEVC NONE\nAAC SW\nMP3 SW\nOpus SW\nVorbis SW\nFLAC SW\nWave SW"},"accessibility":{"isActive":false,"forceDisabled":0,"instantiator":""},"startupCache":{"DiskCachePath":"/tmp/tmpyyv9p4gx/profile/startupCache/startupCache.8.little","IgnoreDiskCache":false,"FoundDiskCacheOnInit":false,"WroteToDiskCache":false},"libraryVersions":{"NSPR":{"minVersion":"4.36","version":"4.36"},"NSS":{"minVersion":"3.107","version":"3.107"},"NSSUTIL":{"minVersion":"3.107","version":"3.107"},"NSSSSL":{"minVersion":"3.107","version":"3.107"},"NSSSMIME":{"minVersion":"3.107","version":"3.107"}},"userJS":{"exists":true},"intl":{"localeService":{"requested":["en-US"],"available":["en-US"],"supported":["en-US"],"regionalPrefs":["en-US"],"defaultLocale":"en-US"},"osPrefs":{"systemLocales":["en-US"],"regionalPrefsLocales":["en-US"]}},"contentAnalysis":{"active":false},"crashes":{"submitted":[],"pending":0},"sandbox":{"hasSeccompBPF":true,"hasSeccompTSync":true,"hasPrivilegedUserNamespaces":true,"hasUserNamespaces":true,"canSandboxContent":true,"canSandboxMedia":true,"syscallLog":[],"contentSandboxLevel":4,"effectiveContentSandboxLevel":0},"remoteAgent":{"running":false,"url":""},"graphics":{"desktopEnvironment":"","numTotalWindows":1,"numAcceleratedWindows":1,"windowLayerManagerType":"WebRender","windowLayerManagerRemote":true,"graphicsDevicePixelRatios":[1],"adapterDescription":"llvmpipe (LLVM 20.1.8, 128 bits)","adapterVendorID":"Mesa","adapterDeviceID":"llvmpipe (LLVM 20.1.8, 128 bits)","adapterRAM":0,"adapterDrivers":"","driverVendor":"mesa/llvmpipe","driverVersion":"25.1.7.0","driverDate":"","adapterVendorID2":"0x1a03","adapterDeviceID2":"0x2000","isGPU2Active":false,"targetFrameRate":59,"windowProtocol":"x11","supportFontDetermination":"Fedora Unknown - ID=fedora","webgl1Renderer":"Mesa -- llvmpipe (LLVM 20.1.8, 128 bits)","webgl1Version":"OpenGL ES 3.2 Mesa 25.1.7","webgl1DriverExtensions":"GL_EXT_blend_minmax GL_EXT_multi_draw_arrays GL_EXT_texture_filter_anisotropic GL_EXT_texture_compression_s3tc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_format_BGRA8888 GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_mapbuffer GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_stencil8 GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_vertex_half_float GL_EXT_draw_instanced GL_EXT_texture_sRGB_decode GL_OES_EGL_image GL_OES_depth_texture GL_OES_packed_depth_stencil GL_EXT_texture_type_2_10_10_10_REV GL_NV_conditional_render GL_OES_get_program_binary GL_APPLE_texture_max_level GL_EXT_discard_framebuffer GL_EXT_read_format_bgra GL_EXT_texture_storage GL_NV_pack_subimage GL_NV_texture_barrier GL_EXT_frag_depth GL_NV_fbo_color_attachments GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_vertex_array_object GL_OES_viewport_array GL_ANGLE_pack_reverse_row_order GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_EXT_occlusion_query_boolean GL_EXT_robustness GL_EXT_texture_rg GL_EXT_unpack_subimage GL_NV_draw_buffers GL_NV_read_buffer GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_APPLE_sync GL_EXT_draw_buffers GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_shadow_samplers GL_KHR_debug GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_NV_generate_mipmap_sRGB GL_NV_pixel_buffer_object GL_OES_depth_texture_cube_map GL_OES_required_internalformat GL_OES_surfaceless_context GL_EXT_color_buffer_float GL_EXT_debug_label GL_EXT_sRGB_write_control GL_EXT_separate_shader_objects GL_EXT_shader_framebuffer_fetch GL_EXT_shader_group_vote GL_EXT_shader_implicit_conversions GL_EXT_shader_integer_mix GL_EXT_tessellation_point_size GL_EXT_tessellation_shader GL_ANDROID_extension_pack_es31a GL_ARM_shader_framebuffer_fetch_depth_stencil GL_EXT_base_instance GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_copy_image GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_gpu_shader5 GL_EXT_multi_draw_indirect GL_EXT_polygon_offset_clamp GL_EXT_primitive_bounding_box GL_EXT_render_snorm GL_EXT_shader_io_blocks GL_EXT_texture_border_clamp GL_EXT_texture_buffer GL_EXT_texture_cube_map_array GL_EXT_texture_norm16 GL_EXT_texture_view GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_robust_buffer_access_behavior GL_NV_image_formats GL_NV_shader_noperspective_interpolation GL_OES_copy_image GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_gpu_shader5 GL_OES_primitive_bounding_box GL_OES_sample_shading GL_OES_sample_variables GL_OES_shader_io_blocks GL_OES_shader_multisample_interpolation GL_OES_tessellation_point_size GL_OES_tessellation_shader GL_OES_texture_border_clamp GL_OES_texture_buffer GL_OES_texture_cube_map_array GL_OES_texture_stencil8 GL_OES_texture_storage_multisample_2d_array GL_OES_texture_view GL_EXT_blend_func_extended GL_EXT_buffer_storage GL_EXT_float_blend GL_EXT_geometry_point_size GL_EXT_geometry_shader GL_EXT_texture_filter_minmax GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_KHR_no_error GL_KHR_texture_compression_astc_sliced_3d GL_OES_EGL_image_external_essl3 GL_OES_geometry_point_size GL_OES_geometry_shader GL_OES_shader_image_atomic GL_EXT_clear_texture GL_EXT_clip_cull_distance GL_EXT_conservative_depth GL_EXT_disjoint_timer_query GL_EXT_texture_compression_s3tc_srgb GL_MESA_shader_integer_functions GL_EXT_clip_control GL_EXT_color_buffer_half_float GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_texture_compression_bptc GL_EXT_texture_mirror_clamp_to_edge GL_KHR_parallel_shader_compile GL_NV_alpha_to_coverage_dither_control GL_EXT_EGL_image_storage GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_texture_shadow_lod GL_MESA_framebuffer_flip_y GL_OVR_multiview GL_OVR_multiview2 GL_EXT_depth_clamp GL_EXT_texture_query_lod GL_MESA_sampler_objects GL_EXT_EGL_image_storage_compression GL_EXT_texture_storage_compression GL_MESA_bgra ","webgl1Extensions":"ANGLE_instanced_arrays EXT_blend_minmax EXT_color_buffer_half_float EXT_depth_clamp EXT_float_blend EXT_frag_depth EXT_sRGB EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_element_index_uint OES_fbo_render_mipmap OES_standard_derivatives OES_texture_float OES_texture_float_linear OES_texture_half_float OES_texture_half_float_linear OES_vertex_array_object WEBGL_color_buffer_float WEBGL_compressed_texture_astc WEBGL_compressed_texture_etc WEBGL_compressed_texture_etc1 WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_depth_texture WEBGL_draw_buffers WEBGL_lose_context","webgl1WSIInfo":"outOfProcess: false\ninProcess: true\nEGL_VENDOR: Mesa Project\nEGL_VERSION: 1.5\nEGL_EXTENSIONS: EGL_ANDROID_blob_cache EGL_ANGLE_sync_control_rate EGL_EXT_buffer_age EGL_EXT_config_select_group EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_EXT_query_reset_notification_strategy EGL_EXT_surface_compression EGL_EXT_swap_buffers_with_damage EGL_KHR_cl_event2 EGL_KHR_config_attribs EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_create_context_no_error EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image_base EGL_KHR_no_config_context EGL_KHR_reusable_sync EGL_KHR_surfaceless_context EGL_KHR_swap_buffers_with_damage EGL_EXT_pixel_format_float EGL_KHR_wait_sync EGL_MESA_configless_context EGL_MESA_gl_interop EGL_MESA_query_driver EGL_MESA_x11_native_visual_id \nEGL_EXTENSIONS(nullptr): EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_EXT_platform_base EGL_KHR_client_get_all_proc_addresses EGL_EXT_client_extensions EGL_KHR_debug EGL_EXT_platform_device EGL_EXT_explicit_device EGL_EXT_platform_wayland EGL_KHR_platform_wayland EGL_EXT_platform_x11 EGL_KHR_platform_x11 EGL_EXT_platform_xcb EGL_MESA_platform_gbm EGL_KHR_platform_gbm EGL_MESA_platform_surfaceless","webgl2Renderer":"Mesa -- llvmpipe (LLVM 20.1.8, 128 bits)","webgl2Version":"OpenGL ES 3.2 Mesa 25.1.7","webgl2DriverExtensions":"GL_EXT_blend_minmax GL_EXT_multi_draw_arrays GL_EXT_texture_filter_anisotropic GL_EXT_texture_compression_s3tc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_format_BGRA8888 GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_mapbuffer GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_stencil8 GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_vertex_half_float GL_EXT_draw_instanced GL_EXT_texture_sRGB_decode GL_OES_EGL_image GL_OES_depth_texture GL_OES_packed_depth_stencil GL_EXT_texture_type_2_10_10_10_REV GL_NV_conditional_render GL_OES_get_program_binary GL_APPLE_texture_max_level GL_EXT_discard_framebuffer GL_EXT_read_format_bgra GL_EXT_texture_storage GL_NV_pack_subimage GL_NV_texture_barrier GL_EXT_frag_depth GL_NV_fbo_color_attachments GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_vertex_array_object GL_OES_viewport_array GL_ANGLE_pack_reverse_row_order GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_EXT_occlusion_query_boolean GL_EXT_robustness GL_EXT_texture_rg GL_EXT_unpack_subimage GL_NV_draw_buffers GL_NV_read_buffer GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_APPLE_sync GL_EXT_draw_buffers GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_shadow_samplers GL_KHR_debug GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_NV_generate_mipmap_sRGB GL_NV_pixel_buffer_object GL_OES_depth_texture_cube_map GL_OES_required_internalformat GL_OES_surfaceless_context GL_EXT_color_buffer_float GL_EXT_debug_label GL_EXT_sRGB_write_control GL_EXT_separate_shader_objects GL_EXT_shader_framebuffer_fetch GL_EXT_shader_group_vote GL_EXT_shader_implicit_conversions GL_EXT_shader_integer_mix GL_EXT_tessellation_point_size GL_EXT_tessellation_shader GL_ANDROID_extension_pack_es31a GL_ARM_shader_framebuffer_fetch_depth_stencil GL_EXT_base_instance GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_copy_image GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_gpu_shader5 GL_EXT_multi_draw_indirect GL_EXT_polygon_offset_clamp GL_EXT_primitive_bounding_box GL_EXT_render_snorm GL_EXT_shader_io_blocks GL_EXT_texture_border_clamp GL_EXT_texture_buffer GL_EXT_texture_cube_map_array GL_EXT_texture_norm16 GL_EXT_texture_view GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_robust_buffer_access_behavior GL_NV_image_formats GL_NV_shader_noperspective_interpolation GL_OES_copy_image GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_gpu_shader5 GL_OES_primitive_bounding_box GL_OES_sample_shading GL_OES_sample_variables GL_OES_shader_io_blocks GL_OES_shader_multisample_interpolation GL_OES_tessellation_point_size GL_OES_tessellation_shader GL_OES_texture_border_clamp GL_OES_texture_buffer GL_OES_texture_cube_map_array GL_OES_texture_stencil8 GL_OES_texture_storage_multisample_2d_array GL_OES_texture_view GL_EXT_blend_func_extended GL_EXT_buffer_storage GL_EXT_float_blend GL_EXT_geometry_point_size GL_EXT_geometry_shader GL_EXT_texture_filter_minmax GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_KHR_no_error GL_KHR_texture_compression_astc_sliced_3d GL_OES_EGL_image_external_essl3 GL_OES_geometry_point_size GL_OES_geometry_shader GL_OES_shader_image_atomic GL_EXT_clear_texture GL_EXT_clip_cull_distance GL_EXT_conservative_depth GL_EXT_disjoint_timer_query GL_EXT_texture_compression_s3tc_srgb GL_MESA_shader_integer_functions GL_EXT_clip_control GL_EXT_color_buffer_half_float GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_texture_compression_bptc GL_EXT_texture_mirror_clamp_to_edge GL_KHR_parallel_shader_compile GL_NV_alpha_to_coverage_dither_control GL_EXT_EGL_image_storage GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_texture_shadow_lod GL_MESA_framebuffer_flip_y GL_OVR_multiview GL_OVR_multiview2 GL_EXT_depth_clamp GL_EXT_texture_query_lod GL_MESA_sampler_objects GL_EXT_EGL_image_storage_compression GL_EXT_texture_storage_compression GL_MESA_bgra ","webgl2Extensions":"EXT_color_buffer_float EXT_depth_clamp EXT_float_blend EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_draw_buffers_indexed OES_texture_float_linear OVR_multiview2 WEBGL_compressed_texture_astc WEBGL_compressed_texture_etc WEBGL_compressed_texture_etc1 WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_lose_context","webgl2WSIInfo":"outOfProcess: false\ninProcess: true\nEGL_VENDOR: Mesa Project\nEGL_VERSION: 1.5\nEGL_EXTENSIONS: EGL_ANDROID_blob_cache EGL_ANGLE_sync_control_rate EGL_EXT_buffer_age EGL_EXT_config_select_group EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_EXT_query_reset_notification_strategy EGL_EXT_surface_compression EGL_EXT_swap_buffers_with_damage EGL_KHR_cl_event2 EGL_KHR_config_attribs EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_create_context_no_error EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image_base EGL_KHR_no_config_context EGL_KHR_reusable_sync EGL_KHR_surfaceless_context EGL_KHR_swap_buffers_with_damage EGL_EXT_pixel_format_float EGL_KHR_wait_sync EGL_MESA_configless_context EGL_MESA_gl_interop EGL_MESA_query_driver EGL_MESA_x11_native_visual_id \nEGL_EXTENSIONS(nullptr): EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_EXT_platform_base EGL_KHR_client_get_all_proc_addresses EGL_EXT_client_extensions EGL_KHR_debug EGL_EXT_platform_device EGL_EXT_explicit_device EGL_EXT_platform_wayland EGL_KHR_platform_wayland EGL_EXT_platform_x11 EGL_KHR_platform_x11 EGL_EXT_platform_xcb EGL_MESA_platform_gbm EGL_KHR_platform_gbm EGL_MESA_platform_surfaceless","info":{"AzureFallbackCanvasBackend":"skia","AzureCanvasBackend":"skia","AzureContentBackend":"skia","ApzWheelInput":1,"ApzDragInput":1,"ApzKeyboardInput":1,"ApzAutoscrollInput":1,"ApzZoomingInput":1,"CMSOutputProfile":"Empty profile data","DisplayCount":1,"Display0":"1280x1024@0Hz scales:1.000000|1.000000"},"featureLog":{"features":[{"name":"HW_COMPOSITING","description":"Compositing","status":"available","log":[{"type":"default","status":"available"}]},{"name":"OPENGL_COMPOSITING","description":"OpenGL Compositing","status":"blocklisted","log":[{"type":"default","status":"available"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_SOFTWARE_GL","message":"#BLOCKLIST_FEATURE_FAILURE_SOFTWARE_GL"}]},{"name":"WEBRENDER","description":"WebRender","status":"force_enabled","log":[{"type":"default","status":"available"},{"type":"user","status":"force_enabled","message":"Force enabled by pref"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_SOFTWARE_GL","message":"Blocklisted by gfxInfo"}]},{"name":"WEBRENDER_COMPOSITOR","description":"WebRender native compositor","status":"blocked","log":[{"type":"default","status":"disabled","failureId":"FEATURE_FAILURE_DISABLED","message":"Disabled by default"},{"type":"env","status":"blocklisted","failureId":"FEATURE_FAILURE_WEBRENDER_COMPOSITOR_DISABLED","message":"Blocklisted by gfxInfo"},{"type":"runtime","status":"blocked","failureId":"FEATURE_FAILURE_DISABLE_RELEASE_OR_BETA","message":"Cannot be enabled in release or beta"}]},{"name":"WEBRENDER_PARTIAL","description":"WebRender partial present","status":"available","log":[{"type":"default","status":"available"}]},{"name":"WEBRENDER_SHADER_CACHE","description":"WebRender shader disk cache","status":"disabled","log":[{"type":"default","status":"disabled","failureId":"FEATURE_FAILURE_DISABLED","message":"Disabled by default"}]},{"name":"WEBRENDER_OPTIMIZED_SHADERS","description":"WebRender optimized shaders","status":"available","log":[{"type":"default","status":"available"}]},{"name":"WEBRENDER_ANGLE","description":"WebRender ANGLE","status":"unavailable","log":[{"type":"default","status":"available"},{"type":"env","status":"unavailable","failureId":"FEATURE_FAILURE_OS_NOT_SUPPORTED","message":"OS not supported"}]},{"name":"WEBRENDER_DCOMP_PRESENT","description":"WebRender DirectComposition","status":"unavailable","log":[{"type":"default","status":"available"},{"type":"user","status":"disabled","failureId":"FEATURE_FAILURE_DCOMP_PREF_DISABLED","message":"User disabled via pref"},{"type":"env","status":"unavailable","failureId":"FEATURE_FAILURE_NO_GPU_PROCESS","message":"Requires GPU process"},{"type":"runtime","status":"unavailable","failureId":"FEATURE_FAILURE_DCOMP_NOT_ANGLE","message":"Requires ANGLE"}]},{"name":"WEBRENDER_SCISSORED_CACHE_CLEARS","description":"WebRender scissored cache clears","status":"available","log":[{"type":"default","status":"available"}]},{"name":"WEBGPU","description":"WebGPU","status":"blocked","log":[{"type":"default","status":"available"},{"type":"runtime","status":"blocked","failureId":"WEBGPU_DISABLE_RELEASE_OR_BETA","message":"WebGPU cannot be enabled in release or beta"}]},{"name":"X11_EGL","description":"X11 EGL","status":"available","log":[{"type":"default","status":"available"}]},{"name":"DMABUF","description":"DMABUF","status":"failed","log":[{"type":"default","status":"available"},{"type":"runtime","status":"failed","failureId":"FEATURE_FAILURE_NO_DRM_DEVICE","message":"Failed to configure"}]},{"name":"HARDWARE_VIDEO_DECODING","description":"Hardware video decoding","status":"unavailable","log":[{"type":"default","status":"available"},{"type":"runtime","status":"unavailable","failureId":"FEATURE_FAILURE_VIDEO_DECODING_TEST_FAILED","message":"Force disabled by gfxInfo"}]},{"name":"DMABUF_SURFACE_EXPORT","description":"WebGL DMABuf surface export","status":"blocked","log":[{"type":"default","status":"available"},{"type":"env","status":"blocked","failureId":"FEATURE_FAILURE_BROKEN_DRIVER","message":"Blocklisted by gfxInfo"}]},{"name":"BACKDROP_FILTER","description":"Backdrop filter","status":"available","log":[{"type":"default","status":"available"}]},{"name":"CANVAS_RENDERER_THREAD","description":"canvas renderer thread","status":"available","log":[{"type":"default","status":"available"}]},{"name":"ACCELERATED_CANVAS2D","description":"Accelerated Canvas2D","status":"available","log":[{"type":"default","status":"available"}]},{"name":"REMOTE_CANVAS","description":"Remote canvas","status":"blocked","log":[{"type":"default","status":"disabled","failureId":"FEATURE_FAILURE_DISABLED","message":"Disabled via pref"},{"type":"env","status":"unavailable-no-gpu-process","failureId":"FEATURE_REMOTE_CANVAS_NO_GPU_PROCESS","message":"Disabled without GPU process"},{"type":"runtime","status":"blocked","failureId":"FEATURE_REMOTE_CANVAS_NOT_WINDOWS","message":"Platform not supported"}]},{"name":"DMABUF_WEBGL","description":"DMABuf for WebGL","status":"available","log":[{"type":"default","status":"available"}]}],"fallbacks":[]},"crashGuards":[],"webgpuDefaultAdapter":{"navigator.gpu":null},"webgpuFallbackAdapter":{"navigator.gpu":null}},"addons":[{"name":"Add-ons Search Detection","type":"extension","version":"2.0.0","isActive":true,"id":"addons-search-detection@mozilla.com"},{"name":"PageLoader extension","type":"extension","version":"1.1","isActive":true,"id":"pageloader@mozilla.org"},{"name":"Talos Powers","type":"extension","version":"1.1","isActive":true,"id":"talos-powers@mozilla.org"},{"name":"System theme — auto","type":"theme","version":"1.4.1","isActive":true,"id":"default-theme@mozilla.org"}],"features":[{"name":"Firefox Screenshots","version":"39.0.1","id":"screenshots@mozilla.org"},{"name":"Form Autofill","version":"1.0.1","id":"formautofill@mozilla.org"},{"name":"Picture-In-Picture","version":"1.0.0","id":"pictureinpicture@mozilla.org"},{"name":"Web Compatibility Interventions","version":"134.5.0","id":"webcompat@mozilla.org"},{"name":"WebCompat Reporter","version":"2.1.0","id":"webcompat-reporter@mozilla.org"}],"experimentalFeatures":[["sidebar-title","sidebar.revamp",false],["vertical-tabs-title","sidebar.verticalTabs",false],["genai-settings-chat-title","browser.ml.chat.enabled",false],["experimental-features-auto-pip","media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled",false],["experimental-features-ime-search","browser.urlbar.keepPanelOpenDuringImeComposition",false],["experimental-features-webrtc-global-mute-toggles","privacy.webrtc.globalMuteToggles",false],["experimental-features-media-jxl","image.jxl.enabled",false],["experimental-features-css-masonry2","layout.css.grid-template-masonry-value.enabled",false],["experimental-features-web-gpu2","dom.webgpu.enabled",false],["experimental-features-devtools-serviceworker-debugger-support","devtools.debugger.features.windowless-service-workers",false]],"processes":{"remoteTypes":{"socket":1,"extension":1,"rdd":1,"webIsolated":1},"maxWebContentProcesses":8},"normandy":{"addonStudies":[],"prefRollouts":[],"prefStudies":[],"nimbusExperiments":[],"nimbusRollouts":[]},"legacyUserStylesheets":{"active":false,"types":[]},"remoteSettings":{"serverURL":"data:,#remote-settings-dummy/v1","pollingEndpoint":"data:,#remote-settings-dummy/v1/buckets/monitor/collections/changes/changeset","serverTimestamp":null,"localTimestamp":null,"lastCheck":"","mainBucket":"main","defaultSigner":"remote-settings.content-signature.mozilla.org","previewMode":false,"collections":[],"history":{"settings-sync":[]},"isSynchronizationBroken":false},"places":[{"efficiencyPerc":24.4,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_schema","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_origins","count":1},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_origins_1","count":"-"},{"efficiencyPerc":0.3,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places","count":1},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_extra","count":0},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_url_hashindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_hostindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_visitcount","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_frecencyindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_lastvisitdateindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_guid_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_originidindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_altfrecencyindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits","count":1},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_extra","count":0},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_placedateindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_fromindex","count":"-"},{"efficiencyPerc":0.1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_historyvisits_dateindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_inputhistory","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_inputhistory_1","count":"-"},{"efficiencyPerc":1,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks","count":6},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_deleted","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_bookmarks_deleted_1","count":"-"},{"efficiencyPerc":0.2,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_itemindex","count":"-"},{"efficiencyPerc":0.2,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_parentindex","count":"-"},{"efficiencyPerc":0.3,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_itemlastmodifiedindex","count":"-"},{"efficiencyPerc":0.3,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_dateaddedindex","count":"-"},{"efficiencyPerc":0.4,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_bookmarks_guid_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_keywords","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_keywords_1","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_sequence","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_keywords_placepostdata_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_anno_attributes","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_anno_attributes_1","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_annos","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_annos_placeattributeindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_items_annos","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_items_annos_itemattributeindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_meta","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata_placecreated_uniqueindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata_referrerindex","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_places_metadata_search_queries","count":0},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"sqlite_autoindex_moz_places_metadata_search_queries_1","count":"-"},{"efficiencyPerc":0,"pages":1,"sizeBytes":32768,"sizePerc":2.2,"sequentialityPerc":100,"entity":"moz_previews_tombstones","count":0}]}
+20:25:03     INFO -  [ERROR glean_core::metrics::ping] Invalid reason code active for ping usage-reporting
+20:25:03     INFO -  [ERROR error_support::handling] logins-unexpected: Error parsing URL: relative URL with a cannot-be-a-base base
+20:25:03     INFO -  [ERROR error_support::handling] suggest-unexpected: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base
+20:25:03     INFO -  console.error: URLBar - QuickSuggest.SuggestBackendRust: "Error initializing SuggestStore" (new Error("reason: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base", "resource://gre/modules/RustSuggest.sys.mjs", 2228))
+20:25:07     INFO -  [Parent 2624538, IPC I/O Parent] WARNING: process 2624907 exited on signal 4: file /home/XXXXXXXX/firefox-mte/ipc/chromium/src/base/process_util_posix.cc:335
+20:25:07     INFO -  JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "CrashService waiting for content crash ping to be sent"
+20:25:07     INFO -  TEST-INFO | 2624538: exit 0
+20:25:07     INFO -  Browser initialized.
+20:25:07     INFO -  Fission enabled: True
+20:25:07     INFO -  Running cycle 1/1 for expat_perf_test test...
+20:25:07     INFO -  Using env: {'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+20:25:07     INFO -   'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:',
+20:25:07     INFO -   'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ',
+20:25:07     INFO -   'DISPLAY': ':99',
+20:25:07     INFO -   'EDITOR': '/usr/bin/vim',
+20:25:07     INFO -   'EXPAT_PIN_CORE': '1',
+20:25:07     INFO -   'GPG_TTY': '/dev/pts/13',
+20:25:07     INFO -   'HISTCONTROL': 'ignoredups',
+20:25:07     INFO -   'HISTSIZE': '1000',
+20:25:07     INFO -   'HOME': '/home/XXXXXXXX',
+20:25:07     INFO -   'HOSTNAME': 'fedora',
+20:25:07     INFO -   'LANG': 'en_US.UTF-8',
+20:25:07     INFO -   'LD_LIBRARY_PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin',
+20:25:07     INFO -   'LESSOPEN': '||/usr/bin/lesspipe.sh %s',
+20:25:07     INFO -   'LOGNAME': 'XXXXXXXX',
+20:25:07     INFO -   'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+20:25:07     INFO -   'MACH_MAIN_PID': '2624476',
+20:25:07     INFO -   'MAIL': '/var/spool/mail/XXXXXXXX',
+20:25:07     INFO -   'MINIDUMP_SAVE_PATH': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:25:07     INFO -   'MOTD_SHOWN': 'pam',
+20:25:07     INFO -   'MOZBUILD_PATH': '/home/XXXXXXXX/.mozbuild',
+20:25:07     INFO -   'MOZCONFIG': 'mozconfig_mte',
+20:25:07     INFO -   'MOZ_CRASHREPORTER': '1',
+20:25:07     INFO -   'MOZ_CRASHREPORTER_NO_REPORT': '1',
+20:25:07     INFO -   'MOZ_DEVELOPER_OBJ_DIR': '/home/XXXXXXXX/firefox-mte/firefox_release_mte',
+20:25:07     INFO -   'MOZ_DEVELOPER_REPO_DIR': '/home/XXXXXXXX/firefox-mte',
+20:25:07     INFO -   'MOZ_DISABLE_NONLOCAL_CONNECTIONS': '1',
+20:25:07     INFO -   'MOZ_UPLOAD_DIR': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:25:07     INFO -   'MOZ_USE_PAGELOADER': '1',
+20:25:07     INFO -   'NO_EM_RESTART': '1',
+20:25:07     INFO -   'OLDPWD': '/home/XXXXXXXX/firefox-mte',
+20:25:07     INFO -   'PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin',
+20:25:07     INFO -   'PWD': '/home/XXXXXXXX/firefox-mte',
+20:25:07     INFO -   'PYTHONPATH': '/home/XXXXXXXX/firefox-mte/testing/talos',
+20:25:07     INFO -   'REQUIRE_GPU': '0',
+20:25:07     INFO -   'RUST_BACKTRACE': 'full',
+20:25:07     INFO -   'SELINUX_LEVEL_REQUESTED': '',
+20:25:07     INFO -   'SELINUX_ROLE_REQUESTED': '',
+20:25:07     INFO -   'SELINUX_USE_CURRENT_RANGE': '',
+20:25:07     INFO -   'SHELL': '/bin/bash',
+20:25:07     INFO -   'SHLVL': '3',
+20:25:07     INFO -   'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346',
+20:25:07     INFO -   'SSH_CLIENT': '172.17.128.2 52585 22',
+20:25:07     INFO -   'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22',
+20:25:07     INFO -   'SSH_TTY': '/dev/pts/0',
+20:25:07     INFO -   'TERM': 'tmux-256color',
+20:25:07     INFO -   'TERM_PROGRAM': 'tmux',
+20:25:07     INFO -   'TERM_PROGRAM_VERSION': '3.5a',
+20:25:07     INFO -   'TMUX': '/tmp/tmux-1000/default,2416415,0',
+20:25:07     INFO -   'TMUX_PANE': '%1',
+20:25:07     INFO -   'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins',
+20:25:07     INFO -   'USER': 'XXXXXXXX',
+20:25:07     INFO -   'VIRTUAL_ENV': 'talos-venv',
+20:25:07     INFO -   'VIRTUAL_ENV_PROMPT': '(venv-3.11) ',
+20:25:07     INFO -   'XDG_RUNTIME_DIR': '/run/user/1000',
+20:25:07     INFO -   'XDG_SESSION_CLASS': 'user',
+20:25:07     INFO -   'XDG_SESSION_ID': '1323',
+20:25:07     INFO -   'XDG_SESSION_TYPE': 'tty',
+20:25:07     INFO -   '_': './mach'}
+20:25:07     INFO -  TEST-INFO | started process 2624997 (/home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox -profile /tmp/tmpyyv9p4gx/profile)
+20:25:08     INFO -  PID 2624997 | ExceptionHandler::GenerateDump attempting to generate: /tmp/tmpyyv9p4gx/profile/minidumps/223df73f-3a05-cf52-81a2-786f2293e610.dmp
+20:25:08     INFO -  PID 2624997 | ExceptionHandler::GenerateDump cloned child 2625122
+20:25:08     INFO -  PID 2624997 | ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+20:25:08     INFO -  PID 2624997 | ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+20:25:08     INFO -  PID 2624997 | ExceptionHandler::GenerateDump minidump generation  succeeded
+20:25:08     INFO -  PID 2624997 |  
+20:25:08     INFO -  TEST-INFO | 2624997: exit 4
+20:25:08     INFO -  mozcrash checking /tmp/tmpyyv9p4gx/profile/minidumps for minidumps...
+20:25:08     INFO -  mozcrash Saved minidump as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/3fdc9c15-508d-ace5-49dd-977f228d8221.dmp
+20:25:08     INFO -  mozcrash Saved app info as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/3fdc9c15-508d-ace5-49dd-977f228d8221.extra
+20:25:08     INFO -  PROCESS-CRASH | None [unknown top frame] | expat_perf_test
+20:25:08     INFO -  Crash dump filename: /tmp/tmpyyv9p4gx/profile/minidumps/3fdc9c15-508d-ace5-49dd-977f228d8221.dmp
+20:25:08     INFO -  Process type: content
+20:25:08     INFO -  Process pid: unknown
+20:25:08     INFO -  MINIDUMP_STACKWALK binary not found: /home/XXXXXXXX/.mozbuild/minidump-stackwalk/minidump-stackwalk. Use mach bootstrap --no-system-changes to install minidump-stackwalk.
+20:25:08     INFO -  mozcrash Saved minidump as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/223df73f-3a05-cf52-81a2-786f2293e610.dmp
+20:25:08     INFO -  mozcrash Saved app info as /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir/223df73f-3a05-cf52-81a2-786f2293e610.extra
+20:25:08     INFO -  PROCESS-CRASH | None [unknown top frame] | expat_perf_test
+20:25:08     INFO -  Crash dump filename: /tmp/tmpyyv9p4gx/profile/minidumps/223df73f-3a05-cf52-81a2-786f2293e610.dmp
+20:25:08     INFO -  Process type: main
+20:25:08     INFO -  Process pid: unknown
+20:25:08     INFO -  MINIDUMP_STACKWALK binary not found: /home/XXXXXXXX/.mozbuild/minidump-stackwalk/minidump-stackwalk. Use mach bootstrap --no-system-changes to install minidump-stackwalk.
+20:25:08     INFO -  TEST-UNEXPECTED-ERROR | expat_perf_test | Found crashes after test run, terminating test
+20:25:08    ERROR -  Traceback (most recent call last):
+20:25:08     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/ttest.py", line 243, in _runTest
+20:25:08     INFO -      test_results.add(
+20:25:08     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/results.py", line 92, in add
+20:25:08     INFO -      browserLog = BrowserLogResults(
+20:25:08     INFO -                   ^^^^^^^^^^^^^^^^^^
+20:25:08     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/results.py", line 344, in __init__
+20:25:08     INFO -      self.parse()
+20:25:08     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/results.py", line 370, in parse
+20:25:08     INFO -      self.error(
+20:25:08     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/results.py", line 355, in error
+20:25:08     INFO -      raise utils.TalosError(message)
+20:25:08     INFO -  talos.utils.TalosError: Could not find report in browser output: [('tsformat', ('__start_report', '__end_report')), ('tpformat', ('__start_tp_report', '__end_tp_report'))]
+20:25:08     INFO -  During handling of the above exception, another exception occurred:
+20:25:08    ERROR -  Traceback (most recent call last):
+20:25:08     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py", line 351, in run_tests
+20:25:08     INFO -      mytest.runTest(browser_config, test, utility_path=utility_path)
+20:25:08     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/ttest.py", line 61, in runTest
+20:25:08     INFO -      return self._runTest(
+20:25:08     INFO -             ^^^^^^^^^^^^^^
+20:25:08     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/ttest.py", line 254, in _runTest
+20:25:08     INFO -      self.check_for_crashes(
+20:25:08     INFO -    File "/home/XXXXXXXX/firefox-mte/testing/talos/talos/ttest.py", line 45, in check_for_crashes
+20:25:08     INFO -      raise TalosCrash("Found crashes after test run, terminating test")
+20:25:08     INFO -  talos.utils.TalosCrash: Found crashes after test run, terminating test
+20:25:08     INFO -  TEST-INFO took 7256ms
+20:25:08     INFO -  SUITE-END | took 7s
+20:25:08     INFO - Return code: 2
+20:25:08  WARNING - setting return code to 2
+20:25:08     INFO - Running post-action listener: _package_coverage_data
+20:25:08     INFO - Running post-action listener: _resource_record_post_action
+20:25:08     INFO - Running post-action listener: process_java_coverage_data
+20:25:08     INFO - [mozharness: 2025-08-20 20:25:08.533778Z] Finished run-tests step (success)
+20:25:08     INFO - Running post-run listener: _resource_record_post_run
+20:25:08     INFO - Total resource usage - Wall time: 8s; CPU: 1%; Read bytes: 0; Write bytes: 14020608; Read time: 0; Write time: 85
+20:25:08     INFO - TinderboxPrint: CPU usage<br/>0.8%
+20:25:08     INFO - TinderboxPrint: I/O read bytes / time<br/>0 / 0
+20:25:08     INFO - TinderboxPrint: I/O write bytes / time<br/>14,020,608 / 85
+20:25:08     INFO - TinderboxPrint: CPU idle<br/>1,460.5 (99.2%)
+20:25:08     INFO - TinderboxPrint: Swap in / out<br/>0 / 0
+20:25:08     INFO - run-tests - Wall time: 8s; CPU: 1%; Read bytes: 0; Write bytes: 14020608; Read time: 0; Write time: 85
+20:25:09     INFO - Glean disabled: not submitting any pings.
+Failed to run test benchmark for /home/XXXXXXXX/benchmarks/ff-expat-ampere1/CPU1/mte. Retrying...

@@ -1,0 +1,246 @@
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+                           SPEC(R) CINT2006 Summary
+                                       
+                           Wed Oct 16 15:07:46 2024
+
+CPU2006 License: 0                                       Test date: Oct-2024
+Test sponsor:                                Hardware availability: Dec-9999
+Tested by:                                   Software availability: Mar-2008
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+400.perlbench    9770        476       20.5 S                                  
+400.perlbench    9770        475       20.6 *                                  
+400.perlbench    9770        474       20.6 S                                  
+401.bzip2        9650        515       18.7 S                                  
+401.bzip2        9650        510       18.9 S                                  
+401.bzip2        9650        513       18.8 *                                  
+403.gcc          8050        317       25.4 S                                  
+403.gcc          8050        310       25.9 S                                  
+403.gcc          8050        312       25.8 *                                  
+429.mcf          9120        418       21.8 S                                  
+429.mcf          9120        385       23.7 S                                  
+429.mcf          9120        393       23.2 *                                  
+445.gobmk       10490        497       21.1 *                                  
+445.gobmk       10490        498       21.0 S                                  
+445.gobmk       10490        496       21.1 S                                  
+456.hmmer        9330        269       34.7 S                                  
+456.hmmer        9330        270       34.6 *                                  
+456.hmmer        9330        270       34.5 S                                  
+458.sjeng       12100        645       18.8 S                                  
+458.sjeng       12100        646       18.7 *                                  
+458.sjeng       12100        648       18.7 S                                  
+462.libquantum  20720        302       68.6 S                                  
+462.libquantum  20720        302       68.6 *                                  
+462.libquantum  20720        303       68.3 S                                  
+464.h264ref     22130        468       47.3 S                                  
+464.h264ref     22130        468       47.3 *                                  
+464.h264ref     22130        467       47.4 S                                  
+471.omnetpp      6250        545       11.5 *                                  
+471.omnetpp      6250        549       11.4 S                                  
+471.omnetpp      6250        532       11.7 S                                  
+473.astar        7020        447       15.7 *                                  
+473.astar        7020        449       15.6 S                                  
+473.astar        7020        436       16.1 S                                  
+483.xalancbmk    6900        271       25.4 *                                  
+483.xalancbmk    6900        274       25.2 S                                  
+483.xalancbmk    6900        271       25.5 S                                  
+==============================================================================
+400.perlbench    9770        475       20.6 *                                  
+401.bzip2        9650        513       18.8 *                                  
+403.gcc          8050        312       25.8 *                                  
+429.mcf          9120        393       23.2 *                                  
+445.gobmk       10490        497       21.1 *                                  
+456.hmmer        9330        270       34.6 *                                  
+458.sjeng       12100        646       18.7 *                                  
+462.libquantum  20720        302       68.6 *                                  
+464.h264ref     22130        468       47.3 *                                  
+471.omnetpp      6250        545       11.5 *                                  
+473.astar        7020        447       15.7 *                                  
+483.xalancbmk    6900        271       25.4 *                                  
+ Est. SPECint(R)_base2006              24.5
+ Est. SPECint2006                                                   Not Run
+
+
+                                   HARDWARE
+                                   --------
+            CPU Name:  
+ CPU Characteristics:  
+             CPU MHz:  
+                 FPU:  
+      CPU(s) enabled:  cores,  chips,  cores/chip,  threads/core
+    CPU(s) orderable:  
+       Primary Cache:  
+     Secondary Cache:  
+            L3 Cache:  
+         Other Cache:  
+              Memory:  
+      Disk Subsystem:  
+      Other Hardware:  
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: QEMU AArch64 Usermode
+            Compiler: clang
+       Auto Parallel: No
+         File System:  
+        System State:  
+       Base Pointers: 64-bit
+       Peak Pointers: Not Applicable
+      Other Software: None
+
+
+                                 Submit Notes
+                                 ------------
+    The config file option 'submit' was used.
+
+                              Base Unknown Flags
+                              ------------------
+  400.perlbench: "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in CC)
+                 "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in LD)
+                 "-Wno-int-conversion" (in PORTABILITY)
+                 "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/repos/llvm-mte/toolchains/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in COPTIMIZE)
+                 "-std=gnu89 -mllvm -tagcfi-retlock -mllvm --sw-tag-excl=0" (in EXTRA_CFLAGS)
+                 "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                 "-L/home/XXXXXXXX/repos/llvm-mte/tagcfi_samples/runtime/ -l:mte-sync-aarch64.a" (in EXTRA_LIBS)
+
+      401.bzip2: "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in CC)
+                 "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in LD)
+                 "-Wno-int-conversion" (in PORTABILITY)
+                 "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/repos/llvm-mte/toolchains/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in COPTIMIZE)
+                 "-std=gnu89 -mllvm -tagcfi-retlock -mllvm --sw-tag-excl=0" (in EXTRA_CFLAGS)
+                 "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                 "-L/home/XXXXXXXX/repos/llvm-mte/tagcfi_samples/runtime/ -l:mte-sync-aarch64.a" (in EXTRA_LIBS)
+
+        403.gcc: "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in CC)
+                 "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in LD)
+                 "-Wno-int-conversion" (in PORTABILITY)
+                 "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/repos/llvm-mte/toolchains/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in COPTIMIZE)
+                 "-std=gnu89 -mllvm -tagcfi-retlock -mllvm --sw-tag-excl=0" (in EXTRA_CFLAGS)
+                 "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                 "-L/home/XXXXXXXX/repos/llvm-mte/tagcfi_samples/runtime/ -l:mte-sync-aarch64.a" (in EXTRA_LIBS)
+
+        429.mcf: "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in CC)
+                 "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in LD)
+                 "-Wno-int-conversion" (in PORTABILITY)
+                 "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/repos/llvm-mte/toolchains/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in COPTIMIZE)
+                 "-std=gnu89 -mllvm -tagcfi-retlock -mllvm --sw-tag-excl=0" (in EXTRA_CFLAGS)
+                 "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                 "-L/home/XXXXXXXX/repos/llvm-mte/tagcfi_samples/runtime/ -l:mte-sync-aarch64.a" (in EXTRA_LIBS)
+
+      445.gobmk: "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in CC)
+                 "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in LD)
+                 "-Wno-int-conversion" (in PORTABILITY)
+                 "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/repos/llvm-mte/toolchains/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in COPTIMIZE)
+                 "-std=gnu89 -mllvm -tagcfi-retlock -mllvm --sw-tag-excl=0" (in EXTRA_CFLAGS)
+                 "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                 "-L/home/XXXXXXXX/repos/llvm-mte/tagcfi_samples/runtime/ -l:mte-sync-aarch64.a" (in EXTRA_LIBS)
+
+      456.hmmer: "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in CC)
+                 "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in LD)
+                 "-Wno-int-conversion" (in PORTABILITY)
+                 "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/repos/llvm-mte/toolchains/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in COPTIMIZE)
+                 "-std=gnu89 -mllvm -tagcfi-retlock -mllvm --sw-tag-excl=0" (in EXTRA_CFLAGS)
+                 "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                 "-L/home/XXXXXXXX/repos/llvm-mte/tagcfi_samples/runtime/ -l:mte-sync-aarch64.a" (in EXTRA_LIBS)
+
+      458.sjeng: "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in CC)
+                 "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in LD)
+                 "-Wno-int-conversion" (in PORTABILITY)
+                 "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/repos/llvm-mte/toolchains/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in COPTIMIZE)
+                 "-std=gnu89 -mllvm -tagcfi-retlock -mllvm --sw-tag-excl=0" (in EXTRA_CFLAGS)
+                 "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                 "-L/home/XXXXXXXX/repos/llvm-mte/tagcfi_samples/runtime/ -l:mte-sync-aarch64.a" (in EXTRA_LIBS)
+
+ 462.libquantum: "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in CC)
+                 "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in LD)
+                 "-Wno-int-conversion" (in PORTABILITY)
+                 "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/repos/llvm-mte/toolchains/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in COPTIMIZE)
+                 "-std=gnu89 -mllvm -tagcfi-retlock -mllvm --sw-tag-excl=0" (in EXTRA_CFLAGS)
+                 "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                 "-L/home/XXXXXXXX/repos/llvm-mte/tagcfi_samples/runtime/ -l:mte-sync-aarch64.a" (in EXTRA_LIBS)
+
+    464.h264ref: "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in CC)
+                 "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang" (in LD)
+                 "-Wno-int-conversion" (in PORTABILITY)
+                 "-fsigned-char" (in CPORTABILITY)
+                 "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/repos/llvm-mte/toolchains/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in COPTIMIZE)
+                 "-std=gnu89 -mllvm -tagcfi-retlock -mllvm --sw-tag-excl=0" (in EXTRA_CFLAGS)
+                 "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                 "-L/home/XXXXXXXX/repos/llvm-mte/tagcfi_samples/runtime/ -l:mte-sync-aarch64.a" (in EXTRA_LIBS)
+
+    471.omnetpp: "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang++" (in CXX)
+                 "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang++" (in LD)
+                 "-Wno-int-conversion" (in PORTABILITY)
+                 "-unwindlib=libunwind" (in LDPORTABILITY)
+                 "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/repos/llvm-mte/toolchains/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXXOPTIMIZE)
+                 "-std=c++98 -mllvm -tagcfi-retlock -mllvm --sw-tag-excl=0" (in EXTRA_CXXFLAGS)
+                 "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                 "-L/home/XXXXXXXX/repos/llvm-mte/tagcfi_samples/runtime/ -l:mte-sync-aarch64.a" (in EXTRA_LIBS)
+
+      473.astar: "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang++" (in CXX)
+                 "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang++" (in LD)
+                 "-Wno-int-conversion" (in PORTABILITY)
+                 "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/repos/llvm-mte/toolchains/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXXOPTIMIZE)
+                 "-std=c++98 -mllvm -tagcfi-retlock -mllvm --sw-tag-excl=0" (in EXTRA_CXXFLAGS)
+                 "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                 "-L/home/XXXXXXXX/repos/llvm-mte/tagcfi_samples/runtime/ -l:mte-sync-aarch64.a" (in EXTRA_LIBS)
+
+  483.xalancbmk: "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang++" (in CXX)
+                 "/home/XXXXXXXX/repos/llvm-mte/.buildcross/bin/clang++" (in LD)
+                 "-Wno-int-conversion" (in PORTABILITY)
+                 "-unwindlib=libunwind" (in LDPORTABILITY)
+                 "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/repos/llvm-mte/toolchains/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXXOPTIMIZE)
+                 "-std=c++98 -mllvm -tagcfi-retlock -mllvm --sw-tag-excl=0" (in EXTRA_CXXFLAGS)
+                 "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                 "-L/home/XXXXXXXX/repos/llvm-mte/tagcfi_samples/runtime/ -l:mte-sync-aarch64.a" (in EXTRA_LIBS)
+
+
+                            Base Portability Flags
+                            ----------------------
+  400.perlbench: -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64
+      401.bzip2: -DSPEC_CPU_LP64
+        403.gcc: -DSPEC_CPU_LP64
+        429.mcf: -DSPEC_CPU_LP64
+      445.gobmk: -DSPEC_CPU_LP64
+      456.hmmer: -DSPEC_CPU_LP64
+      458.sjeng: -DSPEC_CPU_LP64
+ 462.libquantum: -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX
+    464.h264ref: -DSPEC_CPU_LP64
+    471.omnetpp: -DSPEC_CPU_LP64
+      473.astar: -DSPEC_CPU_LP64
+  483.xalancbmk: -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX
+
+
+    SPEC and SPECint are registered trademarks of the Standard Performance
+    Evaluation Corporation.  All other brand and product names appearing
+    in this result are trademarks or registered trademarks of their
+    respective holders.
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 2006-2008 Standard Performance Evaluation Corporation
+Tested with SPEC CPU2006 v1.1.
+Report generated on Wed Oct 16 19:30:55 2024 by CPU2006 ASCII formatter v6128.

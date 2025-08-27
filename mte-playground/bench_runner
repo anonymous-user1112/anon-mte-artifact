@@ -1,0 +1,31 @@
+#!/bin/sh
+cores=(0 4 8)
+fixed_freq=(1328 1836 2363)
+orig_min=(324 402 500)
+orig_max=(1704 2367 2850)
+
+bench_runner() {
+	i=$1
+	shift
+	# cpufreq-set -c "${cores[$i]}" -g performance && \
+	# cpufreq-set -c "${cores[$i]}" --min "${fixed_freq[$i]}"MHz --max "${fixed_freq[$i]}"MHz
+
+	taskset -c "${cores[$i]}" "$@"
+
+	# cpufreq-set -c "${cores[$i]}" -g sched_pixel && \
+	# cpufreq-set -c "${cores[$i]}" --min "${orig_min[$i]}"MHz --max "${orig_max[$i]}"MHz
+}
+
+if [ $1 == "little" ]; then
+	shift
+	bench_runner 0 $@
+elif [ $1 == "big" ]; then
+	shift
+	bench_runner 1 $@
+elif [ $1 == "cxc" ]; then
+	shift
+	bench_runner 2 $@
+else
+	echo "wrong usage: bench_runner {big|little|cxc} <command>"
+fi
+

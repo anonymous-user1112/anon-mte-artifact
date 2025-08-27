@@ -1,0 +1,1439 @@
+runspec v6152 started at Wed Feb 12 10:21:09 2025 on "localhost"
+runspec is: /root/spec/bin/runspec
+runspec: runspec -c llvm-aarch64-mte-tagcfi -e ral-full-tagcheck-static --tune base --size ref --iterations 3 -S CORE=cxc --noreportable int
+toolset: unknown
+
+Locating benchmarks...found 31 benchmarks in 6 benchsets.
+Reading config file '/root/spec/config/llvm-aarch64-mte-tagcfi.cfg'
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = ral-full-tagcheck-static
+Size      = ref
+Machine   = default
+benchmarks= 400.perlbench,401.bzip2,403.gcc,429.mcf,445.gobmk,456.hmmer,458.sjeng,462.libquantum,464.h264ref,471.omnetpp,473.astar,483.xalancbmk,999.specrand
+outputs   = asc, csv, Screen
+username  = root
+Benchmarks selected: 400.perlbench, 401.bzip2, 403.gcc, 429.mcf, 445.gobmk, 456.hmmer, 458.sjeng, 462.libquantum, 464.h264ref, 471.omnetpp, 473.astar, 483.xalancbmk, 999.specrand
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 400.perlbench base ral-full-tagcheck-static default
+
+------------------------------------------------------------------------
+  Up to date 401.bzip2 base ral-full-tagcheck-static default
+
+------------------------------------------------------------------------
+  Up to date 403.gcc base ral-full-tagcheck-static default
+
+------------------------------------------------------------------------
+  Up to date 429.mcf base ral-full-tagcheck-static default
+
+------------------------------------------------------------------------
+  Up to date 445.gobmk base ral-full-tagcheck-static default
+
+------------------------------------------------------------------------
+  Up to date 456.hmmer base ral-full-tagcheck-static default
+
+------------------------------------------------------------------------
+  Up to date 458.sjeng base ral-full-tagcheck-static default
+
+------------------------------------------------------------------------
+  Up to date 462.libquantum base ral-full-tagcheck-static default
+
+------------------------------------------------------------------------
+  Up to date 464.h264ref base ral-full-tagcheck-static default
+
+------------------------------------------------------------------------
+  Up to date 471.omnetpp base ral-full-tagcheck-static default
+
+------------------------------------------------------------------------
+  Up to date 473.astar base ral-full-tagcheck-static default
+
+------------------------------------------------------------------------
+  Up to date 483.xalancbmk base ral-full-tagcheck-static default
+
+------------------------------------------------------------------------
+  Up to date 999.specrand base ral-full-tagcheck-static default
+
+
+Setting Up Run Directories
+  Setting up 400.perlbench ref base ral-full-tagcheck-static default: existing (run_base_ref_ral-full-tagcheck-static.0000)
+  Setting up 401.bzip2 ref base ral-full-tagcheck-static default: existing (run_base_ref_ral-full-tagcheck-static.0000)
+  Setting up 403.gcc ref base ral-full-tagcheck-static default: existing (run_base_ref_ral-full-tagcheck-static.0000)
+  Setting up 429.mcf ref base ral-full-tagcheck-static default: existing (run_base_ref_ral-full-tagcheck-static.0000)
+  Setting up 445.gobmk ref base ral-full-tagcheck-static default: existing (run_base_ref_ral-full-tagcheck-static.0000)
+  Setting up 456.hmmer ref base ral-full-tagcheck-static default: existing (run_base_ref_ral-full-tagcheck-static.0000)
+  Setting up 458.sjeng ref base ral-full-tagcheck-static default: existing (run_base_ref_ral-full-tagcheck-static.0000)
+  Setting up 462.libquantum ref base ral-full-tagcheck-static default: existing (run_base_ref_ral-full-tagcheck-static.0000)
+  Setting up 464.h264ref ref base ral-full-tagcheck-static default: existing (run_base_ref_ral-full-tagcheck-static.0000)
+  Setting up 471.omnetpp ref base ral-full-tagcheck-static default: existing (run_base_ref_ral-full-tagcheck-static.0000)
+  Setting up 473.astar ref base ral-full-tagcheck-static default: existing (run_base_ref_ral-full-tagcheck-static.0000)
+  Setting up 483.xalancbmk ref base ral-full-tagcheck-static default: existing (run_base_ref_ral-full-tagcheck-static.0000)
+  Setting up 999.specrand ref base ral-full-tagcheck-static default: existing (run_base_ref_ral-full-tagcheck-static.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 400.perlbench ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/perlbench_base.ral-full-tagcheck-static -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/perlbench_base.ral-full-tagcheck-static -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/perlbench_base.ral-full-tagcheck-static -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 10:21:19 2025 (1739355679)
+Stop command: Wed Feb 12 10:29:16 2025 (1739356156)
+Elapsed time for command: 00:07:57 (477)
+Workload elapsed time (0:1) = 239.687455 seconds
+Workload elapsed time (0:2) = 111.186512 seconds
+Workload elapsed time (0:3) = 117.814292 seconds
+Copy 0 of 400.perlbench (base ref) run 1 finished at Wed Feb 12 10:29:08 2025.  Total elapsed time: 468.688259
+comparing files in '/root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 10:29:16 2025 (1739356156)
+Stop command: Wed Feb 12 10:29:17 2025 (1739356157)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Wed Feb 12 10:21:19 2025 (1739355679)
+  Stop:     Wed Feb 12 10:29:16 2025 (1739356156)
+  Elapsed:  00:07:57 (477)
+  Reported: 468 688449000 468.688449
+ Success 400.perlbench base ref ratio=20.85, runtime=468.688449
+
+-----------------------------------
+  Running (#1) 401.bzip2 ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o input.source.out -e input.source.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static input.program 280 (timed)
+    -o text.html.out -e text.html.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static text.html 280 (timed)
+    -o input.combined.out -e input.combined.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static input.combined 200 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 10:29:17 2025 (1739356157)
+Stop command: Wed Feb 12 10:37:24 2025 (1739356644)
+Elapsed time for command: 00:08:07 (487)
+Workload elapsed time (0:1) = 83.989198 seconds
+Workload elapsed time (0:2) = 48.425976 seconds
+Workload elapsed time (0:3) = 49.233198 seconds
+Workload elapsed time (0:4) = 132.026045 seconds
+Workload elapsed time (0:5) = 95.471467 seconds
+Workload elapsed time (0:6) = 69.567766 seconds
+Copy 0 of 401.bzip2 (base ref) run 1 finished at Wed Feb 12 10:37:16 2025.  Total elapsed time: 478.71365
+comparing files in '/root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 10:37:24 2025 (1739356644)
+Stop command: Wed Feb 12 10:37:26 2025 (1739356646)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Feb 12 10:29:17 2025 (1739356157)
+  Stop:     Wed Feb 12 10:37:24 2025 (1739356644)
+  Elapsed:  00:08:07 (487)
+  Reported: 478 714236000 478.714236
+ Success 401.bzip2 base ref ratio=20.16, runtime=478.714236
+
+-----------------------------------
+  Running (#1) 403.gcc ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o 166.out -e 166.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static 166.i -o 166.s (timed)
+    -o 200.out -e 200.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static g23.i -o g23.s (timed)
+    -o s04.out -e s04.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static scilab.i -o scilab.s (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 10:37:26 2025 (1739356646)
+Stop command: Wed Feb 12 10:42:27 2025 (1739356947)
+Elapsed time for command: 00:05:01 (301)
+Workload elapsed time (0:1) = 21.652234 seconds
+Workload elapsed time (0:2) = 42.311743 seconds
+Workload elapsed time (0:3) = 29.770509 seconds
+Workload elapsed time (0:4) = 27.378428 seconds
+Workload elapsed time (0:5) = 26.632961 seconds
+Workload elapsed time (0:6) = 37.451015 seconds
+Workload elapsed time (0:7) = 49.707754 seconds
+Workload elapsed time (0:8) = 41.648105 seconds
+Workload elapsed time (0:9) = 16.082378 seconds
+Copy 0 of 403.gcc (base ref) run 1 finished at Wed Feb 12 10:42:19 2025.  Total elapsed time: 292.635127
+comparing files in '/root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 10:42:27 2025 (1739356947)
+Stop command: Wed Feb 12 10:42:30 2025 (1739356950)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Wed Feb 12 10:37:26 2025 (1739356646)
+  Stop:     Wed Feb 12 10:42:27 2025 (1739356947)
+  Elapsed:  00:05:01 (301)
+  Reported: 292 636007000 292.636007
+ Success 403.gcc base ref ratio=27.51, runtime=292.636007
+
+-----------------------------------
+  Running (#1) 429.mcf ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o inp.out -e inp.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/mcf_base.ral-full-tagcheck-static inp.in (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 10:42:30 2025 (1739356950)
+Stop command: Wed Feb 12 10:45:33 2025 (1739357133)
+Elapsed time for command: 00:03:03 (183)
+Workload elapsed time (0:1) = 174.526548 seconds
+Copy 0 of 429.mcf (base ref) run 1 finished at Wed Feb 12 10:45:25 2025.  Total elapsed time: 174.526548
+comparing files in '/root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 10:45:33 2025 (1739357133)
+Stop command: Wed Feb 12 10:45:34 2025 (1739357134)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Wed Feb 12 10:42:30 2025 (1739356950)
+  Stop:     Wed Feb 12 10:45:33 2025 (1739357133)
+  Elapsed:  00:03:03 (183)
+  Reported: 174 526771000 174.526771
+ Success 429.mcf base ref ratio=52.26, runtime=174.526771
+
+-----------------------------------
+  Running (#1) 445.gobmk ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000
+    -i 13x13.tst -o 13x13.out -e 13x13.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 10:45:34 2025 (1739357134)
+Stop command: Wed Feb 12 10:53:46 2025 (1739357626)
+Elapsed time for command: 00:08:12 (492)
+Workload elapsed time (0:1) = 66.850537 seconds
+Workload elapsed time (0:2) = 174.864035 seconds
+Workload elapsed time (0:3) = 81.200128 seconds
+Workload elapsed time (0:4) = 67.781132 seconds
+Workload elapsed time (0:5) = 93.12004 seconds
+Copy 0 of 445.gobmk (base ref) run 1 finished at Wed Feb 12 10:53:38 2025.  Total elapsed time: 483.815872
+comparing files in '/root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 10:53:46 2025 (1739357626)
+Stop command: Wed Feb 12 10:53:48 2025 (1739357628)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Feb 12 10:45:34 2025 (1739357134)
+  Stop:     Wed Feb 12 10:53:46 2025 (1739357626)
+  Elapsed:  00:08:12 (492)
+  Reported: 483 816257000 483.816257
+ Success 445.gobmk base ref ratio=21.68, runtime=483.816257
+
+-----------------------------------
+  Running (#1) 456.hmmer ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o nph3.out -e nph3.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/hmmer_base.ral-full-tagcheck-static nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/hmmer_base.ral-full-tagcheck-static --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 10:53:48 2025 (1739357628)
+Stop command: Wed Feb 12 10:57:50 2025 (1739357870)
+Elapsed time for command: 00:04:02 (242)
+Workload elapsed time (0:1) = 73.667303 seconds
+Workload elapsed time (0:2) = 160.883126 seconds
+Copy 0 of 456.hmmer (base ref) run 1 finished at Wed Feb 12 10:57:42 2025.  Total elapsed time: 234.550429
+comparing files in '/root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 10:57:50 2025 (1739357870)
+Stop command: Wed Feb 12 10:57:51 2025 (1739357871)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Wed Feb 12 10:53:48 2025 (1739357628)
+  Stop:     Wed Feb 12 10:57:50 2025 (1739357870)
+  Elapsed:  00:04:02 (242)
+  Reported: 234 551011000 234.551011
+ Success 456.hmmer base ref ratio=39.78, runtime=234.551011
+
+-----------------------------------
+  Running (#1) 458.sjeng ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o ref.out -e ref.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/sjeng_base.ral-full-tagcheck-static ref.txt (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 10:57:51 2025 (1739357871)
+Stop command: Wed Feb 12 11:06:04 2025 (1739358364)
+Elapsed time for command: 00:08:13 (493)
+Workload elapsed time (0:1) = 484.603462 seconds
+Copy 0 of 458.sjeng (base ref) run 1 finished at Wed Feb 12 11:05:56 2025.  Total elapsed time: 484.603462
+comparing files in '/root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 11:06:04 2025 (1739358364)
+Stop command: Wed Feb 12 11:06:04 2025 (1739358364)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Wed Feb 12 10:57:51 2025 (1739357871)
+  Stop:     Wed Feb 12 11:06:04 2025 (1739358364)
+  Elapsed:  00:08:13 (493)
+  Reported: 484 604019000 484.604019
+ Success 458.sjeng base ref ratio=24.97, runtime=484.604019
+
+-----------------------------------
+  Running (#1) 462.libquantum ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o ref.out -e ref.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/libquantum_base.ral-full-tagcheck-static 1397 8 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 11:06:05 2025 (1739358365)
+Stop command: Wed Feb 12 11:23:25 2025 (1739359405)
+Elapsed time for command: 00:17:20 (1040)
+Workload elapsed time (0:1) = 1032.610087 seconds
+Copy 0 of 462.libquantum (base ref) run 1 finished at Wed Feb 12 11:23:17 2025.  Total elapsed time: 1032.610087
+comparing files in '/root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 11:23:25 2025 (1739359405)
+Stop command: Wed Feb 12 11:23:26 2025 (1739359406)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Wed Feb 12 11:06:05 2025 (1739358365)
+  Stop:     Wed Feb 12 11:23:25 2025 (1739359405)
+  Elapsed:  00:17:20 (1040)
+  Reported: 1032 610325000 1032.610325
+ Success 462.libquantum base ref ratio=20.07, runtime=1032.610325
+
+-----------------------------------
+  Running (#1) 464.h264ref ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/h264ref_base.ral-full-tagcheck-static -d foreman_ref_encoder_baseline.cfg (timed)
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/h264ref_base.ral-full-tagcheck-static -d foreman_ref_encoder_main.cfg (timed)
+    -o sss_main_encodelog.out -e sss_main_encodelog.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/h264ref_base.ral-full-tagcheck-static -d sss_encoder_main.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 11:23:26 2025 (1739359406)
+Stop command: Wed Feb 12 11:29:38 2025 (1739359778)
+Elapsed time for command: 00:06:12 (372)
+Workload elapsed time (0:1) = 44.901195 seconds
+Workload elapsed time (0:2) = 33.341629 seconds
+Workload elapsed time (0:3) = 285.684012 seconds
+Copy 0 of 464.h264ref (base ref) run 1 finished at Wed Feb 12 11:29:30 2025.  Total elapsed time: 363.926836
+comparing files in '/root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 11:29:38 2025 (1739359778)
+Stop command: Wed Feb 12 11:29:40 2025 (1739359780)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Feb 12 11:23:26 2025 (1739359406)
+  Stop:     Wed Feb 12 11:29:38 2025 (1739359778)
+  Elapsed:  00:06:12 (372)
+  Reported: 363 927087000 363.927087
+ Success 464.h264ref base ref ratio=60.81, runtime=363.927087
+
+-----------------------------------
+  Running (#1) 471.omnetpp ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o omnetpp.log -e omnetpp.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/omnetpp_base.ral-full-tagcheck-static omnetpp.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 11:29:40 2025 (1739359780)
+Stop command: Wed Feb 12 11:35:05 2025 (1739360105)
+Elapsed time for command: 00:05:25 (325)
+Workload elapsed time (0:1) = 316.851202 seconds
+Copy 0 of 471.omnetpp (base ref) run 1 finished at Wed Feb 12 11:34:57 2025.  Total elapsed time: 316.851202
+comparing files in '/root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 11:35:05 2025 (1739360105)
+Stop command: Wed Feb 12 11:35:06 2025 (1739360106)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Wed Feb 12 11:29:40 2025 (1739359780)
+  Stop:     Wed Feb 12 11:35:05 2025 (1739360105)
+  Elapsed:  00:05:25 (325)
+  Reported: 316 851481000 316.851481
+ Success 471.omnetpp base ref ratio=19.73, runtime=316.851481
+
+-----------------------------------
+  Running (#1) 473.astar ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/astar_base.ral-full-tagcheck-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/astar_base.ral-full-tagcheck-static rivers.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 11:35:06 2025 (1739360106)
+Stop command: Wed Feb 12 11:40:08 2025 (1739360408)
+Elapsed time for command: 00:05:02 (302)
+Workload elapsed time (0:1) = 109.070163 seconds
+Workload elapsed time (0:2) = 185.233932 seconds
+Copy 0 of 473.astar (base ref) run 1 finished at Wed Feb 12 11:40:00 2025.  Total elapsed time: 294.304095
+comparing files in '/root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 11:40:08 2025 (1739360408)
+Stop command: Wed Feb 12 11:40:09 2025 (1739360409)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Wed Feb 12 11:35:06 2025 (1739360106)
+  Stop:     Wed Feb 12 11:40:08 2025 (1739360408)
+  Elapsed:  00:05:02 (302)
+  Reported: 294 304328000 294.304328
+ Success 473.astar base ref ratio=23.85, runtime=294.304328
+
+-----------------------------------
+  Running (#1) 483.xalancbmk ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o ref.out -e ref.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/Xalan_base.ral-full-tagcheck-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 11:40:09 2025 (1739360409)
+Stop command: Wed Feb 12 11:43:31 2025 (1739360611)
+Elapsed time for command: 00:03:22 (202)
+Workload elapsed time (0:1) = 193.759238 seconds
+Copy 0 of 483.xalancbmk (base ref) run 1 finished at Wed Feb 12 11:43:23 2025.  Total elapsed time: 193.759238
+comparing files in '/root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 11:43:31 2025 (1739360611)
+Stop command: Wed Feb 12 11:43:33 2025 (1739360613)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Feb 12 11:40:09 2025 (1739360409)
+  Stop:     Wed Feb 12 11:43:31 2025 (1739360611)
+  Elapsed:  00:03:22 (202)
+  Reported: 193 759353000 193.759353
+ Success 483.xalancbmk base ref ratio=35.61, runtime=193.759353
+
+-----------------------------------
+  Running (#1) 999.specrand ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o rand.234923.out -e rand.234923.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/specrand_base.ral-full-tagcheck-static 1255432124 234923 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 11:43:33 2025 (1739360613)
+Stop command: Wed Feb 12 11:43:33 2025 (1739360613)
+Elapsed time for command: 00:00:00 (0)
+Workload elapsed time (0:1) = 0.207989 seconds
+Copy 0 of 999.specrand (base ref) run 1 finished at Wed Feb 12 11:43:33 2025.  Total elapsed time: 0.207989
+comparing files in '/root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 11:43:33 2025 (1739360613)
+Stop command: Wed Feb 12 11:43:37 2025 (1739360617)
+Elapsed time for command: 00:00:04 (4)
+Benchmark Times:
+  Start:    Wed Feb 12 11:43:33 2025 (1739360613)
+  Stop:     Wed Feb 12 11:43:33 2025 (1739360613)
+  Elapsed:  00:00:00 (0)
+  Reported: 0 208246000 0.208246
+ Success 999.specrand base ref ratio=48.02, runtime=0.208246
+
+-----------------------------------
+  Running (#2) 400.perlbench ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/perlbench_base.ral-full-tagcheck-static -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/perlbench_base.ral-full-tagcheck-static -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/perlbench_base.ral-full-tagcheck-static -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 11:43:37 2025 (1739360617)
+Stop command: Wed Feb 12 11:51:42 2025 (1739361102)
+Elapsed time for command: 00:08:05 (485)
+Workload elapsed time (0:1) = 246.625262 seconds
+Workload elapsed time (0:2) = 111.046111 seconds
+Workload elapsed time (0:3) = 119.408577 seconds
+Copy 0 of 400.perlbench (base ref) run 2 finished at Wed Feb 12 11:51:34 2025.  Total elapsed time: 477.07995
+comparing files in '/root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 11:51:42 2025 (1739361102)
+Stop command: Wed Feb 12 11:51:43 2025 (1739361103)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Wed Feb 12 11:43:37 2025 (1739360617)
+  Stop:     Wed Feb 12 11:51:42 2025 (1739361102)
+  Elapsed:  00:08:05 (485)
+  Reported: 477 80226000 477.080226
+ Success 400.perlbench base ref ratio=20.48, runtime=477.080226
+
+-----------------------------------
+  Running (#2) 401.bzip2 ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o input.source.out -e input.source.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static input.program 280 (timed)
+    -o text.html.out -e text.html.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static text.html 280 (timed)
+    -o input.combined.out -e input.combined.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static input.combined 200 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 11:51:43 2025 (1739361103)
+Stop command: Wed Feb 12 11:59:50 2025 (1739361590)
+Elapsed time for command: 00:08:07 (487)
+Workload elapsed time (0:1) = 83.496458 seconds
+Workload elapsed time (0:2) = 48.488301 seconds
+Workload elapsed time (0:3) = 49.270631 seconds
+Workload elapsed time (0:4) = 132.137467 seconds
+Workload elapsed time (0:5) = 95.756896 seconds
+Workload elapsed time (0:6) = 69.678172 seconds
+Copy 0 of 401.bzip2 (base ref) run 2 finished at Wed Feb 12 11:59:42 2025.  Total elapsed time: 478.827925
+comparing files in '/root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 11:59:50 2025 (1739361590)
+Stop command: Wed Feb 12 11:59:52 2025 (1739361592)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Feb 12 11:51:43 2025 (1739361103)
+  Stop:     Wed Feb 12 11:59:50 2025 (1739361590)
+  Elapsed:  00:08:07 (487)
+  Reported: 478 828314000 478.828314
+ Success 401.bzip2 base ref ratio=20.15, runtime=478.828314
+
+-----------------------------------
+  Running (#2) 403.gcc ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o 166.out -e 166.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static 166.i -o 166.s (timed)
+    -o 200.out -e 200.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static g23.i -o g23.s (timed)
+    -o s04.out -e s04.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static scilab.i -o scilab.s (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 11:59:52 2025 (1739361592)
+Stop command: Wed Feb 12 12:04:52 2025 (1739361892)
+Elapsed time for command: 00:05:00 (300)
+Workload elapsed time (0:1) = 21.652095 seconds
+Workload elapsed time (0:2) = 42.317179 seconds
+Workload elapsed time (0:3) = 29.628524 seconds
+Workload elapsed time (0:4) = 25.699678 seconds
+Workload elapsed time (0:5) = 28.049928 seconds
+Workload elapsed time (0:6) = 35.80745 seconds
+Workload elapsed time (0:7) = 47.380154 seconds
+Workload elapsed time (0:8) = 45.088989 seconds
+Workload elapsed time (0:9) = 16.168407 seconds
+Copy 0 of 403.gcc (base ref) run 2 finished at Wed Feb 12 12:04:44 2025.  Total elapsed time: 291.792404
+comparing files in '/root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 12:04:52 2025 (1739361892)
+Stop command: Wed Feb 12 12:04:55 2025 (1739361895)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Wed Feb 12 11:59:52 2025 (1739361592)
+  Stop:     Wed Feb 12 12:04:52 2025 (1739361892)
+  Elapsed:  00:05:00 (300)
+  Reported: 291 793351000 291.793351
+ Success 403.gcc base ref ratio=27.59, runtime=291.793351
+
+-----------------------------------
+  Running (#2) 429.mcf ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o inp.out -e inp.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/mcf_base.ral-full-tagcheck-static inp.in (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 12:04:56 2025 (1739361896)
+Stop command: Wed Feb 12 12:07:57 2025 (1739362077)
+Elapsed time for command: 00:03:01 (181)
+Workload elapsed time (0:1) = 173.763316 seconds
+Copy 0 of 429.mcf (base ref) run 2 finished at Wed Feb 12 12:07:49 2025.  Total elapsed time: 173.763316
+comparing files in '/root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 12:07:58 2025 (1739362078)
+Stop command: Wed Feb 12 12:07:58 2025 (1739362078)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Wed Feb 12 12:04:56 2025 (1739361896)
+  Stop:     Wed Feb 12 12:07:57 2025 (1739362077)
+  Elapsed:  00:03:01 (181)
+  Reported: 173 763513000 173.763513
+ Success 429.mcf base ref ratio=52.49, runtime=173.763513
+
+-----------------------------------
+  Running (#2) 445.gobmk ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000
+    -i 13x13.tst -o 13x13.out -e 13x13.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 12:07:59 2025 (1739362079)
+Stop command: Wed Feb 12 12:16:10 2025 (1739362570)
+Elapsed time for command: 00:08:11 (491)
+Workload elapsed time (0:1) = 66.626605 seconds
+Workload elapsed time (0:2) = 175.382198 seconds
+Workload elapsed time (0:3) = 80.62258 seconds
+Workload elapsed time (0:4) = 68.264118 seconds
+Workload elapsed time (0:5) = 92.338056 seconds
+Copy 0 of 445.gobmk (base ref) run 2 finished at Wed Feb 12 12:16:02 2025.  Total elapsed time: 483.233557
+comparing files in '/root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 12:16:10 2025 (1739362570)
+Stop command: Wed Feb 12 12:16:12 2025 (1739362572)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Feb 12 12:07:59 2025 (1739362079)
+  Stop:     Wed Feb 12 12:16:10 2025 (1739362570)
+  Elapsed:  00:08:11 (491)
+  Reported: 483 233857000 483.233857
+ Success 445.gobmk base ref ratio=21.71, runtime=483.233857
+
+-----------------------------------
+  Running (#2) 456.hmmer ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o nph3.out -e nph3.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/hmmer_base.ral-full-tagcheck-static nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/hmmer_base.ral-full-tagcheck-static --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 12:16:12 2025 (1739362572)
+Stop command: Wed Feb 12 12:20:15 2025 (1739362815)
+Elapsed time for command: 00:04:03 (243)
+Workload elapsed time (0:1) = 74.006259 seconds
+Workload elapsed time (0:2) = 160.917621 seconds
+Copy 0 of 456.hmmer (base ref) run 2 finished at Wed Feb 12 12:20:07 2025.  Total elapsed time: 234.92388
+comparing files in '/root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 12:20:15 2025 (1739362815)
+Stop command: Wed Feb 12 12:20:15 2025 (1739362815)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Wed Feb 12 12:16:12 2025 (1739362572)
+  Stop:     Wed Feb 12 12:20:15 2025 (1739362815)
+  Elapsed:  00:04:03 (243)
+  Reported: 234 924143000 234.924143
+ Success 456.hmmer base ref ratio=39.71, runtime=234.924143
+
+-----------------------------------
+  Running (#2) 458.sjeng ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o ref.out -e ref.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/sjeng_base.ral-full-tagcheck-static ref.txt (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 12:20:16 2025 (1739362816)
+Stop command: Wed Feb 12 12:28:29 2025 (1739363309)
+Elapsed time for command: 00:08:13 (493)
+Workload elapsed time (0:1) = 485.198772 seconds
+Copy 0 of 458.sjeng (base ref) run 2 finished at Wed Feb 12 12:28:21 2025.  Total elapsed time: 485.198772
+comparing files in '/root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 12:28:29 2025 (1739363309)
+Stop command: Wed Feb 12 12:28:29 2025 (1739363309)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Wed Feb 12 12:20:16 2025 (1739362816)
+  Stop:     Wed Feb 12 12:28:29 2025 (1739363309)
+  Elapsed:  00:08:13 (493)
+  Reported: 485 198948000 485.198948
+ Success 458.sjeng base ref ratio=24.94, runtime=485.198948
+
+-----------------------------------
+  Running (#2) 462.libquantum ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o ref.out -e ref.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/libquantum_base.ral-full-tagcheck-static 1397 8 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 12:28:29 2025 (1739363309)
+Stop command: Wed Feb 12 12:45:47 2025 (1739364347)
+Elapsed time for command: 00:17:18 (1038)
+Workload elapsed time (0:1) = 1029.405741 seconds
+Copy 0 of 462.libquantum (base ref) run 2 finished at Wed Feb 12 12:45:39 2025.  Total elapsed time: 1029.405741
+comparing files in '/root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 12:45:47 2025 (1739364347)
+Stop command: Wed Feb 12 12:45:47 2025 (1739364347)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Wed Feb 12 12:28:29 2025 (1739363309)
+  Stop:     Wed Feb 12 12:45:47 2025 (1739364347)
+  Elapsed:  00:17:18 (1038)
+  Reported: 1029 405948000 1029.405948
+ Success 462.libquantum base ref ratio=20.13, runtime=1029.405948
+
+-----------------------------------
+  Running (#2) 464.h264ref ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/h264ref_base.ral-full-tagcheck-static -d foreman_ref_encoder_baseline.cfg (timed)
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/h264ref_base.ral-full-tagcheck-static -d foreman_ref_encoder_main.cfg (timed)
+    -o sss_main_encodelog.out -e sss_main_encodelog.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/h264ref_base.ral-full-tagcheck-static -d sss_encoder_main.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 12:45:48 2025 (1739364348)
+Stop command: Wed Feb 12 12:51:59 2025 (1739364719)
+Elapsed time for command: 00:06:11 (371)
+Workload elapsed time (0:1) = 45.017057 seconds
+Workload elapsed time (0:2) = 33.468171 seconds
+Workload elapsed time (0:3) = 285.204266 seconds
+Copy 0 of 464.h264ref (base ref) run 2 finished at Wed Feb 12 12:51:51 2025.  Total elapsed time: 363.689494
+comparing files in '/root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 12:51:59 2025 (1739364719)
+Stop command: Wed Feb 12 12:52:01 2025 (1739364721)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Feb 12 12:45:48 2025 (1739364348)
+  Stop:     Wed Feb 12 12:51:59 2025 (1739364719)
+  Elapsed:  00:06:11 (371)
+  Reported: 363 690224000 363.690224
+ Success 464.h264ref base ref ratio=60.85, runtime=363.690224
+
+-----------------------------------
+  Running (#2) 471.omnetpp ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o omnetpp.log -e omnetpp.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/omnetpp_base.ral-full-tagcheck-static omnetpp.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 12:52:01 2025 (1739364721)
+Stop command: Wed Feb 12 12:57:25 2025 (1739365045)
+Elapsed time for command: 00:05:24 (324)
+Workload elapsed time (0:1) = 315.337615 seconds
+Copy 0 of 471.omnetpp (base ref) run 2 finished at Wed Feb 12 12:57:17 2025.  Total elapsed time: 315.337615
+comparing files in '/root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 12:57:25 2025 (1739365045)
+Stop command: Wed Feb 12 12:57:26 2025 (1739365046)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Wed Feb 12 12:52:01 2025 (1739364721)
+  Stop:     Wed Feb 12 12:57:25 2025 (1739365045)
+  Elapsed:  00:05:24 (324)
+  Reported: 315 337752000 315.337752
+ Success 471.omnetpp base ref ratio=19.82, runtime=315.337752
+
+-----------------------------------
+  Running (#2) 473.astar ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/astar_base.ral-full-tagcheck-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/astar_base.ral-full-tagcheck-static rivers.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 12:57:26 2025 (1739365046)
+Stop command: Wed Feb 12 13:02:27 2025 (1739365347)
+Elapsed time for command: 00:05:01 (301)
+Workload elapsed time (0:1) = 109.223062 seconds
+Workload elapsed time (0:2) = 183.506013 seconds
+Copy 0 of 473.astar (base ref) run 2 finished at Wed Feb 12 13:02:19 2025.  Total elapsed time: 292.729075
+comparing files in '/root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 13:02:27 2025 (1739365347)
+Stop command: Wed Feb 12 13:02:27 2025 (1739365347)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Wed Feb 12 12:57:26 2025 (1739365046)
+  Stop:     Wed Feb 12 13:02:27 2025 (1739365347)
+  Elapsed:  00:05:01 (301)
+  Reported: 292 729313000 292.729313
+ Success 473.astar base ref ratio=23.98, runtime=292.729313
+
+-----------------------------------
+  Running (#2) 483.xalancbmk ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o ref.out -e ref.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/Xalan_base.ral-full-tagcheck-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 13:02:28 2025 (1739365348)
+Stop command: Wed Feb 12 13:05:49 2025 (1739365549)
+Elapsed time for command: 00:03:21 (201)
+Workload elapsed time (0:1) = 193.611461 seconds
+Copy 0 of 483.xalancbmk (base ref) run 2 finished at Wed Feb 12 13:05:41 2025.  Total elapsed time: 193.611461
+comparing files in '/root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 13:05:49 2025 (1739365549)
+Stop command: Wed Feb 12 13:05:51 2025 (1739365551)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Feb 12 13:02:28 2025 (1739365348)
+  Stop:     Wed Feb 12 13:05:49 2025 (1739365549)
+  Elapsed:  00:03:21 (201)
+  Reported: 193 611629000 193.611629
+ Success 483.xalancbmk base ref ratio=35.64, runtime=193.611629
+
+-----------------------------------
+  Running (#2) 999.specrand ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o rand.234923.out -e rand.234923.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/specrand_base.ral-full-tagcheck-static 1255432124 234923 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 13:05:51 2025 (1739365551)
+Stop command: Wed Feb 12 13:05:52 2025 (1739365552)
+Elapsed time for command: 00:00:01 (1)
+Workload elapsed time (0:1) = 0.204987 seconds
+Copy 0 of 999.specrand (base ref) run 2 finished at Wed Feb 12 13:05:51 2025.  Total elapsed time: 0.204987
+comparing files in '/root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 13:05:52 2025 (1739365552)
+Stop command: Wed Feb 12 13:05:55 2025 (1739365555)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Wed Feb 12 13:05:51 2025 (1739365551)
+  Stop:     Wed Feb 12 13:05:52 2025 (1739365552)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 205332000 0.205332
+ Success 999.specrand base ref ratio=48.70, runtime=0.205332
+
+-----------------------------------
+  Running (#3) 400.perlbench ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/perlbench_base.ral-full-tagcheck-static -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/perlbench_base.ral-full-tagcheck-static -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/perlbench_base.ral-full-tagcheck-static -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 13:05:55 2025 (1739365555)
+Stop command: Wed Feb 12 13:13:51 2025 (1739366031)
+Elapsed time for command: 00:07:56 (476)
+Workload elapsed time (0:1) = 242.811883 seconds
+Workload elapsed time (0:2) = 107.254107 seconds
+Workload elapsed time (0:3) = 117.770531 seconds
+Copy 0 of 400.perlbench (base ref) run 3 finished at Wed Feb 12 13:13:43 2025.  Total elapsed time: 467.836521
+comparing files in '/root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 13:13:51 2025 (1739366031)
+Stop command: Wed Feb 12 13:13:53 2025 (1739366033)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Feb 12 13:05:55 2025 (1739365555)
+  Stop:     Wed Feb 12 13:13:51 2025 (1739366031)
+  Elapsed:  00:07:56 (476)
+  Reported: 467 837717000 467.837717
+ Success 400.perlbench base ref ratio=20.88, runtime=467.837717
+
+-----------------------------------
+  Running (#3) 401.bzip2 ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o input.source.out -e input.source.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static input.program 280 (timed)
+    -o text.html.out -e text.html.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static text.html 280 (timed)
+    -o input.combined.out -e input.combined.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/bzip2_base.ral-full-tagcheck-static input.combined 200 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 13:13:53 2025 (1739366033)
+Stop command: Wed Feb 12 13:22:00 2025 (1739366520)
+Elapsed time for command: 00:08:07 (487)
+Workload elapsed time (0:1) = 83.910472 seconds
+Workload elapsed time (0:2) = 48.542066 seconds
+Workload elapsed time (0:3) = 49.327189 seconds
+Workload elapsed time (0:4) = 132.275808 seconds
+Workload elapsed time (0:5) = 95.8313 seconds
+Workload elapsed time (0:6) = 69.663132 seconds
+Copy 0 of 401.bzip2 (base ref) run 3 finished at Wed Feb 12 13:21:52 2025.  Total elapsed time: 479.549967
+comparing files in '/root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 13:22:01 2025 (1739366521)
+Stop command: Wed Feb 12 13:22:02 2025 (1739366522)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Wed Feb 12 13:13:53 2025 (1739366033)
+  Stop:     Wed Feb 12 13:22:00 2025 (1739366520)
+  Elapsed:  00:08:07 (487)
+  Reported: 479 550617000 479.550617
+ Success 401.bzip2 base ref ratio=20.12, runtime=479.550617
+
+-----------------------------------
+  Running (#3) 403.gcc ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o 166.out -e 166.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static 166.i -o 166.s (timed)
+    -o 200.out -e 200.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static g23.i -o g23.s (timed)
+    -o s04.out -e s04.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gcc_base.ral-full-tagcheck-static scilab.i -o scilab.s (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 13:22:03 2025 (1739366523)
+Stop command: Wed Feb 12 13:26:58 2025 (1739366818)
+Elapsed time for command: 00:04:55 (295)
+Workload elapsed time (0:1) = 21.032706 seconds
+Workload elapsed time (0:2) = 42.253371 seconds
+Workload elapsed time (0:3) = 31.12554 seconds
+Workload elapsed time (0:4) = 25.851336 seconds
+Workload elapsed time (0:5) = 26.487783 seconds
+Workload elapsed time (0:6) = 35.558161 seconds
+Workload elapsed time (0:7) = 47.582165 seconds
+Workload elapsed time (0:8) = 41.845535 seconds
+Workload elapsed time (0:9) = 16.091362 seconds
+Copy 0 of 403.gcc (base ref) run 3 finished at Wed Feb 12 13:26:50 2025.  Total elapsed time: 287.827959
+comparing files in '/root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 13:26:59 2025 (1739366819)
+Stop command: Wed Feb 12 13:27:02 2025 (1739366822)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Wed Feb 12 13:22:03 2025 (1739366523)
+  Stop:     Wed Feb 12 13:26:58 2025 (1739366818)
+  Elapsed:  00:04:55 (295)
+  Reported: 287 828739000 287.828739
+ Success 403.gcc base ref ratio=27.97, runtime=287.828739
+
+-----------------------------------
+  Running (#3) 429.mcf ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o inp.out -e inp.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/mcf_base.ral-full-tagcheck-static inp.in (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 13:27:02 2025 (1739366822)
+Stop command: Wed Feb 12 13:30:07 2025 (1739367007)
+Elapsed time for command: 00:03:05 (185)
+Workload elapsed time (0:1) = 177.527021 seconds
+Copy 0 of 429.mcf (base ref) run 3 finished at Wed Feb 12 13:29:59 2025.  Total elapsed time: 177.527021
+comparing files in '/root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 13:30:08 2025 (1739367008)
+Stop command: Wed Feb 12 13:30:08 2025 (1739367008)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Wed Feb 12 13:27:02 2025 (1739366822)
+  Stop:     Wed Feb 12 13:30:07 2025 (1739367007)
+  Elapsed:  00:03:05 (185)
+  Reported: 177 527357000 177.527357
+ Success 429.mcf base ref ratio=51.37, runtime=177.527357
+
+-----------------------------------
+  Running (#3) 445.gobmk ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000
+    -i 13x13.tst -o 13x13.out -e 13x13.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/gobmk_base.ral-full-tagcheck-static --quiet --mode gtp (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 13:30:09 2025 (1739367009)
+Stop command: Wed Feb 12 13:38:21 2025 (1739367501)
+Elapsed time for command: 00:08:12 (492)
+Workload elapsed time (0:1) = 67.093595 seconds
+Workload elapsed time (0:2) = 174.386733 seconds
+Workload elapsed time (0:3) = 81.296226 seconds
+Workload elapsed time (0:4) = 68.018989 seconds
+Workload elapsed time (0:5) = 93.163003 seconds
+Copy 0 of 445.gobmk (base ref) run 3 finished at Wed Feb 12 13:38:13 2025.  Total elapsed time: 483.958546
+comparing files in '/root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 13:38:21 2025 (1739367501)
+Stop command: Wed Feb 12 13:38:22 2025 (1739367502)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Wed Feb 12 13:30:09 2025 (1739367009)
+  Stop:     Wed Feb 12 13:38:21 2025 (1739367501)
+  Elapsed:  00:08:12 (492)
+  Reported: 483 959383000 483.959383
+ Success 445.gobmk base ref ratio=21.68, runtime=483.959383
+
+-----------------------------------
+  Running (#3) 456.hmmer ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o nph3.out -e nph3.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/hmmer_base.ral-full-tagcheck-static nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/hmmer_base.ral-full-tagcheck-static --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 13:38:22 2025 (1739367502)
+Stop command: Wed Feb 12 13:42:25 2025 (1739367745)
+Elapsed time for command: 00:04:03 (243)
+Workload elapsed time (0:1) = 73.651097 seconds
+Workload elapsed time (0:2) = 161.312699 seconds
+Copy 0 of 456.hmmer (base ref) run 3 finished at Wed Feb 12 13:42:17 2025.  Total elapsed time: 234.963796
+comparing files in '/root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 13:42:26 2025 (1739367746)
+Stop command: Wed Feb 12 13:42:26 2025 (1739367746)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Wed Feb 12 13:38:22 2025 (1739367502)
+  Stop:     Wed Feb 12 13:42:25 2025 (1739367745)
+  Elapsed:  00:04:03 (243)
+  Reported: 234 964276000 234.964276
+ Success 456.hmmer base ref ratio=39.71, runtime=234.964276
+
+-----------------------------------
+  Running (#3) 458.sjeng ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o ref.out -e ref.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/sjeng_base.ral-full-tagcheck-static ref.txt (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 13:42:26 2025 (1739367746)
+Stop command: Wed Feb 12 13:50:38 2025 (1739368238)
+Elapsed time for command: 00:08:12 (492)
+Workload elapsed time (0:1) = 483.906594 seconds
+Copy 0 of 458.sjeng (base ref) run 3 finished at Wed Feb 12 13:50:30 2025.  Total elapsed time: 483.906594
+comparing files in '/root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 13:50:38 2025 (1739368238)
+Stop command: Wed Feb 12 13:50:39 2025 (1739368239)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Wed Feb 12 13:42:26 2025 (1739367746)
+  Stop:     Wed Feb 12 13:50:38 2025 (1739368238)
+  Elapsed:  00:08:12 (492)
+  Reported: 483 906717000 483.906717
+ Success 458.sjeng base ref ratio=25.00, runtime=483.906717
+
+-----------------------------------
+  Running (#3) 462.libquantum ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o ref.out -e ref.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/libquantum_base.ral-full-tagcheck-static 1397 8 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 13:50:39 2025 (1739368239)
+Stop command: Wed Feb 12 14:07:36 2025 (1739369256)
+Elapsed time for command: 00:16:57 (1017)
+Workload elapsed time (0:1) = 1008.651938 seconds
+Copy 0 of 462.libquantum (base ref) run 3 finished at Wed Feb 12 14:07:28 2025.  Total elapsed time: 1008.651938
+comparing files in '/root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 14:07:36 2025 (1739369256)
+Stop command: Wed Feb 12 14:07:36 2025 (1739369256)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Wed Feb 12 13:50:39 2025 (1739368239)
+  Stop:     Wed Feb 12 14:07:36 2025 (1739369256)
+  Elapsed:  00:16:57 (1017)
+  Reported: 1008 652045000 1008.652045
+ Success 462.libquantum base ref ratio=20.54, runtime=1008.652045
+
+-----------------------------------
+  Running (#3) 464.h264ref ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/h264ref_base.ral-full-tagcheck-static -d foreman_ref_encoder_baseline.cfg (timed)
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/h264ref_base.ral-full-tagcheck-static -d foreman_ref_encoder_main.cfg (timed)
+    -o sss_main_encodelog.out -e sss_main_encodelog.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/h264ref_base.ral-full-tagcheck-static -d sss_encoder_main.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 14:07:36 2025 (1739369256)
+Stop command: Wed Feb 12 14:13:48 2025 (1739369628)
+Elapsed time for command: 00:06:12 (372)
+Workload elapsed time (0:1) = 45.003561 seconds
+Workload elapsed time (0:2) = 33.485936 seconds
+Workload elapsed time (0:3) = 285.088959 seconds
+Copy 0 of 464.h264ref (base ref) run 3 finished at Wed Feb 12 14:13:40 2025.  Total elapsed time: 363.578456
+comparing files in '/root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 14:13:48 2025 (1739369628)
+Stop command: Wed Feb 12 14:13:50 2025 (1739369630)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Feb 12 14:07:36 2025 (1739369256)
+  Stop:     Wed Feb 12 14:13:48 2025 (1739369628)
+  Elapsed:  00:06:12 (372)
+  Reported: 363 578807000 363.578807
+ Success 464.h264ref base ref ratio=60.87, runtime=363.578807
+
+-----------------------------------
+  Running (#3) 471.omnetpp ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o omnetpp.log -e omnetpp.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/omnetpp_base.ral-full-tagcheck-static omnetpp.ini (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 14:13:50 2025 (1739369630)
+Stop command: Wed Feb 12 14:19:18 2025 (1739369958)
+Elapsed time for command: 00:05:28 (328)
+Workload elapsed time (0:1) = 319.845591 seconds
+Copy 0 of 471.omnetpp (base ref) run 3 finished at Wed Feb 12 14:19:10 2025.  Total elapsed time: 319.845591
+comparing files in '/root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 14:19:18 2025 (1739369958)
+Stop command: Wed Feb 12 14:19:19 2025 (1739369959)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Wed Feb 12 14:13:50 2025 (1739369630)
+  Stop:     Wed Feb 12 14:19:18 2025 (1739369958)
+  Elapsed:  00:05:28 (328)
+  Reported: 319 845876000 319.845876
+ Success 471.omnetpp base ref ratio=19.54, runtime=319.845876
+
+-----------------------------------
+  Running (#3) 473.astar ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/astar_base.ral-full-tagcheck-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/astar_base.ral-full-tagcheck-static rivers.cfg (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 14:19:19 2025 (1739369959)
+Stop command: Wed Feb 12 14:24:18 2025 (1739370258)
+Elapsed time for command: 00:04:59 (299)
+Workload elapsed time (0:1) = 109.604427 seconds
+Workload elapsed time (0:2) = 181.883351 seconds
+Copy 0 of 473.astar (base ref) run 3 finished at Wed Feb 12 14:24:10 2025.  Total elapsed time: 291.487778
+comparing files in '/root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/473.astar/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 14:24:19 2025 (1739370259)
+Stop command: Wed Feb 12 14:24:19 2025 (1739370259)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Wed Feb 12 14:19:19 2025 (1739369959)
+  Stop:     Wed Feb 12 14:24:18 2025 (1739370258)
+  Elapsed:  00:04:59 (299)
+  Reported: 291 487930000 291.48793
+ Success 473.astar base ref ratio=24.08, runtime=291.487930
+
+-----------------------------------
+  Running (#3) 483.xalancbmk ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o ref.out -e ref.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/Xalan_base.ral-full-tagcheck-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 14:24:19 2025 (1739370259)
+Stop command: Wed Feb 12 14:27:42 2025 (1739370462)
+Elapsed time for command: 00:03:23 (203)
+Workload elapsed time (0:1) = 194.739117 seconds
+Copy 0 of 483.xalancbmk (base ref) run 3 finished at Wed Feb 12 14:27:34 2025.  Total elapsed time: 194.739117
+comparing files in '/root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 14:27:42 2025 (1739370462)
+Stop command: Wed Feb 12 14:27:44 2025 (1739370464)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Feb 12 14:24:19 2025 (1739370259)
+  Stop:     Wed Feb 12 14:27:42 2025 (1739370462)
+  Elapsed:  00:03:23 (203)
+  Reported: 194 739233000 194.739233
+ Success 483.xalancbmk base ref ratio=35.43, runtime=194.739233
+
+-----------------------------------
+  Running (#3) 999.specrand ref base ral-full-tagcheck-static default
+Commands to run:
+    -C /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000
+    -o rand.234923.out -e rand.234923.err bench_runner cxc ../run_base_ref_ral-full-tagcheck-static.0000/specrand_base.ral-full-tagcheck-static 1255432124 234923 (timed)
+Specinvoke: /root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/root/spec/bin/specinvoke -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Wed Feb 12 14:27:44 2025 (1739370464)
+Stop command: Wed Feb 12 14:27:45 2025 (1739370465)
+Elapsed time for command: 00:00:01 (1)
+Workload elapsed time (0:1) = 0.205278 seconds
+Copy 0 of 999.specrand (base ref) run 3 finished at Wed Feb 12 14:27:44 2025.  Total elapsed time: 0.205278
+comparing files in '/root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/root/spec/bin/specinvoke -E -d /root/spec/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-full-tagcheck-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Wed Feb 12 14:27:45 2025 (1739370465)
+Stop command: Wed Feb 12 14:27:48 2025 (1739370468)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Wed Feb 12 14:27:44 2025 (1739370464)
+  Stop:     Wed Feb 12 14:27:45 2025 (1739370465)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 206088000 0.206088
+ Success 999.specrand base ref ratio=48.52, runtime=0.206088
+Success: 3x400.perlbench 3x401.bzip2 3x403.gcc 3x429.mcf 3x445.gobmk 3x456.hmmer 3x458.sjeng 3x462.libquantum 3x464.h264ref 3x471.omnetpp 3x473.astar 3x483.xalancbmk 3x999.specrand
+Producing Raw Reports
+mach: default
+  ext: ral-full-tagcheck-static
+    size: ref
+      set: int
+        format: raw -> /root/spec/result/CINT2006.212.ref.rsf
+Parsing flags for 400.perlbench base: done
+Parsing flags for 401.bzip2 base: done
+Parsing flags for 403.gcc base: done
+Parsing flags for 429.mcf base: done
+Parsing flags for 445.gobmk base: done
+Parsing flags for 456.hmmer base: done
+Parsing flags for 458.sjeng base: done
+Parsing flags for 462.libquantum base: done
+Parsing flags for 464.h264ref base: done
+Parsing flags for 471.omnetpp base: done
+Parsing flags for 473.astar base: done
+Parsing flags for 483.xalancbmk base: done
+Doing flag reduction: done
+        format: ASCII -> /root/spec/result/CINT2006.212.ref.txt
+        format: CSV -> /root/spec/result/CINT2006.212.ref.csv
+        format: Screen -> 
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+400.perlbench    9770        469       20.8 *                                  
+401.bzip2        9650        479       20.2 *                                  
+403.gcc          8050        292       27.6 *                                  
+429.mcf          9120        175       52.3 *                                  
+445.gobmk       10490        484       21.7 *                                  
+456.hmmer        9330        235       39.7 *                                  
+458.sjeng       12100        485       25.0 *                                  
+462.libquantum  20720       1029       20.1 *                                  
+464.h264ref     22130        364       60.8 *                                  
+471.omnetpp      6250        317       19.7 *                                  
+473.astar        7020        293       24.0 *                                  
+483.xalancbmk    6900        194       35.6 *                                  
+ Est. SPECint_base2006                 28.3
+ Est. SPECint2006                                                   Not Run
+
+      set: fp
+
+The log for this run is in /root/spec/result/CPU2006.212.log
+
+runspec finished at Wed Feb 12 14:27:51 2025; 14802 total seconds elapsed

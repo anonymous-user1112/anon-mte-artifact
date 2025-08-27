@@ -1,0 +1,75 @@
+diff -Naur postgresql-17.0-orig/src/backend/port/pg_shmem.c postgresql-17.0/src/backend/port/pg_shmem.c
+--- postgresql-17.0-orig/src/backend/port/pg_shmem.c	2025-08-21 16:57:27.699464515 -0700
++++ postgresql-17.0/src/backend/port/pg_shmem.c	2025-08-21 16:59:34.731360175 -0700
+@@ -619,7 +619,7 @@
+ 		if (allocsize % hugepagesize != 0)
+ 			allocsize += hugepagesize - (allocsize % hugepagesize);
+ 
+-		ptr = mmap(NULL, allocsize, PROT_READ | PROT_WRITE,
++		ptr = mmap(NULL, allocsize, PROT_READ | PROT_WRITE | PROT_MTE,
+ 				   PG_MMAP_FLAGS | mmap_flags, -1, 0);
+ 		mmap_errno = errno;
+ 		if (huge_pages == HUGE_PAGES_TRY && ptr == MAP_FAILED)
+@@ -643,7 +643,7 @@
+ 		 * to non-huge pages.
+ 		 */
+ 		allocsize = *size;
+-		ptr = mmap(NULL, allocsize, PROT_READ | PROT_WRITE,
++		ptr = mmap(NULL, allocsize, PROT_READ | PROT_WRITE | PROT_MTE,
+ 				   PG_MMAP_FLAGS, -1, 0);
+ 		mmap_errno = errno;
+ 	}
+diff -Naur postgresql-17.0-orig/src/backend/port/sysv_shmem.c postgresql-17.0/src/backend/port/sysv_shmem.c
+--- postgresql-17.0-orig/src/backend/port/sysv_shmem.c	2025-08-21 16:57:27.699464515 -0700
++++ postgresql-17.0/src/backend/port/sysv_shmem.c	2025-08-21 16:59:34.731360175 -0700
+@@ -619,7 +619,7 @@
+ 		if (allocsize % hugepagesize != 0)
+ 			allocsize += hugepagesize - (allocsize % hugepagesize);
+ 
+-		ptr = mmap(NULL, allocsize, PROT_READ | PROT_WRITE,
++		ptr = mmap(NULL, allocsize, PROT_READ | PROT_WRITE | PROT_MTE,
+ 				   PG_MMAP_FLAGS | mmap_flags, -1, 0);
+ 		mmap_errno = errno;
+ 		if (huge_pages == HUGE_PAGES_TRY && ptr == MAP_FAILED)
+@@ -643,7 +643,7 @@
+ 		 * to non-huge pages.
+ 		 */
+ 		allocsize = *size;
+-		ptr = mmap(NULL, allocsize, PROT_READ | PROT_WRITE,
++		ptr = mmap(NULL, allocsize, PROT_READ | PROT_WRITE | PROT_MTE,
+ 				   PG_MMAP_FLAGS, -1, 0);
+ 		mmap_errno = errno;
+ 	}
+diff -Naur postgresql-17.0-orig/src/backend/storage/file/fd.c postgresql-17.0/src/backend/storage/file/fd.c
+--- postgresql-17.0-orig/src/backend/storage/file/fd.c	2025-08-21 16:57:27.709816081 -0700
++++ postgresql-17.0/src/backend/storage/file/fd.c	2025-08-21 17:00:45.191406054 -0700
+@@ -639,7 +639,7 @@
+ 		 * through to the next implementation.
+ 		 */
+ 		if (nbytes <= (off_t) SSIZE_MAX)
+-			p = mmap(NULL, nbytes, PROT_READ, MAP_SHARED, fd, offset);
++			p = mmap(NULL, nbytes, PROT_READ | PROT_MTE, MAP_SHARED, fd, offset);
+ 		else
+ 			p = MAP_FAILED;
+ 
+diff -Naur postgresql-17.0-orig/src/backend/storage/ipc/dsm_impl.c postgresql-17.0/src/backend/storage/ipc/dsm_impl.c
+--- postgresql-17.0-orig/src/backend/storage/ipc/dsm_impl.c	2025-08-21 16:57:27.710995382 -0700
++++ postgresql-17.0/src/backend/storage/ipc/dsm_impl.c	2025-08-21 17:01:36.958909657 -0700
+@@ -312,7 +312,7 @@
+ 	}
+ 
+ 	/* Map it. */
+-	address = mmap(NULL, request_size, PROT_READ | PROT_WRITE,
++	address = mmap(NULL, request_size, PROT_READ | PROT_WRITE | PROT_MTE,
+ 				   MAP_SHARED | MAP_HASSEMAPHORE | MAP_NOSYNC, fd, 0);
+ 	if (address == MAP_FAILED)
+ 	{
+@@ -915,7 +915,7 @@
+ 	}
+ 
+ 	/* Map it. */
+-	address = mmap(NULL, request_size, PROT_READ | PROT_WRITE,
++	address = mmap(NULL, request_size, PROT_READ | PROT_WRITE | PROT_MTE,
+ 				   MAP_SHARED | MAP_HASSEMAPHORE | MAP_NOSYNC, fd, 0);
+ 	if (address == MAP_FAILED)
+ 	{

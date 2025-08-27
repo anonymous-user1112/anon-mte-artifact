@@ -1,0 +1,315 @@
+20:31:36     INFO - ConsoleLogger online at 20250820 20:31:36Z in /home/XXXXXXXX/firefox-mte
+20:31:36     INFO - Run as ./mach talos-test --activeTests expat_perf_test
+20:31:36     INFO - Dumping config to /home/XXXXXXXX/firefox-mte/testing/mozharness/logs/localconfig.json.
+20:31:36     INFO - {'append_to_log': False,
+20:31:36     INFO -  'base_work_dir': '/home/XXXXXXXX/firefox-mte/testing/mozharness',
+20:31:36     INFO -  'binary_path': '/home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox',
+20:31:36     INFO -  'code_coverage': False,
+20:31:36     INFO -  'config_files': (),
+20:31:36     INFO -  'default_actions': ('populate-webroot', 'create-virtualenv', 'run-tests'),
+20:31:36     INFO -  'disable_ccov_upload': False,
+20:31:36     INFO -  'e10s': True,
+20:31:36     INFO -  'exes': {'python': '/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python',
+20:31:36     INFO -           'virtualenv': ('/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin/python',
+20:31:36     INFO -                          '/home/XXXXXXXX/firefox-mte/third_party/python/virtualenv/virtualenv.py')},
+20:31:36     INFO -  'extra_prefs': (),
+20:31:36     INFO -  'find_links': ('https://pypi.pub.build.mozilla.org/pub/',),
+20:31:36     INFO -  'fission': True,
+20:31:36     INFO -  'gecko_profile': False,
+20:31:36     INFO -  'java_code_coverage': False,
+20:31:36     INFO -  'log_level': 'info',
+20:31:36     INFO -  'log_name': 'talos',
+20:31:36     INFO -  'log_to_console': True,
+20:31:36     INFO -  'mozbuild_path': '/home/XXXXXXXX/.mozbuild',
+20:31:36     INFO -  'obj_path': '/home/XXXXXXXX/firefox-mte/firefox_release_mte',
+20:31:36     INFO -  'opt_config_files': (),
+20:31:36     INFO -  'per_test_coverage': False,
+20:31:36     INFO -  'pip_index': False,
+20:31:36     INFO -  'pypi_url': 'http://pypi.python.org/simple',
+20:31:36     INFO -  'python3_manifest': {'win32': 'python3.manifest',
+20:31:36     INFO -                       'win64': 'python3_x64.manifest'},
+20:31:36     INFO -  'repo_path': '/home/XXXXXXXX/firefox-mte',
+20:31:36     INFO -  'requires_gpu': False,
+20:31:36     INFO -  'restartAfterFailure': False,
+20:31:36     INFO -  'run_local': True,
+20:31:36     INFO -  'screenshot_on_failure': False,
+20:31:36     INFO -  'skip_preflight': False,
+20:31:36     INFO -  'system_bits': '32',
+20:31:36     INFO -  'talos_extra_options': ('--develop', '--activeTests', 'expat_perf_test'),
+20:31:36     INFO -  'talos_json': '/home/XXXXXXXX/firefox-mte/testing/talos/talos.json',
+20:31:36     INFO -  'title': 'fedora',
+20:31:36     INFO -  'use_talos_json': False,
+20:31:36     INFO -  'verify': False,
+20:31:36     INFO -  'virtualenv_path': '/home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv',
+20:31:36     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+20:31:36     INFO -  'work_dir': 'build'}
+20:31:36     INFO - [mozharness: 2025-08-20 20:31:36.622048Z] Skipping clobber step.
+20:31:36     INFO - [mozharness: 2025-08-20 20:31:36.622077Z] Skipping download-and-extract step.
+20:31:36     INFO - [mozharness: 2025-08-20 20:31:36.622100Z] Running populate-webroot step.
+20:31:36     INFO - Running pre-action listener: _resource_record_pre_action
+20:31:36     INFO - Running main action method: populate_webroot
+20:31:36     INFO - {'suites': {'bcv': {'tests': ['basic_compositor_video']},
+20:31:36     INFO -             'chromez': {'tests': ['about_preferences_basic', 'tresize']},
+20:31:36     INFO -             'damp': {'extra_prefs': ['talos.damp.suite=all'],
+20:31:36     INFO -                      'pagesets_name': 'tp5n.zip',
+20:31:36     INFO -                      'tests': ['damp']},
+20:31:36     INFO -             'damp-inspector': {'extra_prefs': ['talos.damp.suite=inspector'],
+20:31:36     INFO -                                'pagesets_name': 'tp5n.zip',
+20:31:36     INFO -                                'tests': ['damp']},
+20:31:36     INFO -             'damp-other': {'extra_prefs': ['talos.damp.suite=other'],
+20:31:36     INFO -                            'pagesets_name': 'tp5n.zip',
+20:31:36     INFO -                            'tests': ['damp']},
+20:31:36     INFO -             'damp-webconsole': {'extra_prefs': ['talos.damp.suite=webconsole'],
+20:31:36     INFO -                                 'pagesets_name': 'tp5n.zip',
+20:31:36     INFO -                                 'tests': ['damp']},
+20:31:36     INFO -             'dromaeojs': {'tests': ['dromaeo_css', 'kraken']},
+20:31:36     INFO -             'g1': {'pagesets_name': 'tp5n.zip', 'tests': ['tp5o_scroll']},
+20:31:36     INFO -             'g3': {'tests': ['dromaeo_dom']},
+20:31:36     INFO -             'g4': {'tests': ['displaylist_mutate',
+20:31:36     INFO -                              'rasterflood_svg',
+20:31:36     INFO -                              'rasterflood_gradient']},
+20:31:36     INFO -             'g5': {'pagesets_name': 'tp5n.zip',
+20:31:36     INFO -                    'tests': ['ts_paint_webext', 'tp5o_webext']},
+20:31:36     INFO -             'h1': {'tests': ['ts_paint_heavy']},
+20:31:36     INFO -             'motionmark': {'benchmark_zip': 'jetstream.zip',
+20:31:36     INFO -                            'tests': ['motionmark_animometer',
+20:31:36     INFO -                                      'motionmark_htmlsuite',
+20:31:36     INFO -                                      'JetStream',
+20:31:36     INFO -                                      'ARES6']},
+20:31:36     INFO -             'mtetest': {'tests': ['expat_perf_test', 'expat_perf_test_mini']},
+20:31:36     INFO -             'other': {'tests': ['a11yr',
+20:31:36     INFO -                                 'ts_paint',
+20:31:36     INFO -                                 'twinopen',
+20:31:36     INFO -                                 'sessionrestore',
+20:31:36     INFO -                                 'sessionrestore_no_auto_restore',
+20:31:36     INFO -                                 'tabpaint',
+20:31:36     INFO -                                 'cpstartup',
+20:31:36     INFO -                                 'startup_about_home_paint',
+20:31:36     INFO -                                 'cross_origin_pageload',
+20:31:36     INFO -                                 'startup_about_home_paint_cached']},
+20:31:36     INFO -             'pdfpaint': {'tests': ['pdfpaint']},
+20:31:36     INFO -             'perf-reftest': {'tests': ['perf_reftest']},
+20:31:36     INFO -             'perf-reftest-singletons': {'tests': ['perf_reftest_singletons']},
+20:31:36     INFO -             'realworld-webextensions': {'tests': ['startup_about_home_paint_realworld_webextensions'],
+20:31:36     INFO -                                         'webextensions_zip': 'webextensions.zip'},
+20:31:36     INFO -             'sessionrestore-many-windows': {'tests': ['sessionrestore_many_windows']},
+20:31:36     INFO -             'svgr': {'tests': ['tsvgx',
+20:31:36     INFO -                                'tsvgr_opacity',
+20:31:36     INFO -                                'tscrollx',
+20:31:36     INFO -                                'tsvg_static',
+20:31:36     INFO -                                'tart']},
+20:31:36     INFO -             'tabswitch': {'pagesets_name': 'tp5n.zip', 'tests': ['tabswitch']},
+20:31:36     INFO -             'tp5o': {'pagesets_name': 'tp5n.zip', 'tests': ['tp5o']},
+20:31:36     INFO -             'webgl': {'tests': ['canvas2dvideo',
+20:31:36     INFO -                                 'glterrain',
+20:31:36     INFO -                                 'glvideo',
+20:31:36     INFO -                                 'motionmark_webgl',
+20:31:36     INFO -                                 'offscreencanvas_webcodecs_main_webgl_h264',
+20:31:36     INFO -                                 'offscreencanvas_webcodecs_main_webgl_vp9',
+20:31:36     INFO -                                 'offscreencanvas_webcodecs_main_webgl_av1',
+20:31:36     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_h264',
+20:31:36     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_vp9',
+20:31:36     INFO -                                 'offscreencanvas_webcodecs_worker_webgl_av1',
+20:31:36     INFO -                                 'offscreencanvas_webcodecs_main_2d_h264',
+20:31:36     INFO -                                 'offscreencanvas_webcodecs_main_2d_vp9',
+20:31:36     INFO -                                 'offscreencanvas_webcodecs_main_2d_av1',
+20:31:36     INFO -                                 'offscreencanvas_webcodecs_worker_2d_h264',
+20:31:36     INFO -                                 'offscreencanvas_webcodecs_worker_2d_vp9',
+20:31:36     INFO -                                 'offscreencanvas_webcodecs_worker_2d_av1']},
+20:31:36     INFO -             'xperf': {'pagesets_name': 'tp5n.zip',
+20:31:36     INFO -                       'talos_options': ['--xperf_path',
+20:31:36     INFO -                                         '"c:/Program Files (x86)/Windows '
+20:31:36     INFO -                                         'Kits/10/Windows Performance '
+20:31:36     INFO -                                         'Toolkit/xperf.exe"'],
+20:31:36     INFO -                       'tests': ['tp5n']}}}
+20:31:36     INFO - Running post-action listener: _resource_record_post_action
+20:31:36     INFO - [mozharness: 2025-08-20 20:31:36.624500Z] Finished populate-webroot step (success)
+20:31:36     INFO - [mozharness: 2025-08-20 20:31:36.624523Z] Running create-virtualenv step.
+20:31:36     INFO - Running pre-action listener: _resource_record_pre_action
+20:31:36     INFO - Running main action method: create_virtualenv
+20:31:36     INFO - Virtualenv already exists, skipping creation
+20:31:36     INFO - Running post-action listener: _resource_record_post_action
+20:31:36     INFO - Running post-action listener: _start_resource_monitoring
+20:31:36     INFO - Starting resource monitoring.
+20:31:36     INFO - [mozharness: 2025-08-20 20:31:36.636470Z] Finished create-virtualenv step (success)
+20:31:36     INFO - [mozharness: 2025-08-20 20:31:36.636992Z] Skipping install step.
+20:31:36     INFO - [mozharness: 2025-08-20 20:31:36.637030Z] Running run-tests step.
+20:31:36     INFO - Running pre-action listener: _resource_record_pre_action
+20:31:36     INFO - Running pre-action listener: _set_gcov_prefix
+20:31:36     INFO - Running main action method: run_tests
+20:31:36     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin/python', '--version']
+20:31:36     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin/python --version
+20:31:36     INFO -  Python 3.11.13
+20:31:36     INFO - Return code: 0
+20:31:36     INFO - ENV: MOZ_UPLOAD_DIR is now /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir
+20:31:36     INFO - ENV: MOZBUILD_PATH is now /home/XXXXXXXX/.mozbuild
+20:31:36     INFO - ENV: MINIDUMP_SAVE_PATH is now /home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir
+20:31:36     INFO - ENV: RUST_BACKTRACE is now full
+20:31:36     INFO - Running command: ['/home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin/python', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py', '--executablePath', '/home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox', '--title', 'fedora', '--develop', '--activeTests', 'expat_perf_test', '--log-tbpl-level=info'] in /home/XXXXXXXX/firefox-mte/testing/mozharness/build
+20:31:36     INFO - Copy/paste: /home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin/python /home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py --executablePath /home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox --title fedora --develop --activeTests expat_perf_test --log-tbpl-level=info
+20:31:36     INFO - Using env: {'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+20:31:36     INFO -  'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:',
+20:31:36     INFO -  'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ',
+20:31:36     INFO -  'DISPLAY': ':99',
+20:31:36     INFO -  'EDITOR': '/usr/bin/vim',
+20:31:36     INFO -  'EXPAT_PIN_CORE': '1',
+20:31:36     INFO -  'GPG_TTY': '/dev/pts/13',
+20:31:36     INFO -  'HISTCONTROL': 'ignoredups',
+20:31:36     INFO -  'HISTSIZE': '1000',
+20:31:36     INFO -  'HOME': '/home/XXXXXXXX',
+20:31:36     INFO -  'HOSTNAME': 'fedora',
+20:31:36     INFO -  'LANG': 'en_US.UTF-8',
+20:31:36     INFO -  'LESSOPEN': '||/usr/bin/lesspipe.sh %s',
+20:31:36     INFO -  'LOGNAME': 'XXXXXXXX',
+20:31:36     INFO -  'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+20:31:36     INFO -  'MACH_MAIN_PID': '2633018',
+20:31:36     INFO -  'MAIL': '/var/spool/mail/XXXXXXXX',
+20:31:36     INFO -  'MINIDUMP_SAVE_PATH': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:31:36     INFO -  'MOTD_SHOWN': 'pam',
+20:31:36     INFO -  'MOZBUILD_PATH': '/home/XXXXXXXX/.mozbuild',
+20:31:36     INFO -  'MOZCONFIG': 'mozconfig_mte',
+20:31:36     INFO -  'MOZ_DEVELOPER_OBJ_DIR': '/home/XXXXXXXX/firefox-mte/firefox_release_mte',
+20:31:36     INFO -  'MOZ_DEVELOPER_REPO_DIR': '/home/XXXXXXXX/firefox-mte',
+20:31:36     INFO -  'MOZ_UPLOAD_DIR': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:31:36     INFO -  'OLDPWD': '/home/XXXXXXXX/firefox-mte',
+20:31:36     INFO -  'PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin',
+20:31:36     INFO -  'PWD': '/home/XXXXXXXX/firefox-mte',
+20:31:36     INFO -  'PYTHONPATH': '/home/XXXXXXXX/firefox-mte/testing/talos',
+20:31:36     INFO -  'REQUIRE_GPU': '0',
+20:31:36     INFO -  'RUST_BACKTRACE': 'full',
+20:31:36     INFO -  'SELINUX_LEVEL_REQUESTED': '',
+20:31:36     INFO -  'SELINUX_ROLE_REQUESTED': '',
+20:31:36     INFO -  'SELINUX_USE_CURRENT_RANGE': '',
+20:31:36     INFO -  'SHELL': '/bin/bash',
+20:31:36     INFO -  'SHLVL': '3',
+20:31:36     INFO -  'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346',
+20:31:36     INFO -  'SSH_CLIENT': '172.17.128.2 52585 22',
+20:31:36     INFO -  'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22',
+20:31:36     INFO -  'SSH_TTY': '/dev/pts/0',
+20:31:36     INFO -  'TERM': 'tmux-256color',
+20:31:36     INFO -  'TERM_PROGRAM': 'tmux',
+20:31:36     INFO -  'TERM_PROGRAM_VERSION': '3.5a',
+20:31:36     INFO -  'TMUX': '/tmp/tmux-1000/default,2416415,0',
+20:31:36     INFO -  'TMUX_PANE': '%1',
+20:31:36     INFO -  'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins',
+20:31:36     INFO -  'USER': 'XXXXXXXX',
+20:31:36     INFO -  'VIRTUAL_ENV': 'talos-venv',
+20:31:36     INFO -  'VIRTUAL_ENV_PROMPT': '(venv-3.11) ',
+20:31:36     INFO -  'XDG_RUNTIME_DIR': '/run/user/1000',
+20:31:36     INFO -  'XDG_SESSION_CLASS': 'user',
+20:31:36     INFO -  'XDG_SESSION_ID': '1323',
+20:31:36     INFO -  'XDG_SESSION_TYPE': 'tty',
+20:31:36     INFO -  '_': './mach'}
+20:31:36     INFO - Calling ['/home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin/python', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/run_tests.py', '--executablePath', '/home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox', '--title', 'fedora', '--develop', '--activeTests', 'expat_perf_test', '--log-tbpl-level=info'] with output_timeout 3600
+20:31:36     INFO -  mozversion application_buildid: 20250820124010
+20:31:36     INFO -  mozversion application_changeset: 497a35d032e41a640590af9ac68d8a6dd21f4131
+20:31:36     INFO -  mozversion application_display_name: Nightly
+20:31:36     INFO -  mozversion application_id: {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+20:31:36     INFO -  mozversion application_name: Firefox
+20:31:36     INFO -  mozversion application_remotingname: firefox-default
+20:31:36     INFO -  mozversion application_vendor: Mozilla
+20:31:36     INFO -  mozversion application_version: 134.0.1
+20:31:36     INFO -  mozversion platform_buildid: 20250820124010
+20:31:36     INFO -  mozversion platform_changeset: 497a35d032e41a640590af9ac68d8a6dd21f4131
+20:31:36     INFO -  mozversion platform_version: 134.0.1
+20:31:36     INFO -  starting webserver on '127.0.0.1:56691'
+20:31:36     INFO -  SUITE-START | Running 1 tests
+20:31:36     INFO -  TEST-START | expat_perf_test
+20:31:36     INFO -  Initialising browser for expat_perf_test test...
+20:31:36     INFO -  Cloning profile located at /home/XXXXXXXX/firefox-mte/testing/talos/talos/base_profile
+20:31:36     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/base
+20:31:36     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/common
+20:31:36     INFO -  Merging profile: /home/XXXXXXXX/firefox-mte/testing/profiles/perf
+20:31:36     INFO -  Installing Add-ons:
+20:31:36     INFO -  ['/home/XXXXXXXX/firefox-mte/testing/talos/talos/talos-powers', '/home/XXXXXXXX/firefox-mte/testing/talos/talos/pageloader']
+20:31:36     INFO -  Installing Webextensions:
+20:31:36     INFO -  Application command: /home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox http://127.0.0.1:56691/getInfo.html -profile /tmp/tmp5e_lzndg/profile
+20:31:36     INFO -  TEST-INFO | started process 2633084 (/home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox http://127.0.0.1:56691/getInfo.html)
+20:31:37     INFO -  ExceptionHandler::GenerateDump attempting to generate: /tmp/tmp5e_lzndg/profile/minidumps/15ee5e31-1a11-1f1a-5bdf-3b5bb1815309.dmp
+20:31:37     INFO -  ExceptionHandler::GenerateDump cloned child 2633224
+20:31:37     INFO -  ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+20:31:37     INFO -  ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+20:31:37     INFO -  ExceptionHandler::GenerateDump minidump generation  succeeded
+20:31:37     INFO -   
+20:31:37     INFO -  TEST-INFO | 2633084: exit 4
+20:31:37     INFO -  Browser initialized.
+20:31:37     INFO -  Fission enabled: True
+20:31:37     INFO -  Running cycle 1/1 for expat_perf_test test...
+20:31:37     INFO -  Using env: {'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+20:31:37     INFO -   'DEBUGINFOD_IMA_CERT_PATH': '/etc/keys/ima:',
+20:31:37     INFO -   'DEBUGINFOD_URLS': 'https://debuginfod.fedoraproject.org/ ',
+20:31:37     INFO -   'DISPLAY': ':99',
+20:31:37     INFO -   'EDITOR': '/usr/bin/vim',
+20:31:37     INFO -   'EXPAT_PIN_CORE': '1',
+20:31:37     INFO -   'GPG_TTY': '/dev/pts/13',
+20:31:37     INFO -   'HISTCONTROL': 'ignoredups',
+20:31:37     INFO -   'HISTSIZE': '1000',
+20:31:37     INFO -   'HOME': '/home/XXXXXXXX',
+20:31:37     INFO -   'HOSTNAME': 'fedora',
+20:31:37     INFO -   'LANG': 'en_US.UTF-8',
+20:31:37     INFO -   'LD_LIBRARY_PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin',
+20:31:37     INFO -   'LESSOPEN': '||/usr/bin/lesspipe.sh %s',
+20:31:37     INFO -   'LOGNAME': 'XXXXXXXX',
+20:31:37     INFO -   'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:',
+20:31:37     INFO -   'MACH_MAIN_PID': '2633018',
+20:31:37     INFO -   'MAIL': '/var/spool/mail/XXXXXXXX',
+20:31:37     INFO -   'MINIDUMP_SAVE_PATH': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:31:37     INFO -   'MOTD_SHOWN': 'pam',
+20:31:37     INFO -   'MOZBUILD_PATH': '/home/XXXXXXXX/.mozbuild',
+20:31:37     INFO -   'MOZCONFIG': 'mozconfig_mte',
+20:31:37     INFO -   'MOZ_CRASHREPORTER': '1',
+20:31:37     INFO -   'MOZ_CRASHREPORTER_NO_REPORT': '1',
+20:31:37     INFO -   'MOZ_DEVELOPER_OBJ_DIR': '/home/XXXXXXXX/firefox-mte/firefox_release_mte',
+20:31:37     INFO -   'MOZ_DEVELOPER_REPO_DIR': '/home/XXXXXXXX/firefox-mte',
+20:31:37     INFO -   'MOZ_DISABLE_NONLOCAL_CONNECTIONS': '1',
+20:31:37     INFO -   'MOZ_UPLOAD_DIR': '/home/XXXXXXXX/firefox-mte/testing/mozharness/build/blobber_upload_dir',
+20:31:37     INFO -   'MOZ_USE_PAGELOADER': '1',
+20:31:37     INFO -   'NO_EM_RESTART': '1',
+20:31:37     INFO -   'OLDPWD': '/home/XXXXXXXX/firefox-mte',
+20:31:37     INFO -   'PATH': '/home/XXXXXXXX/firefox-mte/firefox_release_mte/testing/talos-venv/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/common/bin:/home/XXXXXXXX/.mozbuild/srcdirs/firefox-mte-f625a17dae07/_virtualenvs/mach/bin:/home/XXXXXXXX/firefox-mte/venv-3.11/bin:/home/XXXXXXXX/.cargo/bin:/home/XXXXXXXX/.local/bin:/home/XXXXXXXX/bin:/usr/local/bin:/usr/bin:/usr/local/sbin',
+20:31:37     INFO -   'PWD': '/home/XXXXXXXX/firefox-mte',
+20:31:37     INFO -   'PYTHONPATH': '/home/XXXXXXXX/firefox-mte/testing/talos',
+20:31:37     INFO -   'REQUIRE_GPU': '0',
+20:31:37     INFO -   'RUST_BACKTRACE': 'full',
+20:31:37     INFO -   'SELINUX_LEVEL_REQUESTED': '',
+20:31:37     INFO -   'SELINUX_ROLE_REQUESTED': '',
+20:31:37     INFO -   'SELINUX_USE_CURRENT_RANGE': '',
+20:31:37     INFO -   'SHELL': '/bin/bash',
+20:31:37     INFO -   'SHLVL': '3',
+20:31:37     INFO -   'SSH_AUTH_SOCK': '/tmp/ssh-XXXXZ6nCDS/agent.2416346',
+20:31:37     INFO -   'SSH_CLIENT': '172.17.128.2 52585 22',
+20:31:37     INFO -   'SSH_CONNECTION': '172.17.128.2 52585 172.16.128.61 22',
+20:31:37     INFO -   'SSH_TTY': '/dev/pts/0',
+20:31:37     INFO -   'TERM': 'tmux-256color',
+20:31:37     INFO -   'TERM_PROGRAM': 'tmux',
+20:31:37     INFO -   'TERM_PROGRAM_VERSION': '3.5a',
+20:31:37     INFO -   'TMUX': '/tmp/tmux-1000/default,2416415,0',
+20:31:37     INFO -   'TMUX_PANE': '%1',
+20:31:37     INFO -   'TMUX_PLUGIN_MANAGER_PATH': '/home/XXXXXXXX/.local/share/tmux/plugins',
+20:31:37     INFO -   'USER': 'XXXXXXXX',
+20:31:37     INFO -   'VIRTUAL_ENV': 'talos-venv',
+20:31:37     INFO -   'VIRTUAL_ENV_PROMPT': '(venv-3.11) ',
+20:31:37     INFO -   'XDG_RUNTIME_DIR': '/run/user/1000',
+20:31:37     INFO -   'XDG_SESSION_CLASS': 'user',
+20:31:37     INFO -   'XDG_SESSION_ID': '1323',
+20:31:37     INFO -   'XDG_SESSION_TYPE': 'tty',
+20:31:37     INFO -   '_': './mach'}
+20:31:37     INFO -  TEST-INFO | started process 2633231 (/home/XXXXXXXX/firefox-mte/firefox_release_mte/dist/bin/firefox -profile /tmp/tmp5e_lzndg/profile)
+20:31:38     INFO -  PID 2633231 | libEGL warning: DRI3 error: Could not get DRI3 device
+20:31:38     INFO -  PID 2633231 | libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:31:38     INFO -  PID 2633231 | libEGL warning: DRI3 error: Could not get DRI3 device
+20:31:38     INFO -  PID 2633231 | libEGL warning: Activate DRI3 at Xorg or build mesa with DRI2
+20:31:38     INFO -  PID 2633231 | MTE sched_setaffinity on core : 1 (PID:2633231)
+20:31:39     INFO -  PID 2633231 | console.error: ({})
+20:31:40     INFO -  PID 2633231 | [ERROR glean_core::metrics::ping] Invalid reason code active for ping usage-reporting
+20:31:40     INFO -  PID 2633231 | [ERROR error_support::handling] logins-unexpected: Error parsing URL: relative URL with a cannot-be-a-base base
+20:31:40     INFO -  PID 2633231 | [ERROR error_support::handling] suggest-unexpected: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base
+20:31:40     INFO -  PID 2633231 | console.error: URLBar - QuickSuggest.SuggestBackendRust: "Error initializing SuggestStore" (new Error("reason: Error from Remote Settings: Remote settings error: Error parsing URL: relative URL with a cannot-be-a-base base", "resource://gre/modules/RustSuggest.sys.mjs", 2228))
+20:31:40     INFO -  PID 2633231 | MTE sched_setaffinity on core : 1 (PID:2633577)
+20:31:41     INFO -  PID 2633231 | MTE Capture_Time:Expat,1,284761086,2633577|
+20:31:41     INFO -  PID 2633231 | Cycle 1(1): loaded http://127.0.0.1:56691/tests/expat_perf_test/mytest_material_common_sprite321x10.svg (next: http://127.0.0.1:56691/tests/expat_perf_test/mytest_material_common_sprite321x10.svg)
+20:31:45     INFO -  PID 2633231 | [Parent 2633231, IPC I/O Parent] WARNING: process 2633577 exited on signal 4: file /home/XXXXXXXX/firefox-mte/ipc/chromium/src/base/process_util_posix.cc:335
+20:31:46     INFO -  PID 2633231 | console.error: AboutHomeStartupCache: "A privileged about content process shut down while cache streams were still en route."
+20:31:46     INFO -  PID 2633231 | [Parent 2633231, IPC I/O Parent] WARNING: process 2633477 exited on signal 4: file /home/XXXXXXXX/firefox-mte/ipc/chromium/src/base/process_util_posix.cc:335
+20:32:10     INFO -  PID 2633231 | 1755721930114	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, channelStatus: 2152398861, errorCode: 2, reason: error
+Failed to run test benchmark for /home/XXXXXXXX/benchmarks/ff-expat-ampere1/CPU1/mte. Retrying...

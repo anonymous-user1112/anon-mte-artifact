@@ -1,0 +1,42 @@
+--- rocksdb-10.0.1-orig/port/mmap.cc	2025-03-06 17:32:20.000000000 -0800
++++ rocksdb-10.0.1/port/mmap.cc	2025-08-21 10:48:11.044853378 -0700
+@@ -78,7 +78,7 @@
+     huge_flag = MAP_HUGETLB;
+ #endif  // MAP_HUGE_TLB
+   }
+-  mm.addr_ = mmap(nullptr, length, PROT_READ | PROT_WRITE,
++  mm.addr_ = mmap(nullptr, length, PROT_READ | PROT_WRITE | PROT_MTE,
+                   MAP_PRIVATE | MAP_ANONYMOUS | huge_flag, -1, 0);
+   if (mm.addr_ == MAP_FAILED) {
+     mm.addr_ = nullptr;
+--- rocksdb-10.0.1-orig/env/io_posix.cc	2025-03-06 17:32:20.000000000 -0800
++++ rocksdb-10.0.1/env/io_posix.cc	2025-08-21 10:58:03.143238845 -0700
+@@ -1104,7 +1104,7 @@
+   }
+ 
+   TEST_KILL_RANDOM("PosixMmapFile::Append:1");
+-  void* ptr = mmap(nullptr, map_size_, PROT_READ | PROT_WRITE, MAP_SHARED, fd_,
++  void* ptr = mmap(nullptr, map_size_, PROT_READ | PROT_WRITE | PROT_MTE, MAP_SHARED, fd_,
+                    file_offset_);
+   if (ptr == MAP_FAILED) {
+     return IOStatus::IOError("MMap failed on " + filename_);
+--- rocksdb-10.0.1-orig/env/fs_posix.cc	2025-03-06 17:32:20.000000000 -0800
++++ rocksdb-10.0.1/env/fs_posix.cc	2025-08-21 11:02:48.280913348 -0700
+@@ -245,7 +245,7 @@
+       IOOptions opts;
+       s = GetFileSize(fname, opts, &size, nullptr);
+       if (s.ok()) {
+-        void* base = mmap(nullptr, size, PROT_READ, MAP_SHARED, fd, 0);
++        void* base = mmap(nullptr, size, PROT_READ | PROT_MTE, MAP_SHARED, fd, 0);
+         if (base != MAP_FAILED) {
+           result->reset(
+               new PosixMmapReadableFile(fd, fname, base, size, options));
+@@ -503,7 +503,7 @@
+     }
+     void* base = nullptr;
+     if (status.ok()) {
+-      base = mmap(nullptr, static_cast<size_t>(size), PROT_READ | PROT_WRITE,
++      base = mmap(nullptr, static_cast<size_t>(size), PROT_READ | PROT_WRITE | PROT_MTE,
+                   MAP_SHARED, fd, 0);
+       if (base == MAP_FAILED) {
+         status = IOError("while mmap file for read", fname, errno);

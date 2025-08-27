@@ -1,0 +1,1439 @@
+runspec v6152 started at Thu Oct 17 06:46:07 2024 on "localhost"
+runspec is: /spec2006/bin/runspec
+runspec: runspec -c llvm-mte-aarch64-mte -e ral-half-static --tune base --size ref --iterations 3 --noreportable int
+toolset: unknown
+
+Locating benchmarks...found 31 benchmarks in 6 benchsets.
+Reading config file '/spec2006/config/llvm-mte-aarch64-mte.cfg'
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = ral-half-static
+Size      = ref
+Machine   = default
+benchmarks= 400.perlbench,401.bzip2,403.gcc,429.mcf,445.gobmk,456.hmmer,458.sjeng,462.libquantum,464.h264ref,471.omnetpp,473.astar,483.xalancbmk,999.specrand
+outputs   = asc, csv, Screen
+username  = root
+Benchmarks selected: 400.perlbench, 401.bzip2, 403.gcc, 429.mcf, 445.gobmk, 456.hmmer, 458.sjeng, 462.libquantum, 464.h264ref, 471.omnetpp, 473.astar, 483.xalancbmk, 999.specrand
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 400.perlbench base ral-half-static default
+
+------------------------------------------------------------------------
+  Up to date 401.bzip2 base ral-half-static default
+
+------------------------------------------------------------------------
+  Up to date 403.gcc base ral-half-static default
+
+------------------------------------------------------------------------
+  Up to date 429.mcf base ral-half-static default
+
+------------------------------------------------------------------------
+  Up to date 445.gobmk base ral-half-static default
+
+------------------------------------------------------------------------
+  Up to date 456.hmmer base ral-half-static default
+
+------------------------------------------------------------------------
+  Up to date 458.sjeng base ral-half-static default
+
+------------------------------------------------------------------------
+  Up to date 462.libquantum base ral-half-static default
+
+------------------------------------------------------------------------
+  Up to date 464.h264ref base ral-half-static default
+
+------------------------------------------------------------------------
+  Up to date 471.omnetpp base ral-half-static default
+
+------------------------------------------------------------------------
+  Up to date 473.astar base ral-half-static default
+
+------------------------------------------------------------------------
+  Up to date 483.xalancbmk base ral-half-static default
+
+------------------------------------------------------------------------
+  Up to date 999.specrand base ral-half-static default
+
+
+Setting Up Run Directories
+  Setting up 400.perlbench ref base ral-half-static default: existing (run_base_ref_ral-half-static.0000)
+  Setting up 401.bzip2 ref base ral-half-static default: existing (run_base_ref_ral-half-static.0000)
+  Setting up 403.gcc ref base ral-half-static default: existing (run_base_ref_ral-half-static.0000)
+  Setting up 429.mcf ref base ral-half-static default: existing (run_base_ref_ral-half-static.0000)
+  Setting up 445.gobmk ref base ral-half-static default: existing (run_base_ref_ral-half-static.0000)
+  Setting up 456.hmmer ref base ral-half-static default: existing (run_base_ref_ral-half-static.0000)
+  Setting up 458.sjeng ref base ral-half-static default: existing (run_base_ref_ral-half-static.0000)
+  Setting up 462.libquantum ref base ral-half-static default: existing (run_base_ref_ral-half-static.0000)
+  Setting up 464.h264ref ref base ral-half-static default: existing (run_base_ref_ral-half-static.0000)
+  Setting up 471.omnetpp ref base ral-half-static default: existing (run_base_ref_ral-half-static.0000)
+  Setting up 473.astar ref base ral-half-static default: existing (run_base_ref_ral-half-static.0000)
+  Setting up 483.xalancbmk ref base ral-half-static default: existing (run_base_ref_ral-half-static.0000)
+  Setting up 999.specrand ref base ral-half-static default: existing (run_base_ref_ral-half-static.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 400.perlbench ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err bench_runner little ../run_base_ref_ral-half-static.0000/perlbench_base.ral-half-static -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err bench_runner little ../run_base_ref_ral-half-static.0000/perlbench_base.ral-half-static -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err bench_runner little ../run_base_ref_ral-half-static.0000/perlbench_base.ral-half-static -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 06:46:23 2024 (1729147583)
+Stop command: Thu Oct 17 07:11:22 2024 (1729149082)
+Elapsed time for command: 00:24:59 (1499)
+Workload elapsed time (0:1) = 786.627366 seconds
+Workload elapsed time (0:2) = 281.822642 seconds
+Workload elapsed time (0:3) = 422.430731 seconds
+Copy 0 of 400.perlbench (base ref) run 1 finished at Thu Oct 17 07:11:14 2024.  Total elapsed time: 1490.880739
+comparing files in '/spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 07:11:22 2024 (1729149082)
+Stop command: Thu Oct 17 07:11:24 2024 (1729149084)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Oct 17 06:46:23 2024 (1729147583)
+  Stop:     Thu Oct 17 07:11:22 2024 (1729149082)
+  Elapsed:  00:24:59 (1499)
+  Reported: 1490 880946000 1490.880946
+ Success 400.perlbench base ref ratio=6.55, runtime=1490.880946
+
+-----------------------------------
+  Running (#1) 401.bzip2 ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000
+    -o input.source.out -e input.source.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static input.program 280 (timed)
+    -o text.html.out -e text.html.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static text.html 280 (timed)
+    -o input.combined.out -e input.combined.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static input.combined 200 (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 07:11:24 2024 (1729149084)
+Stop command: Thu Oct 17 07:36:05 2024 (1729150565)
+Elapsed time for command: 00:24:41 (1481)
+Workload elapsed time (0:1) = 286.278736 seconds
+Workload elapsed time (0:2) = 100.310841 seconds
+Workload elapsed time (0:3) = 188.778374 seconds
+Workload elapsed time (0:4) = 311.933076 seconds
+Workload elapsed time (0:5) = 364.371052 seconds
+Workload elapsed time (0:6) = 221.307598 seconds
+Copy 0 of 401.bzip2 (base ref) run 1 finished at Thu Oct 17 07:35:57 2024.  Total elapsed time: 1472.979677
+comparing files in '/spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 07:36:05 2024 (1729150565)
+Stop command: Thu Oct 17 07:36:06 2024 (1729150566)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 07:11:24 2024 (1729149084)
+  Stop:     Thu Oct 17 07:36:05 2024 (1729150565)
+  Elapsed:  00:24:41 (1481)
+  Reported: 1472 980094000 1472.980094
+ Success 401.bzip2 base ref ratio=6.55, runtime=1472.980094
+
+-----------------------------------
+  Running (#1) 403.gcc ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000
+    -o 166.out -e 166.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static 166.i -o 166.s (timed)
+    -o 200.out -e 200.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static g23.i -o g23.s (timed)
+    -o s04.out -e s04.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static scilab.i -o scilab.s (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 07:36:07 2024 (1729150567)
+Stop command: Thu Oct 17 07:52:47 2024 (1729151567)
+Elapsed time for command: 00:16:40 (1000)
+Workload elapsed time (0:1) = 81.138176 seconds
+Workload elapsed time (0:2) = 139.443074 seconds
+Workload elapsed time (0:3) = 97.804857 seconds
+Workload elapsed time (0:4) = 76.042013 seconds
+Workload elapsed time (0:5) = 88.072599 seconds
+Workload elapsed time (0:6) = 126.346537 seconds
+Workload elapsed time (0:7) = 190.168982 seconds
+Workload elapsed time (0:8) = 144.83204 seconds
+Workload elapsed time (0:9) = 48.51067 seconds
+Copy 0 of 403.gcc (base ref) run 1 finished at Thu Oct 17 07:52:39 2024.  Total elapsed time: 992.358948
+comparing files in '/spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 07:52:47 2024 (1729151567)
+Stop command: Thu Oct 17 07:52:50 2024 (1729151570)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Thu Oct 17 07:36:07 2024 (1729150567)
+  Stop:     Thu Oct 17 07:52:47 2024 (1729151567)
+  Elapsed:  00:16:40 (1000)
+  Reported: 992 359460000 992.35946
+ Success 403.gcc base ref ratio=8.11, runtime=992.359460
+
+-----------------------------------
+  Running (#1) 429.mcf ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000
+    -o inp.out -e inp.err bench_runner little ../run_base_ref_ral-half-static.0000/mcf_base.ral-half-static inp.in (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 07:52:50 2024 (1729151570)
+Stop command: Thu Oct 17 08:23:51 2024 (1729153431)
+Elapsed time for command: 00:31:01 (1861)
+Workload elapsed time (0:1) = 1852.197665 seconds
+Copy 0 of 429.mcf (base ref) run 1 finished at Thu Oct 17 08:23:43 2024.  Total elapsed time: 1852.197665
+comparing files in '/spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 08:23:51 2024 (1729153431)
+Stop command: Thu Oct 17 08:23:51 2024 (1729153431)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Thu Oct 17 07:52:50 2024 (1729151570)
+  Stop:     Thu Oct 17 08:23:51 2024 (1729153431)
+  Elapsed:  00:31:01 (1861)
+  Reported: 1852 197867000 1852.197867
+ Success 429.mcf base ref ratio=4.92, runtime=1852.197867
+
+-----------------------------------
+  Running (#1) 445.gobmk ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000
+    -i 13x13.tst -o 13x13.out -e 13x13.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 08:23:52 2024 (1729153432)
+Stop command: Thu Oct 17 08:48:32 2024 (1729154912)
+Elapsed time for command: 00:24:40 (1480)
+Workload elapsed time (0:1) = 205.61451 seconds
+Workload elapsed time (0:2) = 527.678754 seconds
+Workload elapsed time (0:3) = 259.59264 seconds
+Workload elapsed time (0:4) = 202.683272 seconds
+Workload elapsed time (0:5) = 276.713294 seconds
+Copy 0 of 445.gobmk (base ref) run 1 finished at Thu Oct 17 08:48:24 2024.  Total elapsed time: 1472.28247
+comparing files in '/spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 08:48:32 2024 (1729154912)
+Stop command: Thu Oct 17 08:48:34 2024 (1729154914)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Oct 17 08:23:52 2024 (1729153432)
+  Stop:     Thu Oct 17 08:48:32 2024 (1729154912)
+  Elapsed:  00:24:40 (1480)
+  Reported: 1472 282831000 1472.282831
+ Success 445.gobmk base ref ratio=7.12, runtime=1472.282831
+
+-----------------------------------
+  Running (#1) 456.hmmer ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000
+    -o nph3.out -e nph3.err bench_runner little ../run_base_ref_ral-half-static.0000/hmmer_base.ral-half-static nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err bench_runner little ../run_base_ref_ral-half-static.0000/hmmer_base.ral-half-static --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 08:48:34 2024 (1729154914)
+Stop command: Thu Oct 17 09:09:15 2024 (1729156155)
+Elapsed time for command: 00:20:41 (1241)
+Workload elapsed time (0:1) = 392.988025 seconds
+Workload elapsed time (0:2) = 840.161669 seconds
+Copy 0 of 456.hmmer (base ref) run 1 finished at Thu Oct 17 09:09:07 2024.  Total elapsed time: 1233.149694
+comparing files in '/spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 09:09:15 2024 (1729156155)
+Stop command: Thu Oct 17 09:09:16 2024 (1729156156)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 08:48:34 2024 (1729154914)
+  Stop:     Thu Oct 17 09:09:15 2024 (1729156155)
+  Elapsed:  00:20:41 (1241)
+  Reported: 1233 149914000 1233.149914
+ Success 456.hmmer base ref ratio=7.57, runtime=1233.149914
+
+-----------------------------------
+  Running (#1) 458.sjeng ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ral-half-static.0000/sjeng_base.ral-half-static ref.txt (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 09:09:16 2024 (1729156156)
+Stop command: Thu Oct 17 09:46:12 2024 (1729158372)
+Elapsed time for command: 00:36:56 (2216)
+Workload elapsed time (0:1) = 2207.579708 seconds
+Copy 0 of 458.sjeng (base ref) run 1 finished at Thu Oct 17 09:46:04 2024.  Total elapsed time: 2207.579708
+comparing files in '/spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 09:46:12 2024 (1729158372)
+Stop command: Thu Oct 17 09:46:12 2024 (1729158372)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Thu Oct 17 09:09:16 2024 (1729156156)
+  Stop:     Thu Oct 17 09:46:12 2024 (1729158372)
+  Elapsed:  00:36:56 (2216)
+  Reported: 2207 579834000 2207.579834
+ Success 458.sjeng base ref ratio=5.48, runtime=2207.579834
+
+-----------------------------------
+  Running (#1) 462.libquantum ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ral-half-static.0000/libquantum_base.ral-half-static 1397 8 (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 09:46:12 2024 (1729158372)
+Stop command: Thu Oct 17 10:03:50 2024 (1729159430)
+Elapsed time for command: 00:17:38 (1058)
+Workload elapsed time (0:1) = 1050.1451 seconds
+Copy 0 of 462.libquantum (base ref) run 1 finished at Thu Oct 17 10:03:42 2024.  Total elapsed time: 1050.1451
+comparing files in '/spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 10:03:51 2024 (1729159431)
+Stop command: Thu Oct 17 10:03:51 2024 (1729159431)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Thu Oct 17 09:46:12 2024 (1729158372)
+  Stop:     Thu Oct 17 10:03:50 2024 (1729159430)
+  Elapsed:  00:17:38 (1058)
+  Reported: 1050 145220000 1050.14522
+ Success 462.libquantum base ref ratio=19.73, runtime=1050.145220
+
+-----------------------------------
+  Running (#1) 464.h264ref ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err bench_runner little ../run_base_ref_ral-half-static.0000/h264ref_base.ral-half-static -d foreman_ref_encoder_baseline.cfg (timed)
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err bench_runner little ../run_base_ref_ral-half-static.0000/h264ref_base.ral-half-static -d foreman_ref_encoder_main.cfg (timed)
+    -o sss_main_encodelog.out -e sss_main_encodelog.err bench_runner little ../run_base_ref_ral-half-static.0000/h264ref_base.ral-half-static -d sss_encoder_main.cfg (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 10:03:51 2024 (1729159431)
+Stop command: Thu Oct 17 10:35:12 2024 (1729161312)
+Elapsed time for command: 00:31:21 (1881)
+Workload elapsed time (0:1) = 214.909511 seconds
+Workload elapsed time (0:2) = 164.099744 seconds
+Workload elapsed time (0:3) = 1493.946914 seconds
+Copy 0 of 464.h264ref (base ref) run 1 finished at Thu Oct 17 10:35:04 2024.  Total elapsed time: 1872.956169
+comparing files in '/spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 10:35:12 2024 (1729161312)
+Stop command: Thu Oct 17 10:35:14 2024 (1729161314)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Oct 17 10:03:51 2024 (1729159431)
+  Stop:     Thu Oct 17 10:35:12 2024 (1729161312)
+  Elapsed:  00:31:21 (1881)
+  Reported: 1872 956373000 1872.956373
+ Success 464.h264ref base ref ratio=11.82, runtime=1872.956373
+
+-----------------------------------
+  Running (#1) 471.omnetpp ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000
+    -o omnetpp.log -e omnetpp.err bench_runner little ../run_base_ref_ral-half-static.0000/omnetpp_base.ral-half-static omnetpp.ini (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 10:35:14 2024 (1729161314)
+Stop command: Thu Oct 17 10:59:03 2024 (1729162743)
+Elapsed time for command: 00:23:49 (1429)
+Workload elapsed time (0:1) = 1421.302629 seconds
+Copy 0 of 471.omnetpp (base ref) run 1 finished at Thu Oct 17 10:58:55 2024.  Total elapsed time: 1421.302629
+comparing files in '/spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 10:59:03 2024 (1729162743)
+Stop command: Thu Oct 17 10:59:04 2024 (1729162744)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 10:35:14 2024 (1729161314)
+  Stop:     Thu Oct 17 10:59:03 2024 (1729162743)
+  Elapsed:  00:23:49 (1429)
+  Reported: 1421 302823000 1421.302823
+ Success 471.omnetpp base ref ratio=4.40, runtime=1421.302823
+
+-----------------------------------
+  Running (#1) 473.astar ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner little ../run_base_ref_ral-half-static.0000/astar_base.ral-half-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner little ../run_base_ref_ral-half-static.0000/astar_base.ral-half-static rivers.cfg (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 10:59:04 2024 (1729162744)
+Stop command: Thu Oct 17 11:20:20 2024 (1729164020)
+Elapsed time for command: 00:21:16 (1276)
+Workload elapsed time (0:1) = 568.397813 seconds
+Workload elapsed time (0:2) = 699.449673 seconds
+Copy 0 of 473.astar (base ref) run 1 finished at Thu Oct 17 11:20:12 2024.  Total elapsed time: 1267.847486
+comparing files in '/spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 11:20:20 2024 (1729164020)
+Stop command: Thu Oct 17 11:20:21 2024 (1729164021)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 10:59:04 2024 (1729162744)
+  Stop:     Thu Oct 17 11:20:20 2024 (1729164020)
+  Elapsed:  00:21:16 (1276)
+  Reported: 1267 847667000 1267.847667
+ Success 473.astar base ref ratio=5.54, runtime=1267.847667
+
+-----------------------------------
+  Running (#1) 483.xalancbmk ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ral-half-static.0000/Xalan_base.ral-half-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 11:20:21 2024 (1729164021)
+Stop command: Thu Oct 17 11:35:54 2024 (1729164954)
+Elapsed time for command: 00:15:33 (933)
+Workload elapsed time (0:1) = 924.972548 seconds
+Copy 0 of 483.xalancbmk (base ref) run 1 finished at Thu Oct 17 11:35:46 2024.  Total elapsed time: 924.972548
+comparing files in '/spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 11:35:54 2024 (1729164954)
+Stop command: Thu Oct 17 11:35:56 2024 (1729164956)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Oct 17 11:20:21 2024 (1729164021)
+  Stop:     Thu Oct 17 11:35:54 2024 (1729164954)
+  Elapsed:  00:15:33 (933)
+  Reported: 924 972676000 924.972676
+ Success 483.xalancbmk base ref ratio=7.46, runtime=924.972676
+
+-----------------------------------
+  Running (#1) 999.specrand ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000
+    -o rand.234923.out -e rand.234923.err bench_runner little ../run_base_ref_ral-half-static.0000/specrand_base.ral-half-static 1255432124 234923 (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 11:35:56 2024 (1729164956)
+Stop command: Thu Oct 17 11:35:57 2024 (1729164957)
+Elapsed time for command: 00:00:01 (1)
+Workload elapsed time (0:1) = 0.325328 seconds
+Copy 0 of 999.specrand (base ref) run 1 finished at Thu Oct 17 11:35:57 2024.  Total elapsed time: 0.325328
+comparing files in '/spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 11:35:57 2024 (1729164957)
+Stop command: Thu Oct 17 11:36:00 2024 (1729164960)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Thu Oct 17 11:35:56 2024 (1729164956)
+  Stop:     Thu Oct 17 11:35:57 2024 (1729164957)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 325489000 0.325489
+ Success 999.specrand base ref ratio=30.72, runtime=0.325489
+
+-----------------------------------
+  Running (#2) 400.perlbench ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err bench_runner little ../run_base_ref_ral-half-static.0000/perlbench_base.ral-half-static -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err bench_runner little ../run_base_ref_ral-half-static.0000/perlbench_base.ral-half-static -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err bench_runner little ../run_base_ref_ral-half-static.0000/perlbench_base.ral-half-static -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 11:36:01 2024 (1729164961)
+Stop command: Thu Oct 17 12:00:51 2024 (1729166451)
+Elapsed time for command: 00:24:50 (1490)
+Workload elapsed time (0:1) = 780.206393 seconds
+Workload elapsed time (0:2) = 280.295789 seconds
+Workload elapsed time (0:3) = 421.73186 seconds
+Copy 0 of 400.perlbench (base ref) run 2 finished at Thu Oct 17 12:00:43 2024.  Total elapsed time: 1482.234042
+comparing files in '/spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 12:00:51 2024 (1729166451)
+Stop command: Thu Oct 17 12:00:52 2024 (1729166452)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 11:36:01 2024 (1729164961)
+  Stop:     Thu Oct 17 12:00:51 2024 (1729166451)
+  Elapsed:  00:24:50 (1490)
+  Reported: 1482 234329000 1482.234329
+ Success 400.perlbench base ref ratio=6.59, runtime=1482.234329
+
+-----------------------------------
+  Running (#2) 401.bzip2 ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000
+    -o input.source.out -e input.source.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static input.program 280 (timed)
+    -o text.html.out -e text.html.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static text.html 280 (timed)
+    -o input.combined.out -e input.combined.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static input.combined 200 (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 12:00:52 2024 (1729166452)
+Stop command: Thu Oct 17 12:25:43 2024 (1729167943)
+Elapsed time for command: 00:24:51 (1491)
+Workload elapsed time (0:1) = 287.303012 seconds
+Workload elapsed time (0:2) = 100.371535 seconds
+Workload elapsed time (0:3) = 190.337942 seconds
+Workload elapsed time (0:4) = 312.579923 seconds
+Workload elapsed time (0:5) = 368.844255 seconds
+Workload elapsed time (0:6) = 223.261944 seconds
+Copy 0 of 401.bzip2 (base ref) run 2 finished at Thu Oct 17 12:25:35 2024.  Total elapsed time: 1482.698611
+comparing files in '/spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 12:25:43 2024 (1729167943)
+Stop command: Thu Oct 17 12:25:44 2024 (1729167944)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 12:00:52 2024 (1729166452)
+  Stop:     Thu Oct 17 12:25:43 2024 (1729167943)
+  Elapsed:  00:24:51 (1491)
+  Reported: 1482 703692000 1482.703692
+ Success 401.bzip2 base ref ratio=6.51, runtime=1482.703692
+
+-----------------------------------
+  Running (#2) 403.gcc ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000
+    -o 166.out -e 166.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static 166.i -o 166.s (timed)
+    -o 200.out -e 200.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static g23.i -o g23.s (timed)
+    -o s04.out -e s04.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static scilab.i -o scilab.s (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 12:25:45 2024 (1729167945)
+Stop command: Thu Oct 17 12:42:23 2024 (1729168943)
+Elapsed time for command: 00:16:38 (998)
+Workload elapsed time (0:1) = 81.104931 seconds
+Workload elapsed time (0:2) = 139.620747 seconds
+Workload elapsed time (0:3) = 97.93085 seconds
+Workload elapsed time (0:4) = 75.71915 seconds
+Workload elapsed time (0:5) = 87.747029 seconds
+Workload elapsed time (0:6) = 126.336672 seconds
+Workload elapsed time (0:7) = 188.663518 seconds
+Workload elapsed time (0:8) = 144.792992 seconds
+Workload elapsed time (0:9) = 48.569934 seconds
+Copy 0 of 403.gcc (base ref) run 2 finished at Thu Oct 17 12:42:15 2024.  Total elapsed time: 990.485823
+comparing files in '/spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 12:42:23 2024 (1729168943)
+Stop command: Thu Oct 17 12:42:26 2024 (1729168946)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Thu Oct 17 12:25:45 2024 (1729167945)
+  Stop:     Thu Oct 17 12:42:23 2024 (1729168943)
+  Elapsed:  00:16:38 (998)
+  Reported: 990 486350000 990.48635
+ Success 403.gcc base ref ratio=8.13, runtime=990.486350
+
+-----------------------------------
+  Running (#2) 429.mcf ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000
+    -o inp.out -e inp.err bench_runner little ../run_base_ref_ral-half-static.0000/mcf_base.ral-half-static inp.in (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 12:42:27 2024 (1729168947)
+Stop command: Thu Oct 17 13:14:02 2024 (1729170842)
+Elapsed time for command: 00:31:35 (1895)
+Workload elapsed time (0:1) = 1887.366264 seconds
+Copy 0 of 429.mcf (base ref) run 2 finished at Thu Oct 17 13:13:54 2024.  Total elapsed time: 1887.366264
+comparing files in '/spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 13:14:02 2024 (1729170842)
+Stop command: Thu Oct 17 13:14:03 2024 (1729170843)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 12:42:27 2024 (1729168947)
+  Stop:     Thu Oct 17 13:14:02 2024 (1729170842)
+  Elapsed:  00:31:35 (1895)
+  Reported: 1887 366426000 1887.366426
+ Success 429.mcf base ref ratio=4.83, runtime=1887.366426
+
+-----------------------------------
+  Running (#2) 445.gobmk ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000
+    -i 13x13.tst -o 13x13.out -e 13x13.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 13:14:03 2024 (1729170843)
+Stop command: Thu Oct 17 13:38:45 2024 (1729172325)
+Elapsed time for command: 00:24:42 (1482)
+Workload elapsed time (0:1) = 205.067008 seconds
+Workload elapsed time (0:2) = 530.777154 seconds
+Workload elapsed time (0:3) = 259.498598 seconds
+Workload elapsed time (0:4) = 201.943911 seconds
+Workload elapsed time (0:5) = 276.541005 seconds
+Copy 0 of 445.gobmk (base ref) run 2 finished at Thu Oct 17 13:38:37 2024.  Total elapsed time: 1473.827676
+comparing files in '/spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 13:38:45 2024 (1729172325)
+Stop command: Thu Oct 17 13:38:47 2024 (1729172327)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Oct 17 13:14:03 2024 (1729170843)
+  Stop:     Thu Oct 17 13:38:45 2024 (1729172325)
+  Elapsed:  00:24:42 (1482)
+  Reported: 1473 828149000 1473.828149
+ Success 445.gobmk base ref ratio=7.12, runtime=1473.828149
+
+-----------------------------------
+  Running (#2) 456.hmmer ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000
+    -o nph3.out -e nph3.err bench_runner little ../run_base_ref_ral-half-static.0000/hmmer_base.ral-half-static nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err bench_runner little ../run_base_ref_ral-half-static.0000/hmmer_base.ral-half-static --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 13:38:47 2024 (1729172327)
+Stop command: Thu Oct 17 13:59:29 2024 (1729173569)
+Elapsed time for command: 00:20:42 (1242)
+Workload elapsed time (0:1) = 392.925582 seconds
+Workload elapsed time (0:2) = 840.698502 seconds
+Copy 0 of 456.hmmer (base ref) run 2 finished at Thu Oct 17 13:59:21 2024.  Total elapsed time: 1233.624084
+comparing files in '/spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 13:59:29 2024 (1729173569)
+Stop command: Thu Oct 17 13:59:29 2024 (1729173569)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Thu Oct 17 13:38:47 2024 (1729172327)
+  Stop:     Thu Oct 17 13:59:29 2024 (1729173569)
+  Elapsed:  00:20:42 (1242)
+  Reported: 1233 624244000 1233.624244
+ Success 456.hmmer base ref ratio=7.56, runtime=1233.624244
+
+-----------------------------------
+  Running (#2) 458.sjeng ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ral-half-static.0000/sjeng_base.ral-half-static ref.txt (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 13:59:30 2024 (1729173570)
+Stop command: Thu Oct 17 14:36:19 2024 (1729175779)
+Elapsed time for command: 00:36:49 (2209)
+Workload elapsed time (0:1) = 2201.654331 seconds
+Copy 0 of 458.sjeng (base ref) run 2 finished at Thu Oct 17 14:36:11 2024.  Total elapsed time: 2201.654331
+comparing files in '/spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 14:36:19 2024 (1729175779)
+Stop command: Thu Oct 17 14:36:20 2024 (1729175780)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 13:59:30 2024 (1729173570)
+  Stop:     Thu Oct 17 14:36:19 2024 (1729175779)
+  Elapsed:  00:36:49 (2209)
+  Reported: 2201 654449000 2201.654449
+ Success 458.sjeng base ref ratio=5.50, runtime=2201.654449
+
+-----------------------------------
+  Running (#2) 462.libquantum ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ral-half-static.0000/libquantum_base.ral-half-static 1397 8 (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 14:36:20 2024 (1729175780)
+Stop command: Thu Oct 17 14:53:54 2024 (1729176834)
+Elapsed time for command: 00:17:34 (1054)
+Workload elapsed time (0:1) = 1045.939684 seconds
+Copy 0 of 462.libquantum (base ref) run 2 finished at Thu Oct 17 14:53:46 2024.  Total elapsed time: 1045.939684
+comparing files in '/spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 14:53:54 2024 (1729176834)
+Stop command: Thu Oct 17 14:53:54 2024 (1729176834)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Thu Oct 17 14:36:20 2024 (1729175780)
+  Stop:     Thu Oct 17 14:53:54 2024 (1729176834)
+  Elapsed:  00:17:34 (1054)
+  Reported: 1045 939829000 1045.939829
+ Success 462.libquantum base ref ratio=19.81, runtime=1045.939829
+
+-----------------------------------
+  Running (#2) 464.h264ref ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err bench_runner little ../run_base_ref_ral-half-static.0000/h264ref_base.ral-half-static -d foreman_ref_encoder_baseline.cfg (timed)
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err bench_runner little ../run_base_ref_ral-half-static.0000/h264ref_base.ral-half-static -d foreman_ref_encoder_main.cfg (timed)
+    -o sss_main_encodelog.out -e sss_main_encodelog.err bench_runner little ../run_base_ref_ral-half-static.0000/h264ref_base.ral-half-static -d sss_encoder_main.cfg (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 14:53:55 2024 (1729176835)
+Stop command: Thu Oct 17 15:25:17 2024 (1729178717)
+Elapsed time for command: 00:31:22 (1882)
+Workload elapsed time (0:1) = 215.284686 seconds
+Workload elapsed time (0:2) = 164.711672 seconds
+Workload elapsed time (0:3) = 1494.566235 seconds
+Copy 0 of 464.h264ref (base ref) run 2 finished at Thu Oct 17 15:25:09 2024.  Total elapsed time: 1874.562593
+comparing files in '/spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 15:25:17 2024 (1729178717)
+Stop command: Thu Oct 17 15:25:19 2024 (1729178719)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Oct 17 14:53:55 2024 (1729176835)
+  Stop:     Thu Oct 17 15:25:17 2024 (1729178717)
+  Elapsed:  00:31:22 (1882)
+  Reported: 1874 562782000 1874.562782
+ Success 464.h264ref base ref ratio=11.81, runtime=1874.562782
+
+-----------------------------------
+  Running (#2) 471.omnetpp ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000
+    -o omnetpp.log -e omnetpp.err bench_runner little ../run_base_ref_ral-half-static.0000/omnetpp_base.ral-half-static omnetpp.ini (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 15:25:19 2024 (1729178719)
+Stop command: Thu Oct 17 15:49:13 2024 (1729180153)
+Elapsed time for command: 00:23:54 (1434)
+Workload elapsed time (0:1) = 1425.455152 seconds
+Copy 0 of 471.omnetpp (base ref) run 2 finished at Thu Oct 17 15:49:05 2024.  Total elapsed time: 1425.455152
+comparing files in '/spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 15:49:13 2024 (1729180153)
+Stop command: Thu Oct 17 15:49:13 2024 (1729180153)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Thu Oct 17 15:25:19 2024 (1729178719)
+  Stop:     Thu Oct 17 15:49:13 2024 (1729180153)
+  Elapsed:  00:23:54 (1434)
+  Reported: 1425 455405000 1425.455405
+ Success 471.omnetpp base ref ratio=4.38, runtime=1425.455405
+
+-----------------------------------
+  Running (#2) 473.astar ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner little ../run_base_ref_ral-half-static.0000/astar_base.ral-half-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner little ../run_base_ref_ral-half-static.0000/astar_base.ral-half-static rivers.cfg (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 15:49:14 2024 (1729180154)
+Stop command: Thu Oct 17 16:10:27 2024 (1729181427)
+Elapsed time for command: 00:21:13 (1273)
+Workload elapsed time (0:1) = 566.413606 seconds
+Workload elapsed time (0:2) = 698.475404 seconds
+Copy 0 of 473.astar (base ref) run 2 finished at Thu Oct 17 16:10:19 2024.  Total elapsed time: 1264.88901
+comparing files in '/spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 16:10:27 2024 (1729181427)
+Stop command: Thu Oct 17 16:10:27 2024 (1729181427)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Thu Oct 17 15:49:14 2024 (1729180154)
+  Stop:     Thu Oct 17 16:10:27 2024 (1729181427)
+  Elapsed:  00:21:13 (1273)
+  Reported: 1264 889308000 1264.889308
+ Success 473.astar base ref ratio=5.55, runtime=1264.889308
+
+-----------------------------------
+  Running (#2) 483.xalancbmk ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ral-half-static.0000/Xalan_base.ral-half-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 16:10:28 2024 (1729181428)
+Stop command: Thu Oct 17 16:26:03 2024 (1729182363)
+Elapsed time for command: 00:15:35 (935)
+Workload elapsed time (0:1) = 926.864571 seconds
+Copy 0 of 483.xalancbmk (base ref) run 2 finished at Thu Oct 17 16:25:55 2024.  Total elapsed time: 926.864571
+comparing files in '/spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 16:26:03 2024 (1729182363)
+Stop command: Thu Oct 17 16:26:04 2024 (1729182364)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 16:10:28 2024 (1729181428)
+  Stop:     Thu Oct 17 16:26:03 2024 (1729182363)
+  Elapsed:  00:15:35 (935)
+  Reported: 926 864853000 926.864853
+ Success 483.xalancbmk base ref ratio=7.44, runtime=926.864853
+
+-----------------------------------
+  Running (#2) 999.specrand ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000
+    -o rand.234923.out -e rand.234923.err bench_runner little ../run_base_ref_ral-half-static.0000/specrand_base.ral-half-static 1255432124 234923 (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 16:26:04 2024 (1729182364)
+Stop command: Thu Oct 17 16:26:05 2024 (1729182365)
+Elapsed time for command: 00:00:01 (1)
+Workload elapsed time (0:1) = 0.349713 seconds
+Copy 0 of 999.specrand (base ref) run 2 finished at Thu Oct 17 16:26:05 2024.  Total elapsed time: 0.349713
+comparing files in '/spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 16:26:05 2024 (1729182365)
+Stop command: Thu Oct 17 16:26:08 2024 (1729182368)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Thu Oct 17 16:26:04 2024 (1729182364)
+  Stop:     Thu Oct 17 16:26:05 2024 (1729182365)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 349914000 0.349914
+ Success 999.specrand base ref ratio=28.58, runtime=0.349914
+
+-----------------------------------
+  Running (#3) 400.perlbench ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err bench_runner little ../run_base_ref_ral-half-static.0000/perlbench_base.ral-half-static -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err bench_runner little ../run_base_ref_ral-half-static.0000/perlbench_base.ral-half-static -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err bench_runner little ../run_base_ref_ral-half-static.0000/perlbench_base.ral-half-static -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 16:26:09 2024 (1729182369)
+Stop command: Thu Oct 17 16:50:59 2024 (1729183859)
+Elapsed time for command: 00:24:50 (1490)
+Workload elapsed time (0:1) = 779.619394 seconds
+Workload elapsed time (0:2) = 280.473718 seconds
+Workload elapsed time (0:3) = 421.615685 seconds
+Copy 0 of 400.perlbench (base ref) run 3 finished at Thu Oct 17 16:50:51 2024.  Total elapsed time: 1481.708797
+comparing files in '/spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 16:50:59 2024 (1729183859)
+Stop command: Thu Oct 17 16:51:00 2024 (1729183860)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 16:26:09 2024 (1729182369)
+  Stop:     Thu Oct 17 16:50:59 2024 (1729183859)
+  Elapsed:  00:24:50 (1490)
+  Reported: 1481 709095000 1481.709095
+ Success 400.perlbench base ref ratio=6.59, runtime=1481.709095
+
+-----------------------------------
+  Running (#3) 401.bzip2 ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000
+    -o input.source.out -e input.source.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static input.program 280 (timed)
+    -o text.html.out -e text.html.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static text.html 280 (timed)
+    -o input.combined.out -e input.combined.err bench_runner little ../run_base_ref_ral-half-static.0000/bzip2_base.ral-half-static input.combined 200 (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 16:51:00 2024 (1729183860)
+Stop command: Thu Oct 17 17:15:42 2024 (1729185342)
+Elapsed time for command: 00:24:42 (1482)
+Workload elapsed time (0:1) = 286.277211 seconds
+Workload elapsed time (0:2) = 99.818762 seconds
+Workload elapsed time (0:3) = 189.571323 seconds
+Workload elapsed time (0:4) = 311.759127 seconds
+Workload elapsed time (0:5) = 364.590573 seconds
+Workload elapsed time (0:6) = 221.898219 seconds
+Copy 0 of 401.bzip2 (base ref) run 3 finished at Thu Oct 17 17:15:34 2024.  Total elapsed time: 1473.915215
+comparing files in '/spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 17:15:42 2024 (1729185342)
+Stop command: Thu Oct 17 17:15:44 2024 (1729185344)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Oct 17 16:51:00 2024 (1729183860)
+  Stop:     Thu Oct 17 17:15:42 2024 (1729185342)
+  Elapsed:  00:24:42 (1482)
+  Reported: 1473 919029000 1473.919029
+ Success 401.bzip2 base ref ratio=6.55, runtime=1473.919029
+
+-----------------------------------
+  Running (#3) 403.gcc ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000
+    -o 166.out -e 166.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static 166.i -o 166.s (timed)
+    -o 200.out -e 200.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static g23.i -o g23.s (timed)
+    -o s04.out -e s04.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err bench_runner little ../run_base_ref_ral-half-static.0000/gcc_base.ral-half-static scilab.i -o scilab.s (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 17:15:44 2024 (1729185344)
+Stop command: Thu Oct 17 17:32:22 2024 (1729186342)
+Elapsed time for command: 00:16:38 (998)
+Workload elapsed time (0:1) = 81.710143 seconds
+Workload elapsed time (0:2) = 139.627003 seconds
+Workload elapsed time (0:3) = 97.888598 seconds
+Workload elapsed time (0:4) = 75.777951 seconds
+Workload elapsed time (0:5) = 87.686687 seconds
+Workload elapsed time (0:6) = 125.946713 seconds
+Workload elapsed time (0:7) = 188.394122 seconds
+Workload elapsed time (0:8) = 144.534766 seconds
+Workload elapsed time (0:9) = 48.595565 seconds
+Copy 0 of 403.gcc (base ref) run 3 finished at Thu Oct 17 17:32:14 2024.  Total elapsed time: 990.161548
+comparing files in '/spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/403.gcc/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 17:32:22 2024 (1729186342)
+Stop command: Thu Oct 17 17:32:26 2024 (1729186346)
+Elapsed time for command: 00:00:04 (4)
+Benchmark Times:
+  Start:    Thu Oct 17 17:15:44 2024 (1729185344)
+  Stop:     Thu Oct 17 17:32:22 2024 (1729186342)
+  Elapsed:  00:16:38 (998)
+  Reported: 990 162014000 990.162014
+ Success 403.gcc base ref ratio=8.13, runtime=990.162014
+
+-----------------------------------
+  Running (#3) 429.mcf ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000
+    -o inp.out -e inp.err bench_runner little ../run_base_ref_ral-half-static.0000/mcf_base.ral-half-static inp.in (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 17:32:26 2024 (1729186346)
+Stop command: Thu Oct 17 18:03:36 2024 (1729188216)
+Elapsed time for command: 00:31:10 (1870)
+Workload elapsed time (0:1) = 1862.218349 seconds
+Copy 0 of 429.mcf (base ref) run 3 finished at Thu Oct 17 18:03:28 2024.  Total elapsed time: 1862.218349
+comparing files in '/spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/429.mcf/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 18:03:36 2024 (1729188216)
+Stop command: Thu Oct 17 18:03:37 2024 (1729188217)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 17:32:26 2024 (1729186346)
+  Stop:     Thu Oct 17 18:03:36 2024 (1729188216)
+  Elapsed:  00:31:10 (1870)
+  Reported: 1862 218474000 1862.218474
+ Success 429.mcf base ref ratio=4.90, runtime=1862.218474
+
+-----------------------------------
+  Running (#3) 445.gobmk ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000
+    -i 13x13.tst -o 13x13.out -e 13x13.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err bench_runner little ../run_base_ref_ral-half-static.0000/gobmk_base.ral-half-static --quiet --mode gtp (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 18:03:38 2024 (1729188218)
+Stop command: Thu Oct 17 18:28:17 2024 (1729189697)
+Elapsed time for command: 00:24:39 (1479)
+Workload elapsed time (0:1) = 205.461181 seconds
+Workload elapsed time (0:2) = 527.556807 seconds
+Workload elapsed time (0:3) = 259.826531 seconds
+Workload elapsed time (0:4) = 202.139289 seconds
+Workload elapsed time (0:5) = 276.73317 seconds
+Copy 0 of 445.gobmk (base ref) run 3 finished at Thu Oct 17 18:28:09 2024.  Total elapsed time: 1471.716978
+comparing files in '/spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 18:28:17 2024 (1729189697)
+Stop command: Thu Oct 17 18:28:19 2024 (1729189699)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Oct 17 18:03:38 2024 (1729188218)
+  Stop:     Thu Oct 17 18:28:17 2024 (1729189697)
+  Elapsed:  00:24:39 (1479)
+  Reported: 1471 717526000 1471.717526
+ Success 445.gobmk base ref ratio=7.13, runtime=1471.717526
+
+-----------------------------------
+  Running (#3) 456.hmmer ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000
+    -o nph3.out -e nph3.err bench_runner little ../run_base_ref_ral-half-static.0000/hmmer_base.ral-half-static nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err bench_runner little ../run_base_ref_ral-half-static.0000/hmmer_base.ral-half-static --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 18:28:19 2024 (1729189699)
+Stop command: Thu Oct 17 18:48:58 2024 (1729190938)
+Elapsed time for command: 00:20:39 (1239)
+Workload elapsed time (0:1) = 392.767002 seconds
+Workload elapsed time (0:2) = 838.283464 seconds
+Copy 0 of 456.hmmer (base ref) run 3 finished at Thu Oct 17 18:48:50 2024.  Total elapsed time: 1231.050466
+comparing files in '/spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 18:48:58 2024 (1729190938)
+Stop command: Thu Oct 17 18:48:59 2024 (1729190939)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 18:28:19 2024 (1729189699)
+  Stop:     Thu Oct 17 18:48:58 2024 (1729190938)
+  Elapsed:  00:20:39 (1239)
+  Reported: 1231 50618000 1231.050618
+ Success 456.hmmer base ref ratio=7.58, runtime=1231.050618
+
+-----------------------------------
+  Running (#3) 458.sjeng ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ral-half-static.0000/sjeng_base.ral-half-static ref.txt (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 18:48:59 2024 (1729190939)
+Stop command: Thu Oct 17 19:26:02 2024 (1729193162)
+Elapsed time for command: 00:37:03 (2223)
+Workload elapsed time (0:1) = 2215.182358 seconds
+Copy 0 of 458.sjeng (base ref) run 3 finished at Thu Oct 17 19:25:54 2024.  Total elapsed time: 2215.182358
+comparing files in '/spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 19:26:02 2024 (1729193162)
+Stop command: Thu Oct 17 19:26:03 2024 (1729193163)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 18:48:59 2024 (1729190939)
+  Stop:     Thu Oct 17 19:26:02 2024 (1729193162)
+  Elapsed:  00:37:03 (2223)
+  Reported: 2215 182479000 2215.182479
+ Success 458.sjeng base ref ratio=5.46, runtime=2215.182479
+
+-----------------------------------
+  Running (#3) 462.libquantum ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ral-half-static.0000/libquantum_base.ral-half-static 1397 8 (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 19:26:03 2024 (1729193163)
+Stop command: Thu Oct 17 19:43:39 2024 (1729194219)
+Elapsed time for command: 00:17:36 (1056)
+Workload elapsed time (0:1) = 1047.835881 seconds
+Copy 0 of 462.libquantum (base ref) run 3 finished at Thu Oct 17 19:43:31 2024.  Total elapsed time: 1047.835881
+comparing files in '/spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 19:43:39 2024 (1729194219)
+Stop command: Thu Oct 17 19:43:39 2024 (1729194219)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Thu Oct 17 19:26:03 2024 (1729193163)
+  Stop:     Thu Oct 17 19:43:39 2024 (1729194219)
+  Elapsed:  00:17:36 (1056)
+  Reported: 1047 836058000 1047.836058
+ Success 462.libquantum base ref ratio=19.77, runtime=1047.836058
+
+-----------------------------------
+  Running (#3) 464.h264ref ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err bench_runner little ../run_base_ref_ral-half-static.0000/h264ref_base.ral-half-static -d foreman_ref_encoder_baseline.cfg (timed)
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err bench_runner little ../run_base_ref_ral-half-static.0000/h264ref_base.ral-half-static -d foreman_ref_encoder_main.cfg (timed)
+    -o sss_main_encodelog.out -e sss_main_encodelog.err bench_runner little ../run_base_ref_ral-half-static.0000/h264ref_base.ral-half-static -d sss_encoder_main.cfg (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 19:43:39 2024 (1729194219)
+Stop command: Thu Oct 17 20:14:56 2024 (1729196096)
+Elapsed time for command: 00:31:17 (1877)
+Workload elapsed time (0:1) = 212.098481 seconds
+Workload elapsed time (0:2) = 163.98039 seconds
+Workload elapsed time (0:3) = 1492.708377 seconds
+Copy 0 of 464.h264ref (base ref) run 3 finished at Thu Oct 17 20:14:48 2024.  Total elapsed time: 1868.787248
+comparing files in '/spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 20:14:56 2024 (1729196096)
+Stop command: Thu Oct 17 20:14:58 2024 (1729196098)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Oct 17 19:43:39 2024 (1729194219)
+  Stop:     Thu Oct 17 20:14:56 2024 (1729196096)
+  Elapsed:  00:31:17 (1877)
+  Reported: 1868 787475000 1868.787475
+ Success 464.h264ref base ref ratio=11.84, runtime=1868.787475
+
+-----------------------------------
+  Running (#3) 471.omnetpp ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000
+    -o omnetpp.log -e omnetpp.err bench_runner little ../run_base_ref_ral-half-static.0000/omnetpp_base.ral-half-static omnetpp.ini (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 20:14:58 2024 (1729196098)
+Stop command: Thu Oct 17 20:38:40 2024 (1729197520)
+Elapsed time for command: 00:23:42 (1422)
+Workload elapsed time (0:1) = 1414.079235 seconds
+Copy 0 of 471.omnetpp (base ref) run 3 finished at Thu Oct 17 20:38:32 2024.  Total elapsed time: 1414.079235
+comparing files in '/spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 20:38:40 2024 (1729197520)
+Stop command: Thu Oct 17 20:38:41 2024 (1729197521)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 20:14:58 2024 (1729196098)
+  Stop:     Thu Oct 17 20:38:40 2024 (1729197520)
+  Elapsed:  00:23:42 (1422)
+  Reported: 1414 79547000 1414.07955
+ Success 471.omnetpp base ref ratio=4.42, runtime=1414.079547
+
+-----------------------------------
+  Running (#3) 473.astar ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000
+    -o BigLakes2048.out -e BigLakes2048.err bench_runner little ../run_base_ref_ral-half-static.0000/astar_base.ral-half-static BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err bench_runner little ../run_base_ref_ral-half-static.0000/astar_base.ral-half-static rivers.cfg (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 20:38:41 2024 (1729197521)
+Stop command: Thu Oct 17 20:59:48 2024 (1729198788)
+Elapsed time for command: 00:21:07 (1267)
+Workload elapsed time (0:1) = 567.067213 seconds
+Workload elapsed time (0:2) = 691.884495 seconds
+Copy 0 of 473.astar (base ref) run 3 finished at Thu Oct 17 20:59:40 2024.  Total elapsed time: 1258.951708
+comparing files in '/spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/473.astar/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 20:59:48 2024 (1729198788)
+Stop command: Thu Oct 17 20:59:49 2024 (1729198789)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Thu Oct 17 20:38:41 2024 (1729197521)
+  Stop:     Thu Oct 17 20:59:48 2024 (1729198788)
+  Elapsed:  00:21:07 (1267)
+  Reported: 1258 951944000 1258.951944
+ Success 473.astar base ref ratio=5.58, runtime=1258.951944
+
+-----------------------------------
+  Running (#3) 483.xalancbmk ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000
+    -o ref.out -e ref.err bench_runner little ../run_base_ref_ral-half-static.0000/Xalan_base.ral-half-static -v t5.xml xalanc.xsl (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 20:59:49 2024 (1729198789)
+Stop command: Thu Oct 17 21:15:27 2024 (1729199727)
+Elapsed time for command: 00:15:38 (938)
+Workload elapsed time (0:1) = 929.555269 seconds
+Copy 0 of 483.xalancbmk (base ref) run 3 finished at Thu Oct 17 21:15:19 2024.  Total elapsed time: 929.555269
+comparing files in '/spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 21:15:27 2024 (1729199727)
+Stop command: Thu Oct 17 21:15:29 2024 (1729199729)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Oct 17 20:59:49 2024 (1729198789)
+  Stop:     Thu Oct 17 21:15:27 2024 (1729199727)
+  Elapsed:  00:15:38 (938)
+  Reported: 929 555613000 929.555613
+ Success 483.xalancbmk base ref ratio=7.42, runtime=929.555613
+
+-----------------------------------
+  Running (#3) 999.specrand ref base ral-half-static default
+Commands to run:
+    -C /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000
+    -o rand.234923.out -e rand.234923.err bench_runner little ../run_base_ref_ral-half-static.0000/specrand_base.ral-half-static 1255432124 234923 (timed)
+Specinvoke: /spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/spec2006/bin/specinvoke -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Thu Oct 17 21:15:29 2024 (1729199729)
+Stop command: Thu Oct 17 21:15:30 2024 (1729199730)
+Elapsed time for command: 00:00:01 (1)
+Workload elapsed time (0:1) = 0.33915 seconds
+Copy 0 of 999.specrand (base ref) run 3 finished at Thu Oct 17 21:15:29 2024.  Total elapsed time: 0.33915
+comparing files in '/spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/spec2006/bin/specinvoke -E -d /spec2006/benchspec/CPU2006/999.specrand/run/run_base_ref_ral-half-static.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Thu Oct 17 21:15:30 2024 (1729199730)
+Stop command: Thu Oct 17 21:15:33 2024 (1729199733)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Thu Oct 17 21:15:29 2024 (1729199729)
+  Stop:     Thu Oct 17 21:15:30 2024 (1729199730)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 339261000 0.339261
+ Success 999.specrand base ref ratio=29.48, runtime=0.339261
+Success: 3x400.perlbench 3x401.bzip2 3x403.gcc 3x429.mcf 3x445.gobmk 3x456.hmmer 3x458.sjeng 3x462.libquantum 3x464.h264ref 3x471.omnetpp 3x473.astar 3x483.xalancbmk 3x999.specrand
+Producing Raw Reports
+mach: default
+  ext: ral-half-static
+    size: ref
+      set: int
+        format: raw -> /spec2006/result/CINT2006.011.ref.rsf
+Parsing flags for 400.perlbench base: done
+Parsing flags for 401.bzip2 base: done
+Parsing flags for 403.gcc base: done
+Parsing flags for 429.mcf base: done
+Parsing flags for 445.gobmk base: done
+Parsing flags for 456.hmmer base: done
+Parsing flags for 458.sjeng base: done
+Parsing flags for 462.libquantum base: done
+Parsing flags for 464.h264ref base: done
+Parsing flags for 471.omnetpp base: done
+Parsing flags for 473.astar base: done
+Parsing flags for 483.xalancbmk base: done
+Doing flag reduction: done
+        format: ASCII -> /spec2006/result/CINT2006.011.ref.txt
+        format: CSV -> /spec2006/result/CINT2006.011.ref.csv
+        format: Screen -> 
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+400.perlbench    9770       1482       6.59 *                                  
+401.bzip2        9650       1474       6.55 *                                  
+403.gcc          8050        990       8.13 *                                  
+429.mcf          9120       1862       4.90 *                                  
+445.gobmk       10490       1472       7.12 *                                  
+456.hmmer        9330       1233       7.57 *                                  
+458.sjeng       12100       2208       5.48 *                                  
+462.libquantum  20720       1048      19.8  *                                  
+464.h264ref     22130       1873      11.8  *                                  
+471.omnetpp      6250       1421       4.40 *                                  
+473.astar        7020       1265       5.55 *                                  
+483.xalancbmk    6900        927       7.44 *                                  
+ Est. SPECint_base2006                 7.26
+ Est. SPECint2006                                                   Not Run
+
+      set: fp
+
+The log for this run is in /spec2006/result/CPU2006.011.log
+
+runspec finished at Thu Oct 17 21:15:36 2024; 52169 total seconds elapsed

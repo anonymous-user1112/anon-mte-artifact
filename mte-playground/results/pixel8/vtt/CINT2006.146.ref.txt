@@ -1,0 +1,185 @@
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 456.hmmer (base) did not have enough runs!                                 #
+# 445.gobmk (base) did not have enough runs!                                 #
+# 458.sjeng (base) did not have enough runs!                                 #
+# 429.mcf (base) did not have enough runs!                                   #
+# 400.perlbench (base) did not have enough runs!                             #
+# 464.h264ref (base) did not have enough runs!                               #
+# 462.libquantum (base) did not have enough runs!                            #
+# 401.bzip2 (base) did not have enough runs!                                 #
+# 403.gcc (base) did not have enough runs!                                   #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+                           SPEC(R) CINT2006 Summary
+                                       
+                           Fri Nov  1 21:26:38 2024
+
+CPU2006 License: 0                                       Test date: Nov-2024
+Test sponsor:                                Hardware availability: Dec-9999
+Tested by:                                   Software availability: Mar-2008
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+400.perlbench                               NR                                 
+401.bzip2                                   NR                                 
+403.gcc                                     NR                                 
+429.mcf                                     NR                                 
+445.gobmk                                   NR                                 
+456.hmmer                                   NR                                 
+458.sjeng                                   NR                                 
+462.libquantum                              NR                                 
+464.h264ref                                 NR                                 
+471.omnetpp      6250       1673       3.74 S                                  
+471.omnetpp      6250       1692       3.69 S                                  
+471.omnetpp      6250       1703       3.67 *                                  
+471.omnetpp      6250       1706       3.66 S                                  
+471.omnetpp      6250       1707       3.66 S                                  
+471.omnetpp      6250       1713       3.65 S                                  
+471.omnetpp      6250       1677       3.73 S                                  
+471.omnetpp      6250       1681       3.72 S                                  
+471.omnetpp      6250       1688       3.70 S                                  
+471.omnetpp      6250       1711       3.65 S                                  
+473.astar        7020       1341       5.23 S                                  
+473.astar        7020       1370       5.12 *                                  
+473.astar        7020       1367       5.13 S                                  
+473.astar        7020       1377       5.10 S                                  
+473.astar        7020       1362       5.15 S                                  
+473.astar        7020       1375       5.10 S                                  
+473.astar        7020       1381       5.08 S                                  
+473.astar        7020       1359       5.17 S                                  
+473.astar        7020       1369       5.13 S                                  
+473.astar        7020       1374       5.11 S                                  
+483.xalancbmk    6900       1064       6.48 S                                  
+483.xalancbmk    6900       1070       6.45 S                                  
+483.xalancbmk    6900       1078       6.40 S                                  
+483.xalancbmk    6900       1076       6.41 S                                  
+483.xalancbmk    6900       1080       6.39 S                                  
+483.xalancbmk    6900       1073       6.43 S                                  
+483.xalancbmk    6900       1061       6.50 S                                  
+483.xalancbmk    6900       1069       6.45 S                                  
+483.xalancbmk    6900       1067       6.47 S                                  
+483.xalancbmk    6900       1071       6.44 *                                  
+==============================================================================
+400.perlbench                               NR                                 
+401.bzip2                                   NR                                 
+403.gcc                                     NR                                 
+429.mcf                                     NR                                 
+445.gobmk                                   NR                                 
+456.hmmer                                   NR                                 
+458.sjeng                                   NR                                 
+462.libquantum                              NR                                 
+464.h264ref                                 NR                                 
+471.omnetpp      6250       1703       3.67 *                                  
+473.astar        7020       1370       5.12 *                                  
+483.xalancbmk    6900       1071       6.44 *                                  
+ Est. SPECint(R)_base2006                --
+ Est. SPECint2006                                                   Not Run
+
+
+                                   HARDWARE
+                                   --------
+            CPU Name:  
+ CPU Characteristics:  
+             CPU MHz:  
+                 FPU:  
+      CPU(s) enabled:  cores,  chips,  cores/chip,  threads/core
+    CPU(s) orderable:  
+       Primary Cache:  
+     Secondary Cache:  
+            L3 Cache:  
+         Other Cache:  
+              Memory:  
+      Disk Subsystem:  
+      Other Hardware:  
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: QEMU AArch64 Usermode
+            Compiler: clang
+       Auto Parallel: No
+         File System:  
+        System State:  
+       Base Pointers: 64-bit
+       Peak Pointers: Not Applicable
+      Other Software: None
+
+
+                                 Submit Notes
+                                 ------------
+    The config file option 'submit' was used.
+
+                              Base Unknown Flags
+                              ------------------
+   471.omnetpp: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in CXX)
+                "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in LD)
+                "-Wno-int-conversion" (in PORTABILITY)
+                "-unwindlib=libunwind" (in LDPORTABILITY)
+                "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXXOPTIMIZE)
+                "-std=c++98 -nostdinc++ -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/include/c++/12.2.0 -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/include/c++/12.2.0/aarch64-linux-gnu -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/include/c++/12.2.0/backward/ -nostdlib++ -L /home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/lib -lstdc++ -Wl,-rpath,/home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/lib" (in EXTRA_CXXFLAGS)
+                "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                "-unwindlib=libunwind" (in EXTRA_LDFLAGS)
+
+     473.astar: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in CXX)
+                "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in LD)
+                "-Wno-int-conversion" (in PORTABILITY)
+                "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXXOPTIMIZE)
+                "-std=c++98 -nostdinc++ -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/include/c++/12.2.0 -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/include/c++/12.2.0/aarch64-linux-gnu -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/include/c++/12.2.0/backward/ -nostdlib++ -L /home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/lib -lstdc++ -Wl,-rpath,/home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/lib" (in EXTRA_CXXFLAGS)
+                "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                "-unwindlib=libunwind" (in EXTRA_LDFLAGS)
+
+ 483.xalancbmk: "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in CXX)
+                "/home/XXXXXXXX/code/llvm-mte/tagcfi/build/bin/clang++" (in LD)
+                "-Wno-int-conversion" (in PORTABILITY)
+                "-unwindlib=libunwind" (in LDPORTABILITY)
+                "-O2 -fno-strict-aliasing --target=aarch64-linux-gnu -march=armv8-a+memtag --gcc-toolchain=/home/XXXXXXXX/code/llvm-mte/tagcfi/downloads/gcc/gcc-linaro-12.3.1-2023.06-x86_64_aarch64-linux-gnu/" (in CXXOPTIMIZE)
+                "-std=c++98 -nostdinc++ -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/include/c++/12.2.0 -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/include/c++/12.2.0/aarch64-linux-gnu -isystem /home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/include/c++/12.2.0/backward/ -nostdlib++ -L /home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/lib -lstdc++ -Wl,-rpath,/home/XXXXXXXX/code/llvm-mte/tagcfi/install/default/lib" (in EXTRA_CXXFLAGS)
+                "-static -unwindlib=libunwind" (in EXTRA_OPTIMIZE)
+                "-unwindlib=libunwind" (in EXTRA_LDFLAGS)
+
+
+                            Base Portability Flags
+                            ----------------------
+   471.omnetpp: -DSPEC_CPU_LP64
+     473.astar: -DSPEC_CPU_LP64
+ 483.xalancbmk: -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX
+
+
+    SPEC and SPECint are registered trademarks of the Standard Performance
+    Evaluation Corporation.  All other brand and product names appearing
+    in this result are trademarks or registered trademarks of their
+    respective holders.
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 456.hmmer (base) did not have enough runs!                                 #
+# 445.gobmk (base) did not have enough runs!                                 #
+# 458.sjeng (base) did not have enough runs!                                 #
+# 429.mcf (base) did not have enough runs!                                   #
+# 400.perlbench (base) did not have enough runs!                             #
+# 464.h264ref (base) did not have enough runs!                               #
+# 462.libquantum (base) did not have enough runs!                            #
+# 401.bzip2 (base) did not have enough runs!                                 #
+# 403.gcc (base) did not have enough runs!                                   #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 2006-2008 Standard Performance Evaluation Corporation
+Tested with SPEC CPU2006 v1.1.
+Report generated on Sat Nov  2 23:15:57 2024 by CPU2006 ASCII formatter v6128.
