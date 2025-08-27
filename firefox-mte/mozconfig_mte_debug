@@ -1,0 +1,10 @@
+ac_add_options --enable-application=browser
+
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox_release_mte_debug
+ac_add_options --enable-debug
+ac_add_options --disable-optimize
+ac_add_options --enable-expat-uses-mte
+
+export CFLAGS="$CFLAGS -march=armv8.5-a+memtag"
+export CXXFLAGS="$CXXFLAGS -march=armv8.5-a+memtag"
+export LDFLAGS="$LDFLAGS -march=armv8.5-a+memtag"

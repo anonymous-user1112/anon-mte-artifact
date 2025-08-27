@@ -1,0 +1,107 @@
+#!/bin/bash
+
+# set -o xtrace
+
+# source ./mozconfig_common
+# FFBuildDir=$BROWSER_BUILD_PATH
+
+FFBuildDir=$(realpath ./)
+
+if [ -z "$1" ]; then
+	echo "Missing output_folder.";
+	echo "Expected argument: $0 <output_folder> <test_name> <space_separated_build_names> <space_separated_cpus_to_pin_to>";
+	exit 1;
+fi
+
+if [[ -f "$1" ]]; then
+	echo "$1 already exists";
+	exit 1;
+fi
+
+if [ -z "$2" ]; then
+	echo "Missing testname. Expected a test name from the list [expat_perf_test].";
+	echo "Expected argument: $0 <output_folder> <test_name> <space_separated_build_names> <space_separated_cpus_to_pin_to>";
+	exit 1;
+fi
+
+if [ -z "$3" ]; then
+	echo "Missing Firefox versions from [stock copy mte]. Specify space separated e.g. 'stock copy mte'.";
+	echo "Expected argument: $0 <output_folder> <test_name> <space_separated_build_names> <space_separated_cpus_to_pin_to>";
+	exit 1;
+fi
+
+if [ -z "$4" ]; then
+	echo "Missing cpu numbers to pin to. Specify space separated e.g. '1 3 5'.";
+	echo "Expected argument: $0 <output_folder> <test_name> <space_separated_build_names> <space_separated_cpus_to_pin_to>";
+	exit 1;
+fi
+
+FFVersions=($3)
+CPUsToPin=($4)
+
+OUTPUTPATH=$(cd "$(dirname "$1")"; pwd)/$(basename "$1")
+mkdir -p ${OUTPUTPATH}
+cd "$(dirname "$0")"
+
+for (( i = 0; i < ${#FFVersions[@]}; i++ )); do
+	if [[ ! -d "$FFBuildDir/firefox_release_${FFVersions[$i]}" ]]; then
+		echo "Not all firefox versions found: $FFBuildDir/firefox_release_${FFVersions[$i]}";
+		exit 1;
+	fi
+done
+
+echo "Starting. Make sure to isolate and disable scaling on cpus $4"
+sleep 3
+
+# param: outputDir/prefix
+# param: mozconfig
+# param: testname
+# param: cpu
+function runTest(){
+	FINISHED=0
+	for (( l = 0; l < 3; l++ )); do
+		pkill -f WebContent
+		pkill -f firefox
+		rm -f ./testing/mozharness/build/local.json
+
+		MOZCONFIG=$2 EXPAT_PIN_CORE=$4 ./mach talos-test --activeTests "$3" 2>&1 | tee "$1_terminal_output.txt"
+
+		retVal=${PIPESTATUS[0]}
+		if [ $retVal -eq 0 ]; then
+			FINISHED=1
+			break;
+		else
+			echo "Failed to run test benchmark for $1. Retrying..." | tee -a "$1_terminal_output.txt"
+			mv "$1_terminal_output.txt" "$1_terminal_output.run_$l.txt"
+			sleep 30
+		fi
+	done
+	if [ $FINISHED -eq 0 ]; then
+		echo "Failed to run test benchmark for $1." | tee -a "$1_terminal_output.txt"
+		exit 1
+	fi
+	sleep 10
+	mv ./testing/mozharness/build/local.json "$1_rlbox_test_page_render.json"
+}
+
+SAVEDDIR=$PWD
+
+for (( j = 0; j < ${#FFVersions[@]}; j++ )); do
+	for (( k = 0; k < ${#CPUsToPin[@]}; k++ )); do
+		mkdir -p "${OUTPUTPATH}/CPU${CPUsToPin[$k]}"
+		runTest "${OUTPUTPATH}/CPU${CPUsToPin[$k]}/${FFVersions[$j]}" "mozconfig_${FFVersions[$j]}" $2 ${CPUsToPin[$k]}
+		cd $SAVEDDIR
+	done
+done
+
+for (( j = 0; j < ${#FFVersions[@]}; j++ )); do
+	for (( k = 0; k < ${#CPUsToPin[@]}; k++ )); do
+		./testsExtractFromLogs.py "${OUTPUTPATH}/CPU${CPUsToPin[$k]}/${FFVersions[$j]}_terminal_output.txt" 2>&1 >> "${OUTPUTPATH}/CPU${CPUsToPin[$k]}/${FFVersions[$j]}_terminal_analysis.json"
+	done
+done
+
+for (( k = 0; k < ${#CPUsToPin[@]}; k++ )); do
+	./testsAnalyzeExtractedLogs.py "${OUTPUTPATH}/CPU${CPUsToPin[$k]}"
+done
+
+# ./testsRunBenchmark ../benchmarks/ff-expat-copy1 expat_perf_test 'stock copy'

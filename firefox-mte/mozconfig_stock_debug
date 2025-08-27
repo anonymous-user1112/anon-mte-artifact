@@ -1,0 +1,7 @@
+ac_add_options --enable-application=browser
+
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox_release_stock_debug
+ac_add_options --enable-debug
+ac_add_options --disable-optimize
+ac_add_options --enable-expat-no-checks
+

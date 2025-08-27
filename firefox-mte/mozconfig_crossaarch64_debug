@@ -1,0 +1,21 @@
+ac_add_options --enable-application=browser
+
+export LUCETC=
+
+ac_add_options --with-wasm-sandboxed-libraries=expat,soundtouch
+
+####### Debug #######
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj_firefox_latest_aarch64_debug
+ac_add_options --enable-debug
+ac_add_options --disable-optimize
+
+export WASM_CC="$topsrcdir/../wasi-sdk/bin/clang --target=wasm32-wasi"
+export WASM_CXX="$topsrcdir/../wasi-sdk/bin/clang++ --target=wasm32-wasi"
+export WASI_SYSROOT="$topsrcdir/../wasi-sdk/share/wasi-sysroot/"
+
+ac_add_options --enable-expat-no-checks
+ac_add_options --target=aarch64-linux-gnu
+export CFLAGS="$CFLAGS -march=armv8.5-a+memtag"
+export CXXFLAGS="$CXXFLAGS -march=armv8.5-a+memtag"
+export LDFLAGS="$LDFLAGS -march=armv8.5-a+memtag"
+ac_add_options --enable-bootstrap
